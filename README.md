@@ -14,13 +14,13 @@ Website to choose your favorite movie!
 For the next part I Will show you how to use GIT with this project in command line.<br/>
 First you need to fork this project with the Github Interface, button Fork. Then you have to go on your profile and on the forked project "YourName/VoxOffice".<br/>
 Now you could clone the forked project, with the url (you could find it on Github or copying the url in your navigator and adding ".git" at the end).<br/>
-Open your command line terminal (Git Bash on Windows) and go to your directory where you want to install it ("cd C:/xampp/htdocs") and then type that : git clone URL<br/>
+Open your command line terminal (Git Bash on Windows) and go to your directory where you want to install it ("cd C:/xampp/htdocs") and then type that : <code>git clone URL</code><br/>
 Yeah guy you've got your project!<br/>
 So edit it and enjoy it, and when you finished it and you want to share it with me, you have to upload it on your github profile first:<br/>
-git status | to see all the files modified (in red the files you have to add and in green the files you added.)<br/>
-git add filename | to add the modified files to the commit! Exemple git add style/css.css<br/>
-git commit -m "Your Message" | To initialize the commit to send all the documents in your profile Github with a message (exemple : Styling Modify)<br/>
-git push | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br/>
+<code>git status</code> | to see all the files modified (in red the files you have to add and in green the files you added.)<br/>
+<code>git add filename</code> | to add the modified files to the commit! Exemple git add style/css.css<br/>
+<code>git commit -m "Your Message"</code> | To initialize the commit to send all the documents in your profile Github with a message (exemple : Styling Modify)<br/>
+<code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br/>
 Ok now you've got your files in your profile and you want to share it with me? Do a Pull Request from Github and I will examine your modifications<br/>
 
 # Install Compass and use it :
