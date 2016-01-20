@@ -13,8 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<!--LINK TO JS-->
-	<script type="text/javascript"></script>
-
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<header>
@@ -40,15 +40,42 @@
 		<img src="#" alt="Scroll - VoxOffice" title="Scroll - VoxOffice" />
 	</section>
 	<section class="sized">
-		
+		<div class="wrap">			
+			<h2>The Concept.</h2>
+			<p>VoxOffice is a small project aiming for a blazing fast classification of thousands of movies. To reach this goal, <span class="majuscule">You</span> are the main contributor, as you can <span class="highlight">vote</span>, <span class="highlight">add</span> and <span class="highlight">compare</span> all the films you want.</p>
+			<p>Choose fast between two proposed movies, to create a "best and worst" top.</p>
+			<p>We take care of the rest. <span class="majuscule">As Simple as That!</span></p>
+			<p>You can check the documentation for more information or the official repository on github.</p>
+		</div>
 	</section>
 	<section class="sized">
-		
+		<h2>How To</h2>
+		<ul>
+			<li>
+				<h3>Vote.</h3>
+				<img src="#" alt="Vote - VoxOffice" title="Vote - VoxOffice" />
+				<p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+				<a href="#" alt="Try - VoxOffice" title="Try - VoxOffice">Try now</a>
+			</li>
+			<li>
+				<h3>Add.</h3>
+				<img src="#" alt="Ajoute - VoxOffice" title="Ajoute - VoxOffice" />
+				<p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+				<a href="#" alt="Try - VoxOffice" title="Try - VoxOffice">Try now</a>
+			</li>
+			<li>
+				<h3>Compare.</h3>
+				<img src="#" alt="Compare - VoxOffice" title="Compare - VoxOffice" />
+				<p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+				<a href="#" alt="Try - VoxOffice" title="Try - VoxOffice">Try now</a>
+			</li>
+		</ul>
 	</section>
 	<section>
 		<h2>Get Started</h2>
 		<p>By connecting with Facebook we can directly help you and your friends find the greatest films!</p>
 		<p class="alert">This, without ads, tracking or annoying notifications.</p>
+		<a href="#" alt="Connexion a Facebook - VoxOffice" title="Connexion a Facebook - VoxOffice"></a>
 	</section>
 	<footer>
 		<div class="wrap">
