@@ -28,7 +28,7 @@
 		</nav>
 		<div>
 			<img src="#" alt="User - VoxOffice" title="User - VoxOffice" />
-			<p>Connected as:<br/><span id="name">Pierre Prézelin</span></p>
+			<p>Connected as:<br/><span id="username" class="majuscule highlight">Pierre Prézelin</span></p>
 		</div>
 	</header>
 	<section class="sized">
