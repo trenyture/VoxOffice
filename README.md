@@ -1,35 +1,33 @@
 # VoxOffice
-Wait for it....
+Wait for it...
 
 # Technologies :
-
-HTML / SASS | COMPASS / JQUERY / PHP / MYSQL / FACEBOOK APP
+HTML - Sass (with Compass) - jQuery - PHP - MySQL - Facebook app
 
 # Description :
+VoxOffice is a small project aiming for a blazing fast classification of thousands of movies.<br>
+To reach this goal, YOU are the main contributor, as you can vote, add and compare all the films you want.
 
-Website to choose your favorite movie! 
+# How to use Git :
+Command line : first you need to fork this project with the GitHub Interface ("Fork" button).<br>
+Then you have to go on your profile and on the forked project "YourName/VoxOffice".<br>
+Now, you can clone the forked project with the projet URL (on Github or copying this URL in your browser and adding ".git" at the end).<br>
+Open your command line terminal (Git Bash on Windows) and go to the directory where you want to install it, for exemple : <code>cd C:/xampp/htdocs</code><br>
+Finally, type <code>git clone URL</code><br>
+Your project is now all set!<br><br>
+When you finished your modifications and you want to share it with me, you have to upload it on your GitHub profile first :<br>
+<code>git status</code> - to see all the modified files (reds are yet to add and greens will be added).<br>
+<code>git add filename</code> - to add the modified files to the commit! For example, <code>git add style/css.css</code> or <code>git add .</code> to add all files.<br>
+<code>git commit -m "Your message"</code> - to initialize the commit which will send all the documents in your GitHub profile, with a message (ex: "Header styles modification").<br>
+<code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br>
+Now you've got your files in your profile and you want to share it with me? Do a Pull Request from GitHub and I will examine your modifications before including them to the source code.<br>
 
-# Using GIT :
+# How to install Compass and use it :
+Windows : download Ruby from <a href="http://rubyinstaller.org/">here</a>.<br>
+Install it and *IMPORTANT* enable "Add Ruby executables to your PATH" during the installation.<br>
+Then, run your terminal (Cmd/PowerShell on Windows) and type <code>gem install compass</code><br>
+You just installed Compass! To use it :<br>
+Go to your VoxOffice path and double click on the init.bat file. It will open a new command terminal which should stay opened as long as you edit your SCSS files.<br>
+Now, you can edit every SCSS files in VoxOffice/Sass and it will automatically compile and replace the previous css files.<br>
 
-For the next part I Will show you how to use GIT with this project in command line.<br/>
-First you need to fork this project with the Github Interface, button Fork. Then you have to go on your profile and on the forked project "YourName/VoxOffice".<br/>
-Now you could clone the forked project, with the url (you could find it on Github or copying the url in your navigator and adding ".git" at the end).<br/>
-Open your command line terminal (Git Bash on Windows) and go to your directory where you want to install it ("cd C:/xampp/htdocs") and then type that : <code>git clone URL</code><br/>
-Yeah guy you've got your project!<br/>
-So edit it and enjoy it, and when you finished it and you want to share it with me, you have to upload it on your github profile first:<br/>
-<code>git status</code> | to see all the files modified (in red the files you have to add and in green the files you added.)<br/>
-<code>git add filename</code> | to add the modified files to the commit! Exemple git add style/css.css<br/>
-<code>git commit -m "Your Message"</code> | To initialize the commit to send all the documents in your profile Github with a message (exemple : Styling Modify)<br/>
-<code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br/>
-Ok now you've got your files in your profile and you want to share it with me? Do a Pull Request from Github and I will examine your modifications<br/>
-
-# Install Compass and use it :
-
-Windows : Download Ruby from <a href="http://rubyinstaller.org/">here</a>.<br/>
-Install it and IMPORTANT enable "Add Ruby executables to your PATH" during the installation<br/>
-Then, run your terminal (CMD) and type "gem install compass"<br/>
-Now you installed compass, you can use it :<br/>
-Go to your VoxOffice Path and doble click on init.bat It will open a new command terminal which should stay opened as long as you edit your SCSS files.<br/>
-Now you can editing SCSS files in VoxOffice/Sass and it will automaticly changed the css files. <br/>
-
-# Enjoy It and See You Soon ;)
+# Enjoy and see you soon ;)
