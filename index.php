@@ -17,7 +17,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="google-site-verification" content="">-->
 
-        <title>VoxOffice</title>
+        <title>VoxOffice - Tous vos films favoris. Classés.</title>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
