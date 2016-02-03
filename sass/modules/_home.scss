@@ -1,0 +1,46 @@
+/* ======================================
+    INTRODUCTION
+====================================== */
+.home-intro {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: url("../img/home_background.jpg") no-repeat center center;
+    background-position: center center;
+    @include background-size(cover);
+}
+
+/* ======================================
+    DESCRIPTION
+====================================== */
+.home-description {
+    background: url("../img/movie_clap.svg") no-repeat top right $purple;
+    background-size: 42% auto;
+    
+    h2 {
+        color: $yellow;
+    }
+}
+
+/* ======================================
+    GET STARTED
+====================================== */
+.home-features {
+    h2 {
+        color: $purple;
+        text-align: center;
+    }
+}
+
+/* ======================================
+    CONNECT
+====================================== */
+.home-connect {
+    text-align: center;
+    background: url("../img/movie_mosaic.jpg") no-repeat center center;
+    @include background-size(cover);
+    
+    h2 {
+        color: $orange;
+    }
+}

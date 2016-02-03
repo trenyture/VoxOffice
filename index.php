@@ -9,7 +9,7 @@
         <!--Metas -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <meta name="author" content="Pierre Prézelin - Simon Trichereau">
+        <meta name="author" content="Simon Trichereau - Pierre Prézelin">
         <meta name="description" content="Un site web pour choisir et voter pour le meilleur film!">
         <meta name="keywords" content="Meilleur,Film,Best,Movie,Simon,Trichereau,Pierre,Prezelin,VoxOffice,Voter,Vote,HTML,CSS,JavaScript,jQuery,Facebook,Share,Partage,Php,MySQL,SASS,Compass"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +43,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Fonts -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -62,16 +63,16 @@
                 <p>Connecté en tant que :<br/><span id="username" class="uppercase highlight">Pierre Prézelin</span></p>
             </div>
         </header>
-        <section class="sized">
-            <h1><a href="#" title="VoxOffice - Accueil" alt="VoxOffice - Accueil">VoxOffice</a></h1>
+        <section class="home-intro">
+            <h1><a href="#" title="VoxOffice - Accueil" alt="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
             <article>
                 <p>Tous vos films favoris. Classés.</p>
             </article>
-            <a href="#">Go!</a>
-            <img src="#" alt="Scroller - VoxOffice" title="Scroller - VoxOffice" />
+            <a href="#" class="btn btn-home">Go!</a>
+            <a href="#home-description"><span></span></a>
         </section>
-        <section class="sized">
-            <div class="wrap">
+        <section class="home-description">
+            <div class="content-large">
                 <h2>Le concept.</h2>
                 <p>VoxOffice est un projet visant la création d'une classification ultra rapide de milliers de films. Pour atteindre cet objectif, <span class="uppercase">Vous</span> êtes le principal acteur, en pouvant <span class="uppercase">voter</span>, <span class="uppercase">ajouter</span> et <span class="uppercase">comparer</span> tous les films que vous voulez.</p>
                 <p>Choisissez rapidement parmi deux films proposés, pour créer un top des "meilleurs" et des "pires".</p>
@@ -79,34 +80,38 @@
                 <p>Vous pouvez lire la <a href="#">documentation</a> pour plus d'informations ou sur le <a href="#">dépôt officiel GitHub</a>.</p>
             </div>
         </section>
-        <section class="sized">
-            <h2>Comment faire</h2>
-            <ul>
-                <li>
-                    <h3>Votez.</h3>
-                    <img src="#" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
-                    <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
-                    <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                </li>
-                <li>
-                    <h3>Ajoutez.</h3>
-                    <img src="#" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
-                    <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
-                    <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                </li>
-                <li>
-                    <h3>Comparez.</h3>
-                    <img src="#" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
-                    <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
-                    <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                </li>
-            </ul>
+        <section class="home-features">
+            <div class="content">
+                <h2>Comment faire</h2>
+                <ul>
+                    <li>
+                        <h3>Votez.</h3>
+                        <img src="#" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
+                        <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                    </li>
+                    <li>
+                        <h3>Ajoutez.</h3>
+                        <img src="#" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
+                        <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                    </li>
+                    <li>
+                        <h3>Comparez.</h3>
+                        <img src="#" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
+                        <p>Lorem ipsum dolor sit ament, consectetur adipiscing elit.</p>
+                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section>
-            <h2>Lancez-vous</h2>
-            <p>En vous connectant à Facebook, nous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</p>
-            <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
-            <a href="#" alt="Connexion à Facebook - VoxOffice" title="Connexion à Facebook - VoxOffice"></a>
+        <section class="home-connect">
+            <div class="content">
+                <h2>Lancez-vous</h2>
+                <p>En vous connectant à Facebook, nous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</p>
+                <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
+                <a href="#" alt="Connexion à Facebook - VoxOffice" title="Connexion à Facebook - VoxOffice"></a>
+            </div>
         </section>
         <footer>
             <div class="wrap">
