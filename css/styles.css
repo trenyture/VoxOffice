@@ -1,10 +1,15 @@
-/* line 30, ../sass/partials/_base.scss */
+/* line 36, ../sass/partials/_base.scss */
 html,
 body {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.4;
   color: #353535;
+  line-height: 1.2;
+}
+
+/* line 44, ../sass/partials/_base.scss */
+a {
+  text-decoration: none;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -604,25 +609,50 @@ th {
 
 /* line 1, ../sass/partials/_grids.scss */
 .content-fluid,
-.content-large,
-.content {
+.content-lg,
+.content-md,
+.content-sm {
   margin: 0 auto;
 }
 
 /* line 7, ../sass/partials/_grids.scss */
 .content-fluid {
   width: 100%;
-  margin: 0 auto;
 }
 
-/* line 12, ../sass/partials/_grids.scss */
-.content-large {
+/* line 10, ../sass/partials/_grids.scss */
+.content-lg {
   width: 960px;
 }
 
-/* line 16, ../sass/partials/_grids.scss */
-.content {
+/* line 13, ../sass/partials/_grids.scss */
+.content-md {
   width: 860px;
+}
+
+/* line 16, ../sass/partials/_grids.scss */
+.content-sm {
+  width: 320px;
+}
+
+/* line 20, ../sass/partials/_grids.scss */
+.full {
+  width: 100%;
+}
+
+/* line 23, ../sass/partials/_grids.scss */
+.half {
+  width: 50%;
+}
+
+/* line 27, ../sass/partials/_grids.scss */
+.left {
+  float: left;
+}
+
+/* line 30, ../sass/partials/_grids.scss */
+.right {
+  float: right;
 }
 
 /* NEXA BOLD */
@@ -679,22 +709,25 @@ h3 {
 
 /* line 8, ../sass/partials/_titles.scss */
 h1 {
+  position: relative;
   font-family: 'montserrat_bold';
   font-size: 92px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.55);
   text-transform: uppercase;
+  line-height: 48px;
+  z-index: 10;
 }
-/* line 13, ../sass/partials/_titles.scss */
+/* line 16, ../sass/partials/_titles.scss */
 h1 a {
   color: #fff;
   text-decoration: none;
 }
-/* line 17, ../sass/partials/_titles.scss */
+/* line 20, ../sass/partials/_titles.scss */
 h1 span {
   font-family: 'montserrat_ultralight';
 }
 
-/* line 22, ../sass/partials/_titles.scss */
+/* line 25, ../sass/partials/_titles.scss */
 h2 {
   font-family: "nexa_bold", Helvetica, Arial, sans-serif;
   font-size: 48px;
@@ -702,7 +735,7 @@ h2 {
   text-transform: uppercase;
 }
 
-/* line 29, ../sass/partials/_titles.scss */
+/* line 32, ../sass/partials/_titles.scss */
 h3 {
   font-family: "nexa_bold", Helvetica, Arial, sans-serif;
   font-size: 36px;
@@ -712,8 +745,8 @@ h3 {
 .btn {
   display: inline-block;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
+  white-space: nowrap;
 }
 /* line 6, ../sass/partials/_buttons.scss */
 .btn:hover {
@@ -742,18 +775,99 @@ header {
   position: fixed;
   width: 100%;
   height: 60px;
+  padding: 0 60px;
   background: rgba(0, 0, 0, 0.7);
   -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 12, ../sass/modules/_header.scss */
+header .logo {
+  float: left;
+  margin-right: 40px;
+}
+/* line 15, ../sass/modules/_header.scss */
+header .logo img {
+  width: auto;
+  height: 46px;
+  margin-top: 6px;
+}
+/* line 22, ../sass/modules/_header.scss */
+header nav,
+header ul li {
+  display: inline-block;
+}
+/* line 25, ../sass/modules/_header.scss */
+header nav + li,
+header ul li + li {
+  margin-left: 40px;
+}
+/* line 28, ../sass/modules/_header.scss */
+header nav a,
+header ul li a {
+  display: block;
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #eee;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+/* line 38, ../sass/modules/_header.scss */
+header .user {
+  float: right;
+  color: #eee;
+}
+/* line 41, ../sass/modules/_header.scss */
+header .user span {
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  color: #fdbd4e;
+  text-transform: uppercase;
+}
+
+/* line 1, ../sass/modules/_home.scss */
+.home section p {
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+/* line 5, ../sass/modules/_home.scss */
+.home section p + p {
+  padding-top: 20px;
+}
+/* line 8, ../sass/modules/_home.scss */
+.home section p.bigger {
+  font-size: 20px;
+  padding-bottom: 42px;
+}
+/* line 11, ../sass/modules/_home.scss */
+.home section p.bigger span {
+  text-transform: uppercase;
+}
+/* line 15, ../sass/modules/_home.scss */
+.home section p a {
+  color: #fdbd4e;
+}
+/* line 17, ../sass/modules/_home.scss */
+.home section p a:hover {
+  text-decoration: underline;
 }
 
 /* ======================================
     INTRODUCTION
 ====================================== */
-/* line 4, ../sass/modules/_home.scss */
+/* line 26, ../sass/modules/_home.scss */
 .home-intro {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   text-align: center;
   background: url("../img/home_background.jpg") no-repeat center center;
@@ -763,37 +877,107 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
 }
+/* line 34, ../sass/modules/_home.scss */
+.home-intro .intro-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 40, ../sass/modules/_home.scss */
+.home-intro .subtitle {
+  position: relative;
+  padding: 54px 0 8px;
+  margin-bottom: 120px;
+  color: #fff;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 48, ../sass/modules/_home.scss */
+.home-intro .subtitle:before {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 34px;
+  width: 36px;
+  height: 1px;
+  margin-left: -18px;
+  background-color: #fff;
+}
 
 /* ======================================
     DESCRIPTION
 ====================================== */
-/* line 16, ../sass/modules/_home.scss */
+/* line 64, ../sass/modules/_home.scss */
 .home-description {
-  background: url("../img/movie_clap.svg") no-repeat top right #7b6696;
-  background-size: 42% auto;
+  background: url("../img/movie_clap.svg") no-repeat top -120px right -24px #7b6696;
+  background-size: 38% auto;
+  border-bottom: 1px solid #413454;
 }
-/* line 20, ../sass/modules/_home.scss */
-.home-description h2 {
+/* line 69, ../sass/modules/_home.scss */
+.home-description .description {
+  padding: 200px 0;
+}
+/* line 71, ../sass/modules/_home.scss */
+.home-description .description h2 {
+  color: #fdffe6;
+  padding-bottom: 66px;
+}
+/* line 75, ../sass/modules/_home.scss */
+.home-description .description p {
   color: #fdffe6;
 }
 
 /* ======================================
     GET STARTED
 ====================================== */
-/* line 28, ../sass/modules/_home.scss */
+/* line 85, ../sass/modules/_home.scss */
 .home-features {
   padding: 80px 0;
 }
-/* line 30, ../sass/modules/_home.scss */
+/* line 88, ../sass/modules/_home.scss */
 .home-features h2 {
   color: #7b6696;
   text-align: center;
+  padding-bottom: 24px;
+}
+/* line 94, ../sass/modules/_home.scss */
+.home-features .feature {
+  position: relative;
+  padding: 72px 0;
+}
+/* line 97, ../sass/modules/_home.scss */
+.home-features .feature:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  width: 320px;
+  height: 1px;
+  margin: 0 auto 0 -160px;
+  background-color: #eaeaea;
+}
+/* line 107, ../sass/modules/_home.scss */
+.home-features .feature h3 {
+  padding-bottom: 58px;
+  color: #413454;
+}
+/* line 111, ../sass/modules/_home.scss */
+.home-features .feature p {
+  color: #7b6696;
+}
+/* line 114, ../sass/modules/_home.scss */
+.home-features .feature img {
+  width: auto;
+  height: 160px;
 }
 
 /* ======================================
     CONNECT
 ====================================== */
-/* line 39, ../sass/modules/_home.scss */
+/* line 124, ../sass/modules/_home.scss */
 .home-connect {
   padding: 80px 0;
   text-align: center;
@@ -803,27 +987,63 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 45, ../sass/modules/_home.scss */
+/* line 130, ../sass/modules/_home.scss */
 .home-connect h2 {
+  color: #fdbd4e;
+  padding-bottom: 12px;
+}
+/* line 134, ../sass/modules/_home.scss */
+.home-connect p {
+  padding-bottom: 34px;
+  color: #fdffe6;
+}
+/* line 137, ../sass/modules/_home.scss */
+.home-connect p small {
+  font-size: 11px;
+  text-align: center;
+}
+/* line 142, ../sass/modules/_home.scss */
+.home-connect .alert {
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   color: #fdbd4e;
 }
 
 /* line 1, ../sass/modules/_footer.scss */
 footer {
-  background-color: #353535;
   color: #eee;
+  background-color: #353535;
 }
-/* line 5, ../sass/modules/_footer.scss */
-footer li {
+/* line 2, ../sass/partials/_mixins.scss */
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 6, ../sass/modules/_footer.scss */
+footer ul {
+  float: left;
+}
+/* line 8, ../sass/modules/_footer.scss */
+footer ul li {
   display: inline-block;
 }
-/* line 7, ../sass/modules/_footer.scss */
-footer li + li {
+/* line 10, ../sass/modules/_footer.scss */
+footer ul li + li {
   margin-left: 54px;
 }
-/* line 10, ../sass/modules/_footer.scss */
-footer li a {
+/* line 13, ../sass/modules/_footer.scss */
+footer ul li a {
+  padding: 13px 0;
   display: block;
-  font-family: "montserrat_light";
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 15px;
+  color: #eee;
+}
+/* line 23, ../sass/modules/_footer.scss */
+footer p {
+  text-align: right;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  line-height: 42px;
 }

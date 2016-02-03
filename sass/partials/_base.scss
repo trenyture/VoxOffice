@@ -8,7 +8,13 @@ $title-size: 48px;
 // Base font
 $text-font: 'montserrat', Helvetica, Arial, sans-serif;
 $text-size: 14px;
-$text-line-height: 1.4;
+$text-line-height: 1.2;
+
+// Font states
+$text-ultralight: 'montserrat_ultralight', Helvetica, Arial, sans-serif;
+$text-light: 'montserrat_light', Helvetica, Arial, sans-serif;
+$text-semibold: 'montserrat_semibold', Helvetica, Arial, sans-serif;
+$text-bold: 'montserrat_bold', Helvetica, Arial, sans-serif;
 
 // Colors
 $orange: #fdbd4e;
@@ -31,6 +37,10 @@ html,
 body {
     font-family: $text-font;
     font-size: $text-size;
-    line-height: $text-line-height;
     color: $dark-grey;
+    line-height: $text-line-height;
+}
+
+a {
+    text-decoration: none;
 }

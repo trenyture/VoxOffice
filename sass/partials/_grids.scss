@@ -1,18 +1,32 @@
 .content-fluid,
-.content-large,
-.content {
+.content-lg,
+.content-md,
+.content-sm {
     margin: 0 auto;
 }
-
 .content-fluid {
     width: 100%;
-    margin: 0 auto;
 }
-
-.content-large {
+.content-lg {
     width: 960px;
 }
-
-.content {
+.content-md {
     width: 860px;
+}
+.content-sm {
+    width: 320px;
+}
+
+.full {
+    width: 100%;
+}
+.half {
+    width: 50%;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
 }

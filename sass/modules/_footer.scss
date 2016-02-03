@@ -1,17 +1,29 @@
 footer {
-    background-color: $dark-grey;
     color: $light-grey;
+    background-color: $dark-grey;
+    @include clearfix;
     
-    li {
-        display: inline-block;
-        & + li {
-            margin-left: 54px;
-        }
-        a {
-            display: block;
-            font-family: "montserrat_light";
-            font-size: 15px;
+    ul {
+        float: left;
+        li {
+            display: inline-block;
+            & + li {
+                margin-left: 54px;
+            }
+            a {
+                padding: 13px 0;
+                display: block;
+                font-family: $text-light;
+                font-size: 15px;
+                color: $light-grey;
+            }
         }
     }
     
+    p {
+        text-align: right;
+        font-family: $text-light;
+        font-size: 11px;
+        line-height: 42px;
+    }
 }
