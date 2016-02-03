@@ -1,0 +1,26 @@
+html {
+    font-family: $text-font;
+    font-size: $text-size;
+    line-height: $text-line-height;
+    color: $dark-grey;
+    background: #000;
+}
+
+h1 {
+    font-family: 'montserrat_bold';
+    font-size: 92px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .55);
+    
+    span {
+        font-family: 'montserrat_ultralight';
+    }
+}
+h2 {
+    font-family: $title-font;
+    font-size: $title-size;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+h3 {
+    font-family: $title-font;
+    font-size: 36px;
+}

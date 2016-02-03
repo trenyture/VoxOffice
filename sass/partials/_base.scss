@@ -1,19 +1,14 @@
-// Use Compass ('cause it rocks!)
+// Compass
 @import "compass";
 
-// Base Font
-$base-font-family: sans-serif;
-$base-font-weight: $regular;
-$base-font-size: 13px;
-$base-line-height: 1.4;
-
-// Font weights
-$light: 100;
-$regular: 400;
-$bold: 600;
-
 // Headings
-$header-font-weight: $bold;
+$title-font: 'nexa_bold', Helvetica, Arial, sans-serif;
+$title-size: 48px;
+
+// Base font
+$text-font: 'montserrat', Helvetica, Arial, sans-serif;
+$text-size: 14px;
+$text-line-height: 1.4;
 
 // Imports all modules
 @import "modules/all";
