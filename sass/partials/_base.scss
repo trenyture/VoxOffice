@@ -10,5 +10,27 @@ $text-font: 'montserrat', Helvetica, Arial, sans-serif;
 $text-size: 14px;
 $text-line-height: 1.4;
 
-// Imports all modules
-@import "modules/all";
+// Colors
+$orange: #fdbd4e;
+$dark-orange: #e59f26;
+
+$purple: #7b6696;
+$dark-purple: #413454;
+
+$yellow: #fdffe6;
+
+$fb-blue: #4d68a4;
+$dark-fb-blue: #364973;
+
+$border-grey: #eaeaea;
+$light-grey: #eee;
+$dark-grey: #353535;
+
+// Base elements
+html,
+body {
+    font-family: $text-font;
+    font-size: $text-size;
+    line-height: $text-line-height;
+    color: $dark-grey;
+}

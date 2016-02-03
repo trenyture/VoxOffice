@@ -1,13 +1,16 @@
-// Modules and Variables
+// Variables
 @import "partials/base";
 
 // Partials
 @import "partials/reset";
 @import "partials/normalize";
 @import "partials/mixins";
-@import "partials/fonts";
 @import "partials/grids";
-@import "partials/layout";
+@import "partials/fonts";
+@import "partials/titles";
 @import "partials/buttons";
-@import "partials/figures";
 @import "partials/icons";
+@import "partials/figures";
+
+// All modules
+@import "modules/all";

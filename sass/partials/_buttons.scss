@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-square {
+    &.small {
+        
+    }
+}
+
+.btn-fb {
+    
+}
+
+.btn-round {
+    
+}

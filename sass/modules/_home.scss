@@ -26,6 +26,7 @@
     GET STARTED
 ====================================== */
 .home-features {
+    padding: 80px 0;
     h2 {
         color: $purple;
         text-align: center;
@@ -36,6 +37,7 @@
     CONNECT
 ====================================== */
 .home-connect {
+    padding: 80px 0;
     text-align: center;
     background: url("../img/movie_mosaic.jpg") no-repeat center center;
     @include background-size(cover);

@@ -1,14 +1,18 @@
+.content-fluid,
+.content-large,
+.content {
+    margin: 0 auto;
+}
+
 .content-fluid {
     width: 100%;
     margin: 0 auto;
 }
 
 .content-large {
-    @extend .content-fluid;
     width: 960px;
 }
 
 .content {
-    @extend .content-fluid;
     width: 860px;
 }

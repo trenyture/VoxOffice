@@ -1,0 +1,17 @@
+footer {
+    background-color: $dark-grey;
+    color: $light-grey;
+    
+    li {
+        display: inline-block;
+        & + li {
+            margin-left: 54px;
+        }
+        a {
+            display: block;
+            font-family: "montserrat_light";
+            font-size: 15px;
+        }
+    }
+    
+}

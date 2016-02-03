@@ -1,8 +1,8 @@
-html {
-    font-family: $text-font;
-    font-size: $text-size;
-    line-height: $text-line-height;
-    color: $dark-grey;
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -18,12 +18,14 @@ h1 {
         font-family: 'montserrat_ultralight';
     }
 }
+
 h2 {
     font-family: $title-font;
     font-size: $title-size;
     text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
     text-transform: uppercase;
 }
+
 h3 {
     font-family: $title-font;
     font-size: 36px;

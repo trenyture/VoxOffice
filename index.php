@@ -48,7 +48,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-    <body>
+    <body class="home">
         <header>
             <nav>
                 <ul>
@@ -114,7 +114,7 @@
             </div>
         </section>
         <footer>
-            <div class="wrap">
+            <div class="content-large">
                 <ul>
                     <li>Versions</li>
                     <li>FAQ</li>
