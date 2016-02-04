@@ -5,11 +5,41 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1;
+    vertical-align: middle;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-lab {
+    width: 16px;
+    height: 16px;
     background: url('../img/icon_potion.svg') no-repeat;
 }
 
+.icon-scroll {
+    position: absolute;
+    top: auto;
+    bottom: 26px;
+    width: 18px;
+    height: 34px;
+    margin-left: -9px;
+    border: 3px solid #fff;
+    @include border-radius(15px);
+    &:after {
+        position: absolute;
+        content: '';
+        top: 7px;
+        left: 8px;
+        width: 3px;
+        height: 8px;
+        background: #fff;
+        animation: {
+            name: mouse;
+            duration: 1s;
+            iteration-count: infinite;
+        }
+    }
+}
+@keyframes mouse {
+    to {top: 10px;}
+}

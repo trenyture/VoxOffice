@@ -1,4 +1,4 @@
-/* line 36, ../sass/partials/_base.scss */
+/* line 38, ../sass/partials/_base.scss */
 html,
 body {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -7,7 +7,7 @@ body {
   line-height: 1.2;
 }
 
-/* line 44, ../sass/partials/_base.scss */
+/* line 46, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
 }
@@ -753,6 +753,91 @@ h3 {
   cursor: pointer;
 }
 
+/* line 11, ../sass/partials/_buttons.scss */
+.btn-square {
+  padding: 12px 82px;
+  font-family: 'nexa_bold';
+  font-size: 36px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #fdbd4e;
+  border-top: 1px solid #fee6bc;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 23, ../sass/partials/_buttons.scss */
+.btn-square:hover {
+  background: #e59f26;
+  border-top: 1px solid #fdbd4e;
+  text-shadow: none;
+  -moz-box-shadow: 0 3px 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 3px 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
+}
+
+/* line 31, ../sass/partials/_buttons.scss */
+.btn-fb {
+  padding: 10px 22px 8px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #fff;
+  background: #4d68a4;
+  border-top: 1px solid #7c96d1;
+  -moz-box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 41, ../sass/partials/_buttons.scss */
+.btn-fb:hover {
+  background: #364973;
+  border-top: 1px solid #4d68a4;
+  -moz-box-shadow: 0 3px 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 3px 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
+}
+/* line 46, ../sass/partials/_buttons.scss */
+.btn-fb i {
+  padding-right: 24px;
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+/* line 53, ../sass/partials/_buttons.scss */
+.btn-round {
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
+  padding: 12px 22px;
+  color: #413454;
+  background: #fdbd4e;
+  border-bottom: 2px solid #e59f26;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 61, ../sass/partials/_buttons.scss */
+.btn-round:hover {
+  background: #e59f26;
+}
+
 /* line 1, ../sass/partials/_icons.scss */
 .icon {
   position: relative;
@@ -761,21 +846,57 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 1;
+  vertical-align: middle;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 12, ../sass/partials/_icons.scss */
+/* line 13, ../sass/partials/_icons.scss */
 .icon-lab {
+  width: 16px;
+  height: 16px;
   background: url("../img/icon_potion.svg") no-repeat;
 }
 
+/* line 19, ../sass/partials/_icons.scss */
+.icon-scroll {
+  position: absolute;
+  top: auto;
+  bottom: 26px;
+  width: 18px;
+  height: 34px;
+  margin-left: -9px;
+  border: 3px solid #fff;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+/* line 28, ../sass/partials/_icons.scss */
+.icon-scroll:after {
+  position: absolute;
+  content: '';
+  top: 7px;
+  left: 8px;
+  width: 3px;
+  height: 8px;
+  background: #fff;
+  animation-name: mouse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mouse {
+  to {
+    top: 10px;
+  }
+}
 /* line 1, ../sass/modules/_header.scss */
 header {
   position: fixed;
   width: 100%;
   height: 60px;
   padding: 0 60px;
+  color: #eee;
   background: rgba(0, 0, 0, 0.7);
   -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
@@ -786,33 +907,36 @@ header {
   z-index: 100;
 }
 /* line 2, ../sass/partials/_mixins.scss */
-header:after {
+header:before, header:after {
   content: "";
   display: table;
+}
+/* line 7, ../sass/partials/_mixins.scss */
+header:after {
   clear: both;
 }
-/* line 12, ../sass/modules/_header.scss */
+/* line 13, ../sass/modules/_header.scss */
 header .logo {
   float: left;
   margin-right: 40px;
 }
-/* line 15, ../sass/modules/_header.scss */
+/* line 16, ../sass/modules/_header.scss */
 header .logo img {
   width: auto;
   height: 46px;
   margin-top: 6px;
 }
-/* line 22, ../sass/modules/_header.scss */
+/* line 23, ../sass/modules/_header.scss */
 header nav,
 header ul li {
   display: inline-block;
 }
-/* line 25, ../sass/modules/_header.scss */
+/* line 26, ../sass/modules/_header.scss */
 header nav + li,
 header ul li + li {
   margin-left: 40px;
 }
-/* line 28, ../sass/modules/_header.scss */
+/* line 29, ../sass/modules/_header.scss */
 header nav a,
 header ul li a {
   display: block;
@@ -822,14 +946,36 @@ header ul li a {
   line-height: 60px;
   text-transform: uppercase;
 }
-/* line 38, ../sass/modules/_header.scss */
+/* line 39, ../sass/modules/_header.scss */
 header .user {
   float: right;
   color: #eee;
 }
-/* line 41, ../sass/modules/_header.scss */
-header .user span {
+/* line 42, ../sass/modules/_header.scss */
+header .user .user-portrait {
+  float: left;
+  margin: 6px 11px 0 0;
+  overflow: hidden;
+}
+/* line 46, ../sass/modules/_header.scss */
+header .user .user-portrait img {
+  width: 48px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 51, ../sass/modules/_header.scss */
+header .user p {
+  padding: 12px 0;
+  display: inline-block;
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+/* line 57, ../sass/modules/_header.scss */
+header .user p span {
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   color: #fdbd4e;
   text-transform: uppercase;
 }
@@ -867,6 +1013,7 @@ header .user span {
 ====================================== */
 /* line 26, ../sass/modules/_home.scss */
 .home-intro {
+  position: relative;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -877,7 +1024,7 @@ header .user span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 34, ../sass/modules/_home.scss */
+/* line 35, ../sass/modules/_home.scss */
 .home-intro .intro-content {
   position: relative;
   top: 50%;
@@ -885,7 +1032,7 @@ header .user span {
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 40, ../sass/modules/_home.scss */
+/* line 41, ../sass/modules/_home.scss */
 .home-intro .subtitle {
   position: relative;
   padding: 54px 0 8px;
@@ -895,7 +1042,7 @@ header .user span {
   font-size: 24px;
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* line 48, ../sass/modules/_home.scss */
+/* line 49, ../sass/modules/_home.scss */
 .home-intro .subtitle:before {
   position: absolute;
   content: '';
@@ -910,22 +1057,22 @@ header .user span {
 /* ======================================
     DESCRIPTION
 ====================================== */
-/* line 64, ../sass/modules/_home.scss */
+/* line 65, ../sass/modules/_home.scss */
 .home-description {
   background: url("../img/movie_clap.svg") no-repeat top -120px right -24px #7b6696;
   background-size: 38% auto;
   border-bottom: 1px solid #413454;
 }
-/* line 69, ../sass/modules/_home.scss */
+/* line 70, ../sass/modules/_home.scss */
 .home-description .description {
   padding: 200px 0;
 }
-/* line 71, ../sass/modules/_home.scss */
+/* line 72, ../sass/modules/_home.scss */
 .home-description .description h2 {
   color: #fdffe6;
   padding-bottom: 66px;
 }
-/* line 75, ../sass/modules/_home.scss */
+/* line 76, ../sass/modules/_home.scss */
 .home-description .description p {
   color: #fdffe6;
 }
@@ -933,22 +1080,22 @@ header .user span {
 /* ======================================
     GET STARTED
 ====================================== */
-/* line 85, ../sass/modules/_home.scss */
+/* line 86, ../sass/modules/_home.scss */
 .home-features {
   padding: 80px 0;
 }
-/* line 88, ../sass/modules/_home.scss */
+/* line 89, ../sass/modules/_home.scss */
 .home-features h2 {
   color: #7b6696;
   text-align: center;
   padding-bottom: 24px;
 }
-/* line 94, ../sass/modules/_home.scss */
+/* line 95, ../sass/modules/_home.scss */
 .home-features .feature {
   position: relative;
   padding: 72px 0;
 }
-/* line 97, ../sass/modules/_home.scss */
+/* line 98, ../sass/modules/_home.scss */
 .home-features .feature:after {
   position: absolute;
   content: '';
@@ -959,17 +1106,44 @@ header .user span {
   margin: 0 auto 0 -160px;
   background-color: #eaeaea;
 }
-/* line 107, ../sass/modules/_home.scss */
-.home-features .feature h3 {
+/* line 108, ../sass/modules/_home.scss */
+.home-features .feature:last-of-type {
+  padding-bottom: 0;
+}
+/* line 110, ../sass/modules/_home.scss */
+.home-features .feature:last-of-type:after {
+  display: none;
+}
+/* line 114, ../sass/modules/_home.scss */
+.home-features .feature .feature-content {
+  width: 50%;
+  display: inline-block;
+}
+/* line 117, ../sass/modules/_home.scss */
+.home-features .feature .feature-content h3 {
   padding-bottom: 58px;
   color: #413454;
 }
-/* line 111, ../sass/modules/_home.scss */
-.home-features .feature p {
+/* line 121, ../sass/modules/_home.scss */
+.home-features .feature .feature-content p {
   color: #7b6696;
 }
-/* line 114, ../sass/modules/_home.scss */
-.home-features .feature img {
+/* line 123, ../sass/modules/_home.scss */
+.home-features .feature .feature-content p:last-of-type {
+  padding-bottom: 34px;
+}
+/* line 128, ../sass/modules/_home.scss */
+.home-features .feature .feature-img {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+/* line 132, ../sass/modules/_home.scss */
+.home-features .feature .feature-img.right img {
+  float: right;
+}
+/* line 135, ../sass/modules/_home.scss */
+.home-features .feature .feature-img img {
   width: auto;
   height: 160px;
 }
@@ -977,7 +1151,7 @@ header .user span {
 /* ======================================
     CONNECT
 ====================================== */
-/* line 124, ../sass/modules/_home.scss */
+/* line 146, ../sass/modules/_home.scss */
 .home-connect {
   padding: 80px 0;
   text-align: center;
@@ -987,23 +1161,24 @@ header .user span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 130, ../sass/modules/_home.scss */
+/* line 152, ../sass/modules/_home.scss */
 .home-connect h2 {
   color: #fdbd4e;
   padding-bottom: 12px;
 }
-/* line 134, ../sass/modules/_home.scss */
+/* line 156, ../sass/modules/_home.scss */
 .home-connect p {
   padding-bottom: 34px;
   color: #fdffe6;
 }
-/* line 137, ../sass/modules/_home.scss */
+/* line 159, ../sass/modules/_home.scss */
 .home-connect p small {
   font-size: 11px;
   text-align: center;
 }
-/* line 142, ../sass/modules/_home.scss */
+/* line 164, ../sass/modules/_home.scss */
 .home-connect .alert {
+  padding-bottom: 58px;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #fdbd4e;
@@ -1015,9 +1190,12 @@ footer {
   background-color: #353535;
 }
 /* line 2, ../sass/partials/_mixins.scss */
-footer:after {
+footer:before, footer:after {
   content: "";
   display: table;
+}
+/* line 7, ../sass/partials/_mixins.scss */
+footer:after {
   clear: both;
 }
 /* line 6, ../sass/modules/_footer.scss */
@@ -1042,8 +1220,14 @@ footer ul li a {
 }
 /* line 23, ../sass/modules/_footer.scss */
 footer p {
-  text-align: right;
+  float: right;
+  display: inline-block;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 42px;
+}
+/* line 29, ../sass/modules/_footer.scss */
+footer p span {
+  margin-top: -6px;
+  padding-right: 6px;
 }

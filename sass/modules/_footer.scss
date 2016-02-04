@@ -1,7 +1,7 @@
 footer {
     color: $light-grey;
     background-color: $dark-grey;
-    @include clearfix;
+    @include clearfix();
     
     ul {
         float: left;
@@ -21,9 +21,14 @@ footer {
     }
     
     p {
-        text-align: right;
+        float: right;
+        display: inline-block;
         font-family: $text-light;
         font-size: 11px;
         line-height: 42px;
+        span {
+            margin-top: -6px;
+            padding-right: 6px;
+        }
     }
 }

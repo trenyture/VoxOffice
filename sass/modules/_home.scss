@@ -24,6 +24,7 @@
     INTRODUCTION
 ====================================== */
 .home-intro {
+    position: relative;
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -104,16 +105,37 @@
             margin: 0 auto 0 -160px;
             background-color: $border-grey;
         }
-        h3 {
-            padding-bottom: 58px;
-            color: $dark-purple;
+        &:last-of-type {
+            padding-bottom: 0;
+            &:after {
+                display: none;
+            }
         }
-        p {
-            color: $purple;
+        .feature-content {
+            width: 50%;
+            display: inline-block;
+            h3 {
+                padding-bottom: 58px;
+                color: $dark-purple;
+            }
+            p {
+                color: $purple;
+                &:last-of-type {
+                    padding-bottom: 34px;
+                }
+            }
         }
-        img {
-            width: auto;
-            height: 160px;
+        .feature-img {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            &.right img {
+                float: right;
+            }
+            img {
+                width: auto;
+                height: 160px;
+            }
         }
     }
 }
@@ -140,6 +162,7 @@
         }
     }
     .alert {
+        padding-bottom: 58px;
         font-family: $text-semibold;
         font-size: 18px;
         color: $orange;

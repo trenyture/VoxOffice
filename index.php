@@ -60,7 +60,9 @@
                 </ul>
             </nav>
             <div class="user">
-                <img src="#" alt="Utilisateur" title="Utilisateur" />
+                <div class="user-portrait">
+                    <img src="img/portrait.jpg" alt="Utilisateur" title="Utilisateur" />
+                </div>
                 <p>Connecté en tant que :<br/><span id="username">Pierre Prézelin</span></p>
             </div>
         </header>
@@ -68,9 +70,9 @@
             <div class="intro-content">
                 <h1><a href="#" title="VoxOffice - Accueil" alt="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
                 <p class="subtitle">Tous vos films favoris. Classés.</p>
-                <a href="#" class="btn btn-home">Go!</a>
+                <a href="#" class="btn btn-square">Go!</a>
             </div>
-            <a href="#home-description"><span></span></a>
+            <a href="#home-description"><span class="icon icon-scroll"></span></a>
         </section>
         <section class="home-description">
             <div class="content-lg">
@@ -88,24 +90,36 @@
                 <h2>Comment faire</h2>
                 <ul>
                     <li class="feature feature-vote">
-                        <h3>Votez.</h3>
-                        <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
-                        <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                        <img src="img/vote.svg" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
+                        <div class="feature-content">
+                            <h3>Votez.</h3>
+                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
+                            <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
+                            <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                        </div>
+                        <div class="feature-img right">
+                            <img src="img/vote.svg" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
+                        </div>
                     </li>
                     <li class="feature feature-add">
-                        <h3>Ajoutez.</h3>
-                        <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                        <img src="img/add.svg" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
+                        <div class="feature-content">
+                            <h3>Ajoutez.</h3>
+                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
+                            <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                        </div>
+                        <div class="feature-img left">
+                            <img src="img/add.svg" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
+                        </div>
                     </li>
                     <li class="feature feature-compare">
-                        <h3>Comparez.</h3>
-                        <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
-                        <p>Aliquam nibh velit.</p>
-                        <a href="#" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
-                        <img src="img/compare.svg" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
+                        <div class="feature-content">
+                            <h3>Comparez.</h3>
+                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
+                            <p>Aliquam nibh velit.</p>
+                            <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
+                        </div>
+                        <div class="feature-img right">
+                            <img src="img/compare.svg" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -117,7 +131,7 @@
                     <p><small>En vous connectant à Facebook, nous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</small></p>
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
-                <a href="#" alt="Connexion à Facebook - VoxOffice" title="Connexion à Facebook - VoxOffice" class="btn btn-fb"></a>
+                <a href="#" alt="Connexion à Facebook - VoxOffice" title="Connexion à Facebook - VoxOffice" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
             </div>
         </section>
         <footer>
