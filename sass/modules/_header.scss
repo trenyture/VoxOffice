@@ -5,18 +5,24 @@ header {
     padding: 0 60px;
     color: $light-grey;
     background: rgba(0, 0, 0, .7);
-    @include box-shadow(rgba(black, .35) 0 2px 2px);
+    @include box-shadow(rgba(black, .35) 0 1px 2px);
     @include box-sizing(border-box);
+    @include transition();
     @include clearfix;
     z-index: 100;
     
     .logo {
         float: left;
+        width: 57px;
+        height: 46px;
+        margin-top: 6px;
         margin-right: 40px;
-        img {
-            width: auto;
-            height: 46px;
-            margin-top: 6px;
+        &:hover svg path {
+            fill: $orange;
+        }
+        svg path {
+            fill: #fff;
+            @include transition();
         }
     }
     
@@ -33,19 +39,43 @@ header {
             color: $light-grey;
             line-height: 60px;
             text-transform: uppercase;
+            &:hover {
+                color: $orange;
+            }
         }
     }
 
     .user {
         float: right;
         color: $light-grey;
+        
         .user-portrait {
+            position: relative;
             float: left;
             margin: 6px 11px 0 0;
             overflow: hidden;
-            img {
-                width: 48px;
-                @include border-radius(50%);
+            a {
+                overflow: hidden;
+                &:hover span {
+                    @include transform(scale(1));
+                }
+                span {
+                    position: absolute;
+                    width: 48px;
+                    height: 48px;
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: 48px;
+                    text-align: center;
+                    background: rgba(0, 0, 0, .6);
+                    @include border-radius(50%);
+                    @include transform(scale(0));
+                    @include transition();
+                }
+                img {
+                    width: 48px;
+                    @include border-radius(50%);
+                }
             }
         }
         p {
@@ -59,6 +89,34 @@ header {
                 font-size: 14px;
                 color: $orange;
                 text-transform: uppercase;
+            }
+        }
+    }
+    
+    // Scrolled
+    &.scrolled {
+        background: #fff;
+        
+        .logo {
+            &:hover svg path {
+                fill: $dark-purple;
+            }
+            svg path {
+                fill: $purple;
+            }
+        }
+        
+        ul li a {
+            color: $purple;
+            &:hover {
+                color: $dark-purple;
+            }
+        }
+        
+        .user {
+            color: $grey;
+            p span {
+                color: $purple;
             }
         }
     }

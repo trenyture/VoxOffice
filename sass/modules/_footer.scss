@@ -2,20 +2,24 @@ footer {
     color: $light-grey;
     background-color: $dark-grey;
     @include clearfix();
-    
     ul {
         float: left;
+        padding-top: 8px;
         li {
             display: inline-block;
             & + li {
-                margin-left: 54px;
+                margin-left: 42px;
             }
             a {
-                padding: 13px 0;
+                padding: 6px 8px;
                 display: block;
                 font-family: $text-light;
                 font-size: 15px;
                 color: $light-grey;
+                @include border-radius(2px);
+                &:hover {
+                    background: darken($dark-grey, 3%);
+                }
             }
         }
     }

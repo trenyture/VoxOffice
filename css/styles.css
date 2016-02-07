@@ -1,4 +1,4 @@
-/* line 38, ../sass/partials/_base.scss */
+/* line 39, ../sass/partials/_base.scss */
 html,
 body {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -7,7 +7,7 @@ body {
   line-height: 1.2;
 }
 
-/* line 46, ../sass/partials/_base.scss */
+/* line 47, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
 }
@@ -898,12 +898,13 @@ header {
   padding: 0 60px;
   color: #eee;
   background: rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.35) 0 1px 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 1px 2px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  transition: all .3s;
   z-index: 100;
 }
 /* line 2, ../sass/partials/_mixins.scss */
@@ -915,28 +916,34 @@ header:before, header:after {
 header:after {
   clear: both;
 }
-/* line 13, ../sass/modules/_header.scss */
+/* line 14, ../sass/modules/_header.scss */
 header .logo {
   float: left;
-  margin-right: 40px;
-}
-/* line 16, ../sass/modules/_header.scss */
-header .logo img {
-  width: auto;
+  width: 57px;
   height: 46px;
   margin-top: 6px;
+  margin-right: 40px;
+}
+/* line 20, ../sass/modules/_header.scss */
+header .logo:hover svg path {
+  fill: #fdbd4e;
 }
 /* line 23, ../sass/modules/_header.scss */
+header .logo svg path {
+  fill: #fff;
+  transition: all .3s;
+}
+/* line 29, ../sass/modules/_header.scss */
 header nav,
 header ul li {
   display: inline-block;
 }
-/* line 26, ../sass/modules/_header.scss */
+/* line 32, ../sass/modules/_header.scss */
 header nav + li,
 header ul li + li {
   margin-left: 40px;
 }
-/* line 29, ../sass/modules/_header.scss */
+/* line 35, ../sass/modules/_header.scss */
 header nav a,
 header ul li a {
   display: block;
@@ -946,25 +953,61 @@ header ul li a {
   line-height: 60px;
   text-transform: uppercase;
 }
-/* line 39, ../sass/modules/_header.scss */
+/* line 42, ../sass/modules/_header.scss */
+header nav a:hover,
+header ul li a:hover {
+  color: #fdbd4e;
+}
+/* line 48, ../sass/modules/_header.scss */
 header .user {
   float: right;
   color: #eee;
 }
-/* line 42, ../sass/modules/_header.scss */
+/* line 52, ../sass/modules/_header.scss */
 header .user .user-portrait {
+  position: relative;
   float: left;
   margin: 6px 11px 0 0;
   overflow: hidden;
 }
-/* line 46, ../sass/modules/_header.scss */
-header .user .user-portrait img {
+/* line 57, ../sass/modules/_header.scss */
+header .user .user-portrait a {
+  overflow: hidden;
+}
+/* line 59, ../sass/modules/_header.scss */
+header .user .user-portrait a:hover span {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 62, ../sass/modules/_header.scss */
+header .user .user-portrait a span {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: #fff;
+  line-height: 48px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: all .3s;
+}
+/* line 75, ../sass/modules/_header.scss */
+header .user .user-portrait a img {
   width: 48px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 51, ../sass/modules/_header.scss */
+/* line 81, ../sass/modules/_header.scss */
 header .user p {
   padding: 12px 0;
   display: inline-block;
@@ -972,12 +1015,40 @@ header .user p {
   font-size: 12px;
   line-height: 1.4;
 }
-/* line 57, ../sass/modules/_header.scss */
+/* line 87, ../sass/modules/_header.scss */
 header .user p span {
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #fdbd4e;
   text-transform: uppercase;
+}
+/* line 97, ../sass/modules/_header.scss */
+header.scrolled {
+  background: #fff;
+}
+/* line 101, ../sass/modules/_header.scss */
+header.scrolled .logo:hover svg path {
+  fill: #413454;
+}
+/* line 104, ../sass/modules/_header.scss */
+header.scrolled .logo svg path {
+  fill: #7b6696;
+}
+/* line 109, ../sass/modules/_header.scss */
+header.scrolled ul li a {
+  color: #7b6696;
+}
+/* line 111, ../sass/modules/_header.scss */
+header.scrolled ul li a:hover {
+  color: #413454;
+}
+/* line 116, ../sass/modules/_header.scss */
+header.scrolled .user {
+  color: #6e6e6e;
+}
+/* line 118, ../sass/modules/_header.scss */
+header.scrolled .user p span {
+  color: #7b6696;
 }
 
 /* line 1, ../sass/modules/_home.scss */
@@ -1114,35 +1185,35 @@ header .user p span {
 .home-features .feature:last-of-type:after {
   display: none;
 }
-/* line 114, ../sass/modules/_home.scss */
+/* line 115, ../sass/modules/_home.scss */
 .home-features .feature .feature-content {
   width: 50%;
   display: inline-block;
 }
-/* line 117, ../sass/modules/_home.scss */
+/* line 118, ../sass/modules/_home.scss */
 .home-features .feature .feature-content h3 {
   padding-bottom: 58px;
   color: #413454;
 }
-/* line 121, ../sass/modules/_home.scss */
+/* line 122, ../sass/modules/_home.scss */
 .home-features .feature .feature-content p {
   color: #7b6696;
 }
-/* line 123, ../sass/modules/_home.scss */
+/* line 124, ../sass/modules/_home.scss */
 .home-features .feature .feature-content p:last-of-type {
   padding-bottom: 34px;
 }
-/* line 128, ../sass/modules/_home.scss */
+/* line 130, ../sass/modules/_home.scss */
 .home-features .feature .feature-img {
   position: relative;
   width: 50%;
   height: 100%;
 }
-/* line 132, ../sass/modules/_home.scss */
+/* line 134, ../sass/modules/_home.scss */
 .home-features .feature .feature-img.right img {
   float: right;
 }
-/* line 135, ../sass/modules/_home.scss */
+/* line 137, ../sass/modules/_home.scss */
 .home-features .feature .feature-img img {
   width: auto;
   height: 160px;
@@ -1151,7 +1222,7 @@ header .user p span {
 /* ======================================
     CONNECT
 ====================================== */
-/* line 146, ../sass/modules/_home.scss */
+/* line 148, ../sass/modules/_home.scss */
 .home-connect {
   padding: 80px 0;
   text-align: center;
@@ -1161,22 +1232,22 @@ header .user p span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 152, ../sass/modules/_home.scss */
+/* line 154, ../sass/modules/_home.scss */
 .home-connect h2 {
   color: #fdbd4e;
   padding-bottom: 12px;
 }
-/* line 156, ../sass/modules/_home.scss */
+/* line 158, ../sass/modules/_home.scss */
 .home-connect p {
   padding-bottom: 34px;
   color: #fdffe6;
 }
-/* line 159, ../sass/modules/_home.scss */
+/* line 161, ../sass/modules/_home.scss */
 .home-connect p small {
   font-size: 11px;
   text-align: center;
 }
-/* line 164, ../sass/modules/_home.scss */
+/* line 166, ../sass/modules/_home.scss */
 .home-connect .alert {
   padding-bottom: 58px;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
@@ -1198,9 +1269,10 @@ footer:before, footer:after {
 footer:after {
   clear: both;
 }
-/* line 6, ../sass/modules/_footer.scss */
+/* line 5, ../sass/modules/_footer.scss */
 footer ul {
   float: left;
+  padding-top: 8px;
 }
 /* line 8, ../sass/modules/_footer.scss */
 footer ul li {
@@ -1208,17 +1280,24 @@ footer ul li {
 }
 /* line 10, ../sass/modules/_footer.scss */
 footer ul li + li {
-  margin-left: 54px;
+  margin-left: 42px;
 }
 /* line 13, ../sass/modules/_footer.scss */
 footer ul li a {
-  padding: 13px 0;
+  padding: 6px 8px;
   display: block;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #eee;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
-/* line 23, ../sass/modules/_footer.scss */
+/* line 20, ../sass/modules/_footer.scss */
+footer ul li a:hover {
+  background: #2d2d2d;
+}
+/* line 27, ../sass/modules/_footer.scss */
 footer p {
   float: right;
   display: inline-block;
@@ -1226,7 +1305,7 @@ footer p {
   font-size: 11px;
   line-height: 42px;
 }
-/* line 29, ../sass/modules/_footer.scss */
+/* line 33, ../sass/modules/_footer.scss */
 footer p span {
   margin-top: -6px;
   padding-right: 6px;

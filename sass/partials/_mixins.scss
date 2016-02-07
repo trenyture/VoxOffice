@@ -9,6 +9,10 @@
     }
 }
 
+@mixin transition() {
+    transition: all .3s;
+}
+
 @mixin transformY50 {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);

@@ -30,9 +30,10 @@ $fb-blue: #4d68a4;
 $light-fb-blue: #7c96d1;
 $dark-fb-blue: #364973;
 
-$border-grey: #eaeaea;
 $light-grey: #eee;
 $dark-grey: #353535;
+$border-grey: #eaeaea;
+$grey: darken($light-grey, 50%);
 
 // Base elements
 html,
