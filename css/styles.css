@@ -835,6 +835,7 @@ h3 {
 }
 /* line 61, ../sass/partials/_buttons.scss */
 .btn-round:hover {
+  color: #fff;
   background: #e59f26;
 }
 

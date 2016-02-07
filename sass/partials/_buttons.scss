@@ -59,6 +59,7 @@
     @include border-radius(50px);
     @include transition-duration(.3s);
     &:hover {
+        color: #fff;
         background: $dark-orange;
     }
 }

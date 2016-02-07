@@ -4,6 +4,7 @@
 }*/
 
 $(document).ready(function() {
+
     // Smooth scroll
     $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
