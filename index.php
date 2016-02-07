@@ -42,11 +42,10 @@
         <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendors/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/vendors/font-awesome-4.5.0/css/font-awesome.min.css">
     </head>
     <body class="home">
         <header>
@@ -74,7 +73,7 @@
             </div>
             <a href="#home-description"><span class="icon icon-scroll"></span></a>
         </section>
-        <section class="home-description">
+        <section class="home-description" id="home-description">
             <div class="content-lg">
                 <div class="description half">
                     <h2>Le concept.</h2>
@@ -96,7 +95,7 @@
                             <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
                             <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
                         </div>
-                        <div class="feature-img right">
+                        <div class="feature-img right wow fadeInRight">
                             <img src="img/vote.svg" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
                         </div>
                     </li>
@@ -106,7 +105,7 @@
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
                             <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
                         </div>
-                        <div class="feature-img left">
+                        <div class="feature-img left wow fadeInLeft">
                             <img src="img/add.svg" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
                         </div>
                     </li>
@@ -117,7 +116,7 @@
                             <p>Aliquam nibh velit.</p>
                             <a href="#" class="btn btn-round" alt="Essayer - VoxOffice" title="Essayer - VoxOffice">Essayer</a>
                         </div>
-                        <div class="feature-img right">
+                        <div class="feature-img right wow fadeInRight">
                             <img src="img/compare.svg" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
                         </div>
                     </li>
@@ -141,12 +140,13 @@
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <p><span class="icon icon-lab"></span>par Simon-tr et Pierre Prezelin. Copyright 2016</p>
+                <p><span class="icon icon-lab"></span>par Simon-tr et Pierre Prezelin • Copyright 2016</p>
             </div>
         </footer>
 
         <!-- Scripts -->
         <script src="js/jquery-2.2.0.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
