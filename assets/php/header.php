@@ -20,31 +20,31 @@
         <title>VoxOffice - Tous vos films favoris. Classés.</title>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="img/favicons/favicon-194x194.png" sizes="194x194">
-        <link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="img/favicons/manifest.json">
-        <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#7b6696">
-        <link rel="shortcut icon" href="img/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="assets/img/favicons/manifest.json">
+        <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#7b6696">
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
         <meta name="msapplication-TileColor" content="#7b6696">
-        <meta name="msapplication-TileImage" content="img/favicons/mstile-144x144.png">
-        <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+        <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-144x144.png">
+        <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
         <meta name="theme-color" content="#7b6696">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="css/vendors/font-awesome-4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.5.0/css/font-awesome.min.css">
     </head>
     <body class="home">
         <header>
@@ -87,7 +87,7 @@
                 <div class="user-portrait">
                     <a href="#">
                         <span class="logoff"><i class="fa fa-power-off"></i></span>
-                        <img src="img/portrait.jpg" alt="Utilisateur" title="Utilisateur" />
+                        <img src="assets/img/portrait.jpg" alt="Utilisateur" />
                     </a>
                 </div>
                 <p>Connecté en tant que :<br/><span id="username">Pierre Prézelin</span></p>

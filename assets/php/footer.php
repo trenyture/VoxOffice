@@ -10,7 +10,7 @@
         </footer>
 
         <!-- Scripts -->
-        <script src="js/jquery-2.2.0.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="assets/js/jquery-2.2.0.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

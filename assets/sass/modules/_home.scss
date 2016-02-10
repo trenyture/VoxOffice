@@ -254,11 +254,12 @@
                 position: absolute;
                 top: 94px;
                 left: 50%;
+                width: 100%;
                 height: auto;
                 float: none;
                 text-align: center;
                 @include transformX50();
-
+                &.right img,
                 img {
                     float: none;
                     height: 98px;

@@ -1612,6 +1612,7 @@ header.scrolled .user p span {
     position: absolute;
     top: 94px;
     left: 50%;
+    width: 100%;
     height: auto;
     float: none;
     text-align: center;
@@ -1620,6 +1621,7 @@ header.scrolled .user p span {
     transform: translateX(-50%);
   }
   /* line 262, ../sass/modules/_home.scss */
+  .home-features .feature .feature-img.right img,
   .home-features .feature .feature-img img {
     float: none;
     height: 98px;
@@ -1628,7 +1630,7 @@ header.scrolled .user p span {
 /* ======================================
     CONNECT
 ====================================== */
-/* line 274, ../sass/modules/_home.scss */
+/* line 275, ../sass/modules/_home.scss */
 .home-connect {
   padding: 80px 0;
   text-align: center;
@@ -1638,22 +1640,22 @@ header.scrolled .user p span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 280, ../sass/modules/_home.scss */
+/* line 281, ../sass/modules/_home.scss */
 .home-connect h2 {
   color: #fdbd4e;
   padding-bottom: 12px;
 }
-/* line 284, ../sass/modules/_home.scss */
+/* line 285, ../sass/modules/_home.scss */
 .home-connect p {
   padding-bottom: 34px;
   color: #eee;
 }
-/* line 287, ../sass/modules/_home.scss */
+/* line 288, ../sass/modules/_home.scss */
 .home-connect p small {
   font-size: 11px;
   text-align: center;
 }
-/* line 292, ../sass/modules/_home.scss */
+/* line 293, ../sass/modules/_home.scss */
 .home-connect .alert {
   padding-bottom: 58px;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
@@ -1662,15 +1664,15 @@ header.scrolled .user p span {
 }
 
 @media (max-width: 640px) {
-  /* line 300, ../sass/modules/_home.scss */
+  /* line 301, ../sass/modules/_home.scss */
   .home-connect {
     padding: 60px 0;
   }
-  /* line 303, ../sass/modules/_home.scss */
+  /* line 304, ../sass/modules/_home.scss */
   .home-connect p {
     padding-bottom: 12px;
   }
-  /* line 307, ../sass/modules/_home.scss */
+  /* line 308, ../sass/modules/_home.scss */
   .home-connect .alert {
     padding-bottom: 40px;
     font-size: 16px;

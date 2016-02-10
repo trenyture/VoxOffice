@@ -1,4 +1,4 @@
-<?php require_once('php/header.php'); ?>
+<?php require_once('assets/php/header.php'); ?>
        
         <section class="home-intro">
             <div class="intro-content">
@@ -28,20 +28,20 @@
                             <h3>Votez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
                             <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer - VoxOffice">Essayer</a>
+                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
                         </div>
                         <div class="feature-img right">
-                            <img src="img/vote.svg" alt="Votez - VoxOffice" title="Votez - VoxOffice" />
+                            <img src="assets/img/vote.svg" alt="Votez" />
                         </div>
                     </li>
                     <li class="feature feature-add">
                         <div class="feature-content">
                             <h3>Ajoutez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer - VoxOffice">Essayer</a>
+                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
                         </div>
                         <div class="feature-img left">
-                            <img src="img/add.svg" alt="Ajoutez - VoxOffice" title="Ajoutez - VoxOffice" />
+                            <img src="assets/img/add.svg" alt="Ajoutez" />
                         </div>
                     </li>
                     <li class="feature feature-compare">
@@ -49,10 +49,10 @@
                             <h3>Comparez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
                             <p>Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer - VoxOffice">Essayer</a>
+                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
                         </div>
                         <div class="feature-img right">
-                            <img src="img/compare.svg" alt="Comparz - VoxOffice" title="Comparez - VoxOffice" />
+                            <img src="assets/img/compare.svg" alt="Comparez" />
                         </div>
                     </li>
                 </ul>
@@ -65,8 +65,8 @@
                     <p><small>En vous connectant à Facebook, nous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</small></p>
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
-                <a href="#" title="Connexion à Facebook - VoxOffice" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
+                <a href="#" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
             </div>
         </section>
         
-<?php require_once('php/footer.php'); ?>
+<?php require_once('assets/php/footer.php'); ?>
