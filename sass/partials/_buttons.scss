@@ -27,6 +27,12 @@
         @include box-shadow(0 3px 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
     }
 }
+@media (max-width: $smartphone) {
+    .btn-square {
+        padding: 9px 64px;
+        font-size: 30px;
+    }
+}
 
 .btn-fb {
     padding: 10px 22px 8px;
@@ -47,6 +53,16 @@
         padding-right: 24px;
         font-size: 28px;
         vertical-align: middle;
+    }
+}
+@media (max-width: $smartphone) {
+    .btn-fb {
+        padding: 11px 16px 8px;
+
+        i {
+            padding-right: 20px;
+            font-size: 24px;
+        }
     }
 }
 

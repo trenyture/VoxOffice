@@ -19,6 +19,23 @@
         }
     }
 }
+@media (max-width: $smartphoneMax) {
+    .home section p.bigger {
+        padding-bottom: 0;
+    }
+}
+@media (max-width: $smartphone) {
+    .home section p {
+        font-size: 12px;
+        & + p {
+            padding-top: 16px;
+        }
+        &.bigger {
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+}
 
 /* ======================================
     INTRODUCTION
@@ -58,6 +75,21 @@
         }
     }
 }
+@media (max-width: $smartphone) {
+    .home-intro .subtitle {
+        margin-bottom: 76px;
+        padding: 22px 0 4px;
+        font-size: 16px;
+        &:before {
+            top: 14px;
+        }
+    }
+}
+@media (max-width: $smartphone) and (orientation: landscape) {
+    .home-intro .subtitle {
+        margin-bottom: 36px;
+    }
+}
 
 /* ======================================
     DESCRIPTION
@@ -75,9 +107,54 @@
         }
         p {
             color: $yellow;
+            .uppercase {
+                text-transform: uppercase;
+            }
+            .highlighted {
+                color: $orange;
+            }
         }
     }
     
+}
+@media (min-width: $desktop) {
+    .home-description {
+        background-size: auto;
+    }
+}
+@media (max-width: $tabletMax) {
+    .home-description {
+        background-size: 400px auto;
+    }
+}
+@media (max-width: $tablet) {
+    .home-description {
+        background-size: 320px auto;
+        background-position: right -24px top -60px ;
+        
+        .description.half {
+            width: 75%;
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .home-description {
+        background-size: 250px auto;
+        background-position: center top -40px;
+        
+        .description.half {
+            width: 100%;
+            padding: 250px 0 60px;
+            h2 {
+                padding-bottom: 36px;
+            }
+        }
+    }
+}
+@media (max-width: $smartphone) {
+    .home-description .description.half h2 {
+        padding-bottom: 16px;
+    }
 }
 
 /* ======================================
@@ -85,6 +162,7 @@
 ====================================== */
 .home-features {
     padding: 80px 0;
+    background: $yellow;
     
     h2 {
         color: $purple;
@@ -141,6 +219,54 @@
         }
     }
 }
+@media (max-width: $smartphoneMax) {
+    .home-features .feature .feature-img img {
+        height: 130px;
+    }
+}
+@media (max-width: $smartphone) {
+    .home-features {
+        padding: 60px 0;
+        
+        h2 {
+            padding-bottom: 14px;
+        }
+        
+        .feature {
+            padding: 34px 0;
+            &:after {
+                width: 50%;
+                margin: 0;
+                @include transformX50();
+            }
+            
+            .feature-content {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    padding-bottom: 156px;
+                }
+                p:last-of-type {
+                    padding-bottom: 26px;
+                }
+            }
+            .feature-img {
+                position: absolute;
+                top: 94px;
+                left: 50%;
+                height: auto;
+                float: none;
+                text-align: center;
+                @include transformX50();
+
+                img {
+                    float: none;
+                    height: 98px;
+                }
+            }
+        }
+    }
+}
 
 /* ======================================
     CONNECT
@@ -157,7 +283,7 @@
     }
     p {
         padding-bottom: 34px;
-        color: $yellow;
+        color: $light-grey;
         small {
             font-size: 11px;
             text-align: center;
@@ -168,5 +294,19 @@
         font-family: $text-semibold;
         font-size: 18px;
         color: $orange;
+    }
+}
+@media (max-width: $smartphone) {
+    .home-connect {
+       padding: 60px 0;
+        
+        p {
+            padding-bottom: 12px;
+        }
+        
+        .alert {
+            padding-bottom: 40px;
+            font-size: 16px;
+        }
     }
 }

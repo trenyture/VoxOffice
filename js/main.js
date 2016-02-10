@@ -12,17 +12,21 @@ $(document).ready(function() {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 60
-                    }, 500);
-                    return false;
+                    if ($(window).width() >= 768) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 60
+                        }, 500);
+                        return false;
+                    } else {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 44
+                        }, 500);
+                        return false;
+                    }
                 }
             }
         });
     });
-    
-    // CSS transitions
-    new WOW().init();
     
     // Header styles on scroll
     $(window).scroll(function() {
@@ -36,9 +40,16 @@ $(document).ready(function() {
         return false;
     });
     
-	// Resize call
+    // Mobile menu opening {
+    $('.hamburger').on('click', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('nav').toggleClass('open-menu');
+    });
+    
+    // Resize call
     //sizeElement();
 });
-
+    
 // On screen resize
 //$(window).resize(sizeElement);

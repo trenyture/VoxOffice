@@ -30,3 +30,25 @@
 .right {
     float: right;
 }
+
+@media (max-width: $tabletMax) {
+    .content-lg,
+    .content-md {
+        width: 100%;
+        margin: 0;
+        padding: 0 14px;
+        @include box-sizing(border-box);
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .half {
+        width: 100%;
+    }
+}
+@media (max-width: $smartphone) {
+    .content-sm {
+        width: 100%;
+        margin: 0;
+        @include box-sizing(border-box);
+    }
+}

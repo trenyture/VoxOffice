@@ -43,3 +43,14 @@
 @keyframes mouse {
     to {top: 10px;}
 }
+@media (max-width: $smartphone) {
+    .icon-scroll {
+        bottom: 12px;
+        width: 16px;
+        height: 28px;
+        &:after {
+            top: 5px;
+            left: 7px;
+        }
+    }
+}

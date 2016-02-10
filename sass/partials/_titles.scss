@@ -33,3 +33,16 @@ h3 {
     font-family: $title-font;
     font-size: 36px;
 }
+
+@media (max-width: $smartphone) {
+    h1 {
+        font-size: 48px;
+        padding-bottom: 12px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}

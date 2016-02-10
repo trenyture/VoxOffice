@@ -24,7 +24,7 @@ $dark-orange: #e59f26;
 $purple: #7b6696;
 $dark-purple: #413454;
 
-$yellow: #fdffe6;
+$yellow: #fffcf5;
 
 $fb-blue: #4d68a4;
 $light-fb-blue: #7c96d1;
@@ -35,9 +35,21 @@ $dark-grey: #353535;
 $border-grey: #eaeaea;
 $grey: darken($light-grey, 50%);
 
+// Responsive
+$desktop: 1920px;
+$tabletMax: 1024px;
+$tablet: 960px;
+$tabletMin: 768px;
+$smartphoneMax: 767px;
+$smartphone: 640px;
+$smartphoneMin: 480px;
+//$smartphoneSmallMax: 360px;
+//$smartphoneSmallMin: 320px;
+
 // Base elements
 html,
 body {
+    width: 100%;
     font-family: $text-font;
     font-size: $text-size;
     color: $dark-grey;

@@ -34,5 +34,43 @@ footer {
             margin-top: -6px;
             padding-right: 6px;
         }
+        br {
+            display: none;
+        }
+    }
+}
+@media (max-width: $smartphone) {
+    footer {
+        text-align: center;
+        ul,
+        p {
+            float: none;
+        }
+        ul {
+            padding: 14px 0;
+            li {
+                & + li {
+                    margin-left: 24px;
+                }
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+        p {
+            padding-bottom: 10px;
+            font-size: 10px;
+            line-height: 1;
+        }
+    }
+}
+@media (max-width: $smartphoneMin) {
+    footer {
+        ul {
+            padding: 14px 0 24px;
+        }
+        p br {
+            display: block;
+        }
     }
 }
