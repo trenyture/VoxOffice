@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Header and footer in PHP files
 
 ### Removed
-- WOWJS transitions (removed)
+- WOWJS transitions
 - Image attributes
 
 ### Changed
