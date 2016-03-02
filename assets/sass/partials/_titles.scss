@@ -1,0 +1,48 @@
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: relative;
+    font-family: 'montserrat_bold';
+    font-size: 92px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .55);
+    text-transform: uppercase;
+    line-height: 48px;
+    z-index: 10;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    span {
+        font-family: 'montserrat_ultralight';
+    }
+}
+
+h2 {
+    font-family: $title-font;
+    font-size: $title-size;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: $title-font;
+    font-size: 36px;
+}
+
+@media (max-width: $smartphone) {
+    h1 {
+        font-size: 48px;
+        padding-bottom: 12px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}

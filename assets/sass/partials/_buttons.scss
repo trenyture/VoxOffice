@@ -1,0 +1,81 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-square {
+    padding: 12px 82px;
+    font-family: 'nexa_bold';
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    background: $orange;
+    border-top: 1px solid $light-orange;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+    @include box-shadow(0 3px 0 $dark-orange, 0 5px 10px rgba(0, 0, 0, .35));
+    @include border-radius(3px);
+    @include transition-duration(.3s);
+    &:hover {
+        background: $dark-orange;
+        border-top: 1px solid $orange;
+        text-shadow: none;
+        @include box-shadow(0 3px 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
+    }
+}
+@media (max-width: $smartphone) {
+    .btn-square {
+        padding: 9px 64px;
+        font-size: 30px;
+    }
+}
+
+.btn-fb {
+    padding: 10px 22px 8px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #fff;
+    background: $fb-blue;
+    border-top: 1px solid $light-fb-blue;
+    @include box-shadow(0 2px 0 $dark-fb-blue, 0 5px 10px rgba(0, 0, 0, .35));
+    @include border-radius(3px);
+    @include transition-duration(.3s);
+    &:hover {
+        background: $dark-fb-blue;
+        border-top: 1px solid $fb-blue;
+        @include box-shadow(0 3px 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
+    }
+    i {
+        padding-right: 24px;
+        font-size: 28px;
+        vertical-align: middle;
+    }
+}
+@media (max-width: $smartphone) {
+    .btn-fb {
+        padding: 11px 16px 8px;
+
+        i {
+            padding-right: 20px;
+            font-size: 24px;
+        }
+    }
+}
+
+.btn-round {
+    font-family: $text-font;
+    padding: 12px 22px;
+    color: $dark-purple;
+    background: $orange;
+    border-bottom: 2px solid $dark-orange;
+    @include border-radius(50px);
+    @include transition-duration(.3s);
+    &:hover {
+        color: #fff;
+        background: $dark-orange;
+    }
+}

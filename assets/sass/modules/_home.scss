@@ -1,0 +1,313 @@
+.home section p {
+    font-family: $text-font;
+    font-size: 14px;
+    line-height: 1.2;
+    & + p {
+        padding-top: 20px;
+    }
+    &.bigger {
+        font-size: 20px;
+        padding-bottom: 42px;
+        span {
+            text-transform: uppercase;
+        }
+    }
+    a {
+        color: $orange;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .home section p.bigger {
+        padding-bottom: 0;
+    }
+}
+@media (max-width: $smartphone) {
+    .home section p {
+        font-size: 12px;
+        & + p {
+            padding-top: 16px;
+        }
+        &.bigger {
+            padding-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+/* ======================================
+    INTRODUCTION
+====================================== */
+.home-intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: url("../img/home_background.jpg") no-repeat center center;
+    background-position: center center;
+    @include background-size(cover);
+    
+    .intro-content {
+        position: relative;
+        top: 50%;
+        @include transformY50;
+    }
+    
+    .subtitle {
+        position: relative;
+        padding: 54px 0 8px;
+        margin-bottom: 120px;
+        color: #fff;
+        font-family: $text-light;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, .7);
+        &:before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            top: 34px;
+            width: 36px;
+            height: 1px;
+            margin-left: -18px;
+            background-color: #fff;
+        }
+    }
+}
+@media (max-width: $smartphone) {
+    .home-intro .subtitle {
+        margin-bottom: 76px;
+        padding: 22px 0 4px;
+        font-size: 16px;
+        &:before {
+            top: 14px;
+        }
+    }
+}
+@media (max-width: $smartphone) and (orientation: landscape) {
+    .home-intro .subtitle {
+        margin-bottom: 36px;
+    }
+}
+
+/* ======================================
+    DESCRIPTION
+====================================== */
+.home-description {
+    background: url("../img/movie_clap.svg") no-repeat top -120px right -24px $purple;
+    background-size: 38% auto;
+    border-bottom: 1px solid $dark-purple;
+    
+    .description {
+        padding: 200px 0;
+        h2 {
+            color: $yellow;
+            padding-bottom: 66px;
+        }
+        p {
+            color: $yellow;
+            .uppercase {
+                text-transform: uppercase;
+            }
+            .highlighted {
+                color: $orange;
+            }
+        }
+    }
+    
+}
+@media (min-width: $desktop) {
+    .home-description {
+        background-size: auto;
+    }
+}
+@media (max-width: $tabletMax) {
+    .home-description {
+        background-size: 400px auto;
+    }
+}
+@media (max-width: $tablet) {
+    .home-description {
+        background-size: 320px auto;
+        background-position: right -24px top -60px ;
+        
+        .description.half {
+            width: 75%;
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .home-description {
+        background-size: 250px auto;
+        background-position: center top -40px;
+        
+        .description.half {
+            width: 100%;
+            padding: 250px 0 60px;
+            h2 {
+                padding-bottom: 36px;
+            }
+        }
+    }
+}
+@media (max-width: $smartphone) {
+    .home-description .description.half h2 {
+        padding-bottom: 16px;
+    }
+}
+
+/* ======================================
+    GET STARTED
+====================================== */
+.home-features {
+    padding: 80px 0;
+    background: $yellow;
+    
+    h2 {
+        color: $purple;
+        text-align: center;
+        padding-bottom: 24px;
+    }
+    
+    .feature {
+        position: relative;
+        padding: 72px 0;
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 50%;
+            width: 320px;
+            height: 1px;
+            margin: 0 auto 0 -160px;
+            background-color: $border-grey;
+        }
+        &:last-of-type {
+            padding-bottom: 0;
+            &:after {
+                display: none;
+            }
+        }
+        
+        .feature-content {
+            width: 50%;
+            display: inline-block;
+            h3 {
+                padding-bottom: 58px;
+                color: $dark-purple;
+            }
+            p {
+                color: $purple;
+                &:last-of-type {
+                    padding-bottom: 34px;
+                }
+            }
+        }
+        
+        .feature-img {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            &.right img {
+                float: right;
+            }
+            img {
+                width: auto;
+                height: 160px;
+            }
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .home-features .feature .feature-img img {
+        height: 130px;
+    }
+}
+@media (max-width: $smartphone) {
+    .home-features {
+        padding: 60px 0;
+        
+        h2 {
+            padding-bottom: 14px;
+        }
+        
+        .feature {
+            padding: 34px 0;
+            &:after {
+                width: 50%;
+                margin: 0;
+                @include transformX50();
+            }
+            
+            .feature-content {
+                width: 100%;
+                text-align: center;
+                h3 {
+                    padding-bottom: 156px;
+                }
+                p:last-of-type {
+                    padding-bottom: 26px;
+                }
+            }
+            .feature-img {
+                position: absolute;
+                top: 94px;
+                left: 50%;
+                width: 100%;
+                height: auto;
+                float: none;
+                text-align: center;
+                @include transformX50();
+                &.right img,
+                img {
+                    float: none;
+                    height: 98px;
+                }
+            }
+        }
+    }
+}
+
+/* ======================================
+    CONNECT
+====================================== */
+.home-connect {
+    padding: 80px 0;
+    text-align: center;
+    background: url("../img/movie_mosaic.jpg") no-repeat center center;
+    @include background-size(cover);
+    
+    h2 {
+        color: $orange;
+        padding-bottom: 12px;
+    }
+    p {
+        padding-bottom: 34px;
+        color: $light-grey;
+        small {
+            font-size: 11px;
+            text-align: center;
+        }
+    }
+    .alert {
+        padding-bottom: 58px;
+        font-family: $text-semibold;
+        font-size: 18px;
+        color: $orange;
+    }
+}
+@media (max-width: $smartphone) {
+    .home-connect {
+       padding: 60px 0;
+        
+        p {
+            padding-bottom: 12px;
+        }
+        
+        .alert {
+            padding-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+}
