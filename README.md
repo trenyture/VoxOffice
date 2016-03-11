@@ -19,6 +19,7 @@ When you finished your modifications and you want to share it with me, you have 
 <code>git status</code> - to see all the modified files (reds are yet to add and greens will be added).<br>
 <code>git add filename</code> - to add the modified files to the commit! For example, <code>git add style/css.css</code> or <code>git add .</code> to add all files.<br>
 <code>git commit -m "Your message"</code> - to initialize the commit which will send all the documents in your GitHub profile, with a message (ex: "Header styles modification").<br>
+<code>git pull</code> - We have to verify if the folder wasn't modify by another person before to push our changes!<br> 
 <code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br>
 Now you've got your files in your profile and you want to share it with me? Do a Pull Request from GitHub and I will examine your modifications before including them to the source code.<br>
 
