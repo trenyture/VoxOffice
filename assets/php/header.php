@@ -1,3 +1,19 @@
+<?php
+    ini_set('display_errors', 1);  error_reporting(E_ALL);
+    session_start();
+    include('assets/php/newPDO.php');
+    include('assets/php/fbConnect.php');
+    $fbUrlConnect = $helper->getLoginUrl();
+    switch ($_SERVER['REQUEST_URI']) {
+        case '/VoxOffice/vote.php':
+            $bodyId = 'vote';
+            break;
+        
+        default:
+            $bodyId = 'home';
+            break;
+    }
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="fr"><![endif]-->
 <!--[if IE 7 ]> <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="fr"><![endif]-->
@@ -46,9 +62,9 @@
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.5.0/css/font-awesome.min.css">
     </head>
-    <body class="home">
+    <body class="<?=$bodyId;?>">
         <header>
-            <a href="#" class="logo">
+            <a href="index.php" class="logo">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.6 405" style="enable-background:new 0 0 495.6 405;" xml:space="preserve">
                     <path d="M317.1,125.4c-17.2,0-31.2,14-31.2,31.2c0,6.3,1.9,12.5,5.5,17.7c3.7,6.3,2.7,11.1,1.7,13.6l-32.7,61.5l0,0v0.1
                     l-0.9,1.6c-1.4,2.2-4.8,5.6-11.8,6.3h-0.2c-7-0.6-10.4-4.1-11.8-6.3l-0.9-1.6v-0.1l0,0l-32.7-61.5c-1-2.4-1.9-7.3,1.7-13.6
@@ -77,19 +93,31 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Voter</a></li>
-                    <li><a href="#">Classement</a></li>
-                    <li><a href="#">Ajouter</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="vote.php">Voter</a></li>
+                    <li><a href="compare.php">Classement</a></li>
+                    <li><a href="add.php">Ajouter</a></li>
                 </ul>
             </nav>
             <div class="user">
-                <div class="user-portrait">
-                    <a href="#">
-                        <span class="logoff"><i class="fa fa-power-off"></i></span>
-                        <img src="assets/img/portrait.jpg" alt="Utilisateur" />
-                    </a>
-                </div>
-                <p>Connecté en tant que :<br/><span id="username">Pierre Prézelin</span></p>
+                <?php 
+                    if(isset($_SESSION['fb_token'])){
+                    ?>
+                        <div class="user-portrait">
+                            <a href="index.php?logout=true">
+                                <span class="logoff"><i class="fa fa-power-off"></i></span>
+                                <img src="<?= $_SESSION['fbImg']['url']; ?>" alt="Utilisateur" />
+                            </a>
+                        </div>
+                        <p>Connecté en tant que :<br/><span id="username"><?php echo($_SESSION['fbName']); ?></span></p>
+                    <?php
+                    }else{
+                    ?>
+                        <div class="user-portrait">
+                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-facebook-square"></i>Connection</a>
+                        </div>
+                    <?php 
+                    }
+                ?>
             </div>
         </header>
