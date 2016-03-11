@@ -1,7 +1,7 @@
 <?php
 // Définition des paramètres d'accès à la base de données
 define('HOTE', 'localhost') ;
-define('NOM_BD', 'BdName') ;
+define('NOM_BD', 'dbName') ;
 define('UTILISATEUR', 'root') ;
 define('MOT_DE_PASSE', 'pwd') ;
 

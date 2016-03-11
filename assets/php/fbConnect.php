@@ -9,11 +9,11 @@
     if (isset($_GET) && isset($_GET['logout']) && $_GET['logout'] == 'true') {
         $_SESSION = null;
         session_destroy();
-        header('location:index.php');
+        header('location:./index');
     }
     //l'utilisateur se connecte avec FB
     if (isset($_GET) && isset($_GET['code'])) {
-        header('location:vote.php');
+        header('location:./vote');
     }
     function test_user ($nom, $id){
         $maBD = connexionBD() ;  // Cette fonction est définie dans le dossier helpers   
@@ -34,7 +34,7 @@
     $appSecret = 'VoxOfficeAppSecret';
 
     FacebookSession::setDefaultApplication($appId,$appSecret);
-    $helper=new FacebookRedirectLoginHelper('http://simon-tr.com/VoxOffice/index.php');
+    $helper=new FacebookRedirectLoginHelper('http://simon-tr.com/VoxOffice/index');
     if (isset($_SESSION) && isset($_SESSION['fb_token'])) {
         $session = new FacebookSession($_SESSION['fb_token']);
     }else{
