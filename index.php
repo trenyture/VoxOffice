@@ -32,7 +32,9 @@
                             <h3>Votez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
                             <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img right">
                             <img src="assets/img/vote.svg" alt="Votez" />
@@ -42,7 +44,9 @@
                         <div class="feature-content">
                             <h3>Ajoutez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img left">
                             <img src="assets/img/add.svg" alt="Ajoutez" />
@@ -53,7 +57,9 @@
                             <h3>Comparez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
                             <p>Aliquam nibh velit.</p>
-                            <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img right">
                             <img src="assets/img/compare.svg" alt="Comparez" />
