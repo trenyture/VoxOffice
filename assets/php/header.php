@@ -8,6 +8,12 @@
         case '/VoxOffice/vote':
             $bodyId = 'vote';
             break;
+        case '/VoxOffice/add':
+            $bodyId = 'add';
+            break;
+        case '/VoxOffice/compare':
+            $bodyId = 'compare';
+            break;
         
         default:
             $bodyId = 'home';
