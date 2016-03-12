@@ -4,7 +4,11 @@
             <div class="intro-content">
                 <h1><a href="#" title="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
                 <p class="subtitle">Tous vos films favoris. Classés.</p>
-                <a href="#" class="btn btn-square">Go!</a>
+                <?php if(isset($_SESSION['fb_token'])){ ?>
+                    <a href="./vote" class="btn btn-square">Go!</a>
+                <?php }else{ ?>
+                    <a href="<?= $fbUrlConnect ?>" class="btn btn-square">Go!</a>
+                <?php } ?>
             </div>
             <a href="#home-description"><span class="icon icon-scroll"></span></a>
         </section>
@@ -28,7 +32,9 @@
                             <h3>Votez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
                             <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img right">
                             <img src="assets/img/vote.svg" alt="Votez" />
@@ -38,7 +44,9 @@
                         <div class="feature-content">
                             <h3>Ajoutez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img left">
                             <img src="assets/img/add.svg" alt="Ajoutez" />
@@ -49,7 +57,9 @@
                             <h3>Comparez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
                             <p>Aliquam nibh velit.</p>
-                            <a href="#" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php if(isset($_SESSION['fb_token'])){ ?>
+                                <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
+                            <?php }?>
                         </div>
                         <div class="feature-img right">
                             <img src="assets/img/compare.svg" alt="Comparez" />
@@ -62,10 +72,14 @@
             <div class="content-md">
                 <h2>Lancez-vous</h2>
                 <div class="content-sm">
-                    <p><small>En vous connectant à Facebook, nous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</small></p>
+                    <p><small>En vous connectant à Facebook, vous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</small></p>
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
-                <a href="#" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
+            <?php if(isset($_SESSION['fb_token'])){ ?>
+                <a href="./vote" title="Connexion à Facebook" class="btn btn-fb">C'est parti!</a>
+            <?php }else{ ?>
+                <a href="<?= $fbUrlConnect ?>" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
+            <?php } ?>
             </div>
         </section>
         
