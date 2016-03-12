@@ -67,6 +67,9 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.5.0/css/font-awesome.min.css">
+        <!-- Scripts -->
+        <script src="assets/js/jquery-2.2.0.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </head>
     <body class="<?=$bodyId;?>">
         <header>
