@@ -14,6 +14,9 @@
         case '/VoxOffice/compare':
             $bodyId = 'compare';
             break;
+        case '/VoxOffice/contact':
+            $bodyId = 'contact';
+            break;
         
         default:
             $bodyId = 'home';

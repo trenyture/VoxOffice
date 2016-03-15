@@ -8,9 +8,9 @@
 ?>
 	<section>
         <h2>Quel est ton favori?</h2>
-        <article id="film1" style="background:url(/assets/img/films/film1.jpg) no-repeat; background-size:cover;">
-        	<h3>Titre film 1</h3>
-        	<p>Shortdescription (180 caracteres maximum!!!)</p>
+        <article id="film1">
+        	<h3></h3>
+        	<p></p>
         	<a href="#" id="f1-plus">Je vote +</a>
         	<a href="#" id="f1-moins">Je vote -</a>
         	<span>Share
@@ -18,10 +18,10 @@
         		<a href="#" id="sh-f1-moins">Je vote -</a>
         	</span>
         </article>
-        <a href="#">Autres films</a>
-        <article id="film2" style="background:url(/assets/img/films/film2.jpg) no-repeat; background-size:cover;">
-        	<h3>Titre film 2</h3>
-        	<p>Shortdescription (180 caracteres maximum!!!)</p>
+        <a href="#" id="others">Autres films</a>
+        <article id="film2">
+        	<h3></h3>
+        	<p></p>
         	<a href="#" id="f1-plus">Je vote +</a>
         	<a href="#" id="f1-moins">Je vote -</a>
         	<span>Share
@@ -32,4 +32,5 @@
         <!-- petite precision sur les id des liens : f1 = film 1 et sh pour le bouton share : celui qu'on implémentera avec facebook! -->
         <!-- seconde precision : le contenu se fera en ajax donc dynamiquement (process : chercher base de donnée 2 films randoms et les afficher) -->
     </section>
+    <script type="text/javascript" src="assets/js/vote.js"></script>
 <?php require_once('assets/php/footer.php'); ?>
