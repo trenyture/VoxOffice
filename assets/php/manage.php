@@ -1,13 +1,29 @@
 <?php
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
+	if(!isset($_SESSION['fb_token'])){
+		header('location:../../index');
+	}
     include('newPDO.php');
 	$message="";
 	if($_POST['title'] != '' && $_POST['year']!='' && $_POST['shortdesc']!='' && isset($_FILES) && isset($_POST)){
+		$uploadOk = 1;
+		//Vérifie que la description ne dépasse pas 250 caractères!!!!
+		if(strlen($_POST['shortdesc']) > 260){ //On met un petit pourcentage en plus pour certains caractère qui comptent pour 2...
+			$uploadOk = 0;
+			$message .= "<p>Votre description est beaucoup trop grande, veuillez aller à l'essentiel!</p>";
+		}
+		$unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
+                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
+                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
+                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
+
 		/*Code php d'upload de l'image d'apres : http://www.w3schools.com/php/php_file_upload.asp */
 		$target_dir = "../img/films/";
 		/*On recupere le titre de l'image en lowercase et on le split pour supprimer les espaces et les appostrophes*/
-		$imgTitle = $_POST['title'];
+		$title = strtr($_POST['title'], $unwanted_array);
+		$imgTitle = $title;
 		$imgTitle = strtolower($imgTitle);
 		$imgTitle = str_replace(' ', '', $imgTitle);
 		$imgTitle = str_replace("'", '', $imgTitle);
@@ -29,13 +45,7 @@
 				break;
 		}
 		$target_file = $target_dir . $imgTitle;
-		$uploadOk = 1;
 		$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-		//Vérifie que la description ne dépasse pas 128 caractères!!!!
-		if(strlen($_POST['shortdesc']) > 180){
-			$uploadOk = 0;
-			$message .= "<p>Votre description est beaucoup trop grande, veuillez aller à l'essentiel!</p>";
-		}
 		// Vérifie qu'il s'agit bien d'une image et non d'un virus ou quoi que ce soit d'autre
 		if(isset($_POST["submit"])) {
 		    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -71,21 +81,16 @@
 		// Si tout es ok on essaie d'upploader le fichier sinon il y a eu une erreur
 		} else {
 		    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-		    	$unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
-                            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
-                            'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
-                            'è'=>'e', 'é'=>'e', 'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o', 'ô'=>'o', 'õ'=>'o',
-                            'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
-				$str = strtr( $str, $unwanted_array );
 		        $maBD = connexionBD();
 				// Pour indiquer au serveur que les requêtes seront codées grâce au jeu de caractères utf-8
 				$maBD->exec('SET NAMES utf8');
 				// Préparation d'une requête.
 				$requete = $maBD->prepare("INSERT INTO VO_films (fb_id, title, annee, shortdesc, image, vote) VALUES (?,?,?,?,?,?)");
 				// Exécution de la requête, avec les valeur 3, "premium" et "premiums" pour remplacer les ?
-				$title = strtr($_POST['title'], $unwanted_array);
-				$shortdesc = strtr($_POST['shortdesc'], $unwanted_array);
-				$arrayRequest = array($_POST['user'],$title,$shortdesc,$_POST['shortdesc'],$imgTitle, 0);
+				//On empeche les possibles hackers d'entrer dans la bdd
+				$dbTitle = htmlspecialchars($_POST['title']);
+				$dbShortdesc = htmlspecialchars($_POST['shortdesc']);
+				$arrayRequest = array($_POST['user'],$dbTitle,$_POST['year'],$dbShortdesc,$imgTitle, 0);
 				$ok = $requete->execute($arrayRequest);
 				// Le résultat placé dans $ok vaudra 1 si la requête a pu s'exécuter correctement
 				// Création du message indiquant si l'insertion a réussi

@@ -42,15 +42,17 @@ $(document).ready(function(){
 
 function constructPage(films) {
 	console.log(films);
-	var i=0;
+	var i=1;
 	$films = $(films);
 	$films.each(function(){
 		console.log($('article#film'+i));
-		$('article#film'+i).attr('data-id', this.id).css({
+		$('article#film'+i).css({
 			'background-image' : 'url(assets/img/films/'+this.image+')'
 		});
 		$('article#film'+i+' h3').html(this.title+'<br/><span>'+this.annee+'</span>');
 		$('article#film'+i+' p').html(this.shortdesc);
+		$('article#film'+i+' a.vote.plus').attr('href','assets/php/addvote.php?type=plus&id='+this.id);
+		$('article#film'+i+' a.vote.moins').attr('href','assets/php/addvote.php?type=moins&id='+this.id);
 		i = i+1;
 	});
 }

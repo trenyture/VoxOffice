@@ -1,6 +1,4 @@
 <?php
-    ini_set('display_errors', 1);  error_reporting(E_ALL);
-    session_start();
     include('assets/php/newPDO.php');
     include('assets/php/fbConnect.php');
     $fbUrlConnect = $helper->getLoginUrl();
@@ -105,10 +103,12 @@
             </div>
             <nav>
                 <ul>
+                <?php if(isset($_SESSION['fb_token'])){ ?>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
                     <li><a href="./compare">Classement</a></li>
                     <li><a href="./add">Ajouter</a></li>
+                <?php } ?>
                 </ul>
             </nav>
             <div class="user">

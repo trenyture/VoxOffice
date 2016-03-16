@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('form textarea#shortdesc').keyup(function(){
-		var caract = 128 - $(this).val().length;
+		var caract = 250 - $(this).val().length;
 		if(caract < 0){
 			$('form p#caractRest').css('color','red');
 		}else{
@@ -9,9 +9,9 @@ $(document).ready(function(){
 		$('form p#caractRest span#count').html(caract);
 	});
 	/*Vérification Formulaire avant l'envoi*/
-	var okForm = true;
-	var messageError = '';
 	$('form').submit(function(){
+		var okForm = true;
+		var messageError = '';
 		if($(this).children('input#title').val() == ''){
 			okForm = false;
 			messageError += '<li> Vous devez écrire un titre! </li>';
@@ -24,7 +24,7 @@ $(document).ready(function(){
 			okForm = false;
 			messageError += "<li> Vous devez mettre une courte description! </li>";
 		}
-		if($(this).children('textarea#shortdesc').val().length > 128){
+		if($(this).children('textarea#shortdesc').val().length > 250){
 			okForm = false;
 			messageError += "<li> Vous devez écrire une description plus courte! </li>";
 		}
