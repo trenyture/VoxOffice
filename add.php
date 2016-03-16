@@ -1,15 +1,10 @@
 <?php 
-    ini_set('display_errors', 1);  error_reporting(E_ALL);
-    session_start();
-    if(!isset($_SESSION['fb_token'])){
-        //Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
-        header('location:./index');
-    }
 	require_once('assets/php/header.php'); 
     date_default_timezone_set('UTC');
 ?>
 	<!-- Il faudrait rajouter un formulaire de recherche pour voir si le film que l'on souhaite ajouter n'est pas déjà en ligne en ajax-->
-	<!-- Dans le formulaire ci dessus il faut checker la date a deux années pres... Genre si on rentre 2013, faut checker 2011 OR 2012 OR 2013 OR 2014 OR 2015 pour éviter les petits malins-->
+    <!-- Je m'occupe de ce formulaire un peu plus tard ... --> 
+	<!-- Dans le formulaire ci dessus il faudra checker la date a deux années pres... Genre si on rentre 2013, faut checker 2011 OR 2012 OR 2013 OR 2014 OR 2015 pour éviter les petits malins-->
 	<section>
         <h2>Ajoute ton film!</h2>
         <ul id="error-messages"><li>Tous les champs sont obligatoires!</li></ul>
@@ -25,6 +20,7 @@
         	<input type="submit" value="Ajout" />
         </form>
         <script type="text/javascript" src="assets/js/ajout.js"></script>
-        <!--A l'envoi du formulaire on fait une recherche dans la base de donnée pour voir s'il n'existe pas un film avec le meme nom et la meme année-->
+        <!-- pareil essaie de ne pas trop modifier les classes ou les id, mais tu as carte blanche autrement ;) -->
+        <!-- de toute façon je dis cela, mais tu as carte blanche totale en fait, je m'adapterais a ton nouveaux HTML apres ;) -->
     </section>
 <?php require_once('assets/php/footer.php'); ?>
