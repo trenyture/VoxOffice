@@ -19,4 +19,5 @@
         	
         </ul>
     </section>
+    <script type="text/javascript" src="assets/js/compare.js"></script>
 <?php require_once('assets/php/footer.php'); ?>
