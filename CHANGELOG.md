@@ -4,10 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - xx-03-2016
 ### Added
-- Test contact email adress
+- Test "Contact" email adress
+- Header styles for Facebook connection
 
 ### Changed
-- Header styles
+- Pre-scroll header styles
 - Buttons styles
 
 ## [Unreleased] - 11-02-2016

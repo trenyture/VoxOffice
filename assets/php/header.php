@@ -126,7 +126,7 @@
                     }else{
                     ?>
                         <div class="user-portrait disconnected">
-                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connection</a>
+                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connexion</a>
                         </div>
                     <?php
                     }

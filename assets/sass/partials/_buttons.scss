@@ -1,4 +1,5 @@
 .btn {
+    position: relative;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
@@ -9,6 +10,7 @@
 }
 
 .btn-square {
+    top: 0;
     padding: 12px 82px;
     font-family: 'nexa_bold';
     font-size: 36px;
@@ -21,10 +23,10 @@
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
-        background: $dark-orange;
-        border-top: 1px solid $orange;
+        top: 6px;
+        border-top: 1px solid transparent;
         text-shadow: none;
-        @include box-shadow(0 3px 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
+        @include box-shadow(0 0 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
     }
 }
 @media (max-width: $smartphone) {
@@ -35,6 +37,7 @@
 }
 
 .btn-fb {
+    top: 0;
     padding: 10px 22px 8px;
     font-family: Arial, sans-serif;
     font-size: 11px;
@@ -45,9 +48,9 @@
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
-        background: $dark-fb-blue;
-        border-top: 1px solid $fb-blue;
-        @include box-shadow(0 3px 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
+        top: 4px;
+        border-top: 1px solid transparent;
+        @include box-shadow(0 0 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
     }
     i {
         padding-right: 24px;
@@ -67,6 +70,7 @@
 }
 
 .btn-round {
+    top: 0;
     font-family: $text-font;
     padding: 12px 22px;
     color: $dark-purple;
@@ -75,7 +79,8 @@
     @include border-radius(50px);
     @include transition-duration(.3s);
     &:hover {
+        top: 4px;
         color: #fff;
-        background: $dark-orange;
+        border-bottom: 2px solid transparent;
     }
 }
