@@ -633,7 +633,7 @@ th {
 
 /* line 16, ../sass/partials/_grids.scss */
 .content-sm {
-  width: 320px;
+  width: 420px;
 }
 
 /* line 20, ../sass/partials/_grids.scss */
@@ -662,7 +662,7 @@ th {
   .content-md {
     width: 100%;
     margin: 0;
-    padding: 0 14px;
+    padding: 0 5%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -740,7 +740,7 @@ h3 {
 h1 {
   position: relative;
   font-family: 'montserrat_bold';
-  font-size: 92px;
+  font-size: 96px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.55);
   text-transform: uppercase;
   line-height: 48px;
@@ -759,7 +759,7 @@ h1 span {
 /* line 25, ../sass/partials/_titles.scss */
 h2 {
   font-family: "nexa_bold", Helvetica, Arial, sans-serif;
-  font-size: 48px;
+  font-size: 52px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
 }
@@ -767,7 +767,7 @@ h2 {
 /* line 32, ../sass/partials/_titles.scss */
 h3 {
   font-family: "nexa_bold", Helvetica, Arial, sans-serif;
-  font-size: 36px;
+  font-size: 38px;
 }
 
 @media (max-width: 640px) {
@@ -803,9 +803,9 @@ h3 {
 
 /* line 13, ../sass/partials/_buttons.scss */
 .btn-square {
-  padding: 12px 82px;
+  padding: 14px 82px 8px;
   font-family: 'nexa_bold';
-  font-size: 36px;
+  font-size: 42px;
   color: #fff;
   text-transform: uppercase;
   background: #fdbd4e;
@@ -837,9 +837,9 @@ h3 {
 }
 /* line 35, ../sass/partials/_buttons.scss */
 .btn-fb {
-  padding: 18px 22px 17px;
+  padding: 11px 22px 10px;
   font-family: Arial, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   color: #fff;
   background: #4d68a4;
   -moz-box-shadow: 0 0 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
@@ -855,41 +855,29 @@ h3 {
 }
 /* line 44, ../sass/partials/_buttons.scss */
 .btn-fb:hover {
-  padding: 18px 22px 17px 52px;
   background: #455d93;
   -moz-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
 }
 /* line 48, ../sass/partials/_buttons.scss */
-.btn-fb:hover i {
-  -moz-transform: translate3d(-32px, -50%, 1em);
-  -webkit-transform: translate3d(-32px, -50%, 1em);
-  transform: translate3d(-32px, -50%, 1em);
-}
-/* line 52, ../sass/partials/_buttons.scss */
 .btn-fb i {
-  position: absolute;
-  top: 50%;
   font-size: 28px;
   vertical-align: middle;
-  -moz-transform: translate3d(-50px, -50%, 1em);
-  -webkit-transform: translate3d(-50px, -50%, 1em);
-  transform: translate3d(-50px, -50%, 1em);
-  transition: all .3s;
+  margin-right: 16px;
 }
 
 @media (max-width: 640px) {
-  /* line 62, ../sass/partials/_buttons.scss */
+  /* line 55, ../sass/partials/_buttons.scss */
   .btn-fb {
-    padding: 18px 22px 17px;
+    padding: 12px 22px 11px;
   }
-  /* line 65, ../sass/partials/_buttons.scss */
+  /* line 58, ../sass/partials/_buttons.scss */
   .btn-fb i {
     font-size: 24px;
   }
 }
-/* line 71, ../sass/partials/_buttons.scss */
+/* line 64, ../sass/partials/_buttons.scss */
 .btn-round {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
   padding: 12px 22px;
@@ -904,7 +892,7 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 79, ../sass/partials/_buttons.scss */
+/* line 72, ../sass/partials/_buttons.scss */
 .btn-round:hover {
   color: #fff;
   background: #fdbd4e;
@@ -1393,7 +1381,7 @@ header.scrolled .user p span {
 /* line 1, ../sass/modules/_home.scss */
 .home section p {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
 }
 /* line 5, ../sass/modules/_home.scss */
@@ -1470,7 +1458,7 @@ header.scrolled .user p span {
   margin-bottom: 120px;
   color: #fff;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 /* line 66, ../sass/modules/_home.scss */
@@ -1631,46 +1619,42 @@ header.scrolled .user p span {
 .home-features .feature .feature-content p {
   color: #7b6696;
 }
-/* line 202, ../sass/modules/_home.scss */
-.home-features .feature .feature-content p:last-of-type {
-  padding-bottom: 34px;
-}
-/* line 208, ../sass/modules/_home.scss */
+/* line 205, ../sass/modules/_home.scss */
 .home-features .feature .feature-img {
   position: relative;
   width: 50%;
   height: 100%;
 }
-/* line 212, ../sass/modules/_home.scss */
+/* line 209, ../sass/modules/_home.scss */
 .home-features .feature .feature-img.right img {
   float: right;
 }
-/* line 215, ../sass/modules/_home.scss */
+/* line 212, ../sass/modules/_home.scss */
 .home-features .feature .feature-img img {
   width: auto;
   height: 160px;
 }
 
 @media (max-width: 767px) {
-  /* line 223, ../sass/modules/_home.scss */
+  /* line 220, ../sass/modules/_home.scss */
   .home-features .feature .feature-img img {
     height: 130px;
   }
 }
 @media (max-width: 640px) {
-  /* line 228, ../sass/modules/_home.scss */
+  /* line 225, ../sass/modules/_home.scss */
   .home-features {
     padding: 60px 0;
   }
-  /* line 231, ../sass/modules/_home.scss */
+  /* line 228, ../sass/modules/_home.scss */
   .home-features h2 {
     padding-bottom: 14px;
   }
-  /* line 235, ../sass/modules/_home.scss */
+  /* line 232, ../sass/modules/_home.scss */
   .home-features .feature {
     padding: 34px 0;
   }
-  /* line 237, ../sass/modules/_home.scss */
+  /* line 234, ../sass/modules/_home.scss */
   .home-features .feature:after {
     width: 50%;
     margin: 0;
@@ -1678,20 +1662,20 @@ header.scrolled .user p span {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 243, ../sass/modules/_home.scss */
+  /* line 240, ../sass/modules/_home.scss */
   .home-features .feature .feature-content {
     width: 100%;
     text-align: center;
   }
-  /* line 246, ../sass/modules/_home.scss */
+  /* line 243, ../sass/modules/_home.scss */
   .home-features .feature .feature-content h3 {
     padding-bottom: 156px;
   }
-  /* line 249, ../sass/modules/_home.scss */
+  /* line 246, ../sass/modules/_home.scss */
   .home-features .feature .feature-content p:last-of-type {
     padding-bottom: 26px;
   }
-  /* line 253, ../sass/modules/_home.scss */
+  /* line 250, ../sass/modules/_home.scss */
   .home-features .feature .feature-img {
     position: absolute;
     top: 94px;
@@ -1704,7 +1688,7 @@ header.scrolled .user p span {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
   }
-  /* line 262, ../sass/modules/_home.scss */
+  /* line 259, ../sass/modules/_home.scss */
   .home-features .feature .feature-img.right img,
   .home-features .feature .feature-img img {
     float: none;
@@ -1714,7 +1698,7 @@ header.scrolled .user p span {
 /* ======================================
     CONNECT
 ====================================== */
-/* line 275, ../sass/modules/_home.scss */
+/* line 272, ../sass/modules/_home.scss */
 .home-connect {
   padding: 80px 0;
   text-align: center;
@@ -1724,39 +1708,39 @@ header.scrolled .user p span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 281, ../sass/modules/_home.scss */
+/* line 278, ../sass/modules/_home.scss */
 .home-connect h2 {
   color: #fdbd4e;
   padding-bottom: 12px;
 }
-/* line 285, ../sass/modules/_home.scss */
+/* line 282, ../sass/modules/_home.scss */
 .home-connect p {
   padding-bottom: 34px;
   color: #eee;
 }
-/* line 288, ../sass/modules/_home.scss */
+/* line 285, ../sass/modules/_home.scss */
 .home-connect p small {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
-/* line 293, ../sass/modules/_home.scss */
+/* line 290, ../sass/modules/_home.scss */
 .home-connect .alert {
-  padding-bottom: 58px;
+  padding-bottom: 42px;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   color: #fdbd4e;
 }
 
 @media (max-width: 640px) {
-  /* line 301, ../sass/modules/_home.scss */
+  /* line 298, ../sass/modules/_home.scss */
   .home-connect {
     padding: 60px 0;
   }
-  /* line 304, ../sass/modules/_home.scss */
+  /* line 301, ../sass/modules/_home.scss */
   .home-connect p {
     padding-bottom: 12px;
   }
-  /* line 308, ../sass/modules/_home.scss */
+  /* line 305, ../sass/modules/_home.scss */
   .home-connect .alert {
     padding-bottom: 40px;
     font-size: 16px;
@@ -1792,7 +1776,7 @@ footer .logo path {
 footer h2 {
   font-family: "montserrat_ultralight", Helvetica, Arial, sans-serif;
   font-size: 34px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 /* line 19, ../sass/modules/_footer.scss */
 footer h2 span {
@@ -1825,7 +1809,7 @@ footer p a:hover {
 }
 /* line 44, ../sass/modules/_footer.scss */
 footer ul li {
-  margin-top: 20px;
+  margin-top: 22px;
   display: inline-block;
 }
 /* line 47, ../sass/modules/_footer.scss */

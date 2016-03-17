@@ -1,6 +1,6 @@
 .home section p {
     font-family: $text-font;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
     & + p {
         padding-top: 20px;
@@ -61,7 +61,7 @@
         margin-bottom: 120px;
         color: #fff;
         font-family: $text-light;
-        font-size: 24px;
+        font-size: 26px;
         background-color: rgba(0, 0, 0, .7);
         &:before {
             position: absolute;
@@ -199,9 +199,6 @@
             }
             p {
                 color: $purple;
-                &:last-of-type {
-                    padding-bottom: 34px;
-                }
             }
         }
         
@@ -286,14 +283,14 @@
         padding-bottom: 34px;
         color: $light-grey;
         small {
-            font-size: 11px;
+            font-size: 12px;
             text-align: center;
         }
     }
     .alert {
-        padding-bottom: 58px;
+        padding-bottom: 42px;
         font-family: $text-semibold;
-        font-size: 18px;
+        font-size: 20px;
         color: $orange;
     }
 }

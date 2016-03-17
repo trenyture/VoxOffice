@@ -11,9 +11,9 @@
 }
 
 .btn-square {
-    padding: 12px 82px;
+    padding: 14px 82px 8px;
     font-family: 'nexa_bold';
-    font-size: 36px;
+    font-size: 42px;
     color: #fff;
     text-transform: uppercase;
     background: $orange;
@@ -33,34 +33,27 @@
 }
 
 .btn-fb {
-    padding: 18px 22px 17px;
+    padding: 11px 22px 10px;
     font-family: Arial, sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     color: #fff;
     background: $fb-blue;
     @include box-shadow(0 0 0 $dark-fb-blue, 0 5px 10px rgba(0, 0, 0, .35));
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
-        padding: 18px 22px 17px 52px;
         background: darken($fb-blue, 5%);
         @include box-shadow(0 0 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
-        i {
-            @include translate3d(-32px, -50%);
-        }
     }
     i {
-        position: absolute;
-        top: 50%;
         font-size: 28px;
         vertical-align: middle;
-        @include translate3d(-50px, -50%);
-        @include transition();
+        margin-right: 16px;
     }
 }
 @media (max-width: $smartphone) {
     .btn-fb {
-        padding: 18px 22px 17px;
+        padding: 12px 22px 11px;
 
         i {
             font-size: 24px;
