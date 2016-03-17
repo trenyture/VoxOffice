@@ -1,8 +1,3 @@
-// Elements resize
-/*function sizeElement(){
-	console.log('resize!');
-}*/
-
 $(document).ready(function () {
 
     // Smooth scroll
@@ -56,10 +51,4 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('nav').toggleClass('open-menu');
     });
-
-    // Resize call
-    //sizeElement();
 });
-
-// On screen resize
-//$(window).resize(sizeElement);

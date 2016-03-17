@@ -41,11 +41,11 @@ $(document).ready(function () {
 });
 
 function constructPage(films) {
-    console.log(films);
+    //console.log(films);
     var i = 1;
     $films = $(films);
     $films.each(function () {
-        console.log($('article#film' + i));
+        //console.log($('article#film' + i));
         $('article#film' + i).css({
             'background-image': 'url(assets/img/films/' + this.image + ')'
         });

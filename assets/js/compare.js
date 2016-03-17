@@ -16,7 +16,7 @@ $(document).ready(function () {
 })
 
 function constructBad(films) {
-    console.log(films);
+    //console.log(films);
     var i = 1;
     var ulLi = '';
     $films = $(films);
@@ -31,7 +31,7 @@ function constructBad(films) {
 }
 
 function constructGood(films) {
-    console.log(films);
+    //console.log(films);
     var i = 1;
     var ulLi = '';
     $films = $(films);
