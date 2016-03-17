@@ -24,6 +24,7 @@
     @include transition-duration(.3s);
     &:hover {
         top: 6px;
+        background: darken($orange, 5%);
         border-top: 1px solid transparent;
         text-shadow: none;
         @include box-shadow(0 0 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
@@ -49,6 +50,7 @@
     @include transition-duration(.3s);
     &:hover {
         top: 4px;
+        background: darken($fb-blue, 5%);
         border-top: 1px solid transparent;
         @include box-shadow(0 0 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
     }
@@ -81,6 +83,7 @@
     &:hover {
         top: 4px;
         color: #fff;
+        background: darken($orange, 5%);
         border-bottom: 2px solid transparent;
     }
 }

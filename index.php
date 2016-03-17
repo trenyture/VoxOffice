@@ -35,6 +35,7 @@
                             <h3>Votez.</h3>
                             <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
                             <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
+                            <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>

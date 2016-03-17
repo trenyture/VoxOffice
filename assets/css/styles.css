@@ -825,6 +825,7 @@ h3 {
 /* line 25, ../sass/partials/_buttons.scss */
 .btn-square:hover {
   top: 6px;
+  background: #fdb435;
   border-top: 1px solid transparent;
   text-shadow: none;
   -moz-box-shadow: 0 0 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
@@ -833,13 +834,13 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  /* line 33, ../sass/partials/_buttons.scss */
+  /* line 34, ../sass/partials/_buttons.scss */
   .btn-square {
     padding: 9px 64px;
     font-size: 30px;
   }
 }
-/* line 39, ../sass/partials/_buttons.scss */
+/* line 40, ../sass/partials/_buttons.scss */
 .btn-fb {
   top: 0;
   padding: 10px 22px 8px;
@@ -859,15 +860,16 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 50, ../sass/partials/_buttons.scss */
+/* line 51, ../sass/partials/_buttons.scss */
 .btn-fb:hover {
   top: 4px;
+  background: #455d93;
   border-top: 1px solid transparent;
   -moz-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
 }
-/* line 55, ../sass/partials/_buttons.scss */
+/* line 57, ../sass/partials/_buttons.scss */
 .btn-fb i {
   padding-right: 24px;
   font-size: 28px;
@@ -875,17 +877,17 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  /* line 62, ../sass/partials/_buttons.scss */
+  /* line 64, ../sass/partials/_buttons.scss */
   .btn-fb {
     padding: 11px 16px 8px;
   }
-  /* line 65, ../sass/partials/_buttons.scss */
+  /* line 67, ../sass/partials/_buttons.scss */
   .btn-fb i {
     padding-right: 20px;
     font-size: 24px;
   }
 }
-/* line 72, ../sass/partials/_buttons.scss */
+/* line 74, ../sass/partials/_buttons.scss */
 .btn-round {
   top: 0;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -901,10 +903,11 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 81, ../sass/partials/_buttons.scss */
+/* line 83, ../sass/partials/_buttons.scss */
 .btn-round:hover {
   top: 4px;
   color: #fff;
+  background: #fdb435;
   border-bottom: 2px solid transparent;
 }
 
