@@ -187,7 +187,6 @@ header {
 @media (max-width: $smartphoneMax) {
     header {
         height: 44px;
-        background: $dark-grey;
         
         .logo {
             display: none;
@@ -274,6 +273,11 @@ header {
                         width: 30px;
                     }
                 }
+                &.disconnected {
+                    a {
+                        line-height: 44px;
+                    }
+                }
             }
             p {
                 padding: 7px 0;
@@ -285,6 +289,8 @@ header {
         }
         
         &.scrolled {
+            height: 44px;
+            
             .hamburger span {
                 background: $purple;
             }
@@ -293,6 +299,18 @@ header {
                 color: #fff;
                 &:hover {
                     color: $orange;
+                }
+            }
+            
+            .user {
+                .user-portrait {
+                    margin: 7px 8px 0;
+                    &.disconnected a {
+                        line-height: 44px;
+                    }
+                }
+                p {
+                    padding: 7px 0;
                 }
             }
         }

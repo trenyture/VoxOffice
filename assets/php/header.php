@@ -103,6 +103,10 @@
             </div>
             <nav>
                 <ul>
+                <li><a href="./index">Accueil</a></li>
+                    <li><a href="./vote">Voter</a></li>
+                    <li><a href="./compare">Classement</a></li>
+                    <li><a href="./add">Ajouter</a></li>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
@@ -111,6 +115,15 @@
                 <?php } ?>
                 </ul>
             </nav>
+            <div class="user">
+                <div class="user-portrait">
+                            <a href="index.php?logout=true">
+                                <span class="logoff"><i class="fa fa-power-off"></i></span>
+                                <img src="assets/img/portrait.jpg" alt="Utilisateur" />
+                            </a>
+                        </div>
+                        <p>Connecté en tant que :<br/><span id="username">Pierre PREZELIN</span></p>
+            </div>
             <div class="user">
                 <?php
                     if(isset($_SESSION['fb_token'])){
@@ -126,7 +139,7 @@
                     }else{
                     ?>
                         <div class="user-portrait disconnected">
-                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connexion</a>
+                            <!--<a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connexion</a>-->
                         </div>
                     <?php
                     }
