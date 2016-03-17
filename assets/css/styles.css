@@ -4,7 +4,7 @@ body {
   width: 100%;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #353535;
+  color: #2a2a2a;
   line-height: 1.2;
 }
 
@@ -1152,7 +1152,7 @@ header.scrolled .user p span {
   /* line 144, ../sass/modules/_header.scss */
   header {
     height: 44px;
-    background: #353535;
+    background: #2a2a2a;
   }
   /* line 148, ../sass/modules/_header.scss */
   header .logo {
@@ -1681,7 +1681,7 @@ header.scrolled .user p span {
 /* line 1, ../sass/modules/_footer.scss */
 footer {
   color: #eee;
-  background-color: #353535;
+  background-color: #2a2a2a;
 }
 /* line 2, ../sass/partials/_mixins.scss */
 footer:before, footer:after {
@@ -1718,7 +1718,7 @@ footer ul li a {
 }
 /* line 20, ../sass/modules/_footer.scss */
 footer ul li a:hover {
-  background: #2d2d2d;
+  background: #222222;
 }
 /* line 27, ../sass/modules/_footer.scss */
 footer p {
