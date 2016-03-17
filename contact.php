@@ -1,10 +1,11 @@
 <?php 
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
-    require_once('assets/php/header.php'); 
+    require_once('assets/php/header.php');
 ?>    
 	<section>
 		<h2>N'hésite pas à nous contacter!!!</h2>
+		<?php if (!isset($_GET['send'])) { ?>
 		<ul id="error-msg"></ul>
 		<form method="POST" action="assets/php/formsend.php">
 			<input type="email" name="mail" id="mail" placeholder="Ton mail" />
@@ -20,4 +21,7 @@
 		</form>
 	</section>
 	<script type="text/javascript" src="assets/js/contact.js"></script>
+    <?php }else{ ?>
+    <p>Merci beaucoup, votre message à bien été envoyé.</p>
+    <?php } ?>
 <?php require_once('assets/php/footer.php'); ?>
