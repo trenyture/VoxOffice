@@ -103,6 +103,7 @@
             </div>
             <nav>
                 <ul>
+                <li><a href="./index">Accueil</a></li>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
@@ -112,7 +113,7 @@
                 </ul>
             </nav>
             <div class="user">
-                <?php 
+                <?php
                     if(isset($_SESSION['fb_token'])){
                     ?>
                         <div class="user-portrait">
@@ -125,10 +126,10 @@
                     <?php
                     }else{
                     ?>
-                        <div class="user-portrait">
-                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-facebook-square"></i>Connection</a>
+                        <div class="user-portrait disconnected">
+                            <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connection</a>
                         </div>
-                    <?php 
+                    <?php
                     }
                 ?>
             </div>
