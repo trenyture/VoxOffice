@@ -103,7 +103,6 @@
             </div>
             <nav>
                 <ul>
-                <li><a href="./index">Accueil</a></li>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
