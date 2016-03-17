@@ -20,11 +20,12 @@
     position: absolute;
     top: auto;
     bottom: 26px;
+    left: 50%;
     width: 18px;
     height: 34px;
-    margin-left: -9px;
     border: 3px solid #fff;
     @include border-radius(15px);
+    @include transformX50();
     &:after {
         position: absolute;
         content: '';

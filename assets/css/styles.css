@@ -935,15 +935,18 @@ h3 {
   position: absolute;
   top: auto;
   bottom: 26px;
+  left: 50%;
   width: 18px;
   height: 34px;
-  margin-left: -9px;
   border: 3px solid #fff;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   border-radius: 15px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-/* line 28, ../sass/partials/_icons.scss */
+/* line 29, ../sass/partials/_icons.scss */
 .icon-scroll:after {
   position: absolute;
   content: '';
@@ -963,13 +966,13 @@ h3 {
   }
 }
 @media (max-width: 640px) {
-  /* line 47, ../sass/partials/_icons.scss */
+  /* line 48, ../sass/partials/_icons.scss */
   .icon-scroll {
     bottom: 12px;
     width: 16px;
     height: 28px;
   }
-  /* line 51, ../sass/partials/_icons.scss */
+  /* line 52, ../sass/partials/_icons.scss */
   .icon-scroll:after {
     top: 5px;
     left: 7px;
@@ -1272,119 +1275,119 @@ header.scrolled .user p span {
   }
   /* line 231, ../sass/modules/_header.scss */
   header nav {
-    position: absolute;
+    position: fixed;
     top: 44px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 44px);
     display: none;
+    text-align: center;
     background: rgba(65, 52, 84, 0.9);
   }
-  /* line 239, ../sass/modules/_header.scss */
+  /* line 240, ../sass/modules/_header.scss */
   header nav.open-menu {
-    display: block;
+    display: table;
   }
-  /* line 242, ../sass/modules/_header.scss */
+  /* line 243, ../sass/modules/_header.scss */
   header nav + li {
     margin: 0;
   }
-  /* line 245, ../sass/modules/_header.scss */
+  /* line 246, ../sass/modules/_header.scss */
   header nav ul {
     text-align: center;
-    padding-top: 52px;
+    display: table-cell;
+    vertical-align: middle;
   }
-  /* line 248, ../sass/modules/_header.scss */
+  /* line 250, ../sass/modules/_header.scss */
   header nav ul li {
     display: block;
   }
-  /* line 250, ../sass/modules/_header.scss */
+  /* line 252, ../sass/modules/_header.scss */
   header nav ul li + li {
     margin: 0;
   }
-  /* line 253, ../sass/modules/_header.scss */
+  /* line 255, ../sass/modules/_header.scss */
   header nav ul li a {
     font-size: 48px;
     color: #fff;
-    line-height: 80px;
+    line-height: 56px;
   }
-  /* line 263, ../sass/modules/_header.scss */
+  /* line 265, ../sass/modules/_header.scss */
   header .user .user-portrait {
     margin: 7px 8px 0;
   }
-  /* line 266, ../sass/modules/_header.scss */
+  /* line 268, ../sass/modules/_header.scss */
   header .user .user-portrait a span {
     width: 30px;
     height: 30px;
     font-size: 16px;
     line-height: 30px;
   }
-  /* line 272, ../sass/modules/_header.scss */
+  /* line 274, ../sass/modules/_header.scss */
   header .user .user-portrait a img {
     width: 30px;
   }
-  /* line 277, ../sass/modules/_header.scss */
+  /* line 279, ../sass/modules/_header.scss */
   header .user .user-portrait.disconnected a {
     line-height: 44px;
   }
-  /* line 282, ../sass/modules/_header.scss */
+  /* line 284, ../sass/modules/_header.scss */
   header .user p {
     padding: 7px 0;
     font-size: 10px;
   }
-  /* line 285, ../sass/modules/_header.scss */
+  /* line 287, ../sass/modules/_header.scss */
   header .user p span {
     font-size: 12px;
   }
-  /* line 291, ../sass/modules/_header.scss */
+  /* line 293, ../sass/modules/_header.scss */
   header.scrolled {
     height: 44px;
   }
-  /* line 294, ../sass/modules/_header.scss */
+  /* line 296, ../sass/modules/_header.scss */
   header.scrolled .hamburger span {
     background: #7b6696;
   }
-  /* line 298, ../sass/modules/_header.scss */
+  /* line 300, ../sass/modules/_header.scss */
   header.scrolled nav ul li a {
     color: #fff;
   }
-  /* line 300, ../sass/modules/_header.scss */
+  /* line 302, ../sass/modules/_header.scss */
   header.scrolled nav ul li a:hover {
     color: #fdbd4e;
   }
-  /* line 306, ../sass/modules/_header.scss */
+  /* line 308, ../sass/modules/_header.scss */
   header.scrolled .user .user-portrait {
     margin: 7px 8px 0;
   }
-  /* line 308, ../sass/modules/_header.scss */
+  /* line 310, ../sass/modules/_header.scss */
   header.scrolled .user .user-portrait.disconnected a {
     line-height: 44px;
   }
-  /* line 312, ../sass/modules/_header.scss */
+  /* line 314, ../sass/modules/_header.scss */
   header.scrolled .user p {
     padding: 7px 0;
   }
 }
 @media (max-width: 640px) and (orientation: landscape) {
-  /* line 320, ../sass/modules/_header.scss */
-  header nav ul {
-    padding-top: 24px;
-  }
   /* line 322, ../sass/modules/_header.scss */
-  header nav ul li a {
+  header nav ul li a,
+  header.scrolled nav ul li a {
     font-size: 42px;
-    line-height: 66px;
   }
 }
 @media (max-width: 480px) {
-  /* line 329, ../sass/modules/_header.scss */
-  header nav ul li a {
+  /* line 328, ../sass/modules/_header.scss */
+  header nav ul li a,
+  header.scrolled nav ul li a {
     font-size: 42px;
   }
 }
 @media (max-width: 480px) and (orientation: landscape) {
   /* line 334, ../sass/modules/_header.scss */
-  header nav ul {
-    padding-top: 8px;
+  header nav ul li a,
+  header.scrolled nav ul li a {
+    line-height: 46px;
   }
 }
 /* line 1, ../sass/modules/_home.scss */

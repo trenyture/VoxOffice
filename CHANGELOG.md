@@ -10,6 +10,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Pre-scroll header styles
 - Buttons styles
+- Footer styles
+
+### Fixed
+- Scroll icon alignment
+- Mobile header links centering
 
 ## [Unreleased] - 11-02-2016
 ### Added
