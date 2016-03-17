@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - xx-03-2016
 ### Added
-- Test "Contact" email adress
+- GitHub link
+- Temporary contact email adress
 - Header styles for Facebook connection
 
 ### Changed
