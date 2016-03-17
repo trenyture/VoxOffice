@@ -794,26 +794,24 @@ h3 {
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
+  overflow: hidden;
 }
-/* line 7, ../sass/partials/_buttons.scss */
+/* line 8, ../sass/partials/_buttons.scss */
 .btn:hover {
   cursor: pointer;
 }
 
-/* line 12, ../sass/partials/_buttons.scss */
+/* line 13, ../sass/partials/_buttons.scss */
 .btn-square {
-  top: 0;
   padding: 12px 82px;
   font-family: 'nexa_bold';
   font-size: 36px;
   color: #fff;
   text-transform: uppercase;
   background: #fdbd4e;
-  border-top: 1px solid #fee6bc;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 3px 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 #e59f26, 0 5px 10px rgba(0, 0, 0, 0.35);
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -822,36 +820,31 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 25, ../sass/partials/_buttons.scss */
+/* line 23, ../sass/partials/_buttons.scss */
 .btn-square:hover {
-  top: 6px;
   background: #fdb435;
-  border-top: 1px solid transparent;
-  text-shadow: none;
   -moz-box-shadow: 0 0 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 #e59f26, 0 3px 5px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 640px) {
-  /* line 34, ../sass/partials/_buttons.scss */
+  /* line 29, ../sass/partials/_buttons.scss */
   .btn-square {
     padding: 9px 64px;
     font-size: 30px;
   }
 }
-/* line 40, ../sass/partials/_buttons.scss */
+/* line 35, ../sass/partials/_buttons.scss */
 .btn-fb {
-  top: 0;
-  padding: 10px 22px 8px;
+  padding: 18px 22px 17px;
   font-family: Arial, sans-serif;
   font-size: 11px;
   color: #fff;
   background: #4d68a4;
-  border-top: 1px solid #7c96d1;
-  -moz-box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 2px 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 0 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 #364973, 0 5px 10px rgba(0, 0, 0, 0.35);
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -860,41 +853,49 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 51, ../sass/partials/_buttons.scss */
+/* line 44, ../sass/partials/_buttons.scss */
 .btn-fb:hover {
-  top: 4px;
+  padding: 18px 22px 17px 52px;
   background: #455d93;
-  border-top: 1px solid transparent;
   -moz-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 #364973, 0 3px 5px rgba(0, 0, 0, 0.35);
 }
-/* line 57, ../sass/partials/_buttons.scss */
+/* line 48, ../sass/partials/_buttons.scss */
+.btn-fb:hover i {
+  -moz-transform: translate3d(-32px, -50%, 1em);
+  -webkit-transform: translate3d(-32px, -50%, 1em);
+  transform: translate3d(-32px, -50%, 1em);
+}
+/* line 52, ../sass/partials/_buttons.scss */
 .btn-fb i {
-  padding-right: 24px;
+  position: absolute;
+  top: 50%;
   font-size: 28px;
   vertical-align: middle;
+  -moz-transform: translate3d(-50px, -50%, 1em);
+  -webkit-transform: translate3d(-50px, -50%, 1em);
+  transform: translate3d(-50px, -50%, 1em);
+  transition: all .3s;
 }
 
 @media (max-width: 640px) {
-  /* line 64, ../sass/partials/_buttons.scss */
+  /* line 62, ../sass/partials/_buttons.scss */
   .btn-fb {
-    padding: 11px 16px 8px;
+    padding: 18px 22px 17px;
   }
-  /* line 67, ../sass/partials/_buttons.scss */
+  /* line 65, ../sass/partials/_buttons.scss */
   .btn-fb i {
-    padding-right: 20px;
     font-size: 24px;
   }
 }
-/* line 74, ../sass/partials/_buttons.scss */
+/* line 71, ../sass/partials/_buttons.scss */
 .btn-round {
-  top: 0;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
   padding: 12px 22px;
   color: #413454;
-  background: #fdbd4e;
-  border-bottom: 2px solid #e59f26;
+  background: transparent;
+  border: 2px solid #fdbd4e;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -903,12 +904,10 @@ h3 {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 83, ../sass/partials/_buttons.scss */
+/* line 79, ../sass/partials/_buttons.scss */
 .btn-round:hover {
-  top: 4px;
   color: #fff;
-  background: #fdb435;
-  border-bottom: 2px solid transparent;
+  background: #fdbd4e;
 }
 
 /* line 1, ../sass/partials/_icons.scss */
