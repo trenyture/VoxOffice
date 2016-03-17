@@ -1,9 +1,4 @@
-// Elements resize
-/*function sizeElement(){
-	console.log('resize!');
-}*/
-
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Smooth scroll
     $(function () {
@@ -27,9 +22,19 @@ $(document).ready(function() {
             }
         });
     });
-    
+
     // Header styles on scroll
-    $(window).scroll(function() {
+    window.onload = function () {
+        var scrollTop = $(this).scrollTop();
+
+        if (scrollTop > 0) {
+            $('header').addClass('scrolled');
+        } else {
+            $('header').removeClass('scrolled');
+        }
+        return false;
+    }
+    $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
 
         if (scrollTop > 0) {
@@ -39,17 +44,11 @@ $(document).ready(function() {
         }
         return false;
     });
-    
+
     // Mobile menu opening {
-    $('.hamburger').on('click', function(e) {
+    $('.hamburger').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
         $('nav').toggleClass('open-menu');
     });
-    
-    // Resize call
-    //sizeElement();
 });
-    
-// On screen resize
-//$(window).resize(sizeElement);

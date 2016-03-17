@@ -1,8 +1,10 @@
 .btn {
+    position: relative;
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
+    overflow: hidden;
     &:hover {
         cursor: pointer;
     }
@@ -15,16 +17,12 @@
     color: #fff;
     text-transform: uppercase;
     background: $orange;
-    border-top: 1px solid $light-orange;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
-    @include box-shadow(0 3px 0 $dark-orange, 0 5px 10px rgba(0, 0, 0, .35));
+    @include box-shadow(0 0 0 $dark-orange, 0 5px 10px rgba(0, 0, 0, .35));
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
-        background: $dark-orange;
-        border-top: 1px solid $orange;
-        text-shadow: none;
-        @include box-shadow(0 3px 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
+        background: darken($orange, 5%);
+        @include box-shadow(0 0 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
     }
 }
 @media (max-width: $smartphone) {
@@ -35,32 +33,36 @@
 }
 
 .btn-fb {
-    padding: 10px 22px 8px;
+    padding: 18px 22px 17px;
     font-family: Arial, sans-serif;
     font-size: 11px;
     color: #fff;
     background: $fb-blue;
-    border-top: 1px solid $light-fb-blue;
-    @include box-shadow(0 2px 0 $dark-fb-blue, 0 5px 10px rgba(0, 0, 0, .35));
+    @include box-shadow(0 0 0 $dark-fb-blue, 0 5px 10px rgba(0, 0, 0, .35));
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
-        background: $dark-fb-blue;
-        border-top: 1px solid $fb-blue;
-        @include box-shadow(0 3px 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
+        padding: 18px 22px 17px 52px;
+        background: darken($fb-blue, 5%);
+        @include box-shadow(0 0 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
+        i {
+            @include translate3d(-32px, -50%);
+        }
     }
     i {
-        padding-right: 24px;
+        position: absolute;
+        top: 50%;
         font-size: 28px;
         vertical-align: middle;
+        @include translate3d(-50px, -50%);
+        @include transition();
     }
 }
 @media (max-width: $smartphone) {
     .btn-fb {
-        padding: 11px 16px 8px;
+        padding: 18px 22px 17px;
 
         i {
-            padding-right: 20px;
             font-size: 24px;
         }
     }
@@ -70,12 +72,12 @@
     font-family: $text-font;
     padding: 12px 22px;
     color: $dark-purple;
-    background: $orange;
-    border-bottom: 2px solid $dark-orange;
+    background: transparent;
+    border: 2px solid $orange;
     @include border-radius(50px);
     @include transition-duration(.3s);
     &:hover {
         color: #fff;
-        background: $dark-orange;
+        background: $orange;
     }
 }

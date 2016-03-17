@@ -31,9 +31,10 @@ $light-fb-blue: #7c96d1;
 $dark-fb-blue: #364973;
 
 $light-grey: #eee;
-$dark-grey: #353535;
-$border-grey: #eaeaea;
 $grey: darken($light-grey, 50%);
+$medium-grey: #aaa;
+$dark-grey: #2a2a2a;
+$border-grey: #eaeaea;
 
 // Responsive
 $desktop: 1920px;
