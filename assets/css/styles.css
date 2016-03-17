@@ -1764,7 +1764,9 @@ header.scrolled .user p span {
 }
 /* line 1, ../sass/modules/_footer.scss */
 footer {
+  padding: 48px 0;
   color: #eee;
+  text-align: center;
   background-color: #2a2a2a;
 }
 /* line 2, ../sass/partials/_mixins.scss */
@@ -1776,97 +1778,71 @@ footer:before, footer:after {
 footer:after {
   clear: both;
 }
-/* line 5, ../sass/modules/_footer.scss */
-footer ul {
-  float: left;
-  padding-top: 8px;
+/* line 7, ../sass/modules/_footer.scss */
+footer .logo {
+  width: 72px;
+  height: auto;
+  margin-bottom: 3px;
 }
-/* line 8, ../sass/modules/_footer.scss */
-footer ul li {
-  display: inline-block;
+/* line 11, ../sass/modules/_footer.scss */
+footer .logo path {
+  fill: #fff;
 }
-/* line 10, ../sass/modules/_footer.scss */
-footer ul li + li {
-  margin-left: 42px;
+/* line 15, ../sass/modules/_footer.scss */
+footer h2 {
+  font-family: "montserrat_ultralight", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  margin-bottom: 18px;
 }
-/* line 13, ../sass/modules/_footer.scss */
-footer ul li a {
-  padding: 6px 8px;
+/* line 19, ../sass/modules/_footer.scss */
+footer h2 span {
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+}
+/* line 23, ../sass/modules/_footer.scss */
+footer p {
   display: block;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #aaa;
+}
+/* line 29, ../sass/modules/_footer.scss */
+footer p span {
+  margin-top: -6px;
+  padding-right: 6px;
+}
+/* line 33, ../sass/modules/_footer.scss */
+footer p br {
+  display: none;
+}
+/* line 36, ../sass/modules/_footer.scss */
+footer p a {
+  color: #fff;
+}
+/* line 39, ../sass/modules/_footer.scss */
+footer p a:hover {
+  color: #fdbd4e;
+}
+/* line 44, ../sass/modules/_footer.scss */
+footer ul li {
+  margin-top: 20px;
+  display: inline-block;
+}
+/* line 47, ../sass/modules/_footer.scss */
+footer ul li + li {
+  margin-left: 14px;
+}
+/* line 50, ../sass/modules/_footer.scss */
+footer ul li a {
+  display: block;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 20px;
   color: #eee;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 20, ../sass/modules/_footer.scss */
+/* line 56, ../sass/modules/_footer.scss */
 footer ul li a:hover {
-  background: #222222;
-}
-/* line 27, ../sass/modules/_footer.scss */
-footer p {
-  float: right;
-  display: inline-block;
-  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  line-height: 42px;
-  color: #aaa;
-}
-/* line 34, ../sass/modules/_footer.scss */
-footer p span {
-  margin-top: -6px;
-  padding-right: 6px;
-}
-/* line 38, ../sass/modules/_footer.scss */
-footer p br {
-  display: none;
-}
-/* line 41, ../sass/modules/_footer.scss */
-footer p a {
-  color: #fff;
-}
-/* line 44, ../sass/modules/_footer.scss */
-footer p a:hover {
   color: #fdbd4e;
-}
-
-@media (max-width: 640px) {
-  /* line 51, ../sass/modules/_footer.scss */
-  footer {
-    text-align: center;
-  }
-  /* line 53, ../sass/modules/_footer.scss */
-  footer ul,
-  footer p {
-    float: none;
-  }
-  /* line 57, ../sass/modules/_footer.scss */
-  footer ul {
-    padding: 14px 0;
-  }
-  /* line 60, ../sass/modules/_footer.scss */
-  footer ul li + li {
-    margin-left: 24px;
-  }
-  /* line 63, ../sass/modules/_footer.scss */
-  footer ul li a {
-    font-size: 12px;
-  }
-  /* line 68, ../sass/modules/_footer.scss */
-  footer p {
-    padding-bottom: 10px;
-    font-size: 10px;
-    line-height: 1;
-  }
-}
-@media (max-width: 480px) {
-  /* line 77, ../sass/modules/_footer.scss */
-  footer ul {
-    padding: 14px 0 24px;
-  }
-  /* line 80, ../sass/modules/_footer.scss */
-  footer p br {
-    display: block;
-  }
 }

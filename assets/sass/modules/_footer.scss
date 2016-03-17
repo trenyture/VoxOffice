@@ -1,35 +1,30 @@
 footer {
+    padding: 48px 0;
     color: $light-grey;
+    text-align: center;
     background-color: $dark-grey;
     @include clearfix();
-    ul {
-        float: left;
-        padding-top: 8px;
-        li {
-            display: inline-block;
-            & + li {
-                margin-left: 42px;
-            }
-            a {
-                padding: 6px 8px;
-                display: block;
-                font-family: $text-light;
-                font-size: 15px;
-                color: $light-grey;
-                @include border-radius(2px);
-                &:hover {
-                    background: darken($dark-grey, 3%);
-                }
-            }
+    .logo {
+        width: 72px;
+        height: auto;
+        margin-bottom: 3px;
+        path {
+            fill: #fff;
         }
     }
-    
+    h2 {
+        font-family: $text-ultralight;
+        font-size: 34px;
+        margin-bottom: 18px;
+        span {
+            font-family: $text-semibold;
+        }
+    }
     p {
-        float: right;
-        display: inline-block;
+        display: block;
         font-family: $text-light;
-        font-size: 11px;
-        line-height: 42px;
+        font-size: 12px;
+        line-height: 20px;
         color: $medium-grey;
         span {
             margin-top: -6px;
@@ -46,39 +41,21 @@ footer {
             }
         }
     }
-}
-@media (max-width: $smartphone) {
-    footer {
-        text-align: center;
-        ul,
-        p {
-            float: none;
+    ul li {
+        margin-top: 20px;
+        display: inline-block;
+        & + li {
+            margin-left: 14px;
         }
-        ul {
-            padding: 14px 0;
-            li {
-                & + li {
-                    margin-left: 24px;
-                }
-                a {
-                    font-size: 12px;
-                }
-            }
-        }
-        p {
-            padding-bottom: 10px;
-            font-size: 10px;
-            line-height: 1;
-        }
-    }
-}
-@media (max-width: $smartphoneMin) {
-    footer {
-        ul {
-            padding: 14px 0 24px;
-        }
-        p br {
+        a {
             display: block;
+            font-family: $text-light;
+            font-size: 20px;
+            color: $light-grey;
+            @include border-radius(2px);
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }
