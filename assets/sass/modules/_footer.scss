@@ -30,12 +30,20 @@ footer {
         font-family: $text-light;
         font-size: 11px;
         line-height: 42px;
+        color: $medium-grey;
         span {
             margin-top: -6px;
             padding-right: 6px;
         }
         br {
             display: none;
+        }
+        a {
+            color: #fff;
+            
+            &:hover {
+                color: $orange;
+            }
         }
     }
 }

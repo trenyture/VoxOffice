@@ -1,4 +1,4 @@
-/* line 50, ../sass/partials/_base.scss */
+/* line 51, ../sass/partials/_base.scss */
 html,
 body {
   width: 100%;
@@ -8,7 +8,7 @@ body {
   line-height: 1.2;
 }
 
-/* line 59, ../sass/partials/_base.scss */
+/* line 60, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
 }
@@ -1727,40 +1727,49 @@ footer p {
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 42px;
+  color: #aaa;
 }
-/* line 33, ../sass/modules/_footer.scss */
+/* line 34, ../sass/modules/_footer.scss */
 footer p span {
   margin-top: -6px;
   padding-right: 6px;
 }
-/* line 37, ../sass/modules/_footer.scss */
+/* line 38, ../sass/modules/_footer.scss */
 footer p br {
   display: none;
 }
+/* line 41, ../sass/modules/_footer.scss */
+footer p a {
+  color: #fff;
+}
+/* line 44, ../sass/modules/_footer.scss */
+footer p a:hover {
+  color: #fdbd4e;
+}
 
 @media (max-width: 640px) {
-  /* line 43, ../sass/modules/_footer.scss */
+  /* line 51, ../sass/modules/_footer.scss */
   footer {
     text-align: center;
   }
-  /* line 45, ../sass/modules/_footer.scss */
+  /* line 53, ../sass/modules/_footer.scss */
   footer ul,
   footer p {
     float: none;
   }
-  /* line 49, ../sass/modules/_footer.scss */
+  /* line 57, ../sass/modules/_footer.scss */
   footer ul {
     padding: 14px 0;
   }
-  /* line 52, ../sass/modules/_footer.scss */
+  /* line 60, ../sass/modules/_footer.scss */
   footer ul li + li {
     margin-left: 24px;
   }
-  /* line 55, ../sass/modules/_footer.scss */
+  /* line 63, ../sass/modules/_footer.scss */
   footer ul li a {
     font-size: 12px;
   }
-  /* line 60, ../sass/modules/_footer.scss */
+  /* line 68, ../sass/modules/_footer.scss */
   footer p {
     padding-bottom: 10px;
     font-size: 10px;
@@ -1768,11 +1777,11 @@ footer p br {
   }
 }
 @media (max-width: 480px) {
-  /* line 69, ../sass/modules/_footer.scss */
+  /* line 77, ../sass/modules/_footer.scss */
   footer ul {
     padding: 14px 0 24px;
   }
-  /* line 72, ../sass/modules/_footer.scss */
+  /* line 80, ../sass/modules/_footer.scss */
   footer p br {
     display: block;
   }

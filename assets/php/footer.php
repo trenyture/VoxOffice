@@ -3,9 +3,9 @@
                 <ul>
                     <li><a href="#">Versions</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="mailto:contact@voxoffice.com">Contact</a></li>
                 </ul>
-                <p><span class="icon icon-lab"></span>par Simon Trichereau & Pierre Prezelin. <br>Copyright 2016</p>
+                <p><span class="icon icon-lab"></span>par Simon Trichereau & Pierre Prézelin. <br>© 2016 <a href="/">VoxOffice</a>. Tous droits réservés.</p>
             </div>
         </footer>
     </body>
