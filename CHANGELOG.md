@@ -2,7 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - xx-03-2016
+## [Unreleased] - 31-03-2016
+### Changed
+- "How to" images
+
+## [Unreleased] - 17-03-2016
 ### Added
 - GitHub link
 - Temporary contact email adress
