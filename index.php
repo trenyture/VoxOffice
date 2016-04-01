@@ -1,7 +1,7 @@
 <?php 
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
-    require_once('assets/php/header.php'); 
+    require_once('assets/php/header.php');
 ?>     
         <section class="home-intro">
             <div class="intro-content">
@@ -72,6 +72,7 @@
             </div>
         </section>
         <section class="home-connect">
+            <span class="filter"></span>
             <div class="content-md">
                 <h2>Lancez-vous</h2>
                 <div class="content-sm">

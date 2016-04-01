@@ -2,9 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - 31-03-2016
+## [Unreleased] - 01-04-2016
 ### Changed
-- "How to" images
+- "How to" images and titles font
+- "Get started" filter structure
+- JPG background images for progressive ones
 
 ## [Unreleased] - 17-03-2016
 ### Added

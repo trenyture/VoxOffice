@@ -92,7 +92,7 @@
 }
 
 /* ======================================
-    DESCRIPTION
+    CONCEPT
 ====================================== */
 .home-description {
     background: url("../img/movie_clap.svg") no-repeat top -120px right -24px $purple;
@@ -158,7 +158,7 @@
 }
 
 /* ======================================
-    GET STARTED
+    HOW TO
 ====================================== */
 .home-features {
     padding: 80px 0;
@@ -267,31 +267,48 @@
 }
 
 /* ======================================
-    CONNECT
+    GET STARTED
 ====================================== */
 .home-connect {
+    position: relative;
     padding: 80px 0;
     text-align: center;
     background: url("../img/movie_mosaic.jpg") no-repeat center center;
     @include background-size(cover);
     
-    h2 {
-        color: $orange;
-        padding-bottom: 12px;
+    .filter {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
     }
-    p {
-        padding-bottom: 34px;
-        color: $light-grey;
-        small {
-            font-size: 12px;
-            text-align: center;
+    
+    > div {
+        position: relative;
+        z-index: 1;
+        
+        h2 {
+            color: $orange;
+            padding-bottom: 12px;
         }
-    }
-    .alert {
-        padding-bottom: 42px;
-        font-family: $text-semibold;
-        font-size: 20px;
-        color: $orange;
+        p {
+            padding-bottom: 34px;
+            color: $light-grey;
+            small {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .alert {
+            padding-bottom: 42px;
+            font-family: $text-semibold;
+            font-size: 20px;
+            color: $orange;
+        }
     }
 }
 @media (max-width: $smartphone) {

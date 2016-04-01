@@ -739,7 +739,7 @@ h3 {
 /* line 8, ../sass/partials/_titles.scss */
 h1 {
   position: relative;
-  font-family: 'montserrat_bold';
+  font-family: "montserrat_bold", Helvetica, Arial, sans-serif;
   font-size: 96px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.55);
   text-transform: uppercase;
@@ -753,7 +753,7 @@ h1 a {
 }
 /* line 20, ../sass/partials/_titles.scss */
 h1 span {
-  font-family: 'montserrat_ultralight';
+  font-family: "montserrat_ultralight", Helvetica, Arial, sans-serif;
 }
 
 /* line 25, ../sass/partials/_titles.scss */
@@ -766,7 +766,7 @@ h2 {
 
 /* line 32, ../sass/partials/_titles.scss */
 h3 {
-  font-family: "nexa_bold", Helvetica, Arial, sans-serif;
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
   font-size: 38px;
 }
 
@@ -1492,7 +1492,7 @@ header.scrolled .user p span {
   }
 }
 /* ======================================
-    DESCRIPTION
+    CONCEPT
 ====================================== */
 /* line 97, ../sass/modules/_home.scss */
 .home-description {
@@ -1568,7 +1568,7 @@ header.scrolled .user p span {
   }
 }
 /* ======================================
-    GET STARTED
+    HOW TO
 ====================================== */
 /* line 163, ../sass/modules/_home.scss */
 .home-features {
@@ -1696,10 +1696,11 @@ header.scrolled .user p span {
   }
 }
 /* ======================================
-    CONNECT
+    GET STARTED
 ====================================== */
 /* line 272, ../sass/modules/_home.scss */
 .home-connect {
+  position: relative;
   padding: 80px 0;
   text-align: center;
   background: url("../img/movie_mosaic.jpg") no-repeat center center;
@@ -1708,23 +1709,39 @@ header.scrolled .user p span {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 278, ../sass/modules/_home.scss */
-.home-connect h2 {
+/* line 279, ../sass/modules/_home.scss */
+.home-connect .filter {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+/* line 290, ../sass/modules/_home.scss */
+.home-connect > div {
+  position: relative;
+  z-index: 1;
+}
+/* line 294, ../sass/modules/_home.scss */
+.home-connect > div h2 {
   color: #fdbd4e;
   padding-bottom: 12px;
 }
-/* line 282, ../sass/modules/_home.scss */
-.home-connect p {
+/* line 298, ../sass/modules/_home.scss */
+.home-connect > div p {
   padding-bottom: 34px;
   color: #eee;
 }
-/* line 285, ../sass/modules/_home.scss */
-.home-connect p small {
+/* line 301, ../sass/modules/_home.scss */
+.home-connect > div p small {
   font-size: 12px;
   text-align: center;
 }
-/* line 290, ../sass/modules/_home.scss */
-.home-connect .alert {
+/* line 306, ../sass/modules/_home.scss */
+.home-connect > div .alert {
   padding-bottom: 42px;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -1732,15 +1749,15 @@ header.scrolled .user p span {
 }
 
 @media (max-width: 640px) {
-  /* line 298, ../sass/modules/_home.scss */
+  /* line 315, ../sass/modules/_home.scss */
   .home-connect {
     padding: 60px 0;
   }
-  /* line 301, ../sass/modules/_home.scss */
+  /* line 318, ../sass/modules/_home.scss */
   .home-connect p {
     padding-bottom: 12px;
   }
-  /* line 305, ../sass/modules/_home.scss */
+  /* line 322, ../sass/modules/_home.scss */
   .home-connect .alert {
     padding-bottom: 40px;
     font-size: 16px;
