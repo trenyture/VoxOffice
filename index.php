@@ -33,8 +33,8 @@
                     <li class="feature feature-vote">
                         <div class="feature-content">
                             <h3>Votez.</h3>
-                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare.</p>
-                            <p>Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
+                            <p>Le principe de VoxOffice est de voter.</p>
+                            <p>Faites votre choix entre deux films pour les faire monter - ou descendre - dans le classement général. D'autres films vous seront proposés aussitôt après.</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
@@ -46,7 +46,7 @@
                     <li class="feature feature-add">
                         <div class="feature-content">
                             <h3>Ajoutez.</h3>
-                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui. Aliquam nibh velit.</p>
+                            <p>Vous pouvez également ajouter vos propres films et enrichir la liste VoxOffice des films référencés. C'est simple, rapide et immédiat !</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
@@ -58,8 +58,8 @@
                     <li class="feature feature-compare">
                         <div class="feature-content">
                             <h3>Comparez.</h3>
-                            <p>Vestibulum vehicula sollicitudin dolor sit amet ornare. Nullam nec dictum eros. Sed nisi ante, vestibulum sit amet viverra eget, sollicitudin ac dui.</p>
-                            <p>Aliquam nibh velit.</p>
+                            <p>Est-ce-que ces deux films ont été réalisés par la même personne ? Comparez-les rapidement pour avoir la réponse.</p>
+                            <p>D'autres paramètres comme la date de sortie ou la position dans le classement VoxOffice sont aussi disponibles.</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
@@ -76,7 +76,7 @@
             <div class="content-md">
                 <h2>Lancez-vous</h2>
                 <div class="content-sm">
-                    <p><small>En vous connectant à Facebook, vous pouvez directement vous aider vous et vos amis à trouver les plus grands films !</small></p>
+                    <p><small>En vous connectant à Facebook, nous pouvons directement vous aider, vous et vos amis, à trouver les plus grands films !</small></p>
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
             <?php if(isset($_SESSION['fb_token'])){ ?>
