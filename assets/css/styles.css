@@ -1378,6 +1378,91 @@ header.scrolled .user p span {
     line-height: 46px;
   }
 }
+/* line 1, ../sass/modules/_footer.scss */
+footer {
+  padding: 48px 0;
+  color: #eee;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+/* line 2, ../sass/partials/_mixins.scss */
+footer:before, footer:after {
+  content: "";
+  display: table;
+}
+/* line 7, ../sass/partials/_mixins.scss */
+footer:after {
+  clear: both;
+}
+/* line 7, ../sass/modules/_footer.scss */
+footer .logo {
+  width: 72px;
+  height: auto;
+  margin-bottom: 3px;
+}
+/* line 11, ../sass/modules/_footer.scss */
+footer .logo path {
+  fill: #fff;
+}
+/* line 15, ../sass/modules/_footer.scss */
+footer h2 {
+  font-family: "montserrat_ultralight", Helvetica, Arial, sans-serif;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+/* line 19, ../sass/modules/_footer.scss */
+footer h2 span {
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+}
+/* line 23, ../sass/modules/_footer.scss */
+footer p {
+  display: block;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #aaa;
+}
+/* line 29, ../sass/modules/_footer.scss */
+footer p span {
+  margin-top: -6px;
+  padding-right: 6px;
+}
+/* line 33, ../sass/modules/_footer.scss */
+footer p br {
+  display: none;
+}
+/* line 36, ../sass/modules/_footer.scss */
+footer p a {
+  color: #fff;
+}
+/* line 39, ../sass/modules/_footer.scss */
+footer p a:hover {
+  color: #fdbd4e;
+}
+/* line 44, ../sass/modules/_footer.scss */
+footer ul li {
+  margin-top: 22px;
+  display: inline-block;
+}
+/* line 47, ../sass/modules/_footer.scss */
+footer ul li + li {
+  margin-left: 14px;
+}
+/* line 50, ../sass/modules/_footer.scss */
+footer ul li a {
+  display: block;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #eee;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 56, ../sass/modules/_footer.scss */
+footer ul li a:hover {
+  color: #fdbd4e;
+}
+
 /* line 1, ../sass/modules/_home.scss */
 .home section p {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -1762,88 +1847,4 @@ header.scrolled .user p span {
     padding-bottom: 40px;
     font-size: 16px;
   }
-}
-/* line 1, ../sass/modules/_footer.scss */
-footer {
-  padding: 48px 0;
-  color: #eee;
-  text-align: center;
-  background-color: #2a2a2a;
-}
-/* line 2, ../sass/partials/_mixins.scss */
-footer:before, footer:after {
-  content: "";
-  display: table;
-}
-/* line 7, ../sass/partials/_mixins.scss */
-footer:after {
-  clear: both;
-}
-/* line 7, ../sass/modules/_footer.scss */
-footer .logo {
-  width: 72px;
-  height: auto;
-  margin-bottom: 3px;
-}
-/* line 11, ../sass/modules/_footer.scss */
-footer .logo path {
-  fill: #fff;
-}
-/* line 15, ../sass/modules/_footer.scss */
-footer h2 {
-  font-family: "montserrat_ultralight", Helvetica, Arial, sans-serif;
-  font-size: 34px;
-  margin-bottom: 20px;
-}
-/* line 19, ../sass/modules/_footer.scss */
-footer h2 span {
-  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
-}
-/* line 23, ../sass/modules/_footer.scss */
-footer p {
-  display: block;
-  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 20px;
-  color: #aaa;
-}
-/* line 29, ../sass/modules/_footer.scss */
-footer p span {
-  margin-top: -6px;
-  padding-right: 6px;
-}
-/* line 33, ../sass/modules/_footer.scss */
-footer p br {
-  display: none;
-}
-/* line 36, ../sass/modules/_footer.scss */
-footer p a {
-  color: #fff;
-}
-/* line 39, ../sass/modules/_footer.scss */
-footer p a:hover {
-  color: #fdbd4e;
-}
-/* line 44, ../sass/modules/_footer.scss */
-footer ul li {
-  margin-top: 22px;
-  display: inline-block;
-}
-/* line 47, ../sass/modules/_footer.scss */
-footer ul li + li {
-  margin-left: 14px;
-}
-/* line 50, ../sass/modules/_footer.scss */
-footer ul li a {
-  display: block;
-  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  color: #eee;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-/* line 56, ../sass/modules/_footer.scss */
-footer ul li a:hover {
-  color: #fdbd4e;
 }
