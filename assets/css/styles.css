@@ -1414,7 +1414,13 @@ footer h2 {
 footer h2 span {
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
 }
-/* line 23, ../sass/modules/_footer.scss */
+/* line 22, ../sass/modules/_footer.scss */
+footer h2 small {
+  font-size: 12px;
+  color: #aaa;
+  text-transform: none;
+}
+/* line 28, ../sass/modules/_footer.scss */
 footer p {
   display: block;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
@@ -1422,33 +1428,33 @@ footer p {
   line-height: 20px;
   color: #aaa;
 }
-/* line 29, ../sass/modules/_footer.scss */
+/* line 34, ../sass/modules/_footer.scss */
 footer p span {
   margin-top: -6px;
   padding-right: 6px;
 }
-/* line 33, ../sass/modules/_footer.scss */
+/* line 38, ../sass/modules/_footer.scss */
 footer p br {
   display: none;
 }
-/* line 36, ../sass/modules/_footer.scss */
+/* line 41, ../sass/modules/_footer.scss */
 footer p a {
   color: #fff;
 }
-/* line 39, ../sass/modules/_footer.scss */
+/* line 44, ../sass/modules/_footer.scss */
 footer p a:hover {
   color: #fdbd4e;
 }
-/* line 44, ../sass/modules/_footer.scss */
+/* line 49, ../sass/modules/_footer.scss */
 footer ul li {
   margin-top: 22px;
   display: inline-block;
 }
-/* line 47, ../sass/modules/_footer.scss */
+/* line 52, ../sass/modules/_footer.scss */
 footer ul li + li {
   margin-left: 14px;
 }
-/* line 50, ../sass/modules/_footer.scss */
+/* line 55, ../sass/modules/_footer.scss */
 footer ul li a {
   display: block;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
@@ -1458,7 +1464,7 @@ footer ul li a {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 56, ../sass/modules/_footer.scss */
+/* line 61, ../sass/modules/_footer.scss */
 footer ul li a:hover {
   color: #fdbd4e;
 }
