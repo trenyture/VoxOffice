@@ -3,10 +3,15 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased] - 16-07-2016
-- Set the 'Vote' page markup
-- Added a version number in the footer
-- Disabled 'Mail' and 'FAQ' links in footer
-- Text updates
+### Added
+- Version number in the footer
+
+### Changed
+- 'Vote' page markup
+- 'How to' texts
+
+### Removed
+- 'Mail' and 'FAQ' links in footer
 
 ## [Unreleased] - 01-04-2016
 ### Changed
