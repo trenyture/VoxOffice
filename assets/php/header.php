@@ -96,20 +96,27 @@
                     c-3.9,3.9-3.9,10.3,0,14.2l19.9,20H250.8c0,0-67.3-4.6-118.6,48.5S86.2,208.1,86.2,208.1z" />
                 </svg>
             </a>
+            <!--<?php if(isset($_SESSION['fb_token'])){ ?>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <nav>
-                <!--<ul>
-                <?php if(isset($_SESSION['fb_token'])){ ?>
+                <ul>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
                     <li><a href="./compare">Classement</a></li>
                     <li><a href="./add">Ajouter</a></li>
-                <?php } ?>
-                </ul>-->
+                </ul>
+            </nav>
+            <?php } ?>-->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
                 <ul>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
