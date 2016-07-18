@@ -102,13 +102,19 @@
                 <span></span>
             </div>
             <nav>
-                <ul>
+                <!--<ul>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
                     <li><a href="./index">Accueil</a></li>
                     <li><a href="./vote">Voter</a></li>
                     <li><a href="./compare">Classement</a></li>
                     <li><a href="./add">Ajouter</a></li>
                 <?php } ?>
+                </ul>-->
+                <ul>
+                    <li><a href="./index">Accueil</a></li>
+                    <li><a href="./vote">Voter</a></li>
+                    <li><a href="./compare">Classement</a></li>
+                    <li><a href="./add">Ajouter</a></li>
                 </ul>
             </nav>
             <div class="user">
