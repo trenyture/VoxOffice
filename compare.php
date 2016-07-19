@@ -3,7 +3,7 @@
     session_start();
     if(!isset($_SESSION['fb_token'])){
         //Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
-        header('location:./index');
+        //header('location:./index');
     }
 	require_once('assets/php/header.php'); 
 ?>
