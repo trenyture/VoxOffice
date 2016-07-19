@@ -2,8 +2,8 @@
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
     if(!isset($_SESSION['fb_token'])){
-        //Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
-        //header('location:./index');
+        // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
+        // header('location:./index');
     }
 	require_once('assets/php/header.php'); 
 ?>
@@ -19,5 +19,7 @@
         	
         </ul>
     </section>
+    
     <script type="text/javascript" src="assets/js/compare.js"></script>
+    
 <?php require_once('assets/php/footer.php'); ?>
