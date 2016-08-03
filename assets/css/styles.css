@@ -1854,3 +1854,27 @@ footer ul li a:hover {
     font-size: 16px;
   }
 }
+/* line 1, ../sass/modules/_vote.scss */
+.vote {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 5, ../sass/modules/_vote.scss */
+.vote .headings {
+  position: absolute;
+}
+/* line 8, ../sass/modules/_vote.scss */
+.vote article {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+}

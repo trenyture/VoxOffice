@@ -1,0 +1,16 @@
+.vote {
+    position: relative;
+    @include display-flex;
+    @include justify-content(center);
+    .headings {
+        position: absolute;
+    }
+    article {
+        position: relative;
+        @include display-flex;
+        @include justify-content(center);
+        @include align-items(center);
+        width: 50%;
+        height: 100vh;
+    }
+}
