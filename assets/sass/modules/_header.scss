@@ -234,11 +234,14 @@ header {
             left: 0;
             width: 100%;
             height: calc(100% - 4.4rem);
-            display: none;
+            //display: none;
+            display: table;
             text-align: center;
             background: rgba($dark-purple, .9);
+            @include translate3d(-200%, 0, 0);
+            @include transition-duration(.5s);
             &.open-menu {
-                display: table;
+                @include translate3d(0);
             }
             & + li {
                 margin: 0;
