@@ -11,63 +11,63 @@
 }
 
 .btn-square {
-    padding: 14px 82px 8px;
+    padding: 1.4rem 8.2rem .8rem;
     font-family: 'nexa_bold';
-    font-size: 42px;
+    font-size: 4.2rem;
     color: #fff;
     text-transform: uppercase;
     background: $orange;
-    @include box-shadow(0 0 0 $dark-orange, 0 5px 10px rgba(0, 0, 0, .35));
-    @include border-radius(3px);
+    @include box-shadow(0 0 0 $dark-orange, 0 .5rem 1rem rgba(0, 0, 0, .35));
+    @include border-radius(.3rem);
     @include transition-duration(.3s);
     &:hover {
         background: darken($orange, 5%);
-        @include box-shadow(0 0 0 $dark-orange, 0 3px 5px rgba(0, 0, 0, .35));
+        @include box-shadow(0 0 0 $dark-orange, 0 .3rem .5rem rgba(0, 0, 0, .35));
     }
 }
 @media (max-width: $smartphone) {
     .btn-square {
-        padding: 9px 64px;
-        font-size: 30px;
+        padding: .9pxrem 6.4rem;
+        font-size: 3rem;
     }
 }
 
 .btn-fb {
-    padding: 11px 22px 10px;
+    padding: 1.1rem 2.2rem 1rem;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: $text-size;
     color: #fff;
     background: $fb-blue;
-    @include box-shadow(0 0 0 $dark-fb-blue, 0 5px 10px rgba(0, 0, 0, .35));
+    @include box-shadow(0 0 0 $dark-fb-blue, 0 .5rem 1rem rgba(0, 0, 0, .35));
     @include border-radius(3px);
     @include transition-duration(.3s);
     &:hover {
         background: darken($fb-blue, 5%);
-        @include box-shadow(0 0 0 $dark-fb-blue, 0 3px 5px rgba(0, 0, 0, .35));
+        @include box-shadow(0 0 0 $dark-fb-blue, 0 .3rem .5rem rgba(0, 0, 0, .35));
     }
     i {
-        font-size: 28px;
+        font-size: 2.8rem;
         vertical-align: middle;
-        margin-right: 16px;
+        margin-right: 1.6rem;
     }
 }
 @media (max-width: $smartphone) {
     .btn-fb {
-        padding: 12px 22px 11px;
+        padding: 1.2rem 2.2rem 1.1rem;
 
         i {
-            font-size: 24px;
+            font-size: 2.4rem;
         }
     }
 }
 
 .btn-round {
     font-family: $text-font;
-    padding: 12px 22px;
+    padding: 1.2rem 2.2rem;
     color: $dark-purple;
     background: transparent;
-    border: 2px solid $orange;
-    @include border-radius(50px);
+    border: .2rem solid $orange;
+    @include border-radius(5rem);
     @include transition-duration(.3s);
     &:hover {
         color: #fff;

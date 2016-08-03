@@ -1,13 +1,13 @@
 .home section p {
     font-family: $text-font;
-    font-size: 16px;
-    line-height: 1.2;
+    font-size: 1.6rem;
     & + p {
-        padding-top: 20px;
+        padding-top: 2rem;
     }
     &.bigger {
-        font-size: 20px;
-        padding-bottom: 42px;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding-bottom: 4.2rem;
         span {
             text-transform: uppercase;
         }
@@ -26,13 +26,13 @@
 }
 @media (max-width: $smartphone) {
     .home section p {
-        font-size: 12px;
+        font-size: 1.4rem;
         & + p {
-            padding-top: 16px;
+            padding-top: 1.6rem;
         }
         &.bigger {
-            padding-bottom: 20px;
-            font-size: 16px;
+            padding-bottom: 2rem;
+            font-size: 1.6rem;
         }
     }
 }
@@ -57,37 +57,38 @@
     
     .subtitle {
         position: relative;
-        padding: 54px 0 8px;
-        margin-bottom: 120px;
+        padding: 5.4rem 0 .8rem;
+        margin-bottom: 12rem;
         color: #fff;
         font-family: $text-light;
-        font-size: 26px;
+        font-size: 2.6rem;
+        line-height: 2.6rem;
         background-color: rgba(0, 0, 0, .7);
         &:before {
             position: absolute;
             content: '';
             left: 50%;
-            top: 34px;
-            width: 36px;
-            height: 1px;
-            margin-left: -18px;
+            top: 3.4rem;
+            width: 3.6rem;
+            height: .1rem;
+            margin-left: -1.8rem;
             background-color: #fff;
         }
     }
 }
 @media (max-width: $smartphone) {
     .home-intro .subtitle {
-        margin-bottom: 76px;
-        padding: 22px 0 4px;
-        font-size: 16px;
+        margin-bottom: 7.6rem;
+        padding: 2.2rem 0 .4rem;
+        font-size: 1.6rem;
         &:before {
-            top: 14px;
+            top: 1.4rem;
         }
     }
 }
 @media (max-width: $smartphone) and (orientation: landscape) {
     .home-intro .subtitle {
-        margin-bottom: 36px;
+        margin-bottom: 3.6rem;
     }
 }
 
@@ -95,15 +96,15 @@
     CONCEPT
 ====================================== */
 .home-description {
-    background: url("../img/movie_clap.svg") no-repeat top -120px right -24px $purple;
+    background: url("../img/movie_clap.svg") no-repeat top -12rem right -2.4rem $purple;
     background-size: 38% auto;
     border-bottom: 1px solid $dark-purple;
     
     .description {
-        padding: 200px 0;
+        padding: 20rem 0;
         h2 {
             color: $yellow;
-            padding-bottom: 66px;
+            padding-bottom: 6.6rem;
         }
         p {
             color: $yellow;
@@ -124,13 +125,13 @@
 }
 @media (max-width: $tabletMax) {
     .home-description {
-        background-size: 400px auto;
+        background-size: 40rem auto;
     }
 }
 @media (max-width: $tablet) {
     .home-description {
-        background-size: 320px auto;
-        background-position: right -24px top -60px ;
+        background-size: 32rem auto;
+        background-position: right -2.4rem top -6rem ;
         
         .description.half {
             width: 75%;
@@ -139,21 +140,21 @@
 }
 @media (max-width: $smartphoneMax) {
     .home-description {
-        background-size: 250px auto;
-        background-position: center top -40px;
+        background-size: 25rem auto;
+        background-position: center top -4rem;
         
         .description.half {
             width: 100%;
-            padding: 250px 0 60px;
+            padding: 25rem 0 6rem;
             h2 {
-                padding-bottom: 36px;
+                padding-bottom: 3.6rem;
             }
         }
     }
 }
 @media (max-width: $smartphone) {
     .home-description .description.half h2 {
-        padding-bottom: 16px;
+        padding-bottom: 1.6rem;
     }
 }
 
@@ -161,26 +162,26 @@
     HOW TO
 ====================================== */
 .home-features {
-    padding: 80px 0;
+    padding: 8rem 0;
     background: $yellow;
     
     h2 {
         color: $purple;
         text-align: center;
-        padding-bottom: 24px;
+        padding-bottom: 2.4rem;
     }
     
     .feature {
         position: relative;
-        padding: 72px 0;
+        padding: 7.2rem 0;
         &:after {
             position: absolute;
             content: '';
             bottom: 0;
             left: 50%;
-            width: 320px;
-            height: 1px;
-            margin: 0 auto 0 -160px;
+            width: 32rem;
+            height: .1rem;
+            margin: 0 auto 0 -16rem;
             background-color: $border-grey;
         }
         &:last-of-type {
@@ -194,7 +195,7 @@
             width: 50%;
             display: inline-block;
             h3 {
-                padding-bottom: 58px;
+                padding-bottom: 5.8rem;
                 color: $dark-purple;
             }
             p {
@@ -211,26 +212,26 @@
             }
             img {
                 width: auto;
-                height: 160px;
+                height: 16rem;
             }
         }
     }
 }
 @media (max-width: $smartphoneMax) {
     .home-features .feature .feature-img img {
-        height: 130px;
+        height: 13rem;
     }
 }
 @media (max-width: $smartphone) {
     .home-features {
-        padding: 60px 0;
+        padding: 6rem 0;
         
         h2 {
-            padding-bottom: 14px;
+            padding-bottom: 1.4rem;
         }
         
         .feature {
-            padding: 34px 0;
+            padding: 3.4rem 0;
             &:after {
                 width: 50%;
                 margin: 0;
@@ -241,15 +242,15 @@
                 width: 100%;
                 text-align: center;
                 h3 {
-                    padding-bottom: 156px;
+                    padding-bottom: 15.6rem;
                 }
                 p:last-of-type {
-                    padding-bottom: 26px;
+                    padding-bottom: 2.6rem;
                 }
             }
             .feature-img {
                 position: absolute;
-                top: 94px;
+                top: 9.4rem;
                 left: 50%;
                 width: 100%;
                 height: auto;
@@ -259,7 +260,7 @@
                 &.right img,
                 img {
                     float: none;
-                    height: 98px;
+                    height: 9.8rem;
                 }
             }
         }
@@ -271,7 +272,7 @@
 ====================================== */
 .home-connect {
     position: relative;
-    padding: 80px 0;
+    padding: 8rem 0;
     text-align: center;
     background: url("../img/movie_mosaic.jpg") no-repeat center center;
     @include background-size(cover);
@@ -293,35 +294,37 @@
         
         h2 {
             color: $orange;
-            padding-bottom: 12px;
+            padding-bottom: 1.2rem;
         }
         p {
-            padding-bottom: 34px;
+            padding-bottom: 3.4rem;
             color: $light-grey;
             small {
-                font-size: 12px;
+                font-size: 1.2rem;
+                line-height: 1.2rem;
                 text-align: center;
             }
         }
         .alert {
-            padding-bottom: 42px;
+            padding-bottom: 4.2rem;
             font-family: $text-semibold;
-            font-size: 20px;
+            font-size: 2rem;
+            line-height: 2rem;
             color: $orange;
         }
     }
 }
 @media (max-width: $smartphone) {
     .home-connect {
-       padding: 60px 0;
+       padding: 6rem 0;
         
         p {
-            padding-bottom: 12px;
+            padding-bottom: 1.2rem;
         }
         
         .alert {
-            padding-bottom: 40px;
-            font-size: 16px;
+            padding-bottom: 4rem;
+            font-size: 1.6rem;
         }
     }
 }

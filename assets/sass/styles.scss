@@ -1,9 +1,11 @@
+// Vendors
+@import "partials/reset";
+@import "partials/normalize";
+
 // Variables
 @import "partials/base";
 
 // Partials
-@import "partials/reset";
-@import "partials/normalize";
 @import "partials/mixins";
 @import "partials/grids";
 @import "partials/fonts";

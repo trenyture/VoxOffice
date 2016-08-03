@@ -11,28 +11,28 @@
 }
 
 .icon-lab {
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
     background: url('../img/icon_potion.svg') no-repeat;
 }
 
 .icon-scroll {
     position: absolute;
     top: auto;
-    bottom: 26px;
+    bottom: 2.6rem;
     left: 50%;
-    width: 18px;
-    height: 34px;
-    border: 3px solid #fff;
-    @include border-radius(15px);
+    width: 1.8rem;
+    height: 3.4rem;
+    border: .3rem solid #fff;
+    @include border-radius(1.5rem);
     @include transformX50();
     &:after {
         position: absolute;
         content: '';
-        top: 7px;
-        left: 8px;
-        width: 3px;
-        height: 8px;
+        top: .7rem;
+        left: .8rem;
+        width: .3rem;
+        height: .8rem;
         background: #fff;
         animation: {
             name: mouse;
@@ -42,16 +42,16 @@
     }
 }
 @keyframes mouse {
-    to {top: 10px;}
+    to {top: 1rem;}
 }
 @media (max-width: $smartphone) {
     .icon-scroll {
-        bottom: 12px;
-        width: 16px;
-        height: 28px;
+        bottom: 1.2rem;
+        width: 1.6rem;
+        height: 2.8rem;
         &:after {
-            top: 5px;
-            left: 7px;
+            top: .5rem;
+            left: .7rem;
         }
     }
 }
