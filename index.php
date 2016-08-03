@@ -8,9 +8,9 @@
                 <h1><a href="#" title="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
                 <p class="subtitle">Tous vos films favoris. Classés.</p>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
-                    <a href="./vote" class="btn btn-square">Go!</a>
+                    <a href="./vote" class="btn-primary">Go!</a>
                 <?php } else { ?>
-                    <a href="<?= $fbUrlConnect ?>" class="btn btn-square">Go!</a>
+                    <a href="<?= $fbUrlConnect ?>" class="btn btn-primary btn-square">Go!</a>
                 <?php } ?>
             </div>
             <a href="#home-description"><span class="icon icon-scroll"></span></a>
@@ -80,7 +80,7 @@
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
                 <?php if(isset($_SESSION['fb_token'])) { ?>
-                    <a href="./vote" title="Connexion à Facebook" class="btn btn-fb">C'est parti!</a>
+                    <a href="./vote" title="Connexion à Facebook" class="btn-fb">C'est parti!</a>
                 <?php } else { ?>
                     <a href="<?= $fbUrlConnect ?>" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
                 <?php } ?>

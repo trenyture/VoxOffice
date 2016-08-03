@@ -51,8 +51,8 @@ function constructPage(films) {
         });
         $('article#film' + i + ' h3').html(this.title + '<br/><span>' + this.annee + '</span>');
         $('article#film' + i + ' p').html(this.shortdesc);
-        $('article#film' + i + ' a.vote.plus').attr('href', 'assets/php/addvote.php?type=plus&id=' + this.id);
-        $('article#film' + i + ' a.vote.moins').attr('href', 'assets/php/addvote.php?type=moins&id=' + this.id);
+        $('article#film' + i + ' a.plus').attr('href', 'assets/php/addvote.php?type=plus&id=' + this.id);
+        $('article#film' + i + ' a.moins').attr('href', 'assets/php/addvote.php?type=moins&id=' + this.id);
         i = i + 1;
     });
 }

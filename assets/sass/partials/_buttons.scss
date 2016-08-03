@@ -5,34 +5,101 @@
     vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
+    @include transition-duration(.3s);
     &:hover {
         cursor: pointer;
     }
 }
 
+// Shapes
 .btn-square {
-    padding: 1.4rem 8.2rem .8rem;
-    font-family: 'nexa_bold';
+    @extend .btn;
+    color: #fff;
+    @include border-radius(.3rem);
+}
+
+
+.btn-round {
+    @extend .btn;
+    font-family: $text-font;
+    padding: 1.2rem 2.2rem;
+    color: $dark-purple;
+    background: transparent;
+    border: .2rem solid $orange;
+    @include border-radius(5rem);
+    &:hover {
+        color: #fff;
+        background: $orange;
+    }
+}
+
+// Bases & Colors
+.btn-primary {
+    @extend .btn-square;
+    font-family: $title-font;
     font-size: 4.2rem;
+    padding: 1.4rem 8.2rem .8rem;
     color: #fff;
     text-transform: uppercase;
     background: $orange;
     @include box-shadow(0 0 0 $dark-orange, 0 .5rem 1rem rgba(0, 0, 0, .35));
-    @include border-radius(.3rem);
-    @include transition-duration(.3s);
     &:hover {
         background: darken($orange, 5%);
         @include box-shadow(0 0 0 $dark-orange, 0 .3rem .5rem rgba(0, 0, 0, .35));
     }
 }
 @media (max-width: $smartphone) {
-    .btn-square {
+    .btn-primary {
         padding: .9pxrem 6.4rem;
         font-size: 3rem;
     }
 }
 
+.btn-secondary {
+    @extend .btn-square;
+    padding: 0 2rem;
+    font-family: $text-light;
+    font-size: 1.4rem;
+    line-height: 4.6rem;
+    background-color: $purple;
+    @include box-shadow(0 0 2rem 0 rgba(0, 0, 0, .35));
+    
+    &:hover {
+        background-color: $orange;
+        @include box-shadow(none);
+    }
+    i {
+        padding-right: 1.4rem;
+        font-size: 2.2rem;
+        vertical-align: middle;
+    }
+}
+.btn-secondary-transparent {
+    @extend .btn-secondary;
+    background-color: transparent;
+    @include box-shadow(inset 0 0 0 .2rem #fff);
+    &:hover {
+        color: #ffff;
+        background-color: $orange;
+    }
+}
+
+.btn-tertiary {
+    @extend .btn-secondary;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, .6);
+    @include box-shadow(none);
+    &:hover {
+        background-color: rgba(0, 0, 0, .75);
+    }
+    i {
+        padding: 0 0 0 1.4rem;
+    }
+}
+
+// Specials
 .btn-fb {
+    @extend .btn;
     padding: 1.1rem 2.2rem 1rem;
     font-family: Arial, sans-serif;
     font-size: $text-size;
@@ -40,7 +107,6 @@
     background: $fb-blue;
     @include box-shadow(0 0 0 $dark-fb-blue, 0 .5rem 1rem rgba(0, 0, 0, .35));
     @include border-radius(3px);
-    @include transition-duration(.3s);
     &:hover {
         background: darken($fb-blue, 5%);
         @include box-shadow(0 0 0 $dark-fb-blue, 0 .3rem .5rem rgba(0, 0, 0, .35));
@@ -61,16 +127,9 @@
     }
 }
 
-.btn-round {
-    font-family: $text-font;
-    padding: 1.2rem 2.2rem;
-    color: $dark-purple;
-    background: transparent;
-    border: .2rem solid $orange;
-    @include border-radius(5rem);
-    @include transition-duration(.3s);
+.btn-plus {
+    background-color: $purple;
     &:hover {
-        color: #fff;
-        background: $orange;
+        background: darken($orange, 5%);
     }
 }
