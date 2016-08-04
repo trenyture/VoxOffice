@@ -64,3 +64,8 @@ footer {
         }
     }
 }
+@media (max-width: $smartphoneMax) {
+    footer {
+        padding: 3rem 0;
+    }
+}

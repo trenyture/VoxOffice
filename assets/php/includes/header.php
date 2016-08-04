@@ -125,6 +125,13 @@
                 </ul>
             </nav>
             <div class="user">
+                <div class="switch-container" id="blurSwitch">
+                    Flou (Edge)
+                    <label class="switch">
+                        <input type="checkbox" checked="checked">
+                        <div class="slider"></div>
+                    </label>
+                </div>
                 <?php
                     if(isset($_SESSION['fb_token'])){
                     ?>

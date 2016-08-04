@@ -5,7 +5,7 @@
     vertical-align: middle;
     white-space: nowrap;
     overflow: hidden;
-    @include transition-duration(.3s);
+    @include transition();
     &:hover {
         cursor: pointer;
     }
@@ -62,7 +62,7 @@
     font-size: 1.4rem;
     line-height: 4.6rem;
     background-color: $purple;
-    @include box-shadow(0 0 2rem 0 rgba(0, 0, 0, .35));
+    //@include box-shadow(0 0 2rem 0 rgba(0, 0, 0, .2));
     
     &:hover {
         background-color: $orange;
@@ -131,5 +131,49 @@
     background-color: $purple;
     &:hover {
         background: darken($orange, 5%);
+    }
+}
+
+// Switches
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4.2rem;
+    height: 2.2rem;
+    vertical-align: middle;
+    input {
+        display: none;
+        &:checked + .slider {
+           background-color: $purple;
+            &:before {
+                background-color: #fff;
+                @include translate3d(2rem, 0, 0);
+            }
+        }
+        &:focus + .slider {
+           background-color: rgba(0, 0, 0, .6);
+        }
+    }
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    @include border-radius(2.2rem);
+    @include transition();
+    &:before {
+        position: absolute;
+        content: "";
+        height: 1.8rem;
+        width: 1.8rem;
+        left: .2rem;
+        bottom: .2rem;
+        background-color: $orange;
+        @include border-radius(50%);
+        @include transition();
     }
 }

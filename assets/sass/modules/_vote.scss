@@ -6,12 +6,13 @@
         position: absolute;
         z-index: 15;
         top: 15rem;
-        left: 50%;
+        left: 0;
+        right: 0;
         width: 100%;
         min-width: 100%;
         color: #fff;
         text-align: center;
-        @include translate3d(-50%, 0, 0);
+        pointer-events: none;
         h1 {
             font-family: $title-font;
             font-size: 4.8rem;
@@ -89,14 +90,15 @@
             bottom: 2rem;
             left: auto;
             right: 2rem;
+            max-height: 4.6rem;
             @include opacity(0);
-            @include transition-duration(.3s);
+            @include transition();
         }
     }
     .vote-block {
         padding-top: 3.6rem;
         @include opacity(0);
-        @include transition-duration(.3s);
+        @include transition();
         a + a {
             margin-left: 1.2rem;
         }
@@ -113,7 +115,7 @@
         background-position: center center;
         @include background-size(cover);
         @include filter(blur(.8rem));
-        @include transition-duration(.3s);
+        @include transition();
     }
     .content {
         position: relative;
@@ -128,7 +130,7 @@
         min-width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, .75);
-        @include transition-duration(.3s);
+        @include transition();
     }
 }
 @media (max-width: $desktopSmall) {
@@ -220,14 +222,29 @@
     .vote {
         article {
             h3 {
-                font-size: 2.6rem;
+                font-size: 2rem;
+            }
+            .author {
+                font-size: 1.4rem;
+            }
+            .data {
+                font-size: 1.6rem;
+            }
+            .vote-block {
+                padding-top: 1.8rem;
+                a + a {
+                    margin-left: .6rem;
+                }
             }
         }
-        .btn-secondary {
+        .btn-secondary,
+        .btn-secondary-transparent,
+        .btn-tertiary {
             padding: 0 1.4rem;
-        }
-        .vote-block a + a {
-            margin-left: .6rem;
+            line-height: 3.6rem;
+            i {
+                font-size: 1.6rem;
+            }
         }
     }
 }
