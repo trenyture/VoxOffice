@@ -911,7 +911,7 @@ h3 {
 }
 /* line 95, ../sass/partials/_buttons.scss */
 .btn-tertiary i {
-  padding: 0 0 0 1.4rem;
+  padding: 0 0 .4rem 1.4rem;
 }
 
 /* line 101, ../sass/partials/_buttons.scss */
