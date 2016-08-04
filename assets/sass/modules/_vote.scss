@@ -49,7 +49,7 @@
         overflow: hidden;
         &:hover {
             .article-image {
-                //@include filter(blur(0));
+                @include filter(blur(0));
             }
             .vote-block,
             > a {
@@ -112,7 +112,7 @@
         background-repeat: no-repeat;
         background-position: center center;
         @include background-size(cover);
-        //@include filter(blur(.8rem));
+        @include filter(blur(.8rem));
         @include transition-duration(.3s);
     }
     .content {

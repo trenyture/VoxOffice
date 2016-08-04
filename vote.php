@@ -5,7 +5,7 @@
         // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
         // header('location:./index');
     }
-    require_once('assets/php/header.php');
+    require_once('assets/php/includes/header.php');
 ?>
 	<section class="vote">
         <div class="headings">
@@ -44,4 +44,4 @@
     
     <script type="text/javascript" src="assets/js/vote.js"></script>
     
-<?php require_once('assets/php/footer.php'); ?>
+<?php require_once('assets/php/includes/footer.php'); ?>

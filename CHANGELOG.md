@@ -2,50 +2,5 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased] - 16-07-2016
-### Added
-- Version number in the footer
-
-### Changed
-- 'Vote' page markup
-- 'How to' texts
-
-### Removed
-- 'Mail' and 'FAQ' links in footer
-
-## [Unreleased] - 01-04-2016
-### Changed
-- "How to" images and titles font
-- "Get started" filter structure
-- JPG background images for progressive ones
-
-## [Unreleased] - 17-03-2016
-### Added
-- GitHub link
-- Temporary contact email adress
-- Header styles for Facebook connection
-
-### Changed
-- Pre-scroll header styles
-- Buttons styles
-- Footer styles
-
-### Fixed
-- Scroll icon alignment
-- Mobile header links centering
-
-## [Unreleased] - 11-02-2016
-### Added
-- Responsive styles
-- New favicon
-- Header and footer in PHP files
-
-### Removed
-- WOWJS transitions
-- Image attributes
-
-### Changed
-- File/folder structure
-
-### Fixed
-- Grid bugs
+## [Unreleased] - xx-xx-201x
+- Initial release
