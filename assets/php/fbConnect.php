@@ -16,7 +16,7 @@
         header('location:./vote');
     }
     function test_user ($nom, $id){
-        $maBD = connexionBD() ;  // Cette fonction est définie dans le dossier helpers   
+        $maBD = connexionBD() ;  // Cette fonction est définie dans le dossier helpers
         $texteRequete = ("SELECT * from VO_users WHERE VO_users.fb_id=".$id) ;
         $requete = $maBD->prepare($texteRequete) ;
         $ok = $requete->execute() ; 

@@ -14,7 +14,7 @@
     width: 860px;
 }
 .content-sm {
-    width: 320px;
+    width: 420px;
 }
 
 .full {
@@ -36,7 +36,7 @@
     .content-md {
         width: 100%;
         margin: 0;
-        padding: 0 14px;
+        padding: 0 5%;
         @include box-sizing(border-box);
     }
 }
