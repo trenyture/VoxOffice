@@ -2028,7 +2028,7 @@ footer ul li a:hover {
   }
 }
 /* line 1, ../sass/modules/_vote.scss */
-.vote {
+.vote-container {
   position: relative;
   display: -webkit-flex;
   display: flex;
@@ -2036,7 +2036,7 @@ footer ul li a:hover {
   justify-content: center;
 }
 /* line 5, ../sass/modules/_vote.scss */
-.vote .headings {
+.vote-container .headings {
   position: absolute;
   z-index: 15;
   top: 15rem;
@@ -2049,13 +2049,13 @@ footer ul li a:hover {
   pointer-events: none;
 }
 /* line 16, ../sass/modules/_vote.scss */
-.vote .headings h1 {
+.vote-container .headings h1 {
   font-family: "nexa_bold", Helvetica, Arial, sans-serif;
   font-size: 4.8rem;
   padding-bottom: .5rem;
 }
 /* line 21, ../sass/modules/_vote.scss */
-.vote .headings h2 {
+.vote-container .headings h2 {
   position: relative;
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 2.4rem;
@@ -2063,7 +2063,7 @@ footer ul li a:hover {
   padding-bottom: 3.2rem;
 }
 /* line 27, ../sass/modules/_vote.scss */
-.vote .headings h2:after {
+.vote-container .headings h2:after {
   position: absolute;
   content: '';
   bottom: 0;
@@ -2076,7 +2076,7 @@ footer ul li a:hover {
   transform: translate3d(-50%, 0, 0);
 }
 /* line 39, ../sass/modules/_vote.scss */
-.vote article {
+.vote-container article {
   position: relative;
   z-index: 1;
   display: -webkit-flex;
@@ -2093,18 +2093,18 @@ footer ul li a:hover {
   overflow: hidden;
 }
 /* line 52, ../sass/modules/_vote.scss */
-.vote article:hover .article-image {
+.vote-container article:hover .article-image {
   -webkit-filter: blur(0);
   filter: blur(0);
 }
 /* line 55, ../sass/modules/_vote.scss */
-.vote article:hover .vote-block,
-.vote article:hover > a {
+.vote-container article:hover .vote-block,
+.vote-container article:hover > a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 59, ../sass/modules/_vote.scss */
-.vote article:hover .overlay {
+.vote-container article:hover .overlay {
   background-color: rgba(123, 102, 150, 0.6);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF7B6696', endColorstr='#FFFDBD4E');
@@ -2116,34 +2116,34 @@ footer ul li a:hover {
   background-image: linear-gradient(to right bottom, rgba(123, 102, 150, 0.6) 0%, rgba(253, 189, 78, 0.6) 100%);
 }
 /* line 65, ../sass/modules/_vote.scss */
-.vote article h3,
-.vote article p {
+.vote-container article h3,
+.vote-container article p {
   text-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
   text-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.25);
 }
 /* line 69, ../sass/modules/_vote.scss */
-.vote article h3 {
+.vote-container article h3 {
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
   font-size: 4.6rem;
   padding-bottom: 3rem;
 }
 /* line 74, ../sass/modules/_vote.scss */
-.vote article p + p {
+.vote-container article p + p {
   padding-top: 1.2rem;
 }
 /* line 77, ../sass/modules/_vote.scss */
-.vote article .author {
+.vote-container article .author {
   font-family: "montserrat_light", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   font-style: italic;
 }
 /* line 82, ../sass/modules/_vote.scss */
-.vote article .date {
+.vote-container article .date {
   font-family: "montserrat", Helvetica, Arial, sans-serif;
   font-size: 2.4rem;
 }
 /* line 86, ../sass/modules/_vote.scss */
-.vote article > a {
+.vote-container article > a {
   position: absolute;
   z-index: 10;
   top: auto;
@@ -2156,18 +2156,18 @@ footer ul li a:hover {
   transition: all .3s;
 }
 /* line 98, ../sass/modules/_vote.scss */
-.vote .vote-block {
+.vote-container .vote-block {
   padding-top: 3.6rem;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   transition: all .3s;
 }
 /* line 102, ../sass/modules/_vote.scss */
-.vote .vote-block a + a {
+.vote-container .vote-block a + a {
   margin-left: 1.2rem;
 }
 /* line 106, ../sass/modules/_vote.scss */
-.vote .article-image {
+.vote-container .article-image {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -2186,12 +2186,12 @@ footer ul li a:hover {
   transition: all .3s;
 }
 /* line 120, ../sass/modules/_vote.scss */
-.vote .content {
+.vote-container .content {
   position: relative;
   z-index: 10;
 }
 /* line 124, ../sass/modules/_vote.scss */
-.vote .overlay {
+.vote-container .overlay {
   position: absolute;
   z-index: 5;
   top: 0;
@@ -2205,104 +2205,104 @@ footer ul li a:hover {
 
 @media (max-width: 1280px) {
   /* line 137, ../sass/modules/_vote.scss */
-  .vote .headings {
+  .vote-container .headings {
     top: 12rem;
   }
 }
 @media (max-width: 1024px) {
   /* line 142, ../sass/modules/_vote.scss */
-  .vote {
+  .vote-container {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
   /* line 144, ../sass/modules/_vote.scss */
-  .vote .headings {
+  .vote-container .headings {
     display: none;
   }
   /* line 147, ../sass/modules/_vote.scss */
-  .vote article {
+  .vote-container article {
     width: 100%;
     height: 50vh;
   }
   /* line 150, ../sass/modules/_vote.scss */
-  .vote article h3 {
+  .vote-container article h3 {
     padding-bottom: 1rem;
     font-size: 3.4rem;
   }
   /* line 154, ../sass/modules/_vote.scss */
-  .vote article .author {
+  .vote-container article .author {
     font-size: 1.6rem;
   }
   /* line 157, ../sass/modules/_vote.scss */
-  .vote article .date {
+  .vote-container article .date {
     font-size: 2rem;
   }
   /* line 160, ../sass/modules/_vote.scss */
-  .vote article p + p {
+  .vote-container article p + p {
     padding-top: .5rem;
   }
   /* line 163, ../sass/modules/_vote.scss */
-  .vote article .vote-block {
+  .vote-container article .vote-block {
     padding-top: 2.4rem;
   }
   /* line 166, ../sass/modules/_vote.scss */
-  .vote article .vote-block,
-  .vote article > a {
+  .vote-container article .vote-block,
+  .vote-container article > a {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
 }
 @media (max-width: 960px) and (orientation: landscape) {
   /* line 174, ../sass/modules/_vote.scss */
-  .vote {
+  .vote-container {
     -webkit-flex-direction: row;
     flex-direction: row;
   }
   /* line 176, ../sass/modules/_vote.scss */
-  .vote article {
+  .vote-container article {
     width: 50%;
     height: 100vh;
   }
   /* line 179, ../sass/modules/_vote.scss */
-  .vote article h3 {
+  .vote-container article h3 {
     padding-bottom: 1rem;
     font-size: 2.4rem;
   }
   /* line 183, ../sass/modules/_vote.scss */
-  .vote article .author {
+  .vote-container article .author {
     font-size: 1.4rem;
   }
   /* line 186, ../sass/modules/_vote.scss */
-  .vote article .date {
+  .vote-container article .date {
     font-size: 1.8rem;
   }
   /* line 189, ../sass/modules/_vote.scss */
-  .vote article .vote-block,
-  .vote article > a {
+  .vote-container article .vote-block,
+  .vote-container article > a {
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
   }
   /* line 193, ../sass/modules/_vote.scss */
-  .vote article .vote-block {
+  .vote-container article .vote-block {
     padding-top: 1.6rem;
   }
   /* line 195, ../sass/modules/_vote.scss */
-  .vote article .vote-block a {
+  .vote-container article .vote-block a {
     margin-top: .5rem;
   }
   /* line 197, ../sass/modules/_vote.scss */
-  .vote article .vote-block a + a {
+  .vote-container article .vote-block a + a {
     margin-left: 0;
   }
   /* line 202, ../sass/modules/_vote.scss */
-  .vote article > a {
+  .vote-container article > a {
     bottom: 1rem;
     right: 1rem;
   }
 }
 @media (max-width: 640px) {
   /* line 212, ../sass/modules/_vote.scss */
-  .vote article > a {
+  .vote-container article > a {
     bottom: 1rem;
     right: auto;
     left: 50%;
@@ -2310,39 +2310,39 @@ footer ul li a:hover {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
-}
-@media (max-width: 480px) {
-  /* line 224, ../sass/modules/_vote.scss */
-  .vote article h3 {
-    font-size: 2rem;
-  }
-  /* line 227, ../sass/modules/_vote.scss */
-  .vote article .author {
-    font-size: 1.4rem;
-  }
-  /* line 230, ../sass/modules/_vote.scss */
-  .vote article .data {
-    font-size: 1.6rem;
-  }
-  /* line 233, ../sass/modules/_vote.scss */
-  .vote article .vote-block {
-    padding-top: 1.8rem;
-  }
-  /* line 235, ../sass/modules/_vote.scss */
-  .vote article .vote-block a + a {
-    margin-left: .6rem;
-  }
-  /* line 240, ../sass/modules/_vote.scss */
-  .vote .btn-secondary, .vote .btn-secondary-transparent, .vote .btn-tertiary,
-  .vote .btn-secondary-transparent,
-  .vote .btn-tertiary {
+  /* line 219, ../sass/modules/_vote.scss */
+  .vote-container .btn-secondary, .vote-container .btn-secondary-transparent, .vote-container .btn-tertiary,
+  .vote-container .btn-secondary-transparent,
+  .vote-container .btn-tertiary {
     padding: 0 1.4rem;
     line-height: 3.6rem;
   }
-  /* line 245, ../sass/modules/_vote.scss */
-  .vote .btn-secondary i, .vote .btn-secondary-transparent i, .vote .btn-tertiary i,
-  .vote .btn-secondary-transparent i,
-  .vote .btn-tertiary i {
+  /* line 224, ../sass/modules/_vote.scss */
+  .vote-container .btn-secondary i, .vote-container .btn-secondary-transparent i, .vote-container .btn-tertiary i,
+  .vote-container .btn-secondary-transparent i,
+  .vote-container .btn-tertiary i {
     font-size: 1.6rem;
+  }
+}
+@media (max-width: 480px) {
+  /* line 233, ../sass/modules/_vote.scss */
+  .vote-container article h3 {
+    font-size: 2rem;
+  }
+  /* line 236, ../sass/modules/_vote.scss */
+  .vote-container article .author {
+    font-size: 1.4rem;
+  }
+  /* line 239, ../sass/modules/_vote.scss */
+  .vote-container article .data {
+    font-size: 1.6rem;
+  }
+  /* line 242, ../sass/modules/_vote.scss */
+  .vote-container article .vote-block {
+    padding-top: 1.8rem;
+  }
+  /* line 244, ../sass/modules/_vote.scss */
+  .vote-container article .vote-block a + a {
+    margin-left: .6rem;
   }
 }

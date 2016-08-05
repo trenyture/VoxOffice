@@ -7,7 +7,7 @@
     }
     require_once('assets/php/includes/header.php');
 ?>
-	<section class="vote">
+	<section class="vote-container">
         <div class="headings">
             <h1>Votez pour votre favori</h1>
             <h2>Aucune réponse n'est mauvaise !</h2>
@@ -41,7 +41,7 @@
             <div class="overlay"></div>
         </article>
     </section>
-    
+
     <script type="text/javascript" src="assets/js/vote.js"></script>
-    
+
 <?php require_once('assets/php/includes/footer.php'); ?>
