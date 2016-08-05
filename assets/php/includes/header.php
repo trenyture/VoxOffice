@@ -136,9 +136,8 @@
                     if(isset($_SESSION['fb_token'])) {
                     ?>
                         <div class="user-portrait">
-                            <a href="index.php?logout=true">
+                            <a class="connected" href="index.php?logout=true" style="background-image:url('<?php echo $_SESSION['fbImg']['url']; ?>');">
                                 <span class="logoff"><i class="fa fa-power-off"></i></span>
-                                <img src="<?= $_SESSION['fbImg']['url']; ?>" alt="Utilisateur" />
                             </a>
                         </div>
                         <p>Connecté en tant que :<br/><span id="username"><?php echo($_SESSION['fbName']); ?></span></p>

@@ -7,12 +7,7 @@
 	var_dump($_GET);
 	include('newPDO.php');
 	$maBD = connexionBD();
-	if($_GET['type']=='plus'){
-		$requExec = 'UPDATE VO_films SET vote = vote + 1 WHERE id ='.$_GET['id'];
-	}
-	if($_GET['type']=='moins'){
-		$requExec = 'UPDATE VO_films SET vote = vote - 1 WHERE id ='.$_GET['id'];
-	}
+	$requExec = 'UPDATE VO_films SET vote = vote + 1 WHERE id ='.$_GET['id'];
 	$requete = $maBD->prepare($requExec);
 	$ok = $requete->execute();
 	if($ok == 1){
