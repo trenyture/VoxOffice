@@ -3,6 +3,8 @@
     session_start();
 	if(!isset($_SESSION['fb_token'])){
 		header('location:../../index');
+	}else{
+		$user = $_SESSION['fbId'];
 	}
     include('newPDO.php');
 	$message="";
@@ -85,8 +87,7 @@
 				//On empeche les possibles hackers d'entrer dans la bdd
 				$dbTitle = htmlspecialchars($_POST['title']);
 				$dbAuthor = htmlspecialchars($_POST['author']);
-				echo $_dbAuthor;
-				$arrayRequest = array($_POST['user'],$dbTitle,$_POST['year'],$dbAuthor,$imgTitle, 0);
+				$arrayRequest = array($user,$dbTitle,$_POST['year'],$dbAuthor,$imgTitle, 0);
 				$ok = $requete->execute($arrayRequest);
 				// Le résultat placé dans $ok vaudra 1 si la requête a pu s'exécuter correctement
 				// Création du message indiquant si l'insertion a réussi
