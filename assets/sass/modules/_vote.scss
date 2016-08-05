@@ -1,4 +1,4 @@
-.vote {
+.vote-container {
     position: relative;
     @include display-flex;
     @include justify-content(center);
@@ -134,12 +134,12 @@
     }
 }
 @media (max-width: $desktopSmall) {
-    .vote .headings {
+    .vote-container .headings {
         top: 12rem;
     }
 }
 @media (max-width: $tabletMax) {
-    .vote {
+    .vote-container {
         @include flex-direction(column);
         .headings {
             display: none;
@@ -171,7 +171,7 @@
     }
 }
 @media (max-width: $tablet) and (orientation: landscape) {
-    .vote {
+    .vote-container {
         @include flex-direction(row);
         article {
             width: 50%;
@@ -207,7 +207,7 @@
     }
 }
 @media (max-width: $smartphone) {
-    .vote {
+    .vote-container {
         article {
             > a {
                 bottom: 1rem;
@@ -216,10 +216,19 @@
                 @include translate3d(-50%, 0, 0);
             }
         }
+        .btn-secondary,
+        .btn-secondary-transparent,
+        .btn-tertiary {
+            padding: 0 1.4rem;
+            line-height: 3.6rem;
+            i {
+                font-size: 1.6rem;
+            }
+        }
     }
 }
 @media (max-width: $smartphoneMin) {
-    .vote {
+    .vote-container {
         article {
             h3 {
                 font-size: 2rem;
@@ -235,15 +244,6 @@
                 a + a {
                     margin-left: .6rem;
                 }
-            }
-        }
-        .btn-secondary,
-        .btn-secondary-transparent,
-        .btn-tertiary {
-            padding: 0 1.4rem;
-            line-height: 3.6rem;
-            i {
-                font-size: 1.6rem;
             }
         }
     }
