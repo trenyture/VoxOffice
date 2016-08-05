@@ -2,7 +2,7 @@
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
     require_once('assets/php/includes/header.php');
-?>    
+?>
 	<section>
 		<h2>N'hésitez pas à nous contacter !</h2>
 		<?php if (!isset($_GET['send'])) { ?>
@@ -21,8 +21,8 @@
 		</form>
 	</section>
 	<script type="text/javascript" src="assets/js/contact.js"></script>
-    <?php }else{ ?>
+    <?php } else { ?>
     <p>Merci beaucoup, votre message à bien été envoyé.</p>
     <?php } ?>
-    
+
 <?php require_once('assets/php/includes/footer.php'); ?>

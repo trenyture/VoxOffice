@@ -1,4 +1,4 @@
-<?php 
+<?php
     ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
     if(!isset($_SESSION['fb_token'])){
@@ -8,7 +8,7 @@
 	require_once('assets/php/includes/header.php');
     date_default_timezone_set('UTC');
 ?>
-	<!-- Il faudrait rajouter un formulaire de recherche pour voir si le film que l'on souhaite ajouter n'est pas déjà en ligne en ajax-->
+	<!--Il faudrait rajouter un formulaire de recherche pour voir si le film que l'on souhaite ajouter n'est pas déjà en ligne en ajax-->
 	<section>
         <h2>Ajoutez un film !</h2>
         <form id="search" action="" method="POST">

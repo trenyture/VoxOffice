@@ -15,7 +15,7 @@
         case '/VoxOffice/contact':
             $bodyId = 'contact';
             break;
-        
+
         default:
             $bodyId = 'home';
             break;
@@ -96,7 +96,7 @@
                     c-3.9,3.9-3.9,10.3,0,14.2l19.9,20H250.8c0,0-67.3-4.6-118.6,48.5S86.2,208.1,86.2,208.1z" />
                 </svg>
             </a>
-            <!--<?php if(isset($_SESSION['fb_token'])){ ?>
+            <!--<?php if(isset($_SESSION['fb_token'])) { ?>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -133,7 +133,7 @@
                     </label>
                 </div>
                 <?php
-                    if(isset($_SESSION['fb_token'])){
+                    if(isset($_SESSION['fb_token'])) {
                     ?>
                         <div class="user-portrait">
                             <a href="index.php?logout=true">
@@ -143,7 +143,7 @@
                         </div>
                         <p>Connecté en tant que :<br/><span id="username"><?php echo($_SESSION['fbName']); ?></span></p>
                     <?php
-                    }else{
+                    } else {
                     ?>
                         <div class="user-portrait disconnected">
                             <a href="<?= $fbUrlConnect; ?>"><i class="fa fa-lock"></i>Connexion</a>
