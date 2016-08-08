@@ -19,13 +19,40 @@ function postToFeed(title, url, image){
     var obj = {method: 'feed',link: 'http://www.simon-tr.com/VoxOffice/', picture: 'http://www.simon-tr.com/VoxOffice/assets/img/films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
     function callback(response){
         if(response.post_id){
-            window.location = url;
+            randFilms();
         }
     }
     FB.ui(obj, callback);
 }
 /*FIN SDK FB*/
 
+function voteFor(link){
+    $.ajax({
+        url: link,
+        success: function (result){
+            if(result){
+                result = eval(result);
+                if(!result[0]){
+                    randFilms();                
+                }else{
+                    alert(result[1]);
+                }
+            }else{
+                alert("Vous n'êtes pas connecté!");
+            }
+        }
+    });
+}
+
+function randFilms(){
+    $.ajax({
+        url: './assets/php/rand.php',
+        dataType: 'json',
+        success: function (data) {
+            constructPage(data);
+        }
+    });
+}
 
 function constructPage(films) {
     $films = $(films);
@@ -46,17 +73,18 @@ function constructPage(films) {
 }
 
 $(document).ready(function () {
+    randFilms();
+
     $('a#others').click(function (event) {
         event.preventDefault();
-        location.reload();
+        randFilms();
     });
-    $.ajax({
-        url: './assets/php/rand.php',
-        dataType: 'json',
-        success: function (data) {
-            constructPage(data);
-        }
-    });
+
+    $('a.btn-plus').click(function(event){
+        event.preventDefault();
+        var href=$(this).attr('href');
+        voteFor(href);
+    })
 
     $('.btn-share').click(function(event){
         event.preventDefault();
