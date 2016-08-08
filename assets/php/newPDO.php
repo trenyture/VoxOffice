@@ -1,5 +1,5 @@
 <?php
-    require('/home/simontrcuw/globals.php');
+    require('Path to global.php file'); //Use realPath()!
     function connexionBD(){
         try{
             // Try: on essaie de se connecter à la BD
