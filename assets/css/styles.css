@@ -593,12 +593,12 @@ th {
   padding: 0;
 }
 
-/* line 52, ../sass/partials/_base.scss */
+/* line 54, ../sass/partials/_base.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 55, ../sass/partials/_base.scss */
+/* line 57, ../sass/partials/_base.scss */
 body {
   width: 100%;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -606,12 +606,12 @@ body {
   color: #2a2a2a;
 }
 
-/* line 62, ../sass/partials/_base.scss */
+/* line 64, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 65, ../sass/partials/_base.scss */
+/* line 67, ../sass/partials/_base.scss */
 p {
   line-height: 2rem;
 }
@@ -664,8 +664,14 @@ p {
   float: right;
 }
 
+/* line 33, ../sass/partials/_grids.scss */
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
-  /* line 35, ../sass/partials/_grids.scss */
+  /* line 39, ../sass/partials/_grids.scss */
   .content-lg,
   .content-md {
     width: 100%;
@@ -677,13 +683,13 @@ p {
   }
 }
 @media (max-width: 767px) {
-  /* line 44, ../sass/partials/_grids.scss */
+  /* line 48, ../sass/partials/_grids.scss */
   .half {
     width: 100%;
   }
 }
 @media (max-width: 640px) {
-  /* line 49, ../sass/partials/_grids.scss */
+  /* line 53, ../sass/partials/_grids.scss */
   .content-sm {
     width: 100%;
     margin: 0;
@@ -2333,4 +2339,140 @@ footer ul li a:hover {
   .vote-container .skip {
     bottom: .5rem;
   }
+}
+/* line 1, ../sass/modules/_compare.scss */
+.compare-container {
+  min-height: 100vh;
+  padding-top: 20rem;
+  background-color: #eee;
+}
+/* line 5, ../sass/modules/_compare.scss */
+.compare-container h1 {
+  margin-bottom: 10rem;
+  font-family: "nexa_bold", Helvetica, Arial, sans-serif;
+  font-size: 6.4rem;
+  color: #7b6696;
+  text-align: center;
+  text-shadow: none;
+}
+/* line 13, ../sass/modules/_compare.scss */
+.compare-container .content-lg {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+/* line 17, ../sass/modules/_compare.scss */
+.compare-container .content-sm a {
+  margin-top: 4rem;
+}
+/* line 20, ../sass/modules/_compare.scss */
+.compare-container section {
+  -webkit-flex: 1 1 50%;
+  flex: 1 1 50%;
+  padding: 0 1rem;
+}
+/* line 24, ../sass/modules/_compare.scss */
+.compare-container section.best h2,
+.compare-container section.best li p {
+  color: #2DCC70;
+}
+/* line 30, ../sass/modules/_compare.scss */
+.compare-container section.worst h2,
+.compare-container section.worst li p {
+  color: #F72359;
+}
+/* line 35, ../sass/modules/_compare.scss */
+.compare-container section h2 {
+  margin-bottom: 5.8rem;
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
+  font-size: 3.4rem;
+  text-align: center;
+  text-transform: none;
+  text-shadow: none;
+}
+/* line 43, ../sass/modules/_compare.scss */
+.compare-container section h3 {
+  padding-bottom: 1rem;
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #2a2a2a;
+  max-width: 27rem;
+  text-overflow: ellipsis;
+}
+/* line 52, ../sass/modules/_compare.scss */
+.compare-container section h4 {
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #aaa;
+}
+/* line 59, ../sass/modules/_compare.scss */
+.compare-container li {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 7.4rem;
+  margin-top: 3em;
+  padding: 1.5rem;
+  background-color: #fff;
+  -moz-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  transition: all .3s;
+}
+/* line 71, ../sass/modules/_compare.scss */
+.compare-container li:hover {
+  -moz-box-shadow: 0 0.1rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.1rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.1rem 1.5rem 0 rgba(0, 0, 0, 0.2);
+}
+/* line 74, ../sass/modules/_compare.scss */
+.compare-container li .img-film,
+.compare-container li .text-container,
+.compare-container li .score {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+/* line 79, ../sass/modules/_compare.scss */
+.compare-container li span {
+  position: absolute;
+  top: -2.4rem;
+  left: 0;
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #aaa;
+}
+/* line 87, ../sass/modules/_compare.scss */
+.compare-container li .img-film {
+  width: 7.2rem;
+  min-width: 7.2rem;
+  max-width: 7.2rem;
+  height: 7.2rem;
+  margin-right: 2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 98, ../sass/modules/_compare.scss */
+.compare-container li .score {
+  text-align: right;
+  margin-left: 2rem;
+}
+/* line 102, ../sass/modules/_compare.scss */
+.compare-container li p {
+  display: block;
+  font-family: "montserrat_bold", Helvetica, Arial, sans-serif;
+  font-size: 3.4rem;
+  text-align: right;
 }

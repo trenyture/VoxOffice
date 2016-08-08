@@ -30,6 +30,10 @@
 .right {
     float: right;
 }
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
 
 @media (max-width: $tabletMax) {
     .content-lg,
