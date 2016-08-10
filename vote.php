@@ -23,7 +23,6 @@
                     <a href="#" class="btn-secondary-transparent btn-share" id="sh-f1" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
                 </div>
             </div>
-            <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
             <div class="overlay"></div>
         </article>
         <article id="film2">
@@ -37,9 +36,9 @@
                     <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
                 </div>
             </div>
-            <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
             <div class="overlay"></div>
         </article>
+        <a href="#" id="others" class="btn-tertiary skip">Passer <i class="fa fa-arrow-right"></i></a>
     </section>
 
     <script type="text/javascript" src="assets/js/vote.js"></script>
