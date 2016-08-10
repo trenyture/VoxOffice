@@ -20,8 +20,7 @@
             <ul id="error-messages"><li>Tous les champs sont obligatoires.</li></ul>
         	<input type="text" id="title" name="title" placeholder="Titre du film" />
         	<input type="number" id="year" min="1800" max="<?php echo date("Y"); ?>" name="year" placeholder="Année de production (AAAA)" />
-        	<textarea id="shortdesc" name="shortdesc" placeholder="Courte description du film (250 caractères max)"></textarea>
-        	<p id="caractRest">Il vous reste <span id="count">250</span> caractères disponibles.</p>
+            <input type="text" id="author" name="author" placeholder="Nom Prénom du Réalisateur" />
         	<label for"fileToUpload">Affiche du film : </label>
         	<input type="file" name="fileToUpload" id="fileToUpload" />
         	<p>Images en jpg, png ou gif (taille inférieure à 500kb)</p>
