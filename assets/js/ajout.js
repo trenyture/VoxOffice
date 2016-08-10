@@ -31,15 +31,6 @@ $(document).ready(function () {
             });
         }
     })
-    $('form#formadd textarea#shortdesc').keyup(function () {
-        var caract = 250 - $(this).val().length;
-        if (caract < 0) {
-            $('form#formadd p#caractRest').css('color', 'red');
-        } else {
-            $('form#formadd p#caractRest').css('color', 'green');
-        }
-        $('form#formadd p#caractRest span#count').html(caract);
-    });
     /*Vérification Formulaire avant l'envoi*/
     $('form#formadd').submit(function () {
         var okForm = true;
@@ -52,13 +43,9 @@ $(document).ready(function () {
             okForm = false;
             messageError += "<li> Vous devez ajouter l'année de production! </li>";
         }
-        if ($(this).children('textarea#shortdesc').val() == '') {
+        if ($(this).children('input#author').val() == '') {
             okForm = false;
-            messageError += "<li> Vous devez mettre une courte description! </li>";
-        }
-        if ($(this).children('textarea#shortdesc').val().length > 250) {
-            okForm = false;
-            messageError += "<li> Vous devez écrire une description plus courte! </li>";
+            messageError += "<li> Vous devez renseigner le producteur du film! </li>";
         }
         if ($(this).children('input#fileToUpload').val() == '') {
             okForm = false;

@@ -3,16 +3,13 @@
     session_start();
 	if(!isset($_SESSION['fb_token'])){
 		header('location:../../index');
+	}else{
+		$user = $_SESSION['fbId'];
 	}
     include('newPDO.php');
 	$message="";
-	if($_POST['title'] != '' && $_POST['year']!='' && $_POST['shortdesc']!='' && isset($_FILES) && isset($_POST)){
+	if($_POST['title'] != '' && $_POST['year']!='' && $_POST['author']!='' && isset($_FILES) && isset($_POST)){
 		$uploadOk = 1;
-		//Vérifie que la description ne dépasse pas 250 caractères!!!!
-		if(strlen($_POST['shortdesc']) > 260){ //On met un petit pourcentage en plus pour certains caractère qui comptent pour 2...
-			$uploadOk = 0;
-			$message .= "<p>Votre description est beaucoup trop grande, veuillez aller à l'essentiel!</p>";
-		}
 		$unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
                             'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
                             'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss', 'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c',
@@ -85,12 +82,12 @@
 				// Pour indiquer au serveur que les requêtes seront codées grâce au jeu de caractères utf-8
 				$maBD->exec('SET NAMES utf8');
 				// Préparation d'une requête.
-				$requete = $maBD->prepare("INSERT INTO VO_films (fb_id, title, annee, shortdesc, image, vote) VALUES (?,?,?,?,?,?)");
+				$requete = $maBD->prepare("INSERT INTO VO_films (fb_id, title, annee, author, image, vote) VALUES (?,?,?,?,?,?)");
 				// Exécution de la requête, avec les valeur 3, "premium" et "premiums" pour remplacer les ?
 				//On empeche les possibles hackers d'entrer dans la bdd
 				$dbTitle = htmlspecialchars($_POST['title']);
-				$dbShortdesc = htmlspecialchars($_POST['shortdesc']);
-				$arrayRequest = array($_POST['user'],$dbTitle,$_POST['year'],$dbShortdesc,$imgTitle, 0);
+				$dbAuthor = htmlspecialchars($_POST['author']);
+				$arrayRequest = array($user,$dbTitle,$_POST['year'],$dbAuthor,$imgTitle, 0);
 				$ok = $requete->execute($arrayRequest);
 				// Le résultat placé dans $ok vaudra 1 si la requête a pu s'exécuter correctement
 				// Création du message indiquant si l'insertion a réussi

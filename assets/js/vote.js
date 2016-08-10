@@ -1,36 +1,50 @@
-/*String.prototype.decode = function(encoding) {
-    var result = "";
- 
-    var index = 0;
-    var c = c1 = c2 = 0;
- 
-    while(index < this.length) {
-        c = this.charCodeAt(index);
- 
-        if(c < 128) {
-            result += String.fromCharCode(c);
-            index++;
-        }
-        else if((c > 191) && (c < 224)) {
-            c2 = this.charCodeAt(index + 1);
-            result += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
-            index += 2;
-        }
-        else {
-            c2 = this.charCodeAt(index + 1);
-            c3 = this.charCodeAt(index + 2);
-            result += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
-            index += 3;
+/*SHARE FACEBOOK*/
+window.fbAsyncInit = function(){
+    FB.init({
+        appId: '898558203596431',
+        status: true,
+        cookie: true,
+        xfbml: true,
+        version : 'v2.7'
+    }); 
+};
+
+(function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if(d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; 
+    js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+    ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false)
+);
+function postToFeed(title, url, image){
+    var obj = {method: 'feed',link: 'http://www.simon-tr.com/VoxOffice/', picture: 'http://www.simon-tr.com/VoxOffice/assets/img/films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
+    function callback(response){
+        if(response.post_id){
+            randFilms();
         }
     }
-    return result;
-};*/
+    FB.ui(obj, callback);
+}
+/*FIN SDK FB*/
 
-$(document).ready(function () {
-    $('a#others').click(function (event) {
-        event.preventDefault();
-        location.reload();
+function voteFor(link){
+    $.ajax({
+        url: link,
+        success: function (result){
+            if(result){
+                result = eval(result);
+                if(!result[0]){
+                    randFilms();                
+                }else{
+                    alert(result[1]);
+                }
+            }else{
+                alert("Vous n'êtes pas connecté!");
+            }
+        }
     });
+}
+
+function randFilms(){
     $.ajax({
         url: './assets/php/rand.php',
         dataType: 'json',
@@ -38,21 +52,43 @@ $(document).ready(function () {
             constructPage(data);
         }
     });
-});
+}
 
 function constructPage(films) {
-    console.log(films);
-    var i = 1;
     $films = $(films);
-    $films.each(function () {
-        console.log($('article#film' + i));
-        $('article#film' + i).css({
-            'background-image': 'url(assets/img/films/' + this.image + ')'
+    $.each($films, function(key, value){
+        var i = key + 1;
+        $('article#film' + i + ' div.article-image').css({
+            'background-image': 'url(assets/img/films/' + value.image + ')'
         });
-        $('article#film' + i + ' h3').html(this.title + '<br/><span>' + this.annee + '</span>');
-        $('article#film' + i + ' p').html(this.shortdesc);
-        $('article#film' + i + ' a.plus').attr('href', 'assets/php/addvote.php?type=plus&id=' + this.id);
-        $('article#film' + i + ' a.moins').attr('href', 'assets/php/addvote.php?type=moins&id=' + this.id);
-        i = i + 1;
+        $('article#film' + i + ' h3').html(value.title);
+        $('article#film' + i + ' p.date').html(value.annee);
+        $('article#film' + i + ' p.author em').html(value.author);
+        $('article#film' + i + ' a.btn-plus').attr('href', 'assets/php/addvote.php?id=' + value.id);
+        $('article#film' + i + ' a.btn-share').attr('href', 'assets/php/addvote.php?id=' + value.id).data({
+            'image':value.image,
+            'title':"J'ai voté pour "+value.title
+        });
     });
 }
+
+$(document).ready(function () {
+    randFilms();
+
+    $('a#others').click(function (event) {
+        event.preventDefault();
+        randFilms();
+    });
+
+    $('a.btn-plus').click(function(event){
+        event.preventDefault();
+        var href=$(this).attr('href');
+        voteFor(href);
+    })
+
+    $('.btn-share').click(function(event){
+        event.preventDefault();
+        elem = $(this);
+        postToFeed(elem.data('title'), elem.attr('href'), elem.data('image'));
+    });
+});

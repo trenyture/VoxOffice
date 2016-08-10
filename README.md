@@ -19,8 +19,8 @@ When you finished your modifications and you want to share it with me, you have 
 Step 1 : <code>git status</code> - to see all the modified files (reds are yet to add and greens will be added).<br>
 Step 2 : <code>git add filename</code> - to add the modified files to the commit! For example, <code>git add style/css.css</code> or <code>git add .</code> to add all files.<br>
 Step 3 : <code>git commit -m "Your message"</code> - to initialize the commit which will send all the documents in your GitHub profile, with a message (ex: "Header styles modification").<br>
-Step 4 : <code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br><br>
-Now you've got your files in your profile and you want to share it with me? Do a Pull Request from GitHub and I will examine your modifications before including them to the source code.<br>
+Step 4 : <code>git pull</code> - to update possibles changes on the repo online.<br>
+Step 5 : <code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br>
 
 # How to install Compass and use it :
 Step 1 :  (Windows) Download Ruby from <a href="http://rubyinstaller.org/">here</a>.<br>

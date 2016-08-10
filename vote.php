@@ -16,11 +16,11 @@
             <div class="article-image" style="background-image: url('assets/img/films/2001.jpg');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 1]"</h3>
-                <p class="author"><em>[Prénom] [Nom]</em></p>
+                <p class="author">de <em>[Prénom] [Nom]</em></p>
                 <p class="date">[Année]</p>
                 <div class="vote-block">
                     <a href="#" class="btn-secondary btn-plus"><i class="fa fa-check"></i> Voter</a>
-                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2"><i class="fa fa-facebook"></i>Voter et partager</a>
+                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f1" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
                 </div>
             </div>
             <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
@@ -30,11 +30,11 @@
             <div class="article-image" style="background-image: url('assets/img/films/interstellar.jpg');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 2]"</h3>
-                <p class="author"><em>[Prénom] [Nom]</em></p>
+                <p class="author">de <em>[Prénom] [Nom]</em></p>
                 <p class="date">[Année]</p>
                 <div class="vote-block">
                     <a href="#" class="btn-secondary btn-plus"><i class="fa fa-check"></i> Voter</a>
-                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2"><i class="fa fa-facebook"></i>Voter et partager</a>
+                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
                 </div>
             </div>
             <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
