@@ -15,7 +15,7 @@
         @include justify-content(space-between);
     }
     .content-sm a {
-        margin-top: 4rem;
+        margin: 4rem 0;
     }
     section {
         @include flex(1 1 50%);
@@ -104,6 +104,78 @@
             font-family: $text-bold;
             font-size: 3.4rem;
             text-align: right;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .compare-container {
+        padding-top: 15rem;
+        h1 {
+            font-size: 5.8rem;
+            margin-bottom: 7rem;
+        }
+        .content-lg {
+            @include flex-direction(column);
+        }
+        section {
+            @include flex(1 1 auto);
+            + section {
+                margin-top: 6rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+            h3 {
+                max-width: 100%;
+            }
+        }
+        li {
+            width: 75%;
+            height: auto;
+            margin: 3rem auto 0;
+            + li {
+                margin-top: 4rem;
+            }
+        }
+    }
+}
+@media (max-width: $smartphone) {
+    .compare-container {
+        li {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+@media (max-width: $smartphoneMin) {
+    .compare-container {
+        padding-top: 10rem;
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 3rem;
+        }
+        section {
+            h2 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.6rem;
+            }
+            h4 {
+                font-size: 1.4rem;
+            }
+        }
+        li {
+            .img-film {
+                width: 6rem;
+                min-width: 6rem;
+                max-width: 6rem;
+                height: 6rem;
+            }
+            p {
+                font-size: 2.4rem;
+            }
         }
     }
 }
