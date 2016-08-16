@@ -1,0 +1,109 @@
+.compare-container {
+    min-height: 100vh;
+    padding-top: 20rem;
+    background-color: $light-grey;
+    h1 {
+        margin-bottom: 10rem;
+        font-family: $title-font;
+        font-size: 6.4rem;
+        color: $purple;
+        text-align: center;
+        @include text-shadow(none);
+    }
+    .content-lg {
+        @include display-flex;
+        @include justify-content(space-between);
+    }
+    .content-sm a {
+        margin-top: 4rem;
+    }
+    section {
+        @include flex(1 1 50%);
+        padding: 0 1rem;
+        &.best {
+            h2,
+            li p {
+                color: $green;
+            }
+        }
+        &.worst {
+            h2,
+            li p {
+                color: $red;
+            }
+        }
+        h2 {
+            margin-bottom: 5.8rem;
+            font-family: $text-font;
+            font-size: 3.4rem;
+            text-align: center;
+            text-transform: none;
+            @include text-shadow(none);
+        }
+        h3 {
+            padding-bottom: 1rem;
+            font-family: $text-semibold;
+            font-size: 1.8rem;
+            line-height: 2rem;
+            color: $dark-grey;
+            max-width: 27rem;
+            text-overflow: ellipsis;
+        }
+        h4 {
+            font-family: $text-light;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: $medium-grey;
+        }
+    }
+    li {
+        position: relative;
+        @include display-flex;
+        //@include justify-content(space-between);
+        @include align-items(center);
+        height: 7.4rem;
+        margin-top: 3em;
+        padding: 1.5rem;
+        background-color: #fff;
+        @include box-shadow(0 .1rem .2rem 0 rgba(0, 0, 0, .25));
+        @include border-radius(.2rem);
+        @include transition();
+        &:hover {
+            @include box-shadow(0 .1rem 1.5rem 0 rgba(0, 0, 0, .2));
+        }
+        .img-film,
+        .text-container,
+        .score {
+            @include flex(1 1 auto);
+        }
+        span {
+            position: absolute;
+            top: -2.4rem;
+            left: 0;
+            font-family: $text-light;
+            font-size: 2rem;
+            color: $medium-grey;
+        }
+        .img-film {
+            width: 7.2rem;
+            min-width: 7.2rem;
+            max-width: 7.2rem;
+            height: 7.2rem;
+            margin-right: 2rem;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include background-size(cover);
+        }
+        .score {
+            text-align: right;
+            margin-left: 2rem;
+        }
+        p {
+            display: block;
+            font-family: $text-bold;
+            font-size: 3.4rem;
+            text-align: right;
+        }
+    }
+}

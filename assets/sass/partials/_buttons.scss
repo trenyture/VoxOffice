@@ -86,6 +86,7 @@
 
 .btn-tertiary {
     @extend .btn-secondary;
+    display: inline-block;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, .6);
     @include box-shadow(none);

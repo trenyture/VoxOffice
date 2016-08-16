@@ -60,7 +60,7 @@ $(document).ready(function () {
         $(input).click(blurSwitch);
     });
     function blurSwitch() {
-        var blurredImage = $('.vote .article-image');
+        var blurredImage = $('.vote-container .article-image');
         
         if (this.checked) {
             $(blurredImage).attr('checked', true).css({
