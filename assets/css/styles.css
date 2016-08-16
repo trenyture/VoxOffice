@@ -2508,59 +2508,64 @@ footer ul li a:hover {
   /* line 126, ../sass/modules/_compare.scss */
   .compare-container section h2 {
     font-size: 3rem;
+    margin-bottom: 0;
   }
-  /* line 129, ../sass/modules/_compare.scss */
+  /* line 130, ../sass/modules/_compare.scss */
   .compare-container section h3 {
     max-width: 100%;
   }
-  /* line 133, ../sass/modules/_compare.scss */
+  /* line 134, ../sass/modules/_compare.scss */
+  .compare-container ul {
+    margin-top: 5.8rem;
+  }
+  /* line 137, ../sass/modules/_compare.scss */
   .compare-container li {
     width: 75%;
     height: auto;
     margin: 3rem auto 0;
   }
-  /* line 137, ../sass/modules/_compare.scss */
+  /* line 141, ../sass/modules/_compare.scss */
   .compare-container li + li {
     margin-top: 4rem;
   }
 }
 @media (max-width: 640px) {
-  /* line 145, ../sass/modules/_compare.scss */
+  /* line 149, ../sass/modules/_compare.scss */
   .compare-container li {
     width: auto;
     max-width: 100%;
   }
 }
 @media (max-width: 480px) {
-  /* line 152, ../sass/modules/_compare.scss */
+  /* line 156, ../sass/modules/_compare.scss */
   .compare-container {
     padding-top: 10rem;
   }
-  /* line 154, ../sass/modules/_compare.scss */
+  /* line 158, ../sass/modules/_compare.scss */
   .compare-container h1 {
     font-size: 4rem;
     margin-bottom: 3rem;
   }
-  /* line 159, ../sass/modules/_compare.scss */
+  /* line 163, ../sass/modules/_compare.scss */
   .compare-container section h2 {
     font-size: 2rem;
   }
-  /* line 162, ../sass/modules/_compare.scss */
+  /* line 166, ../sass/modules/_compare.scss */
   .compare-container section h3 {
     font-size: 1.6rem;
   }
-  /* line 165, ../sass/modules/_compare.scss */
+  /* line 169, ../sass/modules/_compare.scss */
   .compare-container section h4 {
     font-size: 1.4rem;
   }
-  /* line 170, ../sass/modules/_compare.scss */
+  /* line 174, ../sass/modules/_compare.scss */
   .compare-container li .img-film {
     width: 6rem;
     min-width: 6rem;
     max-width: 6rem;
     height: 6rem;
   }
-  /* line 176, ../sass/modules/_compare.scss */
+  /* line 180, ../sass/modules/_compare.scss */
   .compare-container li p {
     font-size: 2.4rem;
   }
