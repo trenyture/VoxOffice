@@ -129,6 +129,10 @@ header {
         }
     }
     
+    // Darkened
+    &.darkened {
+        background-color: rgba(0, 0, 0, .6);
+    }
     // Scrolled
     &.scrolled {
         height: 6rem;
