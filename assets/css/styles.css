@@ -2570,3 +2570,18 @@ footer ul li a:hover {
     font-size: 2.4rem;
   }
 }
+/* line 1, ../sass/modules/_add.scss */
+.add-container {
+  min-height: 100vh;
+  padding-top: 20rem;
+  background-color: #eee;
+}
+/* line 5, ../sass/modules/_add.scss */
+.add-container h1 {
+  margin-bottom: 10rem;
+  font-family: "nexa_bold", Helvetica, Arial, sans-serif;
+  font-size: 6.4rem;
+  color: #7b6696;
+  text-align: center;
+  text-shadow: none;
+}

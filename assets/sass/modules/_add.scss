@@ -1,0 +1,13 @@
+.add-container {
+    min-height: 100vh;
+    padding-top: 20rem;
+    background-color: $light-grey;
+    h1 {
+        margin-bottom: 10rem;
+        font-family: $title-font;
+        font-size: 6.4rem;
+        color: $purple;
+        text-align: center;
+        @include text-shadow(none);
+    }
+}

@@ -9,24 +9,43 @@
     date_default_timezone_set('UTC');
 ?>
 	<!--Il faudrait rajouter un formulaire de recherche pour voir si le film que l'on souhaite ajouter n'est pas déjà en ligne en ajax-->
-	<section>
-        <h2>Ajoutez un film !</h2>
-        <form id="search" action="" method="POST">
-            <input type="text" name="searchtitle" id="searchtitle" placeholder="Quel film souhaitez vous ajouter?" />
-            <ul id="results">
-            </ul>
-        </form>
-        <form id="formadd" action="assets/php/manage.php" method="post" enctype="multipart/form-data">
-            <ul id="error-messages"><li>Tous les champs sont obligatoires.</li></ul>
-        	<input type="text" id="title" name="title" placeholder="Titre du film" />
-        	<input type="number" id="year" min="1800" max="<?php echo date("Y"); ?>" name="year" placeholder="Année de production (AAAA)" />
-            <input type="text" id="author" name="author" placeholder="Nom Prénom du Réalisateur" />
-        	<label for"fileToUpload">Affiche du film : </label>
-        	<input type="file" name="fileToUpload" id="fileToUpload" />
-        	<p>Images en jpg, png ou gif (taille inférieure à 500kb)</p>
-        	<input type="submit" value="Ajout" />
-        </form>
-        <script type="text/javascript" src="assets/js/ajout.js"></script>
-        <!--A l'envoi du formulaire on fait une recherche dans la base de donnée pour voir s'il n'existe pas un film avec le meme nom et la meme année-->
-    </section>
+	<div class="add-container">
+        <h1>Ajoutez un film !</h1>
+        <div class="content-lg">
+            <form id="search" class="form-search-film" action="" method="POST">
+                <div class="input-container">
+                    <input type="text" id="searchtitle" name="searchtitle" />
+                    <label for="searchtitle">Quel film souhaitez vous ajouter?</label>
+                </div>
+                <ul id="results"></ul>
+            </form>
+            <form id="formadd" class="form-add-film" action="assets/php/manage.php" method="post" enctype="multipart/form-data">
+                <ul id="error-messages">
+                    <li>Tous les champs sont obligatoires.</li>
+                </ul>
+                <div class="input-container">
+                    <input type="text" id="title" name="title" />
+                    <label for="title">Titre du film</label>
+                </div>
+                <div class="input-container">
+                    <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" />
+                    <label for="year">Année de production (AAAA) :</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="author" name="author" />
+                    <label for="author">Nom et prénom du réalisateur :</label>
+                </div>
+                <div class="input-container">
+                    <input type="file" id="fileToUpload" name="fileToUpload" />
+                    <label for="fileToUpload">Affiche du film :</label>
+                    <span>Images en jpg, png ou gif (taille inférieure à 500kb)</span>
+                </div>
+                <input type="submit" value="Ajouter" />
+            </form>
+        </div>
+    </div>
+       
+    <!--A l'envoi du formulaire on fait une recherche dans la base de donnée pour voir s'il n'existe pas un film avec le meme nom et la meme année-->
+    <script type="text/javascript" src="assets/js/ajout.js"></script>
+    
 <?php require_once('assets/php/includes/footer.php'); ?>

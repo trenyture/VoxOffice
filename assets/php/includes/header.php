@@ -73,7 +73,7 @@
         <script src="assets/js/main.js"></script>
     </head>
     <body class="<?=$bodyId;?>">
-        <?php if (strpos($_SERVER['REQUEST_URI'], 'compare') == true) { ?>
+        <?php if (strpos($_SERVER['REQUEST_URI'], 'compare') == true || strpos($_SERVER['REQUEST_URI'], 'add') == true) { ?>
         <header class="darkened">
         <?php } else { ?>
         <header>
@@ -122,10 +122,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index">Accueil</a></li>
-                    <li><a href="./vote">Voter</a></li>
-                    <li><a href="./compare">Classement</a></li>
-                    <li><a href="./add">Ajouter</a></li>
+                    <li><a href="./index.php">Accueil</a></li>
+                    <li><a href="./vote.php">Voter</a></li>
+                    <li><a href="./compare.php">Classement</a></li>
+                    <li><a href="./add.php">Ajouter</a></li>
                 </ul>
             </nav>
             <div class="user">
