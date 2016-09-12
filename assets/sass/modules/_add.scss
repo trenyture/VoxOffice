@@ -1,13 +1,14 @@
 .add-container {
-    min-height: 100vh;
-    padding-top: 20rem;
-    background-color: $light-grey;
-    h1 {
-        margin-bottom: 10rem;
-        font-family: $title-font;
-        font-size: 6.4rem;
-        color: $purple;
-        text-align: center;
-        @include text-shadow(none);
+    @extend .grey-section;
+    
+    .search-title-results {
+        margin-top: 3rem;
+        li {
+            font-size: 2rem;
+            font-weight: 600;
+            + li {
+                padding-top: .8rem;
+            }
+        }
     }
 }

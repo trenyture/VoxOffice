@@ -1,15 +1,4 @@
 .compare-container {
-    min-height: 100vh;
-    padding-top: 20rem;
-    background-color: $light-grey;
-    h1 {
-        margin-bottom: 10rem;
-        font-family: $title-font;
-        font-size: 6.4rem;
-        color: $purple;
-        text-align: center;
-        @include text-shadow(none);
-    }
     .content-lg {
         @include display-flex;
         @include justify-content(space-between);
@@ -59,7 +48,6 @@
     li {
         position: relative;
         @include display-flex;
-        //@include justify-content(space-between);
         @include align-items(center);
         height: 7.4rem;
         margin-top: 3em;
@@ -110,11 +98,6 @@
 
 @media (max-width: $tablet) {
     .compare-container {
-        padding-top: 15rem;
-        h1 {
-            font-size: 5.8rem;
-            margin-bottom: 7rem;
-        }
         .content-lg {
             @include flex-direction(column);
         }
@@ -154,11 +137,6 @@
 }
 @media (max-width: $smartphoneMin) {
     .compare-container {
-        padding-top: 10rem;
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 3rem;
-        }
         section {
             h2 {
                 font-size: 2rem;

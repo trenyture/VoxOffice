@@ -42,6 +42,7 @@
     color: #fff;
     text-transform: uppercase;
     background: $orange;
+    border: 0;
     @include box-shadow(0 0 0 $dark-orange, 0 .5rem 1rem rgba(0, 0, 0, .35));
     &:hover {
         background: darken($orange, 5%);
@@ -62,6 +63,7 @@
     font-size: 1.4rem;
     line-height: 4.6rem;
     background-color: $purple;
+    border: 0;
     //@include box-shadow(0 0 2rem 0 rgba(0, 0, 0, .2));
     
     &:hover {

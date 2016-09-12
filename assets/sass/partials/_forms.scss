@@ -1,0 +1,102 @@
+form {
+    padding-bottom: 6rem;
+    .input-container {
+        position: relative;
+        @include display-flex;
+        @include flex-direction(column);
+        + .input-container {
+            margin-top: 4rem;
+        }
+        &.valid-input input,
+        &.invalid-input input {
+            color: #fff;
+            &:focus {
+                color: #fff;
+                @include box-shadow(inset 0 0 0 .3rem #fff);
+            }
+        }
+        &.valid-input input {
+            background-color: $green;
+        }
+        &.invalid-input input{
+            background-color: $red;
+        }
+        label,
+        input {
+            @include flex(1 1 auto);
+        }
+    }
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.6rem;
+        color: $dark-grey;
+        pointer-events: none;
+        @include transition();
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="file"] {
+        max-width: 100%;
+        margin-top: 2.4rem;
+        padding: 1rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $dark-grey;
+        line-height: 2.8rem;
+        border: 0;
+        overflow: hidden;
+        @include transition();
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {
+            @include box-shadow(inset 0 0 0 .3rem $purple);
+            color: $purple;
+            outline: 0;
+            + label {
+                color: $purple;
+            }
+        }
+    }
+    input[type="number"] {
+        max-width: 20rem;
+    }
+    input[type="file"] {
+        padding: 0 0 1rem;
+        &:focus {
+            @include box-shadow(none);
+        }
+    }
+    input[type="submit"] {
+        margin-top: 2rem;
+    }
+    
+    span {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+    
+    .errors {
+        margin-top: 4rem;
+    }
+    .error {
+        color: $red;
+        + .error {
+            padding-top: .3rem;
+        }
+    }
+    .input-submit {
+        text-align: center;
+    }
+}
+
+@media (max-width: $smartphoneMin) {
+    form {
+        input[type="number"] {
+            max-width: 100%;
+        }
+    }
+}

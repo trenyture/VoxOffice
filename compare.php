@@ -7,7 +7,7 @@
     }
 	require_once('assets/php/includes/header.php');
 ?>
-    <div class="compare-container">
+    <div class="compare-container grey-section">
         <h1>Classement</h1>
         <div class="content-lg">
             <section id="best" class="best">
