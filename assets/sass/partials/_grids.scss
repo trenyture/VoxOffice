@@ -35,6 +35,12 @@
     text-align: center;
 }
 
+.hidden {
+    display: none;
+    visibility: hidden;
+    @include opacity(0);
+}
+
 @media (max-width: $tabletMax) {
     .content-lg,
     .content-md {

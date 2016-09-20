@@ -7,7 +7,7 @@ $title-size: 5.2rem;
 
 // Base font
 $text-font: 'montserrat', Helvetica, Arial, sans-serif;
-$text-size: 1.4rem;
+$text-size: 1.6rem;
 $text-line-height: 2rem;
 
 // Font states
@@ -47,8 +47,6 @@ $tabletMin: 768px;
 $smartphoneMax: 767px;
 $smartphone: 640px;
 $smartphoneMin: 480px;
-//$smartphoneSmallMax: 360px;
-//$smartphoneSmallMin: 320px;
 
 // Base elements
 html {
@@ -66,46 +64,4 @@ a {
 }
 p {
     line-height: $text-line-height;
-}
-
-.grey-section {
-    min-height: 100vh;
-    padding-top: 20rem;
-    background-color: $light-grey;
-    h1 {
-        margin-bottom: 10rem;
-        font-family: $title-font;
-        font-size: 6.4rem;
-        color: $purple;
-        text-align: center;
-        @include text-shadow(none);
-    }
-}
-
-@media (max-width: $tablet) {
-    .grey-section {
-        padding-top: 15rem;
-        h1 {
-            font-size: 5.8rem;
-            margin-bottom: 7rem;
-        }
-    }
-}
-@media (max-width: $tablet) {
-    .grey-section {
-        padding-top: 15rem;
-        h1 {
-            font-size: 5.8rem;
-            margin-bottom: 7rem;
-        }
-    }
-}
-@media (max-width: $smartphoneMin) {
-    .grey-section {
-        padding-top: 10rem;
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 3rem;
-        }
-    }
 }

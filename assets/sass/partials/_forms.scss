@@ -7,19 +7,22 @@ form {
         + .input-container {
             margin-top: 4rem;
         }
+        &.valid-input label,
         &.valid-input input,
+        &.invalid-input label,
         &.invalid-input input {
             color: #fff;
-            &:focus {
-                color: #fff;
-                @include box-shadow(inset 0 0 0 .3rem #fff);
-            }
         }
         &.valid-input input {
             background-color: $green;
         }
-        &.invalid-input input{
+        &.invalid-input input {
             background-color: $red;
+        }
+        &.filled label {
+            font-size: 1.5rem;
+            color: $grey;
+            @include translate3d(0, 0, 0);
         }
         label,
         input {
@@ -28,11 +31,10 @@ form {
     }
     label {
         position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 1.6rem;
-        color: $dark-grey;
+        font-size: 1.8rem;
+        color: $grey;
         pointer-events: none;
+        @include translate3d(1rem, 3.3rem, 0);
         @include transition();
     }
     input[type="text"],
@@ -40,40 +42,68 @@ form {
     input[type="number"],
     input[type="file"] {
         max-width: 100%;
-        margin-top: 2.4rem;
+        margin-top: 1.8rem;
         padding: 1rem;
         font-size: 1.8rem;
-        font-weight: 700;
+        font-weight: 600;
         color: $dark-grey;
         line-height: 2.8rem;
+        background-color: #fff;
         border: 0;
+        border-radius: .2rem;
         overflow: hidden;
         @include transition();
         &:hover {
             cursor: pointer;
         }
         &:focus {
-            @include box-shadow(inset 0 0 0 .3rem $purple);
-            color: $purple;
+            color: #fff;
+            background-color: $purple;
             outline: 0;
             + label {
+                font-size: 1.5rem;
                 color: $purple;
+                @include translate3d(0, 0, 0);
             }
         }
     }
     input[type="number"] {
-        max-width: 20rem;
+        max-width: 30rem;
     }
     input[type="file"] {
         padding: 0 0 1rem;
+        background: transparent;
         &:focus {
+            color: $purple;
+            background: transparent;
             @include box-shadow(none);
+            + label {
+                @include translate3d(0, 0, 0);
+            }
+        }
+        + label {
+            font-size: 1.5rem;
+            @include translate3d(0, 0, 0);
         }
     }
-    input[type="submit"] {
+
+    button[type="submit"] {
         margin-top: 2rem;
     }
     
+    h2 {
+        margin: 3rem 0 1.5rem;
+        font-family: $text-font;
+        font-size: 1.8rem;
+        color: $grey;
+        text-transform: none;
+        @include text-shadow(none);
+        big {
+            color: $purple;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
     span {
         font-size: 1.2rem;
         font-style: italic;
@@ -87,9 +117,6 @@ form {
         + .error {
             padding-top: .3rem;
         }
-    }
-    .input-submit {
-        text-align: center;
     }
 }
 

@@ -80,4 +80,21 @@ $(document).ready(function () {
             });
         }
     }
+    
+    // Label animations
+    $('form input').blur(function() {
+        if ($(this).val()) {
+            $(this).parents('div').addClass('filled');
+        } else {
+            $(this).parents('div').removeClass('filled');
+        }
+    });
+    
+    // Display search result
+    /*$('form#search button[type="submit"]').on('click', function() {
+        var resultsNumber = $('#results li').length;
+        
+        $('form .results-container').removeClass('hidden');
+        $('form h2 big').text(resultsNumber);
+    });*/
 });

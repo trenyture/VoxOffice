@@ -14,37 +14,40 @@
         <div class="content-lg">
             <form id="search" class="form-search-film" action="" method="POST">
                 <div class="input-container">
-                    <input type="text" id="searchtitle" name="searchtitle" />
+                    <input type="text" id="searchtitle" name="searchtitle" maxlength="50" />
                     <label for="searchtitle">Quel film recherchez-vous ?</label>
                 </div>
-                <div class="input-submit">
-                    <input type="submit" value="Rechercher" class="btn-secondary" />
+                <div class="input-submit center">
+                    <button type="submit" class="btn-secondary"><i class="fa fa-search"></i> Rechercher</button>
                 </div>
-                <ul id="results" class="search-title-results">
-                    <li>Coucou</li>
-                    <li>Coucou 2</li>
-                </ul>
+                <div class="results-container hidden">
+                    <h2 class="results-number"><big></big> résultats :</h2>
+                    <ul id="results" class="search-title-results">
+                        <li>Coucou</li>
+                        <li>Coucou 2</li>
+                    </ul>
+                </div>
             </form>
             <form id="formadd" class="form-add-film" action="assets/php/manage.php" method="post" enctype="multipart/form-data">
                 <div class="input-container invalid-input">
-                    <input type="text" id="title" name="title" />
+                    <input type="text" id="title" name="title" maxlength="50" />
                     <label for="title">Titre du film</label>
                 </div>
                 <div class="input-container valid-input">
                     <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" />
-                    <label for="year">Année de production (AAAA) :</label>
+                    <label for="year">Année de production (AAAA)</label>
                 </div>
                 <div class="input-container">
-                    <input type="text" id="author" name="author" />
-                    <label for="author">Nom et prénom du réalisateur :</label>
+                    <input type="text" id="author" name="author" maxlength="50" />
+                    <label for="author">Nom et prénom du réalisateur</label>
                 </div>
                 <div class="input-container">
                     <input type="file" id="fileToUpload" name="fileToUpload" />
                     <label for="fileToUpload">Affiche du film :</label>
                     <span>Images en jpg, png ou gif (taille inférieure à 500kb)</span>
                 </div>
-                <div class="input-submit">
-                    <input type="submit" value="Ajouter" class="btn-secondary"/>
+                <div class="input-submit center">
+                    <button type="submit" class="btn-secondary"><i class="fa fa-plus"></i> Ajouter</button>
                 </div>
                 <ul id="error-messages" class="errors">
                     <li class="error">Tous les champs sont obligatoires.</li>

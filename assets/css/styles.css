@@ -593,12 +593,12 @@ th {
   padding: 0;
 }
 
-/* line 54, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 57, ../sass/partials/_base.scss */
+/* line 55, ../sass/partials/_base.scss */
 body {
   width: 100%;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -606,65 +606,16 @@ body {
   color: #2a2a2a;
 }
 
-/* line 64, ../sass/partials/_base.scss */
+/* line 62, ../sass/partials/_base.scss */
 a {
   text-decoration: none;
 }
 
-/* line 67, ../sass/partials/_base.scss */
+/* line 65, ../sass/partials/_base.scss */
 p {
   line-height: 2rem;
 }
 
-/* line 71, ../sass/partials/_base.scss */
-.grey-section, .add-container {
-  min-height: 100vh;
-  padding-top: 20rem;
-  background-color: #eee;
-}
-/* line 75, ../sass/partials/_base.scss */
-.grey-section h1, .add-container h1 {
-  margin-bottom: 10rem;
-  font-family: "nexa_bold", Helvetica, Arial, sans-serif;
-  font-size: 6.4rem;
-  color: #7b6696;
-  text-align: center;
-  text-shadow: none;
-}
-
-@media (max-width: 960px) {
-  /* line 86, ../sass/partials/_base.scss */
-  .grey-section, .add-container {
-    padding-top: 15rem;
-  }
-  /* line 88, ../sass/partials/_base.scss */
-  .grey-section h1, .add-container h1 {
-    font-size: 5.8rem;
-    margin-bottom: 7rem;
-  }
-}
-@media (max-width: 960px) {
-  /* line 95, ../sass/partials/_base.scss */
-  .grey-section, .add-container {
-    padding-top: 15rem;
-  }
-  /* line 97, ../sass/partials/_base.scss */
-  .grey-section h1, .add-container h1 {
-    font-size: 5.8rem;
-    margin-bottom: 7rem;
-  }
-}
-@media (max-width: 480px) {
-  /* line 104, ../sass/partials/_base.scss */
-  .grey-section, .add-container {
-    padding-top: 10rem;
-  }
-  /* line 106, ../sass/partials/_base.scss */
-  .grey-section h1, .add-container h1 {
-    font-size: 4rem;
-    margin-bottom: 3rem;
-  }
-}
 /* line 1, ../sass/partials/_grids.scss */
 .content-fluid,
 .content-lg,
@@ -719,8 +670,16 @@ p {
   text-align: center;
 }
 
+/* line 38, ../sass/partials/_grids.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
 @media (max-width: 1024px) {
-  /* line 39, ../sass/partials/_grids.scss */
+  /* line 45, ../sass/partials/_grids.scss */
   .content-lg,
   .content-md {
     width: 100%;
@@ -732,13 +691,13 @@ p {
   }
 }
 @media (max-width: 767px) {
-  /* line 48, ../sass/partials/_grids.scss */
+  /* line 54, ../sass/partials/_grids.scss */
   .half {
     width: 100%;
   }
 }
 @media (max-width: 640px) {
-  /* line 53, ../sass/partials/_grids.scss */
+  /* line 59, ../sass/partials/_grids.scss */
   .content-sm {
     width: 100%;
     margin: 0;
@@ -850,6 +809,55 @@ h3 {
     font-size: 2.4rem;
   }
 }
+/* line 1, ../sass/partials/_sections.scss */
+.grey-section, .add-container {
+  min-height: 100vh;
+  padding-top: 20rem;
+  background-color: #eee;
+}
+/* line 5, ../sass/partials/_sections.scss */
+.grey-section h1, .add-container h1 {
+  margin-bottom: 10rem;
+  font-family: "nexa_bold", Helvetica, Arial, sans-serif;
+  font-size: 6.4rem;
+  color: #7b6696;
+  text-align: center;
+  text-shadow: none;
+}
+
+@media (max-width: 960px) {
+  /* line 16, ../sass/partials/_sections.scss */
+  .grey-section, .add-container {
+    padding-top: 15rem;
+  }
+  /* line 18, ../sass/partials/_sections.scss */
+  .grey-section h1, .add-container h1 {
+    font-size: 5.8rem;
+    margin-bottom: 7rem;
+  }
+}
+@media (max-width: 960px) {
+  /* line 25, ../sass/partials/_sections.scss */
+  .grey-section, .add-container {
+    padding-top: 15rem;
+  }
+  /* line 27, ../sass/partials/_sections.scss */
+  .grey-section h1, .add-container h1 {
+    font-size: 5.8rem;
+    margin-bottom: 7rem;
+  }
+}
+@media (max-width: 480px) {
+  /* line 34, ../sass/partials/_sections.scss */
+  .grey-section, .add-container {
+    padding-top: 10rem;
+  }
+  /* line 36, ../sass/partials/_sections.scss */
+  .grey-section h1, .add-container h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+}
 /* line 1, ../sass/partials/_buttons.scss */
 .btn, .btn-square, .btn-primary, .btn-secondary, .btn-secondary-transparent, .btn-tertiary, .btn-round, .btn-fb {
   position: relative;
@@ -927,34 +935,34 @@ h3 {
   background-color: #7b6696;
   border: 0;
 }
-/* line 69, ../sass/partials/_buttons.scss */
+/* line 68, ../sass/partials/_buttons.scss */
 .btn-secondary:hover, .btn-secondary-transparent:hover, .btn-tertiary:hover {
   background-color: #fdbd4e;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 73, ../sass/partials/_buttons.scss */
+/* line 72, ../sass/partials/_buttons.scss */
 .btn-secondary i, .btn-secondary-transparent i, .btn-tertiary i {
   padding-right: 1.4rem;
   font-size: 2.2rem;
   vertical-align: middle;
 }
 
-/* line 79, ../sass/partials/_buttons.scss */
+/* line 78, ../sass/partials/_buttons.scss */
 .btn-secondary-transparent {
   background-color: transparent;
   -moz-box-shadow: inset 0 0 0 0.2rem #fff;
   -webkit-box-shadow: inset 0 0 0 0.2rem #fff;
   box-shadow: inset 0 0 0 0.2rem #fff;
 }
-/* line 83, ../sass/partials/_buttons.scss */
+/* line 82, ../sass/partials/_buttons.scss */
 .btn-secondary-transparent:hover {
   color: #ffff;
   background-color: #fdbd4e;
 }
 
-/* line 89, ../sass/partials/_buttons.scss */
+/* line 88, ../sass/partials/_buttons.scss */
 .btn-tertiary {
   display: inline-block;
   font-size: 2rem;
@@ -963,20 +971,20 @@ h3 {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 95, ../sass/partials/_buttons.scss */
+/* line 94, ../sass/partials/_buttons.scss */
 .btn-tertiary:hover {
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 98, ../sass/partials/_buttons.scss */
+/* line 97, ../sass/partials/_buttons.scss */
 .btn-tertiary i {
   padding: 0 0 .4rem 1.4rem;
 }
 
-/* line 104, ../sass/partials/_buttons.scss */
+/* line 103, ../sass/partials/_buttons.scss */
 .btn-fb {
   padding: 1.1rem 2.2rem 1rem;
   font-family: Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: #fff;
   background: #4d68a4;
   -moz-box-shadow: 0 0 0 #364973, 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
@@ -986,14 +994,14 @@ h3 {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 113, ../sass/partials/_buttons.scss */
+/* line 112, ../sass/partials/_buttons.scss */
 .btn-fb:hover {
   background: #455d93;
   -moz-box-shadow: 0 0 0 #364973, 0 0.3rem 0.5rem rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 0 #364973, 0 0.3rem 0.5rem rgba(0, 0, 0, 0.35);
   box-shadow: 0 0 0 #364973, 0 0.3rem 0.5rem rgba(0, 0, 0, 0.35);
 }
-/* line 117, ../sass/partials/_buttons.scss */
+/* line 116, ../sass/partials/_buttons.scss */
 .btn-fb i {
   font-size: 2.8rem;
   vertical-align: middle;
@@ -1001,25 +1009,25 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  /* line 124, ../sass/partials/_buttons.scss */
+  /* line 123, ../sass/partials/_buttons.scss */
   .btn-fb {
     padding: 1.2rem 2.2rem 1.1rem;
   }
-  /* line 127, ../sass/partials/_buttons.scss */
+  /* line 126, ../sass/partials/_buttons.scss */
   .btn-fb i {
     font-size: 2.4rem;
   }
 }
-/* line 133, ../sass/partials/_buttons.scss */
+/* line 132, ../sass/partials/_buttons.scss */
 .btn-plus {
   background-color: #7b6696;
 }
-/* line 135, ../sass/partials/_buttons.scss */
+/* line 134, ../sass/partials/_buttons.scss */
 .btn-plus:hover {
   background: #fdb435;
 }
 
-/* line 141, ../sass/partials/_buttons.scss */
+/* line 140, ../sass/partials/_buttons.scss */
 .switch {
   position: relative;
   display: inline-block;
@@ -1027,27 +1035,27 @@ h3 {
   height: 2.2rem;
   vertical-align: middle;
 }
-/* line 147, ../sass/partials/_buttons.scss */
+/* line 146, ../sass/partials/_buttons.scss */
 .switch input {
   display: none;
 }
-/* line 149, ../sass/partials/_buttons.scss */
+/* line 148, ../sass/partials/_buttons.scss */
 .switch input:checked + .slider {
   background-color: #7b6696;
 }
-/* line 151, ../sass/partials/_buttons.scss */
+/* line 150, ../sass/partials/_buttons.scss */
 .switch input:checked + .slider:before {
   background-color: #fff;
   -moz-transform: translate3d(2rem, 0, 0);
   -webkit-transform: translate3d(2rem, 0, 0);
   transform: translate3d(2rem, 0, 0);
 }
-/* line 156, ../sass/partials/_buttons.scss */
+/* line 155, ../sass/partials/_buttons.scss */
 .switch input:focus + .slider {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 161, ../sass/partials/_buttons.scss */
+/* line 160, ../sass/partials/_buttons.scss */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -1061,7 +1069,7 @@ h3 {
   border-radius: 2.2rem;
   transition: all .3s;
 }
-/* line 171, ../sass/partials/_buttons.scss */
+/* line 170, ../sass/partials/_buttons.scss */
 .slider:before {
   position: absolute;
   content: "";
@@ -1161,123 +1169,156 @@ form .input-container + .input-container {
   margin-top: 4rem;
 }
 /* line 10, ../sass/partials/_forms.scss */
-form .input-container.valid-input input, form .input-container.invalid-input input {
+form .input-container.valid-input label, form .input-container.valid-input input, form .input-container.invalid-input label, form .input-container.invalid-input input {
   color: #fff;
 }
-/* line 13, ../sass/partials/_forms.scss */
-form .input-container.valid-input input:focus, form .input-container.invalid-input input:focus {
-  color: #fff;
-  -moz-box-shadow: inset 0 0 0 0.3rem #fff;
-  -webkit-box-shadow: inset 0 0 0 0.3rem #fff;
-  box-shadow: inset 0 0 0 0.3rem #fff;
-}
-/* line 18, ../sass/partials/_forms.scss */
+/* line 16, ../sass/partials/_forms.scss */
 form .input-container.valid-input input {
   background-color: #2DCC70;
 }
-/* line 21, ../sass/partials/_forms.scss */
+/* line 19, ../sass/partials/_forms.scss */
 form .input-container.invalid-input input {
   background-color: #F72359;
 }
-/* line 24, ../sass/partials/_forms.scss */
+/* line 22, ../sass/partials/_forms.scss */
+form .input-container.filled label {
+  font-size: 1.5rem;
+  color: #6e6e6e;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 27, ../sass/partials/_forms.scss */
 form .input-container label,
 form .input-container input {
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-/* line 29, ../sass/partials/_forms.scss */
+/* line 32, ../sass/partials/_forms.scss */
 form label {
   position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 1.6rem;
-  color: #2a2a2a;
+  font-size: 1.8rem;
+  color: #6e6e6e;
   pointer-events: none;
+  -moz-transform: translate3d(1rem, 3.3rem, 0);
+  -webkit-transform: translate3d(1rem, 3.3rem, 0);
+  transform: translate3d(1rem, 3.3rem, 0);
   transition: all .3s;
 }
-/* line 38, ../sass/partials/_forms.scss */
+/* line 40, ../sass/partials/_forms.scss */
 form input[type="text"],
 form input[type="email"],
 form input[type="number"],
 form input[type="file"] {
   max-width: 100%;
-  margin-top: 2.4rem;
+  margin-top: 1.8rem;
   padding: 1rem;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #2a2a2a;
   line-height: 2.8rem;
+  background-color: #fff;
   border: 0;
+  border-radius: .2rem;
   overflow: hidden;
   transition: all .3s;
 }
-/* line 52, ../sass/partials/_forms.scss */
+/* line 56, ../sass/partials/_forms.scss */
 form input[type="text"]:hover,
 form input[type="email"]:hover,
 form input[type="number"]:hover,
 form input[type="file"]:hover {
   cursor: pointer;
 }
-/* line 55, ../sass/partials/_forms.scss */
+/* line 59, ../sass/partials/_forms.scss */
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="number"]:focus,
 form input[type="file"]:focus {
-  -moz-box-shadow: inset 0 0 0 0.3rem #7b6696;
-  -webkit-box-shadow: inset 0 0 0 0.3rem #7b6696;
-  box-shadow: inset 0 0 0 0.3rem #7b6696;
-  color: #7b6696;
+  color: #fff;
+  background-color: #7b6696;
   outline: 0;
 }
-/* line 59, ../sass/partials/_forms.scss */
+/* line 63, ../sass/partials/_forms.scss */
 form input[type="text"]:focus + label,
 form input[type="email"]:focus + label,
 form input[type="number"]:focus + label,
 form input[type="file"]:focus + label {
+  font-size: 1.5rem;
   color: #7b6696;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
-/* line 64, ../sass/partials/_forms.scss */
+/* line 70, ../sass/partials/_forms.scss */
 form input[type="number"] {
-  max-width: 20rem;
+  max-width: 30rem;
 }
-/* line 67, ../sass/partials/_forms.scss */
+/* line 73, ../sass/partials/_forms.scss */
 form input[type="file"] {
   padding: 0 0 1rem;
+  background: transparent;
 }
-/* line 69, ../sass/partials/_forms.scss */
+/* line 76, ../sass/partials/_forms.scss */
 form input[type="file"]:focus {
+  color: #7b6696;
+  background: transparent;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 73, ../sass/partials/_forms.scss */
-form input[type="submit"] {
+/* line 80, ../sass/partials/_forms.scss */
+form input[type="file"]:focus + label {
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 84, ../sass/partials/_forms.scss */
+form input[type="file"] + label {
+  font-size: 1.5rem;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 90, ../sass/partials/_forms.scss */
+form button[type="submit"] {
   margin-top: 2rem;
 }
-/* line 77, ../sass/partials/_forms.scss */
+/* line 94, ../sass/partials/_forms.scss */
+form h2 {
+  margin: 3rem 0 1.5rem;
+  font-family: "montserrat", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  color: #6e6e6e;
+  text-transform: none;
+  text-shadow: none;
+}
+/* line 101, ../sass/partials/_forms.scss */
+form h2 big {
+  color: #7b6696;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+/* line 107, ../sass/partials/_forms.scss */
 form span {
   font-size: 1.2rem;
   font-style: italic;
 }
-/* line 82, ../sass/partials/_forms.scss */
+/* line 112, ../sass/partials/_forms.scss */
 form .errors {
   margin-top: 4rem;
 }
-/* line 85, ../sass/partials/_forms.scss */
+/* line 115, ../sass/partials/_forms.scss */
 form .error {
   color: #F72359;
 }
-/* line 87, ../sass/partials/_forms.scss */
+/* line 117, ../sass/partials/_forms.scss */
 form .error + .error {
   padding-top: .3rem;
 }
-/* line 91, ../sass/partials/_forms.scss */
-form .input-submit {
-  text-align: center;
-}
 
 @media (max-width: 480px) {
-  /* line 98, ../sass/partials/_forms.scss */
+  /* line 125, ../sass/partials/_forms.scss */
   form input[type="number"] {
     max-width: 100%;
   }
@@ -2200,8 +2241,8 @@ footer ul li a:hover {
 }
 /* line 303, ../sass/modules/_home.scss */
 .home-connect > div p small {
-  font-size: 1.2rem;
-  line-height: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   text-align: center;
 }
 /* line 309, ../sass/modules/_home.scss */
@@ -2727,15 +2768,24 @@ footer ul li a:hover {
   }
 }
 /* line 4, ../sass/modules/_add.scss */
-.add-container .search-title-results {
-  margin-top: 3rem;
-}
-/* line 6, ../sass/modules/_add.scss */
 .add-container .search-title-results li {
+  position: relative;
+  padding-left: 2rem;
   font-size: 2rem;
   font-weight: 600;
+  color: #2a2a2a;
 }
-/* line 9, ../sass/modules/_add.scss */
+/* line 10, ../sass/modules/_add.scss */
+.add-container .search-title-results li:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  width: .8rem;
+  height: .1rem;
+  background-color: #2a2a2a;
+}
+/* line 19, ../sass/modules/_add.scss */
 .add-container .search-title-results li + li {
-  padding-top: .8rem;
+  margin-top: .8rem;
 }
