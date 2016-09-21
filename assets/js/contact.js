@@ -10,22 +10,22 @@ $(document).ready(function () {
         var errorMsg = '',
             okSend = true;
         if ($('#mail').val() == '') {
-            errorMsg += '<li>Vous devez nous donner votre email</li>';
+            errorMsg += '<li class="error">Votre email est requis.</li>';
             okSend = false;
         }
         if ($('#mail').val()) {
             var testMail = validateEmail($('#mail').val())
             if (testMail == false) {
-                errorMsg += "<li>Un email valide s'il vous plait!!!</li>"
+                errorMsg += '<li class="error">Veuillez vérifier que votre email soit valide.</li>'
                 okSend = false;
             }
         }
         if ($('#sujet').val() == '') {
-            errorMsg = "<li>N'oubliez pas le sujet!</li>"
+            errorMsg = '<li class="error">Veuillez renseigner un sujet.</li>'
             okSend = false;
         }
         if ($('#message').val() == '') {
-            errorMsg = "<li>Veuillez écrire un message!</li>"
+            errorMsg = '<li class="error">Veuillez renseigner votre message.</li>'
             okSend = false;
         }
         if (okSend == false) {

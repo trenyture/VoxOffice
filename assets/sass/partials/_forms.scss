@@ -7,25 +7,49 @@ form {
         + .input-container {
             margin-top: 4rem;
         }
-        &.valid-input label,
+        
         &.valid-input input,
-        &.invalid-input label,
-        &.invalid-input input {
+        &.valid-input input:not([type="file"]) + label,
+        &.valid-input select,
+        &.valid-input select + label,
+        &.valid-input textarea,
+        &.valid-input textarea + label,
+        &.invalid-input input,
+        &.invalid-input input:not([type="file"]) + label,
+        &.invalid-input select,
+        &.invalid-input select + label,
+        &.invalid-input textarea,
+        &.invalid-input textarea + label {
             color: #fff;
         }
-        &.valid-input input {
+        &.valid-input input[type="file"] {
+            color: $green;
+            background-color: transparent;
+        }
+        &.invalid-input input[type="file"] {
+            color: $red;
+            background-color: transparent;
+        }
+        &.valid-input input,
+        &.valid-input select,
+        &.valid-input textarea {
             background-color: $green;
         }
-        &.invalid-input input {
+        &.invalid-input input,
+        &.invalid-input select,
+        &.invalid-input textarea {
             background-color: $red;
         }
         &.filled label {
             font-size: 1.5rem;
-            color: $grey;
+            color: $grey !important;
             @include translate3d(0, 0, 0);
         }
+        
         label,
-        input {
+        input,
+        select,
+        textarea {
             @include flex(1 1 auto);
         }
     }
@@ -40,7 +64,9 @@ form {
     input[type="text"],
     input[type="email"],
     input[type="number"],
-    input[type="file"] {
+    input[type="file"],
+    textarea,
+    select {
         max-width: 100%;
         margin-top: 1.8rem;
         padding: 1rem;
@@ -58,11 +84,11 @@ form {
         }
         &:focus {
             color: #fff;
-            background-color: $purple;
+            background-color: $purple !important;
             outline: 0;
             + label {
                 font-size: 1.5rem;
-                color: $purple;
+                color: $purple !important;
                 @include translate3d(0, 0, 0);
             }
         }
@@ -75,7 +101,7 @@ form {
         background: transparent;
         &:focus {
             color: $purple;
-            background: transparent;
+            background: transparent !important;
             @include box-shadow(none);
             + label {
                 @include translate3d(0, 0, 0);
@@ -86,7 +112,11 @@ form {
             @include translate3d(0, 0, 0);
         }
     }
-
+    textarea {
+        height: 15rem;
+        resize: none;
+        overflow-y: auto;
+    }
     button[type="submit"] {
         margin-top: 2rem;
     }
@@ -119,7 +149,24 @@ form {
         }
     }
 }
+.confirmation {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $green;
+}
 
+@media (max-width: $smartphoneMax) {
+    form {
+        padding-bottom: 3rem;
+        .input-container + .input-container {
+            margin-top: 2rem;
+        }
+        .error {
+            text-align: center;
+        }
+    }
+}
 @media (max-width: $smartphoneMin) {
     form {
         input[type="number"] {

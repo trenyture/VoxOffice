@@ -2,12 +2,12 @@
     @extend .grey-section;
     .search-title-results {
         li {
-            position: relative;
-            padding-left: 2rem;
+            //position: relative;
+            //padding-left: 2rem;
             font-size: 2rem;
             font-weight: 600;
             color: $dark-grey;
-            &:before {
+            /*&:before {
                 position: absolute;
                 content: '';
                 top: 50%;
@@ -15,9 +15,27 @@
                 width: .8rem;
                 height: .1rem;
                 background-color: $dark-grey;
-            }
+            }*/
             + li {
                 margin-top: .8rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $smartphoneMax) {
+    .add-container {
+        .results-container {
+            text-align: center;
+        }
+        .search-title-results li {
+            padding-left: 0;
+            &:before {
+                display: none;
+            }
+            + li {
+                margin-top: 1rem;
             }
         }
     }

@@ -73,10 +73,10 @@
         <script src="assets/js/main.js"></script>
     </head>
     <body class="<?=$bodyId;?>">
-        <?php if (strpos($_SERVER['REQUEST_URI'], 'compare') == true || strpos($_SERVER['REQUEST_URI'], 'add') == true) { ?>
-        <header class="darkened">
-        <?php } else { ?>
+        <?php if (strpos($_SERVER['REQUEST_URI'], 'index') == true || strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
         <header>
+        <?php } else { ?>
+        <header class="darkened">
         <?php } ?>
             <a href="./index.php" class="logo">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.6 405" style="enable-background:new 0 0 495.6 405;" xml:space="preserve">
