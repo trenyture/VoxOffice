@@ -72,6 +72,19 @@
             font-size: 2rem;
             color: $medium-grey;
         }
+        i {
+            position: absolute;
+            top: -2.4rem;
+            right: 0;
+            font-size: 2rem;
+            color: $medium-grey;
+            &:hover {
+                cursor: pointer;
+            }
+            &.wishlisted {
+                color: $red;
+            }
+        }
         .img-film {
             width: 7.2rem;
             min-width: 7.2rem;

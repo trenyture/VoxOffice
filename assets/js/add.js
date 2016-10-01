@@ -18,7 +18,7 @@ function changeFormAdd() {
 
 $(document).ready(function () {
     $('form#search input#searchtitle').keyup(function () {
-        //On ne fait la recherche qu'à partir de 3 caractères minimum
+        // On ne fait la recherche qu'à partir de 3 caractères minimum
         if ($(this).val().length > 2) {
             var searchKey = $(this).val();
             console.log(searchKey);
@@ -31,7 +31,7 @@ $(document).ready(function () {
             });
         }
     })
-    /*Vérification Formulaire avant l'envoi*/
+    // Vérification Formulaire avant l'envoi
     $('form#formadd').submit(function () {
         var okForm = true;
         var messageError = '';
@@ -56,4 +56,12 @@ $(document).ready(function () {
             return false;
         }
     })
+    
+    // Display search result
+    //$('form#search button[type="submit"]').on('click', function() {
+        var resultsNumber = $('#results li').length;
+        
+        //$('form .results-container').removeClass('hidden');
+        $('form h2 big').text(resultsNumber);
+    //});
 });

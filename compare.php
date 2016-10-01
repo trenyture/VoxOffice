@@ -15,6 +15,7 @@
                 <ul class="list-compare">
                     <li>
                         <span>1.</span>
+                        <i class="fa fa-heart wishlist wishlisted"></i>
                         <div class="img-film" style="background-image: url('assets/img/films/2001.jpg');"></div>
                         <div class="text-container">
                             <h3>2001 : l'Odyssée de l'Espace</h3>
@@ -26,6 +27,7 @@
                     </li>
                     <li>
                         <span>2.</span>
+                        <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
                             <div class="img-film" style="background-image: url('assets/img/films/interstellar.jpg');"></div>
                         </div>
@@ -39,6 +41,7 @@
                     </li>
                     <li>
                         <span>3.</span>
+                        <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
                             <div class="img-film" style="background-image: url('assets/img/films/laligneverte_2000.jpg');"></div>
                         </div>
@@ -57,6 +60,7 @@
                 <ul>
                     <li>
                         <span>1.</span>
+                        <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
                             <div class="img-film" style="background-image: url('assets/img/films/forrestgump_1994.jpg');"></div>
                         </div>
@@ -70,6 +74,7 @@
                     </li>
                     <li>
                         <span>2.</span>
+                        <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
                             <div class="img-film" style="background-image: url('assets/img/films/thedarkknight_2008.jpg');"></div>
                         </div>
@@ -83,6 +88,7 @@
                     </li>
                     <li>
                         <span>3.</span>
+                        <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
                             <div class="img-film" style="background-image: url('assets/img/films/djangounchained_2013.jpg');"></div>
                         </div>

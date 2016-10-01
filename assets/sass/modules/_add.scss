@@ -2,20 +2,9 @@
     @extend .grey-section;
     .search-title-results {
         li {
-            //position: relative;
-            //padding-left: 2rem;
             font-size: 2rem;
             font-weight: 600;
             color: $dark-grey;
-            /*&:before {
-                position: absolute;
-                content: '';
-                top: 50%;
-                left: 0;
-                width: .8rem;
-                height: .1rem;
-                background-color: $dark-grey;
-            }*/
             + li {
                 margin-top: .8rem;
             }

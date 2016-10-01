@@ -14,6 +14,17 @@ $(document).ready(function () {
             constructBad(data);
         }
     });
+    
+    // Wishlist items
+    $('.wishlist').on('click', function() {
+        if ($(this).hasClass('fa-heart-o')) {
+            $(this).removeClass('fa-heart-o').addClass('wishlisted fa-heart');
+        } else {
+            $(this).removeClass('wishlisted fa-heart').addClass('fa-heart-o');
+        }
+        
+        return false;
+    });
 })
 
 function constructBad(films) {

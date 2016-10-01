@@ -14,8 +14,8 @@
         text-align: center;
         pointer-events: none;
         h1 {
-            font-family: $title-font;
-            font-size: 4.8rem;
+            font-family: $text-font;
+            font-size: 5.2rem;
             padding-bottom: .5rem;
         }
         h2 {
@@ -158,12 +158,16 @@
                 font-size: 2rem;
             }
             p + p {
-                padding-top: .5rem;
+                padding-top: 0;
             }
             .vote-block {
                 padding-top: 2.4rem;
                 @include opacity(1);
             }
+        }
+        .skip {
+            top: 50%;
+            @include translate3d(-50%, -50%, 0);
         }
     }
 }
@@ -194,42 +198,38 @@
                 }
             }
         }
-        .skip {
-            bottom: 1rem;
-            right: 1rem;
-        }
     }
 }
 @media (max-width: $smartphone) {
     .vote-container {
         article {
             h3 {
+                padding-bottom: .3rem;
                 font-size: 2rem;
             }
             .author {
+                font-size: 1.2rem;
+            }
+            .date {
                 font-size: 1.4rem;
             }
-            .data {
-                font-size: 1.6rem;
-            }
             .vote-block {
-                padding-top: 1.8rem;
+                padding-top: 1.6rem;
                 a + a {
                     margin-left: .6rem;
                 }
             }
         }
-        .btn-secondary,
-        .btn-secondary-transparent,
-        .btn-tertiary {
+        a[class^="btn-"] {
             padding: 0 1.4rem;
             line-height: 3.6rem;
             i {
+                padding: 0;
                 font-size: 1.6rem;
             }
-        }
-        .skip {
-            bottom: .5rem;
+            span {
+                display: none;
+            }
         }
     }
 }

@@ -51,36 +51,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('nav').toggleClass('open-menu');
     });
-    
-    // Blur switch
-    $(function() {
-        var input = $('#blurSwitch input');
-        
-        $(input).prop('checked', true);
-        $(input).click(blurSwitch);
-    });
-    function blurSwitch() {
-        var blurredImage = $('.vote-container .article-image');
-        
-        if (this.checked) {
-            $(blurredImage).attr('checked', true).css({
-                'webkit-filter': 'blur(.8rem)',
-                'filter': 'blur(.8rem)'
-            });
-            $(blurredImage).hover(function() {
-                $(this).css({
-                    'webkit-filter': 'blur(0)',
-                    'filter': 'blur(0)'
-                });
-            });
-        } else {
-            $(blurredImage).removeAttr('checked').css({
-                'webkit-filter': 'blur(0)',
-                'filter': 'blur(0)'
-            });
-        }
-    }
-    
+
     // Label animations
     $('form input, form select, form textarea').blur(function() {
         if ($(this).val()) {
@@ -89,12 +60,4 @@ $(document).ready(function () {
             $(this).parents('div').removeClass('filled');
         }
     });
-    
-    // Display search result
-    //$('form#search button[type="submit"]').on('click', function() {
-        var resultsNumber = $('#results li').length;
-        
-        //$('form .results-container').removeClass('hidden');
-        $('form h2 big').text(resultsNumber);
-    //});
 });

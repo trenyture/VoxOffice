@@ -4,8 +4,9 @@
     background-color: $light-grey;
     h1 {
         margin-bottom: 10rem;
-        font-family: $title-font;
+        font-family: $text-font;
         font-size: 6.4rem;
+        font-weight: 600;
         color: $purple;
         text-align: center;
         @include text-shadow(none);
