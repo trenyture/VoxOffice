@@ -53,14 +53,18 @@ form {
             @include flex(1 1 auto);
         }
     }
+    
     label {
         position: absolute;
+        top: 0;
+        left: 0;
         font-size: 1.8rem;
         color: $grey;
         pointer-events: none;
         @include translate3d(1rem, 3.3rem, 0);
         @include transition();
     }
+
     input[type="text"],
     input[type="email"],
     input[type="number"],
@@ -69,16 +73,16 @@ form {
     select {
         max-width: 100%;
         margin-top: 1.8rem;
-        padding: 1rem;
+        padding: 0 1rem;
         font-size: 1.8rem;
         font-weight: 600;
         color: $dark-grey;
-        line-height: 2.8rem;
         background-color: #fff;
         border: 0;
         border-radius: .2rem;
         overflow: hidden;
         @include transition();
+        @include box-sizing(border-box);
         &:hover {
             cursor: pointer;
         }
@@ -93,8 +97,12 @@ form {
             }
         }
     }
+    input:not([type="file"]),
+    select {
+        height: 4.8rem;
+    }
     input[type="number"] {
-        max-width: 30rem;
+        width: 32rem;
     }
     input[type="file"] {
         padding: 0 0 1rem;
@@ -167,10 +175,8 @@ form {
         }
     }
 }
-@media (max-width: $smartphoneMin) {
-    form {
-        input[type="number"] {
-            max-width: 100%;
-        }
+@media (max-width: $smartphoneMax) {
+    form input[type="number"] {
+        width: 100%;
     }
 }

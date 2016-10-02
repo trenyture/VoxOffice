@@ -129,7 +129,7 @@
                 </ul>
             </nav>
             <div class="user">
-                <?php if (strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
+                <!--<?php //if (strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
                 <div class="switch-container" id="blurSwitch">
                     Flou (Edge)
                     <label class="switch">
@@ -137,7 +137,7 @@
                         <div class="slider"></div>
                     </label>
                 </div>
-                <?php } ?>
+                <?php //} ?>-->
                 <?php
                     if(isset($_SESSION['fb_token'])) {
                     ?>

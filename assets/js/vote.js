@@ -93,7 +93,7 @@ $(document).ready(function () {
     });
     
     // Blur switch
-    $(function() {
+    /*$(function() {
         var input = $('#blurSwitch input');
         
         $(input).prop('checked', true);
@@ -119,5 +119,5 @@ $(document).ready(function () {
                 'filter': 'blur(0)'
             });
         }
-    }
+    }*/
 });
