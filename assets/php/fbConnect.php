@@ -5,7 +5,7 @@
     use Facebook\FacebookRequest;
     use Facebook\GraphUser;
 
-    require_once 'assets/php/vendor/autoload.php';
+    require_once 'assets/php/vendors/autoload.php';
     if (isset($_GET) && isset($_GET['logout']) && $_GET['logout'] == 'true') {
         $_SESSION = null;
         session_destroy();
