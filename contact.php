@@ -30,7 +30,7 @@
                     <button type="submit" class="btn-secondary"><i class="fa fa-paper-plane"></i>Envoyer</button>
                 </div>
                 <ul id="error-messages" class="errors">
-                    <li class="error">pas cool</li>
+                    <li class="error">erreur</li>
                 </ul>
             </form>
             <?php } else { ?>

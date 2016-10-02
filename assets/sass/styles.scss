@@ -1,6 +1,6 @@
 // Vendors
-@import "partials/reset";
-@import "partials/normalize";
+@import "vendors/reset";
+@import "vendors/normalize";
 
 // Variables
 @import "partials/base";
@@ -15,5 +15,12 @@
 @import "partials/icons";
 @import "partials/forms";
 
-// All modules
-@import "modules/all";
+// Modules
+@import "modules/header";
+@import "modules/footer";
+
+// Pages
+@import "pages/home";
+@import "pages/vote";
+@import "pages/compare";
+@import "pages/add";
