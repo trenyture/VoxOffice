@@ -135,7 +135,13 @@
 }
 @media (max-width: $desktopSmall) {
     .vote-container .headings {
-        top: 12rem;
+        top: 10rem;
+        h1 {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 2.4rem;
+        }
     }
 }
 @media (max-width: $tabletMax) {
@@ -169,6 +175,13 @@
             top: 50%;
             @include translate3d(-50%, -50%, 0);
         }
+    }
+}
+@media (min-width: $tabletMin) and (max-width: $tablet) {
+    .vote-container .skip {
+        top: auto;
+        bottom: 2rem;
+        @include translate3d(-50%, 0, 0);
     }
 }
 @media (max-width: $tablet) and (orientation: landscape) {
