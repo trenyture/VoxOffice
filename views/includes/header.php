@@ -20,34 +20,31 @@
         <title>VoxOffice - Tous vos films favoris. Classés.</title>
 
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-194x194.png" sizes="194x194">
-        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="assets/img/favicons/manifest.json">
-        <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#7b6696">
-        <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="<?php echo asset('img/favicons/apple-touch-icon-57x57.png') ?>">
+        <link rel="apple-touch-icon" sizes="60x60" href="<?php echo asset('img/favicons/apple-touch-icon-60x60.png') ?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo asset('img/favicons/apple-touch-icon-72x72.png') ?>">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo asset('img/favicons/apple-touch-icon-76x76.png') ?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo asset('img/favicons/apple-touch-icon-114x114.png') ?>">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo asset('img/favicons/apple-touch-icon-120x120.png') ?>">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?php echo asset('img/favicons/apple-touch-icon-144x144.png') ?>">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo asset('img/favicons/apple-touch-icon-152x152.png') ?>">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo asset('img/favicons/apple-touch-icon-180x180.png') ?>">
+        <link rel="icon" type="image/png" href="<?php echo asset('img/favicons/favicon-32x32.png') ?>" sizes="32x32">
+        <link rel="icon" type="image/png" href="<?php echo asset('img/favicons/favicon-194x194.png') ?>" sizes="194x194">
+        <link rel="icon" type="image/png" href="<?php echo asset('img/favicons/favicon-96x96.png') ?>" sizes="96x96">
+        <link rel="icon" type="image/png" href="<?php echo asset('img/favicons/android-chrome-192x192.png') ?>" sizes="192x192">
+        <link rel="icon" type="image/png" href="<?php echo asset('img/favicons/favicon-16x16.png') ?>" sizes="16x16">
+        <link rel="manifest" href="<?php echo asset('img/favicons/manifest.json') ?>">
+        <link rel="mask-icon" href="<?php echo asset('img/favicons/safari-pinned-tab.svg') ?>" color="#7b6696">
+        <link rel="shortcut icon" href="<?php echo asset('img/favicons/favicon.ic') ?>o">
         <meta name="msapplication-TileColor" content="#7b6696">
-        <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-144x144.png">
-        <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+        <meta name="msapplication-TileImage" content="<?php echo asset('img/favicons/mstile-144x144.png') ?>">
+        <meta name="msapplication-config" content="<?php echo asset('img/favicons/browserconfig.xml') ?>">
         <meta name="theme-color" content="#7b6696">
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.6.3/css/font-awesome.min.css">
-        <!-- Scripts -->
-        <script src="assets/js/vendors/jquery-3.1.0.min.js"></script>
-        <script src="assets/js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo asset('css/style.css') ?>" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
     <body class="<?=$bodyId;?>">
         <?php if (strpos($_SERVER['REQUEST_URI'], 'index') == true || strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
