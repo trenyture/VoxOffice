@@ -22,10 +22,10 @@
                 </svg>
                 <h2><span>Vox</span>Office<small>beta</small></h2>
                 <p><span class="icon icon-lab"></span>par Simon Trichereau & Pierre Prézelin.</p>
-                <p>© 2016 <a href="./index.php">VoxOffice</a></p>
+                <p>© 2016 <a href="<?php echo route('') ?>">VoxOffice</a></p>
                 <ul>
                     <li><a href="https://github.com/trenyture/VoxOffice" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a href="./contact.php"><i class="fa fa-question"></i></a></li>
+                    <li><a href="<?php echo route('contact') ?>"><i class="fa fa-question"></i></a></li>
                     <li><a href="mailto:pierre.prezelin01@gmail.com,simon-trichereau@gmail.com"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
