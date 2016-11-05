@@ -17,7 +17,15 @@ require_once('routes.php');
 |
 */
 
+//load these files first
+require_once __DIR__ . '/framework/debugging/index.php';
+require_once __DIR__ . '/framework/display/index.php';
+require_once __DIR__ . '/framework/routing/index.php';
+
+//load other folders
 $files = glob(__DIR__ . '/framework/*/index.php');
 foreach($files as $file){
-	include $file;
+	require_once $file;
 }
+//launch routing
+init_routing($routes);
