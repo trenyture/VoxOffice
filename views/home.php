@@ -1,5 +1,5 @@
 <?php
-    require_once('assets/php/includes/header.php');
+	view('includes/header');
 ?>
         <section class="home-intro">
             <div class="intro-content">
@@ -84,4 +84,6 @@
             </div>
         </section>
 
-<?php require_once('assets/php/includes/footer.php'); ?>
+<?php
+	view('includes/header');
+?>
