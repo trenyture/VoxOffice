@@ -21,7 +21,9 @@ class PageController extends Controller
 	}
 
 	public function add(){
-		return view('pages/add');
+		$helper = new FacebookRedirectLoginHelper(route(''));
+		$fbUrlConnect = $helper->getLoginUrl();
+		return view('pages/add', compact('fbUrlConnect'));
 	}
 
 	public function postAdd(){
@@ -121,11 +123,15 @@ class PageController extends Controller
 	}
 
 	public function compare(){
-		return view('pages/compare');
+		$helper = new FacebookRedirectLoginHelper(route(''));
+		$fbUrlConnect = $helper->getLoginUrl();
+		return view('pages/compare', compact('fbUrlConnect'));
 	}
 
 	public function contact(){
-		return view('pages/contact');
+		$helper = new FacebookRedirectLoginHelper(route(''));
+		$fbUrlConnect = $helper->getLoginUrl();
+		return view('pages/contact', compact('fbUrlConnect'));
 	}
 
 	public function postContact(){
@@ -142,6 +148,9 @@ class PageController extends Controller
 	}
 
 	public function vote(){
-		return view('pages/vote');
+		$helper = new FacebookRedirectLoginHelper(route(''));
+		$fbUrlConnect = $helper->getLoginUrl();
+		$darkened = 1;
+		return view('pages/vote', compact('darkened','fbUrlConnect'));
 	}
 }
