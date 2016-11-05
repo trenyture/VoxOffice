@@ -1,26 +1,3 @@
-<?php
-    include('assets/php/newPDO.php');
-    include('assets/php/fbConnect.php');
-    $fbUrlConnect = $helper->getLoginUrl();
-    switch ($_SERVER['REQUEST_URI']) {
-        case '/VoxOffice/vote':
-            $bodyId = 'vote';
-            break;
-        case '/VoxOffice/add':
-            $bodyId = 'add';
-            break;
-        case '/VoxOffice/compare':
-            $bodyId = 'compare';
-            break;
-        case '/VoxOffice/contact':
-            $bodyId = 'contact';
-            break;
-
-        default:
-            $bodyId = 'home';
-            break;
-    }
-?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="fr"><![endif]-->
 <!--[if IE 7 ]> <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="fr"><![endif]-->
