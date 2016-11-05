@@ -1,9 +1,5 @@
 <?php
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
-        // header('location:./index');
-    }
-	require_once('assets/php/includes/header.php');
+	view('includes/header', compact('fbUrlConnect'));
 ?>
     <div class="compare-container grey-section">
         <h1>Classement</h1>
@@ -14,7 +10,7 @@
                     <li>
                         <span>1.</span>
                         <i class="fa fa-heart wishlist wishlisted"></i>
-                        <div class="img-film" style="background-image: url('assets/img/films/2001.jpg');"></div>
+                        <div class="img-film" style="background-image: url('<?php echo stored('films/2001.jpg') ?>');"></div>
                         <div class="text-container">
                             <h3>2001 : l'Odyssée de l'Espace</h3>
                             <h4>1968</h4>
@@ -27,7 +23,7 @@
                         <span>2.</span>
                         <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
-                            <div class="img-film" style="background-image: url('assets/img/films/interstellar.jpg');"></div>
+                            <div class="img-film" style="background-image: url('<?php echo stored('films/interstellar.jpg') ?>');"></div>
                         </div>
                         <div class="text-container">
                             <h3>Interstellar</h3>
@@ -41,7 +37,7 @@
                         <span>3.</span>
                         <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
-                            <div class="img-film" style="background-image: url('assets/img/films/laligneverte_2000.jpg');"></div>
+                            <div class="img-film" style="background-image: url('<?php echo stored('films/laligneverte_2000.jpg') ?>');"></div>
                         </div>
                         <div class="text-container">
                             <h3>La Ligne Verte</h3>
@@ -60,7 +56,7 @@
                         <span>1.</span>
                         <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
-                            <div class="img-film" style="background-image: url('assets/img/films/forrestgump_1994.jpg');"></div>
+                            <div class="img-film" style="background-image: url('<?php echo stored('films/forrestgump_1994.jpg') ?>');"></div>
                         </div>
                         <div class="text-container">
                             <h3>Forest Gump</h3>
@@ -74,7 +70,7 @@
                         <span>2.</span>
                         <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
-                            <div class="img-film" style="background-image: url('assets/img/films/thedarkknight_2008.jpg');"></div>
+                            <div class="img-film" style="background-image: url('<?php echo stored('films/thedarkknight_2008.jpg') ?>');"></div>
                         </div>
                         <div class="text-container">
                             <h3>The Dark Knight</h3>
@@ -88,7 +84,7 @@
                         <span>3.</span>
                         <i class="fa fa-heart-o wishlist"></i>
                         <div class="img-container">
-                            <div class="img-film" style="background-image: url('assets/img/films/djangounchained_2013.jpg');"></div>
+                            <div class="img-film" style="background-image: url('<?php echo stored('films/djangounchained_2013.jpg') ?>');"></div>
                         </div>
                         <div class="text-container">
                             <h3>Django Unchained</h3>
@@ -106,6 +102,4 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="assets/js/compare.js"></script>
-
-<?php require_once('assets/php/includes/footer.php'); ?>
+<?php view('includes/footer'); ?>

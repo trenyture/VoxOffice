@@ -3,7 +3,7 @@
         // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
         // header('location:./index');
     }
-    require_once('assets/php/includes/header.php');
+    view('includes/header', compact('fbUrlConnect'));
 ?>
 	<section class="vote-container">
         <div class="headings">
@@ -43,4 +43,4 @@
 
     <script type="text/javascript" src="assets/js/vote.js"></script>
 
-<?php require_once('assets/php/includes/footer.php'); ?>
+<?php view('includes/footer'); ?>

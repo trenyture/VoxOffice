@@ -1,5 +1,5 @@
 <?php
-    require_once('assets/php/includes/header.php');
+    view('includes/header', compact('fbUrlConnect'));
 ?>
     <div class="contact-container grey-section">
 		<h1>N'hésitez pas à nous contacter !</h1>
@@ -38,4 +38,4 @@
     </div>
 	<script type="text/javascript" src="assets/js/contact.js"></script>
 
-<?php require_once('assets/php/includes/footer.php'); ?>
+<?php view('includes/footer'); ?>

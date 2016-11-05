@@ -1,10 +1,5 @@
 <?php
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accède a cette page sans etre connecté via facebook, on le renvoie sur la page d'accueil
-        // header('location:./index');
-    }
-	require_once('assets/php/includes/header.php');
-    date_default_timezone_set('UTC');
+	view('includes/header', compact('fbUrlConnect'));
 ?>
 	<!-- Il faudrait rajouter un formulaire de recherche pour voir si le film que l'on souhaite ajouter n'est pas déjà en ligne en ajax -->
 	<div class="add-container grey-section">
@@ -54,8 +49,6 @@
             </form>
         </div>
     </div>
-
     <!-- A l'envoi du formulaire on fait une recherche dans la base de donnée pour voir s'il n'existe pas un film avec le meme nom et la meme année -->
-    <script type="text/javascript" src="assets/js/add.js"></script>
 
-<?php require_once('assets/php/includes/footer.php'); ?>
+<?php view('includes/footer'); ?>
