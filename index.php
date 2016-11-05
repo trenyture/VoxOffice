@@ -1,6 +1,9 @@
 <?php
-
 include('config.php');
+
+session_name(APP_NAME);
+session_start();
+
 require_once('routes.php');
 
 /*
