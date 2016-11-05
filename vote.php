@@ -19,11 +19,11 @@
                 <p class="author">de <em>[Prénom] [Nom]</em></p>
                 <p class="date">[Année]</p>
                 <div class="vote-block">
-                    <a href="#" class="btn-secondary btn-plus"><i class="fa fa-check"></i> Voter</a>
-                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f1" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
+                    <a href="#" class="btn-secondary btn-vote"><i class="fa fa-check"></i> <span>Voter</span></a>
+                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f1" data-image="" data-title=""><i class="fa fa-facebook tablet-hidden"></i><i class="fa fa-share-alt tablet-only"></i> <span>Voter et partager</span></a>
+                    <a href="#" class="btn-wishlist"><i class="fa fa-heart-o"></i></a>
                 </div>
             </div>
-            <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
             <div class="overlay"></div>
         </article>
         <article id="film2">
@@ -33,13 +33,14 @@
                 <p class="author">de <em>[Prénom] [Nom]</em></p>
                 <p class="date">[Année]</p>
                 <div class="vote-block">
-                    <a href="#" class="btn-secondary btn-plus"><i class="fa fa-check"></i> Voter</a>
-                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2" data-image="" data-title=""><i class="fa fa-facebook"></i>Voter et partager</a>
+                    <a href="#" class="btn-secondary btn-vote"><i class="fa fa-check"></i> <span>Voter</span></a>
+                    <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2" data-image="" data-title=""><i class="fa fa-facebook tablet-hidden"></i><i class="fa fa-share-alt tablet-only"></i> <span>Voter et partager</span></a>
+                    <a href="#" class="btn-wishlist"><i class="fa fa-heart-o"></i></a>
                 </div>
             </div>
-            <a href="#" id="others" class="btn-tertiary">Passer <i class="fa fa-arrow-right"></i></a>
             <div class="overlay"></div>
         </article>
+        <a href="#" id="others" class="btn-tertiary skip">Passer <i class="fa fa-arrow-right"></i></a>
     </section>
 
     <script type="text/javascript" src="assets/js/vote.js"></script>

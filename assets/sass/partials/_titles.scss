@@ -23,15 +23,15 @@ h1 {
 }
 
 h2 {
-    font-family: $title-font;
-    font-size: $title-size;
+    font-family: $text-font;
+    font-size: 5.2rem;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, .3);
     text-transform: uppercase;
 }
 
 h3 {
     font-family: $text-font;
-    font-size: 3.8rem;
+    font-size: 3.4rem;
 }
 
 @media (max-width: $smartphone) {

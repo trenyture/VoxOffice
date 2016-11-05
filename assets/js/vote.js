@@ -1,4 +1,4 @@
-/*SHARE FACEBOOK*/
+// Share Facebook
 window.fbAsyncInit = function(){
     FB.init({
         appId: '898558203596431',
@@ -24,8 +24,8 @@ function postToFeed(title, url, image){
     }
     FB.ui(obj, callback);
 }
-/*FIN SDK FB*/
 
+// Fin SDK Fb
 function voteFor(link){
     $.ajax({
         url: link,
@@ -33,7 +33,7 @@ function voteFor(link){
             if(result){
                 result = eval(result);
                 if(!result[0]){
-                    randFilms();                
+                    randFilms();
                 }else{
                     alert(result[1]);
                 }
@@ -64,7 +64,7 @@ function constructPage(films) {
         $('article#film' + i + ' h3').html(value.title);
         $('article#film' + i + ' p.date').html(value.annee);
         $('article#film' + i + ' p.author em').html(value.author);
-        $('article#film' + i + ' a.btn-plus').attr('href', 'assets/php/addvote.php?id=' + value.id);
+        $('article#film' + i + ' a.btn-vote').attr('href', 'assets/php/addvote.php?id=' + value.id);
         $('article#film' + i + ' a.btn-share').attr('href', 'assets/php/addvote.php?id=' + value.id).data({
             'image':value.image,
             'title':"J'ai voté pour "+value.title
@@ -80,7 +80,7 @@ $(document).ready(function () {
         randFilms();
     });
 
-    $('a.btn-plus').click(function(event){
+    $('a.btn-vote').click(function(event){
         event.preventDefault();
         var href=$(this).attr('href');
         voteFor(href);
@@ -91,4 +91,33 @@ $(document).ready(function () {
         elem = $(this);
         postToFeed(elem.data('title'), elem.attr('href'), elem.data('image'));
     });
+    
+    // Blur switch
+    /*$(function() {
+        var input = $('#blurSwitch input');
+        
+        $(input).prop('checked', true);
+        $(input).click(blurSwitch);
+    });
+    function blurSwitch() {
+        var blurredImage = $('.vote-container .article-image');
+        
+        if (this.checked) {
+            $(blurredImage).attr('checked', true).css({
+                'webkit-filter': 'blur(.8rem)',
+                'filter': 'blur(.8rem)'
+            });
+            $(blurredImage).hover(function() {
+                $(this).css({
+                    'webkit-filter': 'blur(0)',
+                    'filter': 'blur(0)'
+                });
+            });
+        } else {
+            $(blurredImage).removeAttr('checked').css({
+                'webkit-filter': 'blur(0)',
+                'filter': 'blur(0)'
+            });
+        }
+    }*/
 });

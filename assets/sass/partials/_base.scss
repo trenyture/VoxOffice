@@ -1,13 +1,9 @@
 // Compass
 @import 'compass';
 
-// Headings
-$title-font: 'nexa_bold', Helvetica, Arial, sans-serif;
-$title-size: 5.2rem;
-
 // Base font
 $text-font: 'montserrat', Helvetica, Arial, sans-serif;
-$text-size: 1.4rem;
+$text-size: 1.6rem;
 $text-line-height: 2rem;
 
 // Font states
@@ -24,7 +20,9 @@ $dark-orange: #e59f26;
 $purple: #7b6696;
 $dark-purple: #413454;
 
+$red: #F72359;
 $yellow: #fffcf5;
+$green: #2DCC70;
 
 $fb-blue: #4d68a4;
 $light-fb-blue: #7c96d1;
@@ -38,15 +36,13 @@ $border-grey: #eaeaea;
 
 // Responsive
 $desktop: 1920px;
-$desktopSmall: 1280px;
+$desktopSmall: 1366px;
 $tabletMax: 1024px;
 $tablet: 960px;
 $tabletMin: 768px;
 $smartphoneMax: 767px;
 $smartphone: 640px;
 $smartphoneMin: 480px;
-//$smartphoneSmallMax: 360px;
-//$smartphoneSmallMin: 320px;
 
 // Base elements
 html {

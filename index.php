@@ -58,8 +58,7 @@
                     <li class="feature feature-compare">
                         <div class="feature-content">
                             <h3>Comparez.</h3>
-                            <p>Est-ce-que ces deux films ont été réalisés par la même personne ? Comparez-les rapidement pour avoir la réponse.</p>
-                            <p>D'autres paramètres comme la date de sortie ou la position dans le classement VoxOffice sont aussi disponibles.</p>
+                            <p>Des paramètres comme la date de sortie ou la position dans le classement VoxOffice, bientôt disponibles.</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>

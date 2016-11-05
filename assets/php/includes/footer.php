@@ -20,13 +20,13 @@
                     c3.9,3.9,10.2,3.9,14.1,0l42.4-42.4c2-2,3-4.8,2.9-7.6c0.2-2.8-0.9-5.6-2.9-7.6L450.4,2.9c-3.9-3.9-10.2-3.9-14.1,0l-3.5,3.5
                     c-3.9,3.9-3.9,10.3,0,14.2l19.9,20H250.8c0,0-67.3-4.6-118.6,48.5S86.2,208.1,86.2,208.1z" />
                 </svg>
-                <h2><span>Vox</span>Office<small>alpha</small></h2>
+                <h2><span>Vox</span>Office<small>beta</small></h2>
                 <p><span class="icon icon-lab"></span>par Simon Trichereau & Pierre Prézelin.</p>
-                <p>© 2016 <a href="/">VoxOffice</a>.</p>
+                <p>© 2016 <a href="./index.php">VoxOffice</a></p>
                 <ul>
                     <li><a href="https://github.com/trenyture/VoxOffice" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <!--<li><a href="#"><i class="fa fa-question"></i></a></li>-->
-                    <!--<li><a href="mailto:contact@voxoffice.com"><i class="fa fa-envelope"></i></a></li>-->
+                    <li><a href="./contact.php"><i class="fa fa-question"></i></a></li>
+                    <li><a href="mailto:pierre.prezelin01@gmail.com,simon-trichereau@gmail.com"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
         </footer>

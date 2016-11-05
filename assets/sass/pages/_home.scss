@@ -195,7 +195,7 @@
             width: 50%;
             display: inline-block;
             h3 {
-                padding-bottom: 5.8rem;
+                padding-bottom: 5.2rem;
                 color: $dark-purple;
             }
             p {
@@ -298,10 +298,11 @@
         }
         p {
             padding-bottom: 3.4rem;
+            line-height: 1.4rem;
             color: $light-grey;
             small {
-                font-size: 1.2rem;
-                line-height: 1.2rem;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
                 text-align: center;
             }
         }

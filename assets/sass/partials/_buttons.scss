@@ -36,12 +36,13 @@
 // Bases & Colors
 .btn-primary {
     @extend .btn-square;
-    font-family: $title-font;
+    font-family: $text-font;
     font-size: 4.2rem;
-    padding: 1.4rem 8.2rem .8rem;
+    padding: 1.2rem 8.2rem;
     color: #fff;
     text-transform: uppercase;
     background: $orange;
+    border: 0;
     @include box-shadow(0 0 0 $dark-orange, 0 .5rem 1rem rgba(0, 0, 0, .35));
     &:hover {
         background: darken($orange, 5%);
@@ -62,7 +63,7 @@
     font-size: 1.4rem;
     line-height: 4.6rem;
     background-color: $purple;
-    //@include box-shadow(0 0 2rem 0 rgba(0, 0, 0, .2));
+    border: 0;
     
     &:hover {
         background-color: $orange;
@@ -86,11 +87,13 @@
 
 .btn-tertiary {
     @extend .btn-secondary;
+    display: inline-block;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, .6);
     @include box-shadow(none);
     &:hover {
-        background-color: rgba(0, 0, 0, .75);
+        color: #fff;
+        background-color: $orange;
     }
     i {
         padding: 0 0 .4rem 1.4rem;
@@ -102,7 +105,7 @@
     @extend .btn;
     padding: 1.1rem 2.2rem 1rem;
     font-family: Arial, sans-serif;
-    font-size: $text-size;
+    font-size: 1.4rem;
     color: #fff;
     background: $fb-blue;
     @include box-shadow(0 0 0 $dark-fb-blue, 0 .5rem 1rem rgba(0, 0, 0, .35));
@@ -120,17 +123,29 @@
 @media (max-width: $smartphone) {
     .btn-fb {
         padding: 1.2rem 2.2rem 1.1rem;
-
         i {
             font-size: 2.4rem;
         }
     }
 }
 
-.btn-plus {
+.btn-vote {
+    @extend .btn-secondary;
     background-color: $purple;
     &:hover {
         background: darken($orange, 5%);
+    }
+}
+
+.btn-wishlist {
+    @extend .btn-secondary-transparent;
+    padding: 0 1.4rem;
+    &:hover {
+        background-color: $red;
+        
+    }
+    i {
+        padding: 0;
     }
 }
 

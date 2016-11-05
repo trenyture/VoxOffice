@@ -51,33 +51,13 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('nav').toggleClass('open-menu');
     });
-    
-    // Blur switch
-    $(function() {
-        var input = $('#blurSwitch input');
-        
-        $(input).prop('checked', true);
-        $(input).click(blurSwitch);
-    });
-    function blurSwitch() {
-        var blurredImage = $('.vote .article-image');
-        
-        if (this.checked) {
-            $(blurredImage).attr('checked', true).css({
-                'webkit-filter': 'blur(.8rem)',
-                'filter': 'blur(.8rem)'
-            });
-            $(blurredImage).hover(function() {
-                $(this).css({
-                    'webkit-filter': 'blur(0)',
-                    'filter': 'blur(0)'
-                });
-            });
+
+    // Label animations
+    $('form input, form select, form textarea').blur(function() {
+        if ($(this).val()) {
+            $(this).parents('div').addClass('filled');
         } else {
-            $(blurredImage).removeAttr('checked').css({
-                'webkit-filter': 'blur(0)',
-                'filter': 'blur(0)'
-            });
+            $(this).parents('div').removeClass('filled');
         }
-    }
+    });
 });
