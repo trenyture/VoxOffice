@@ -4,8 +4,7 @@
     <div class="contact-container grey-section">
 		<h1>N'hésitez pas à nous contacter !</h1>
         <div class="content-lg">
-            <?php if (!isset($_GET['send'])) { ?>
-            <form method="POST" action="assets/php/formsend.php">
+            <form method="POST" action="">
                 <div class="input-container">
                     <input type="email" name="mail" id="mail" />
                     <label for="mail">Votre mail</label>
@@ -27,13 +26,8 @@
                 <div class="input-submit center">
                     <button type="submit" class="btn-secondary"><i class="fa fa-paper-plane"></i>Envoyer</button>
                 </div>
-                <ul id="error-messages" class="errors">
-                    <li class="error">erreur</li>
-                </ul>
             </form>
-            <?php } else { ?>
-            <p class="confirmation center">Merci beaucoup, votre message à bien été envoyé.</p>
-            <?php } ?>
+            <p class="confirmation center"><?php echo view('errors/messages') ?></p>
         </div>
     </div>
 

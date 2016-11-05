@@ -128,6 +128,19 @@ class PageController extends Controller
 		return view('pages/contact');
 	}
 
+	public function postContact(){
+		$from=$_POST['mail'];
+		$message=$_POST['message']."\n -- \n".$_SESSION['fbName'];
+		$subject=$_POST['sujet'];
+		if(mail( 'simon.trichereau@gmail.com', $subject, $message, "From: ".$from."\nReply-to: ".$from."\n" )){
+			$this->setSuccess('Votre message a bien été envoyé.');
+			return view('pages/contact');
+		}else{
+			$this->setError("Il y a eu un problème lors de l'envoi, veuillez retenter.");
+			return view('pages/contact');
+		}
+	}
+
 	public function vote(){
 		return view('pages/vote');
 	}
