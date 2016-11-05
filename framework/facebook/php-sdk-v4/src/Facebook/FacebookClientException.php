@@ -24,10 +24,10 @@
 namespace Facebook;
 
 /**
- * Class FacebookPermissionException
+ * Class FacebookClientException
  * @package Facebook
  */
-class FacebookPermissionException extends FacebookRequestException
+class FacebookClientException extends FacebookRequestException
 {
 
 }

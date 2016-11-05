@@ -1,11 +1,11 @@
 <?php
-    
+    require('php-sdk-v4/autoload.php');
+
 	use Facebook\FacebookRedirectLoginHelper;
     use Facebook\FacebookSession;
     use Facebook\FacebookRequest;
     use Facebook\GraphUser;
 
-    require_once 'assets/php/vendors/autoload.php';
     if (isset($_GET) && isset($_GET['logout']) && $_GET['logout'] == 'true') {
         $_SESSION = null;
         session_destroy();
@@ -19,9 +19,9 @@
         $maBD = connexionBD() ;  // Cette fonction est définie dans le dossier helpers
         $texteRequete = ("SELECT * from VO_users WHERE VO_users.fb_id=".$id) ;
         $requete = $maBD->prepare($texteRequete) ;
-        $ok = $requete->execute() ; 
+        $ok = $requete->execute() ;
         // Dans $resultats, on récupère le résultat de la requête,
-        // sous la forme d'un tableau d'objets  
+        // sous la forme d'un tableau d'objets
         $resultats = $requete->fetchAll(PDO::FETCH_OBJ)  ;
         if(sizeof($resultats)==0){
             $requete = $maBD->prepare('INSERT INTO VO_users (fb_id, name) VALUES (?, ?)');

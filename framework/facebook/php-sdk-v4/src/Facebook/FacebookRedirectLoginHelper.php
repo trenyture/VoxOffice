@@ -106,12 +106,12 @@ class FacebookRedirectLoginHelper
     if (in_array($authType, array(true, 'reauthenticate', 'https'), true)) {
       $params['auth_type'] = $authType === true ? 'reauthenticate' : $authType;
     }
-    
+
     if ($displayAsPopup)
     {
       $params['display'] = 'popup';
     }
-    
+
     return 'https://www.facebook.com/' . $version . '/dialog/oauth?' .
       http_build_query($params, null, '&');
   }
@@ -281,16 +281,16 @@ class FacebookRedirectLoginHelper
     }
     return null;
   }
-  
+
   /**
    * Generate a cryptographically secure pseudrandom number
-   * 
+   *
    * @param integer $bytes - number of bytes to return
-   * 
+   *
    * @return string
-   * 
+   *
    * @throws FacebookSDKException
-   * 
+   *
    * @todo Support Windows platforms
    */
   public function random($bytes)
@@ -325,9 +325,9 @@ class FacebookRedirectLoginHelper
           return bin2hex($buf);
         }
     }
-    
+
     while (strlen($buf) < $bytes) {
-      $buf .= md5(uniqid(mt_rand(), true), true); 
+      $buf .= md5(uniqid(mt_rand(), true), true);
       // We are appending raw binary
     }
     return bin2hex(substr($buf, 0, $bytes));

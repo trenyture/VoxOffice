@@ -24,82 +24,61 @@
 namespace Facebook;
 
 /**
- * Class GraphLocation
+ * Class GraphUserPage
  * @package Facebook
- * @author Fosco Marotto <fjm@fb.com>
- * @author David Poll <depoll@fb.com>
+ * @author Artur Luiz <artur@arturluiz.com.br>
  */
-class GraphLocation extends GraphObject
+class GraphUserPage extends GraphObject
 {
 
   /**
-   * Returns the street component of the location
+   * Returns the ID for the user's page as a string if present.
    *
    * @return string|null
    */
-  public function getStreet()
+  public function getId()
   {
-    return $this->getProperty('street');
+    return $this->getProperty('id');
   }
 
   /**
-   * Returns the city component of the location
+   * Returns the Category for the user's page as a string if present.
    *
    * @return string|null
    */
-  public function getCity()
+  public function getCategory()
   {
-    return $this->getProperty('city');
+    return $this->getProperty('category');
   }
 
   /**
-   * Returns the state component of the location
+   * Returns the Name of the user's page as a string if present.
    *
    * @return string|null
    */
-  public function getState()
+  public function getName()
   {
-    return $this->getProperty('state');
+    return $this->getProperty('name');
   }
 
   /**
-   * Returns the country component of the location
+   * Returns the Access Token used to access the user's page as a string if present.
    *
    * @return string|null
    */
-  public function getCountry()
+  public function getAccessToken()
   {
-    return $this->getProperty('country');
+    return $this->getProperty('access_token');
   }
 
   /**
-   * Returns the zipcode component of the location
+   * Returns the Permissions for the user's page as an array if present.
    *
-   * @return string|null
+   * @return array|null
    */
-  public function getZip()
+  public function getPermissions()
   {
-    return $this->getProperty('zip');
-  }
-
-  /**
-   * Returns the latitude component of the location
-   *
-   * @return float|null
-   */
-  public function getLatitude()
-  {
-    return $this->getProperty('latitude');
-  }
-
-  /**
-   * Returns the street component of the location
-   *
-   * @return float|null
-   */
-  public function getLongitude()
-  {
-    return $this->getProperty('longitude');
+    return $this->getProperty('perms');
   }
 
 }

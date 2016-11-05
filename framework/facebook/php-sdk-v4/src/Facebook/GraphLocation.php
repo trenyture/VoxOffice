@@ -24,92 +24,82 @@
 namespace Facebook;
 
 /**
- * Class GraphSessionInfo
+ * Class GraphLocation
  * @package Facebook
  * @author Fosco Marotto <fjm@fb.com>
  * @author David Poll <depoll@fb.com>
  */
-class GraphSessionInfo extends GraphObject
+class GraphLocation extends GraphObject
 {
 
   /**
-   * Returns the application id the token was issued for.
+   * Returns the street component of the location
    *
    * @return string|null
    */
-  public function getAppId()
+  public function getStreet()
   {
-    return $this->getProperty('app_id');
+    return $this->getProperty('street');
   }
 
   /**
-   * Returns the application name the token was issued for.
+   * Returns the city component of the location
    *
    * @return string|null
    */
-  public function getApplication()
+  public function getCity()
   {
-    return $this->getProperty('application');
+    return $this->getProperty('city');
   }
 
   /**
-   * Returns the date & time that the token expires.
-   *
-   * @return \DateTime|null
-   */
-  public function getExpiresAt()
-  {
-    $stamp = $this->getProperty('expires_at');
-    if ($stamp) {
-      return (new \DateTime())->setTimestamp($stamp);
-    } else {
-      return null;
-    }
-  }
-
-  /**
-   * Returns whether the token is valid.
-   *
-   * @return boolean
-   */
-  public function isValid()
-  {
-    return $this->getProperty('is_valid');
-  }
-
-  /**
-   * Returns the date & time the token was issued at.
-   *
-   * @return \DateTime|null
-   */
-  public function getIssuedAt()
-  {
-    $stamp = $this->getProperty('issued_at');
-    if ($stamp) {
-      return (new \DateTime())->setTimestamp($stamp);
-    } else {
-      return null;
-    }
-  }
-
-  /**
-   * Returns the scope permissions associated with the token.
-   *
-   * @return array
-   */
-  public function getScopes()
-  {
-    return $this->getPropertyAsArray('scopes');
-  }
-
-  /**
-   * Returns the login id of the user associated with the token.
+   * Returns the state component of the location
    *
    * @return string|null
    */
-  public function getId()
+  public function getState()
   {
-    return $this->getProperty('user_id');
+    return $this->getProperty('state');
+  }
+
+  /**
+   * Returns the country component of the location
+   *
+   * @return string|null
+   */
+  public function getCountry()
+  {
+    return $this->getProperty('country');
+  }
+
+  /**
+   * Returns the zipcode component of the location
+   *
+   * @return string|null
+   */
+  public function getZip()
+  {
+    return $this->getProperty('zip');
+  }
+
+  /**
+   * Returns the latitude component of the location
+   *
+   * @return float|null
+   */
+  public function getLatitude()
+  {
+    return $this->getProperty('latitude');
+  }
+
+  /**
+   * Returns the street component of the location
+   *
+   * @return float|null
+   */
+  public function getLongitude()
+  {
+    return $this->getProperty('longitude');
   }
 
 }

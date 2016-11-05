@@ -80,5 +80,5 @@ class FacebookSessionTest extends PHPUnit_Framework_TestCase
       $this->fail('Exception thrown validating app session.');
     }
   }
-  
+
 }

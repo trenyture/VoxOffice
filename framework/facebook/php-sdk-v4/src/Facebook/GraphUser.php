@@ -51,7 +51,7 @@ class GraphUser extends GraphObject
   {
     return $this->getProperty('name');
   }
-  
+
   public function getEmail()
   {
     return $this->getProperty('email');
@@ -86,7 +86,7 @@ class GraphUser extends GraphObject
   {
     return $this->getProperty('last_name');
   }
-  
+
   /**
    * Returns the gender for the user as a string if present.
    *
