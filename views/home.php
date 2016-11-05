@@ -85,5 +85,5 @@
         </section>
 
 <?php
-	view('includes/header');
+	view('includes/footer');
 ?>
