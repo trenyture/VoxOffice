@@ -1,0 +1,57 @@
+.icon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-lab {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('../img/icon_potion.svg') no-repeat;
+}
+
+.icon-scroll {
+    position: absolute;
+    top: auto;
+    bottom: 2.6rem;
+    left: 50%;
+    width: 1.8rem;
+    height: 3.4rem;
+    border: .3rem solid #fff;
+    @include border-radius(1.5rem);
+    @include transformX50();
+    &:after {
+        position: absolute;
+        content: '';
+        top: .7rem;
+        left: .8rem;
+        width: .3rem;
+        height: .8rem;
+        background: #fff;
+        animation: {
+            name: mouse;
+            duration: 1s;
+            iteration-count: infinite;
+        }
+    }
+}
+@keyframes mouse {
+    to {top: 1rem;}
+}
+@media (max-width: $smartphone) {
+    .icon-scroll {
+        bottom: 1.2rem;
+        width: 1.6rem;
+        height: 2.8rem;
+        &:after {
+            top: .5rem;
+            left: .7rem;
+        }
+    }
+}
