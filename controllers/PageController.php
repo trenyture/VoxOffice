@@ -88,14 +88,21 @@ class PageController extends Controller
 			// Si tout es ok on essaie d'uploader le fichier sinon il y a eu une erreur
 			} else {
 				if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-					// Préparation d'une requête.
-					$requete = $maBD->prepare("INSERT INTO VO_films (fb_id, title, annee, author, image, vote) VALUES (?,?,?,?,?,?)");
-					// Exécution de la requête, avec les valeur 3, "premium" et "premiums" pour remplacer les ?
-					//On empeche les possibles hackers d'entrer dans la bdd
+
+					$film = new Film();
+
+					//On sanitize les données
 					$dbTitle = htmlspecialchars($_POST['title']);
 					$dbAuthor = htmlspecialchars($_POST['author']);
-					$arrayRequest = array($user,$dbTitle,$_POST['year'],$dbAuthor,$imgTitle, 0);
-					$ok = $requete->execute($arrayRequest);
+					$arrayRequest = array(
+						'fb_id' => $_SESSION['fbId'],
+						'title' => $dbTitle,
+						'annee' => $_POST['year'],
+						'author' => $dbAuthor,
+						'image' => $imgTitle,
+						'vote' => 0
+					);
+					$ok = $film->addByArray($arrayRequest);
 					// Le résultat placé dans $ok vaudra 1 si la requête a pu s'exécuter correctement
 					// Création du message indiquant si l'insertion a réussi
 					if($ok == true){
