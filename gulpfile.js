@@ -7,5 +7,5 @@ elixir(function(mix) {
 		style:"compressed",
 		sass:"./resources/scss",
 	})
-    .scriptsIn('resources/js/','public/script.js');
+    .scriptsIn('resources/js/','public/js/script.js');
 });
