@@ -1,5 +1,5 @@
 <?php
-    view('includes/header', compact('fbUrlConnect'));
+    view('includes/header', compact('fbUrlConnect', 'darkened'));
 ?>
 	<section class="vote-container">
         <div class="headings">

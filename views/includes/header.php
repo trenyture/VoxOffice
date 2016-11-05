@@ -46,12 +46,8 @@
         <link rel="stylesheet" type="text/css" href="<?php echo asset('css/style.css') ?>" />
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     </head>
-    <body class="<?=$bodyId;?>">
-        <?php if (strpos($_SERVER['REQUEST_URI'], 'index') == true || strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
-        <header>
-        <?php } else { ?>
-        <header class="darkened">
-        <?php } ?>
+    <body>
+        <header class="<?php if($darkened) echo 'darkened' ?>">
             <a href="<?php echo route('') ?>" class="logo">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.6 405" style="enable-background:new 0 0 495.6 405;" xml:space="preserve">
                     <path d="M317.1,125.4c-17.2,0-31.2,14-31.2,31.2c0,6.3,1.9,12.5,5.5,17.7c3.7,6.3,2.7,11.1,1.7,13.6l-32.7,61.5l0,0v0.1
