@@ -1,6 +1,4 @@
 <?php
-    ini_set('display_errors', 1);  error_reporting(E_ALL);
-    session_start();
     if(!isset($_SESSION['fb_token'])){
         // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
         // header('location:./index');
