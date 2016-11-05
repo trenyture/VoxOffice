@@ -35,4 +35,3 @@ if(!empty($_SESSION['msgSuccess'])){
 	}
 	echo '</ul></div>';
 }
-?>

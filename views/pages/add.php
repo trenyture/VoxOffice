@@ -21,7 +21,7 @@
                     </ul>
                 </div>
             </form>
-            <form id="formadd" class="form-add-film" action="assets/php/manage.php" method="post" enctype="multipart/form-data">
+            <form id="formadd" class="form-add-film" action="" method="post" enctype="multipart/form-data">
                 <div class="input-container valid-input">
                     <input type="text" id="title" name="title" maxlength="50" />
                     <label for="title">Titre du film</label>
@@ -45,7 +45,7 @@
                 <ul id="error-messages" class="errors">
                     <li class="error">Tous les champs sont obligatoires.</li>
                 </ul>
-                <p class="confirmation center">Votre film a bien été ajouté !</p>
+                <p class="confirmation center"><?php echo view('errors/messages') ?></p>
             </form>
         </div>
     </div>

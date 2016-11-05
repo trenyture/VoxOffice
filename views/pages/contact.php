@@ -36,6 +36,5 @@
             <?php } ?>
         </div>
     </div>
-	<script type="text/javascript" src="assets/js/contact.js"></script>
 
 <?php view('includes/footer'); ?>

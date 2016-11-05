@@ -1,8 +1,4 @@
 <?php
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
-        // header('location:./index');
-    }
     view('includes/header', compact('fbUrlConnect'));
 ?>
 	<section class="vote-container">
@@ -11,7 +7,7 @@
             <h2>Aucune réponse n'est mauvaise !</h2>
         </div>
         <article id="film1">
-            <div class="article-image" style="background-image: url('assets/img/films/2001.jpg');"></div>
+            <div class="article-image" style="background-image: url('<?php echo stored('films/2001.jpg') ?>');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 1]"</h3>
                 <p class="author">de <em>[Prénom] [Nom]</em></p>
@@ -25,7 +21,7 @@
             <div class="overlay"></div>
         </article>
         <article id="film2">
-            <div class="article-image" style="background-image: url('assets/img/films/interstellar.jpg');"></div>
+            <div class="article-image" style="background-image: url('<?php echo stored('films/interstellar.jpg') ?>');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 2]"</h3>
                 <p class="author">de <em>[Prénom] [Nom]</em></p>
@@ -40,7 +36,5 @@
         </article>
         <a href="#" id="others" class="btn-tertiary skip">Passer <i class="fa fa-arrow-right"></i></a>
     </section>
-
-    <script type="text/javascript" src="assets/js/vote.js"></script>
 
 <?php view('includes/footer'); ?>
