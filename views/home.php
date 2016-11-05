@@ -6,7 +6,7 @@
                 <h1><a href="#" title="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
                 <p class="subtitle">Tous vos films favoris. Classés.</p>
                 <?php if(isset($_SESSION['fb_token'])){ ?>
-                    <a href="./vote" class="btn-primary">Go!</a>
+                    <a href="<?php echo route('vote') ?>" class="btn-primary">Go!</a>
                 <?php } else { ?>
                     <a href="<?= $fbUrlConnect ?>" class="btn btn-primary btn-square">Go!</a>
                 <?php } ?>
@@ -34,11 +34,11 @@
                             <p>Le principe de VoxOffice est de voter.</p>
                             <p>Faites votre choix entre deux films pour les faire monter - ou descendre - dans le classement général. D'autres films vous seront proposés aussitôt après.</p>
                             <?php if(isset($_SESSION['fb_token'])) { ?>
-                                <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
+                                <a href="<?php echo route('vote') ?>" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php } ?>
                         </div>
                         <div class="feature-img right">
-                            <img src="assets/img/vote.svg" alt="Votez" />
+                            <img src="<?php echo asset('img/vote.svg') ?>" alt="Votez" />
                         </div>
                     </li>
                     <li class="feature feature-add">
@@ -46,11 +46,11 @@
                             <h3>Ajoutez.</h3>
                             <p>Vous pouvez également ajouter vos propres films et enrichir la liste VoxOffice des films référencés. C'est simple, rapide et immédiat !</p>
                             <?php if(isset($_SESSION['fb_token'])) { ?>
-                                <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
+                                <a href="<?php echo route('add') ?>" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php } ?>
                         </div>
                         <div class="feature-img left">
-                            <img src="assets/img/add.svg" alt="Ajoutez" />
+                            <img src="<?php echo asset('img/add.svg') ?>" alt="Ajoutez" />
                         </div>
                     </li>
                     <li class="feature feature-compare">
@@ -58,11 +58,11 @@
                             <h3>Comparez.</h3>
                             <p>Des paramètres comme la date de sortie ou la position dans le classement VoxOffice, bientôt disponibles.</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
-                                <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
+                                <a href="<?php echo route('compare') ?>" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
                         </div>
                         <div class="feature-img right">
-                            <img src="assets/img/compare.svg" alt="Comparez" />
+                            <img src="<?php echo asset('img/compare.svg') ?>" alt="Comparez" />
                         </div>
                     </li>
                 </ul>
@@ -77,7 +77,7 @@
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
                 <?php if(isset($_SESSION['fb_token'])) { ?>
-                    <a href="./vote" title="Connexion à Facebook" class="btn-fb">C'est parti!</a>
+                    <a href="<?php echo route('vote') ?>" title="Connexion à Facebook" class="btn-fb">C'est parti!</a>
                 <?php } else { ?>
                     <a href="<?= $fbUrlConnect ?>" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
                 <?php } ?>
