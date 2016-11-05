@@ -52,7 +52,7 @@
         <?php } else { ?>
         <header class="darkened">
         <?php } ?>
-            <a href="./index.php" class="logo">
+            <a href="<?php echo route('') ?>" class="logo">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.6 405" style="enable-background:new 0 0 495.6 405;" xml:space="preserve">
                     <path d="M317.1,125.4c-17.2,0-31.2,14-31.2,31.2c0,6.3,1.9,12.5,5.5,17.7c3.7,6.3,2.7,11.1,1.7,13.6l-32.7,61.5l0,0v0.1
                     l-0.9,1.6c-1.4,2.2-4.8,5.6-11.8,6.3h-0.2c-7-0.6-10.4-4.1-11.8-6.3l-0.9-1.6v-0.1l0,0l-32.7-61.5c-1-2.4-1.9-7.3,1.7-13.6
@@ -82,10 +82,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index">Accueil</a></li>
-                    <li><a href="./vote">Voter</a></li>
-                    <li><a href="./compare">Classement</a></li>
-                    <li><a href="./add">Ajouter</a></li>
+                    <li><a href="<?php echo route('') ?>">Accueil</a></li>
+                    <li><a href="<?php echo route('vote') ?>">Voter</a></li>
+                    <li><a href="<?php echo route('compare') ?>">Classement</a></li>
+                    <li><a href="<?php echo route('add') ?>">Ajouter</a></li>
                 </ul>
             </nav>
             <?php } ?>-->
@@ -96,10 +96,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.php">Accueil</a></li>
-                    <li><a href="./vote.php">Voter</a></li>
-                    <li><a href="./compare.php">Classement</a></li>
-                    <li><a href="./add.php">Ajouter</a></li>
+                    <li><a href="<?php echo route('') ?>">Accueil</a></li>
+                    <li><a href="<?php echo route('vote') ?>">Voter</a></li>
+                    <li><a href="<?php echo route('compare') ?>">Classement</a></li>
+                    <li><a href="<?php echo route('add') ?>">Ajouter</a></li>
                 </ul>
             </nav>
             <div class="user">
