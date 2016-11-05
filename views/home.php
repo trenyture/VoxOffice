@@ -1,5 +1,5 @@
 <?php
-	view('includes/header');
+	view('includes/header', compact('fbUrlConnect'));
 ?>
         <section class="home-intro">
             <div class="intro-content">
