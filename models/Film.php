@@ -6,9 +6,9 @@
  * @subpackage models
  */
 
-class User extends Model
+class Film extends Model
 {
-	protected $table = 'VO_users';
+	protected $table = 'VO_films';
 
 	protected $rows = [
 					'pseudo' => "string",
