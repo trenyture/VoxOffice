@@ -1,4 +1,9 @@
 #################
+## Node
+#################
+node_modules
+
+#################
 ## Eclipse
 #################
 
@@ -221,3 +226,11 @@ pip-log.txt
 #############
 
 .sass-cache
+
+#############
+## WEBORAMA
+#############
+
+/storage/films
+/public/css
+/public/js
