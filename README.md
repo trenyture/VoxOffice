@@ -21,13 +21,26 @@ When you finished your modifications and you want to share it with me, you have 
 4. <code>git pull</code> - to update possibles changes on the repo online.<br>
 5. <code>git push</code> | Send all the commit added files to your profile Github (it will ask you your Username and Password)<br>
 
-# How to install Compass and use it :
+# How to install Compass :
 Compass is a CSS framework used to compile and add useful mixins to your SCSS.<br><br>
 1. (Windows) Download Ruby from <a href="http://rubyinstaller.org/">here</a>.<br>
 2. Install it and *IMPORTANT* enable "Add Ruby executables to your PATH" during the installation.<br>
-3. Then, run your terminal (Cmd/PowerShell on Windows) and type <code>gem install compass</code><br><br>
-You just installed Compass! To use it :<br><br>
-Go to your VoxOffice path and double click on the init.bat file. It will open a new command terminal which should stay opened as long as you edit your SCSS files.<br><br>
-Now, you can edit every SCSS files in VoxOffice/Sass and it will automatically compile and replace the previous css files.<br>
+3. Then, run your terminal (Cmd/PowerShell on Windows) and type <code>gem install compass</code><br>
+4. You'll now need Gulp to compile scss (and js) files ! <br>
+
+# How to install Gulp and use it :
+Gulp is very helpfull to automate task like compiling scss files or unify js files. <br>
+1. (Windows) install <a href="https://nodejs.org/en/download/">Node.js</a> to get <code>npm</code>. <br>
+2. Run <code>npm install</code> in your terminal at the root of the project. <br>
+3. Now, run <code>gulp watch</code>. <br>
+4. Your assets are ready, you can code. The compilation will run each time you edit a .scss file or a .js file in the <code>/resources</code> folder ! <br><br>
+
+## About Weborama : 
+- URLs routing are handled in the `routes.php` file.
+- The `.htaccess` at the root of the project ismandatory, and permit to keep clean URLs and hide the '/index.php'.
+- The folder `models` contain all the database logic. The objects in this folder have form validation and create/edit/delete methods
+- The folder `controllers` contain the main logic of the website. Here, models are used and views are returned. Request are mostly handled here.
+- The folder `views` contain mostly HTML. It's the file returned by the website when the request was executed. All HTML integration should be made here.
+- The folder `resources` contain uncompiled Javascript and SASS files.
 
 # Enjoy and see you soon ;)

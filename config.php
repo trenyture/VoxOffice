@@ -42,7 +42,7 @@ define('DB_PASS','');
 define('APP_NAME','VoxOffice');
 
 /*- Website Path (url & root) -*/
-define('SITE_URL','http://localhost/voxoffice-refactor');
+define('SITE_URL','http://localhost/voxoffice');
 define('ROOT_PATH', dirname(__FILE__) );
 
 /*- choose beetween 3 debug lvl (0=none, 1=error viewing, 2=dev information) -*/
