@@ -71,6 +71,12 @@ header {
             @include transition();
             a {
                 overflow: hidden;
+                display:block;
+                width:4.8rem;
+                height:4.8rem;
+                background-position: center;
+                @include background-size(cover);
+                @include border-radius(50%);
                 &:hover span {
                     @include transform(scale(1));
                 }
@@ -99,6 +105,9 @@ header {
                     font-size: 1.4rem;
                     color: #fff;
                     line-height: 8rem;
+                    display: inline;
+                    width:auto;
+                    height: auto;
                     @include transition();
                     &:hover {
                         color: $orange;

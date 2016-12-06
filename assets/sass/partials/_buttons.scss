@@ -140,6 +140,7 @@
 .btn-wishlist {
     @extend .btn-secondary-transparent;
     padding: 0 1.4rem;
+    display:none;
     &:hover {
         background-color: $red;
         

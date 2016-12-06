@@ -1,19 +1,22 @@
 $(document).ready(function () {
-    console.log('heeeey');
     $.ajax({
         url: './assets/php/classement.php?wut=good',
         dataType: 'json',
         success: function (data) {
             constructGood(data);
         }
+    }).done(function(){
+        $.ajax({
+            url: './assets/php/classement.php?wut=bad',
+            dataType: 'json',
+            success: function (data) {
+                constructBad(data);
+            }
+        }).done(function(){
+            displayedLis();
+        });
     });
-    $.ajax({
-        url: './assets/php/classement.php?wut=bad',
-        dataType: 'json',
-        success: function (data) {
-            constructBad(data);
-        }
-    });
+    $('#seemore').click(displayedLis);
     
     // Wishlist items
     $('.wishlist').on('click', function() {
@@ -25,17 +28,45 @@ $(document).ready(function () {
         
         return false;
     });
-})
+});
+
+function displayedLis(){
+    $('section#worst ul li.hidden').each(function(key){
+        if(key<5){
+            $(this).addClass('toRemoveClass');
+        }else{
+            return false;
+        }
+    });
+    $('section#best ul li.hidden').each(function(key){
+        if(key<5){
+            $(this).addClass('toRemoveClass');
+        }else{
+            return false;
+        }
+    });
+    $('section ul li.toRemoveClass').each(function(){
+        $(this).removeClass();
+    });
+    if($('section#worst ul li.hidden').length < 1 && $('section#best ul li.hidden').length < 1){
+        $('#seemore').css('visibility','hidden');
+    }
+    return false;
+}
 
 function constructBad(films) {
-    console.log(films);
     var i = 1;
     var ulLi = '';
     $films = $(films);
     $films.each(function () {
-        ulLi += '<li>';
+        ulLi += '<li class="hidden">';
+        ulLi += '<span>'+i+'.</span>'
+        ulLi += '<i class="fa fa-heart wishlist wishlisted"></i>';
         ulLi += '<div class="img-film" style="background-image:url(assets/img/films/' + this.image + ');"></div>';
-        ulLi += '<p class="desc-film">' + i + ' - ' + this.title + ' <span>( ' + this.annee + ' )</span></p>';
+        ulLi += '<div class="text-container">';
+        ulLi += '<h3>'+this.title+'</h3>';
+        ulLi += '<h4>'+this.annee+'</h4>';
+        ulLi += '<div class="score"><p>'+this.vote+'</p></div>'
         ulLi += '</li>';
         i = i + 1;
     });
@@ -48,9 +79,14 @@ function constructGood(films) {
     var ulLi = '';
     $films = $(films);
     $films.each(function () {
-        ulLi += '<li>';
+        ulLi += '<li class="hidden">';
+        ulLi += '<span>'+i+'.</span>'
+        ulLi += '<i class="fa fa-heart wishlist wishlisted"></i>';
         ulLi += '<div class="img-film" style="background-image:url(assets/img/films/' + this.image + ');"></div>';
-        ulLi += '<p class="desc-film">' + i + ' - ' + this.title + ' <span>( ' + this.annee + ' )</span></p>';
+        ulLi += '<div class="text-container">';
+        ulLi += '<h3>'+this.title+'</h3>';
+        ulLi += '<h4>'+this.annee+'</h4>';
+        ulLi += '<div class="score"><p>'+this.vote+'</p></div>'
         ulLi += '</li>';
         i = i + 1;
     });

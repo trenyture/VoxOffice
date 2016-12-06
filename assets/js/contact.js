@@ -6,31 +6,29 @@ function validateEmail(email) {
 
 $(document).ready(function () {
     // Vérification formulaire
-    $('form').submit(function () {
+    $('form').submit(function (event) {
         var errorMsg = '',
             okSend = true;
         if ($('#mail').val() == '') {
             errorMsg += '<li class="error">Votre email est requis.</li>';
             okSend = false;
-        }
-        if ($('#mail').val()) {
-            var testMail = validateEmail($('#mail').val())
-            if (testMail == false) {
+        }else{
+            if (validateEmail($('#mail').val()) == false) {
                 errorMsg += '<li class="error">Veuillez vérifier que votre email soit valide.</li>'
                 okSend = false;
             }
         }
         if ($('#sujet').val() == '') {
-            errorMsg = '<li class="error">Veuillez renseigner un sujet.</li>'
+            errorMsg += '<li class="error">Veuillez renseigner un sujet.</li>'
             okSend = false;
         }
         if ($('#message').val() == '') {
-            errorMsg = '<li class="error">Veuillez renseigner votre message.</li>'
+            errorMsg += '<li class="error">Veuillez renseigner votre message.</li>'
             okSend = false;
         }
         if (okSend == false) {
-            return false; // Je sais pas si tu sais, mais le return false c'est la nouvelle façon d'écrire event.preventDefault();
-            $('ul#error-msg').html(errorMsg);
+            $('ul#error-messages').html(errorMsg);
+            event.preventDefault();
         }
     });
 });

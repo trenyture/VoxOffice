@@ -195,11 +195,14 @@
             width: 50%;
             display: inline-block;
             h3 {
-                padding-bottom: 5.2rem;
+                padding-bottom: 2.5rem;
                 color: $dark-purple;
             }
             p {
                 color: $purple;
+            }
+            .btn-round{
+                margin-top:1rem;
             }
         }
         
