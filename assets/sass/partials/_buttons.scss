@@ -1,0 +1,195 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    @include transition();
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// Shapes
+.btn-square {
+    @extend .btn;
+    color: #fff;
+    @include border-radius(.3rem);
+}
+
+
+.btn-round {
+    @extend .btn;
+    font-family: $text-font;
+    padding: 1.2rem 2.2rem;
+    color: $dark-purple;
+    background: transparent;
+    border: .2rem solid $orange;
+    @include border-radius(5rem);
+    &:hover {
+        color: #fff;
+        background: $orange;
+    }
+}
+
+// Bases & Colors
+.btn-primary {
+    @extend .btn-square;
+    font-family: $text-font;
+    font-size: 4.2rem;
+    padding: 1.2rem 8.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    background: $orange;
+    border: 0;
+    @include box-shadow(0 0 0 $dark-orange, 0 .5rem 1rem rgba(0, 0, 0, .35));
+    &:hover {
+        background: darken($orange, 5%);
+        @include box-shadow(0 0 0 $dark-orange, 0 .3rem .5rem rgba(0, 0, 0, .35));
+    }
+}
+@media (max-width: $smartphone) {
+    .btn-primary {
+        padding: .9pxrem 6.4rem;
+        font-size: 3rem;
+    }
+}
+
+.btn-secondary {
+    @extend .btn-square;
+    padding: 0 2rem;
+    font-family: $text-light;
+    font-size: 1.4rem;
+    line-height: 4.6rem;
+    background-color: $purple;
+    border: 0;
+    
+    &:hover {
+        background-color: $orange;
+        @include box-shadow(none);
+    }
+    i {
+        padding-right: 1.4rem;
+        font-size: 2.2rem;
+        vertical-align: middle;
+    }
+}
+.btn-secondary-transparent {
+    @extend .btn-secondary;
+    background-color: transparent;
+    @include box-shadow(inset 0 0 0 .2rem #fff);
+    &:hover {
+        color: #ffff;
+        background-color: $orange;
+    }
+}
+
+.btn-tertiary {
+    @extend .btn-secondary;
+    display: inline-block;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, .6);
+    @include box-shadow(none);
+    &:hover {
+        color: #fff;
+        background-color: $orange;
+    }
+    i {
+        padding: 0 0 .4rem 1.4rem;
+    }
+}
+
+// Specials
+.btn-fb {
+    @extend .btn;
+    padding: 1.1rem 2.2rem 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    background: $fb-blue;
+    @include box-shadow(0 0 0 $dark-fb-blue, 0 .5rem 1rem rgba(0, 0, 0, .35));
+    @include border-radius(3px);
+    &:hover {
+        background: darken($fb-blue, 5%);
+        @include box-shadow(0 0 0 $dark-fb-blue, 0 .3rem .5rem rgba(0, 0, 0, .35));
+    }
+    i {
+        font-size: 2.8rem;
+        vertical-align: middle;
+        margin-right: 1.6rem;
+    }
+}
+@media (max-width: $smartphone) {
+    .btn-fb {
+        padding: 1.2rem 2.2rem 1.1rem;
+        i {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.btn-vote {
+    @extend .btn-secondary;
+    background-color: $purple;
+    &:hover {
+        background: darken($orange, 5%);
+    }
+}
+
+.btn-wishlist {
+    @extend .btn-secondary-transparent;
+    padding: 0 1.4rem;
+    display:none;
+    &:hover {
+        background-color: $red;
+        
+    }
+    i {
+        padding: 0;
+    }
+}
+
+// Switches
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 4.2rem;
+    height: 2.2rem;
+    vertical-align: middle;
+    input {
+        display: none;
+        &:checked + .slider {
+           background-color: $purple;
+            &:before {
+                background-color: #fff;
+                @include translate3d(2rem, 0, 0);
+            }
+        }
+        &:focus + .slider {
+           background-color: rgba(0, 0, 0, .6);
+        }
+    }
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    @include border-radius(2.2rem);
+    @include transition();
+    &:before {
+        position: absolute;
+        content: "";
+        height: 1.8rem;
+        width: 1.8rem;
+        left: .2rem;
+        bottom: .2rem;
+        background-color: $orange;
+        @include border-radius(50%);
+        @include transition();
+    }
+}

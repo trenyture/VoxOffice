@@ -1,0 +1,182 @@
+form {
+    padding-bottom: 6rem;
+    .input-container {
+        position: relative;
+        @include display-flex;
+        @include flex-direction(column);
+        + .input-container {
+            margin-top: 4rem;
+        }
+        
+        &.valid-input input,
+        &.valid-input input:not([type="file"]) + label,
+        &.valid-input select,
+        &.valid-input select + label,
+        &.valid-input textarea,
+        &.valid-input textarea + label,
+        &.invalid-input input,
+        &.invalid-input input:not([type="file"]) + label,
+        &.invalid-input select,
+        &.invalid-input select + label,
+        &.invalid-input textarea,
+        &.invalid-input textarea + label {
+            color: #fff;
+        }
+        &.valid-input input[type="file"] {
+            color: $green;
+            background-color: transparent;
+        }
+        &.invalid-input input[type="file"] {
+            color: $red;
+            background-color: transparent;
+        }
+        &.valid-input input,
+        &.valid-input select,
+        &.valid-input textarea {
+            background-color: $green;
+        }
+        &.invalid-input input,
+        &.invalid-input select,
+        &.invalid-input textarea {
+            background-color: $red;
+        }
+        &.filled label {
+            font-size: 1.5rem;
+            color: $grey !important;
+            @include translate3d(0, 0, 0);
+        }
+        
+        label,
+        input,
+        select,
+        textarea {
+            @include flex(1 1 auto);
+        }
+    }
+    
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.8rem;
+        color: $grey;
+        pointer-events: none;
+        @include translate3d(1rem, 3.3rem, 0);
+        @include transition();
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="file"],
+    textarea,
+    select {
+        max-width: 100%;
+        margin-top: 1.8rem;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $dark-grey;
+        background-color: #fff;
+        border: 0;
+        border-radius: .2rem;
+        overflow: hidden;
+        @include transition();
+        @include box-sizing(border-box);
+        &:hover {
+            cursor: pointer;
+        }
+        &:focus {
+            color: #fff;
+            background-color: $purple !important;
+            outline: 0;
+            + label {
+                font-size: 1.5rem;
+                color: $purple !important;
+                @include translate3d(0, 0, 0);
+            }
+        }
+    }
+    input:not([type="file"]),
+    select {
+        height: 4.8rem;
+    }
+    input[type="number"] {
+        width: 32rem;
+    }
+    input[type="file"] {
+        padding: 0 0 1rem;
+        background: transparent;
+        &:focus {
+            color: $purple;
+            background: transparent !important;
+            @include box-shadow(none);
+            + label {
+                @include translate3d(0, 0, 0);
+            }
+        }
+        + label {
+            font-size: 1.5rem;
+            @include translate3d(0, 0, 0);
+        }
+    }
+    textarea {
+        height: 15rem;
+        resize: none;
+        overflow-y: auto;
+    }
+    button[type="submit"] {
+        margin-top: 2rem;
+    }
+    
+    h2 {
+        margin: 3rem 0 1.5rem;
+        font-family: $text-font;
+        font-size: 1.8rem;
+        color: $grey;
+        text-transform: none;
+        @include text-shadow(none);
+        big {
+            color: $purple;
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+    }
+    span {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+    
+    .errors {
+        margin-top: 4rem;
+    }
+    .error {
+        color: $red;
+        + .error {
+            padding-top: .3rem;
+        }
+    }
+}
+.confirmation {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $green;
+}
+
+@media (max-width: $smartphoneMax) {
+    form {
+        padding-bottom: 3rem;
+        .input-container + .input-container {
+            margin-top: 2rem;
+        }
+        .error {
+            text-align: center;
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    form input[type="number"] {
+        width: 100%;
+    }
+}

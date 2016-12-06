@@ -1,0 +1,31 @@
+.add-container {
+    @extend .grey-section;
+    .search-title-results {
+        li {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $dark-grey;
+            + li {
+                margin-top: .8rem;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $smartphoneMax) {
+    .add-container {
+        .results-container {
+            text-align: center;
+        }
+        .search-title-results li {
+            padding-left: 0;
+            &:before {
+                display: none;
+            }
+            + li {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
