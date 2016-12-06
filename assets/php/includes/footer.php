@@ -26,7 +26,7 @@
                 <ul>
                     <li><a href="https://github.com/trenyture/VoxOffice" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="./contact.php"><i class="fa fa-question"></i></a></li>
-                    <li><a href="mailto:pierre.prezelin01@gmail.com,simon-trichereau@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="mailto:pierre.prezelin01@gmail.com,simon.trichereau@gmail.com"><i class="fa fa-envelope"></i></a></li>
                 </ul>
             </div>
         </footer>

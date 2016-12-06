@@ -4,7 +4,7 @@
     $msg = '';
     $displayForm = true;
     $error = false;
-    if (isset($_POST)) {
+    if ($_POST) {
          if (empty($_POST["mail"]) || $_POST["mail"] == '') {
             $msg .= '<li class="error">Votre email est requis.</li>';
             $error = true;
@@ -30,11 +30,11 @@
         }
         /*Tout va bien? on envoie le mail*/
         if($error == false){
-            $to  = 'pierre.prezelin01@gmail.com,simon-trichereau@gmail.com';
+            $to  = 'pierre.prezelin01@gmail.com,simon.trichereau@gmail.com';
             /*On remet les paragraphe du message*/
             $message = str_replace("\n",'</p><p style="color:black;">',$message);
             /*On organize un peu le message*/
-            $zeMessage = '<html><head><title></title></head><body><p style="color:black;">'.$message.'</p><p style="margin-top:20px;color:#666;"></p><p style="color:#666;">'.$mail.'<br/>'.$sujet.'<br/>Envoyé depuis Vox Office.</p></body></html>';
+            $zeMessage = '<html><head><title></title></head><body><p style="color:black;">'.$message.'</p><p style="margin-top:20px;color:#666;"></p><p style="color:#666;">'.$mail.'<br/>Envoyé depuis Vox Office.</p></body></html>';
             // Always set content-type when sending HTML email
             $headers = "MIME-Version: 1.0" . "\r\n";
             $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
