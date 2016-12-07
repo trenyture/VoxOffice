@@ -1,5 +1,4 @@
 function lookingTitle(datas) {
-    console.log(datas)
     var liRes = "";
     $data = $(datas);
     $data.each(function () {
@@ -25,7 +24,6 @@ $(document).ready(function () {
         // On ne fait la recherche qu'à partir de 3 caractères minimum
         if ($(this).val().length > 2) {
             var searchKey = $(this).val();
-            console.log(searchKey);
             $.ajax({
                 url: 'assets/php/searchtitle.php?search=' + searchKey,
                 dataType: 'json',
@@ -34,6 +32,10 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+    $('form#search').submit(function(event){
+        changeFormAdd();
+        return false;
     });
     // Vérification Formulaire avant l'envoi
     $('form#formadd').submit(function () {

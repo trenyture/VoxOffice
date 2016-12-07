@@ -1395,7 +1395,7 @@ form span {
 }
 /* line 150, ../sass/partials/_forms.scss */
 form .errors {
-  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 /* line 153, ../sass/partials/_forms.scss */
 form .error {
