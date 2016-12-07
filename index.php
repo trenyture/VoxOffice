@@ -57,7 +57,7 @@
                     <li class="feature feature-compare">
                         <div class="feature-content">
                             <h3>Comparez.</h3>
-                            <p>Des paramètres comme la date de sortie ou la position dans le classement VoxOffice, bientôt disponibles.</p>
+                            <p>Le classement immédiat permet de voir rapidement leqquels ont le plus (ou le moins) plu.</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
