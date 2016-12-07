@@ -16,7 +16,7 @@ window.fbAsyncInit = function(){
     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false)
 );
 function postToFeed(title, url, image){
-    var obj = {method: 'feed',link: 'http://www.simon-tr.com/VoxOffice/', picture: 'http://www.simon-tr.com/VoxOffice/assets/img/films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
+    var obj = {method: 'feed',link: 'http://www.simon-tr.com/VoxOffice/', picture: 'http://www.simon-tr.com/VoxOffice/storage/img_films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
     function callback(response){
         if(response.post_id){
             randFilms();
@@ -59,7 +59,7 @@ function constructPage(films) {
     $.each($films, function(key, value){
         var i = key + 1;
         $('article#film' + i + ' div.article-image').css({
-            'background-image': 'url(assets/img/films/' + value.image + ')'
+            'background-image': 'url(storage/img_films/' + value.image + ')'
         });
         $('article#film' + i + ' h3').html(value.title);
         $('article#film' + i + ' p.date').html(value.annee);

@@ -1,5 +1,4 @@
 <?php
-    ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
 	if(!isset($_SESSION['fb_token'])){
 		header('location:../../index');
@@ -17,15 +16,20 @@
                             'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y' );
 
 		/*Code php d'upload de l'image d'apres : http://www.w3schools.com/php/php_file_upload.asp */
-		$target_dir = "../img/films/";
+		$target_dir = "../../storage/img_films/";
 		/*On recupere le titre de l'image en lowercase et on le split pour supprimer les espaces et les appostrophes*/
-		$title = strtr($_POST['title'], $unwanted_array);
+		$title = htmlspecialchars($_POST['title']);
+		$title = strtr($title, $unwanted_array);
 		$imgTitle = $title;
 		$imgTitle = strtolower($imgTitle);
 		$imgTitle = str_replace(' ', '', $imgTitle);
 		$imgTitle = str_replace("'", '', $imgTitle);
+		$imgTitle = str_replace('"', '', $imgTitle);
+		/*On remplace les espaces dans la date */
+		$date = htmlspecialchars($_POST['year']);
+		$date = str_replace(' ', '', $date);
 		/*On ajoute au titre l'année ecemple : topgun_1994*/
-		$imgTitle.='_'.$_POST['year'];
+		$imgTitle.='_'.$date;
 		/*On ajoute egalement l'extension*/
 		switch ($_FILES["fileToUpload"]["type"]) {
 			case 'image/jpeg':
@@ -87,7 +91,8 @@
 				//On empeche les possibles hackers d'entrer dans la bdd
 				$dbTitle = htmlspecialchars($_POST['title']);
 				$dbAuthor = htmlspecialchars($_POST['author']);
-				$arrayRequest = array($user,$dbTitle,$_POST['year'],$dbAuthor,$imgTitle, 0);
+				$dbYear = htmlspecialchars($_POST['year']);
+				$arrayRequest = array($user,$dbTitle,$dbYear,$dbAuthor,$imgTitle, 0);
 				$ok = $requete->execute($arrayRequest);
 				// Le résultat placé dans $ok vaudra 1 si la requête a pu s'exécuter correctement
 				// Création du message indiquant si l'insertion a réussi

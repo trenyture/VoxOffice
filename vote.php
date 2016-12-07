@@ -1,5 +1,4 @@
 <?php
-    ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
     if(!isset($_SESSION['fb_token'])){
         // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
@@ -13,7 +12,7 @@
             <h2>Aucune réponse n'est mauvaise !</h2>
         </div>
         <article id="film1">
-            <div class="article-image" style="background-image: url('assets/img/films/2001.jpg');"></div>
+            <div class="article-image" style="background-image: url('storage/img_films/2001.jpg');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 1]"</h3>
                 <p class="author">de <em>[Prénom] [Nom]</em></p>
@@ -27,7 +26,7 @@
             <div class="overlay"></div>
         </article>
         <article id="film2">
-            <div class="article-image" style="background-image: url('assets/img/films/interstellar.jpg');"></div>
+            <div class="article-image" style="background-image: url('storage/img_films/interstellar.jpg');"></div>
             <div class="content">
                 <h3>"[Nom de mon film 2]"</h3>
                 <p class="author">de <em>[Prénom] [Nom]</em></p>

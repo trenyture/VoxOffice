@@ -1,4 +1,5 @@
 function lookingTitle(datas) {
+    console.log(datas)
     var liRes = "";
     $data = $(datas);
     $data.each(function () {
@@ -6,14 +7,17 @@ function lookingTitle(datas) {
         liRes += this.title + ' - ' + this.annee;
         liRes += '</li>';
     });
-    liRes += "<li><a onclick='changeFormAdd();' href='#'>Votre film n'apparaît pas ?</a></li>";
     $('ul#results').html(liRes);
+    $('h2.results-number big').html(datas.length);
+    $('form#search div.input-submit').html('<a onclick="changeFormAdd();" class="btn-secondary"><i class="fa fa-plus"></i> Ajouter un film</a>');
 }
 
 function changeFormAdd() {
+    $('form#formadd input#title').val($('form#search input#searchtitle').val());
+    $('form#formadd input#title').first().focus();
     $('form#formadd').removeClass('hidden');
     $('form#search').addClass('hidden');
-    return false;
+    document.getElementById('title').focus();
 }
 
 $(document).ready(function () {
@@ -30,7 +34,7 @@ $(document).ready(function () {
                 }
             });
         }
-    })
+    });
     // Vérification Formulaire avant l'envoi
     $('form#formadd').submit(function () {
         var okForm = true;
@@ -55,13 +59,5 @@ $(document).ready(function () {
             $('ul#error-messages').html(messageError);
             return false;
         }
-    })
-    
-    // Display search result
-    //$('form#search button[type="submit"]').on('click', function() {
-        var resultsNumber = $('#results li').length;
-        
-        //$('form .results-container').removeClass('hidden');
-        $('form h2 big').text(resultsNumber);
-    //});
+    });
 });

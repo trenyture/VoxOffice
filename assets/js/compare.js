@@ -62,7 +62,7 @@ function constructBad(films) {
         ulLi += '<li class="hidden">';
         ulLi += '<span>'+i+'.</span>'
         ulLi += '<i class="fa fa-heart wishlist wishlisted"></i>';
-        ulLi += '<div class="img-film" style="background-image:url(assets/img/films/' + this.image + ');"></div>';
+        ulLi += '<div class="img-film" style="background-image:url(storage/img_films/' + this.image + ');"></div>';
         ulLi += '<div class="text-container">';
         ulLi += '<h3>'+this.title+'</h3>';
         ulLi += '<h4>'+this.annee+'</h4>';
@@ -82,7 +82,7 @@ function constructGood(films) {
         ulLi += '<li class="hidden">';
         ulLi += '<span>'+i+'.</span>'
         ulLi += '<i class="fa fa-heart wishlist wishlisted"></i>';
-        ulLi += '<div class="img-film" style="background-image:url(assets/img/films/' + this.image + ');"></div>';
+        ulLi += '<div class="img-film" style="background-image:url(storage/img_films/' + this.image + ');"></div>';
         ulLi += '<div class="text-container">';
         ulLi += '<h3>'+this.title+'</h3>';
         ulLi += '<h4>'+this.annee+'</h4>';
