@@ -231,6 +231,11 @@ pip-log.txt
 ## WEBORAMA
 #############
 
-/storage/films
+/storage
 /public/css
 /public/js
+
+#############
+## DASHBOARD
+#############
+dashboard/

@@ -2,9 +2,10 @@
     .content-lg {
         @include display-flex;
         @include justify-content(space-between);
+        padding-bottom:4rem;
     }
     .content-sm a {
-        margin: 4rem 0;
+        margin-bottom: 4rem;
     }
     section {
         @include flex(1 1 50%);
@@ -50,7 +51,7 @@
         @include display-flex;
         @include align-items(center);
         height: 7.4rem;
-        margin-top: 3em;
+        margin-top: 3rem;
         padding: 1.5rem;
         background-color: #fff;
         @include box-shadow(0 .1rem .2rem 0 rgba(0, 0, 0, .25));
@@ -75,18 +76,18 @@
             font-size: 2rem;
             color: $medium-grey;
         }
-        i {
+        a.wishlist{
             position: absolute;
-            top: -2.4rem;
-            right: 0;
+            top: 1.4rem;
+            right: 1.4rem;
             font-size: 2rem;
             color: $medium-grey;
+            display:none;
             &:hover {
                 cursor: pointer;
             }
-            &.wishlisted {
+            i{
                 color: $red;
-                display: none;
             }
         }
         .img-film {
@@ -109,6 +110,11 @@
             font-family: $text-bold;
             font-size: 3.4rem;
             text-align: right;
+        }
+        &:hover{
+            a.wishlist{
+                display:block;
+            }
         }
     }
 }

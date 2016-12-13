@@ -69,6 +69,19 @@ function constructPage(films) {
             'image':value.image,
             'title':"J'ai voté pour "+value.title
         });
+        $('article#film' + i + ' a.btn-wishlist').attr('data-id',value.id);
+        if(value.favori == false || value.favori == 'false'){
+            $('article#film' + i + ' a.btn-wishlist').removeClass('yet').html();
+        }else{
+            $('article#film' + i + ' a.btn-wishlist').addClass('yet').html();
+        }
+    });
+}
+
+function addFav(id){
+    $.ajax({
+        url: 'assets/php/addfav.php?film_id='+id,
+        dataType: 'json'
     });
 }
 
@@ -90,6 +103,12 @@ $(document).ready(function () {
         event.preventDefault();
         elem = $(this);
         postToFeed(elem.data('title'), elem.attr('href'), elem.data('image'));
+    });
+
+    $('a.btn-wishlist').click(function(){
+        addFav($(this).attr('data-id'));
+        $(this).toggleClass('yet');
+        return false;
     });
     
     // Blur switch

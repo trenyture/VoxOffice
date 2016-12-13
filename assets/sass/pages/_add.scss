@@ -1,12 +1,63 @@
 .add-container {
     @extend .grey-section;
     .search-title-results {
+        margin-bottom:3rem;
         li {
-            font-size: 2rem;
-            font-weight: 600;
-            color: $dark-grey;
-            + li {
-                margin-top: .8rem;
+            position: relative;
+            @include display-flex;
+            @include align-items(center);
+            height: 7.4rem;
+            margin-top: 0.7rem;
+            padding: 1.5rem;
+            background-color: #fff;
+            @include box-shadow(0 .1rem .2rem 0 rgba(0, 0, 0, .25));
+            @include border-radius(.2rem);
+            @include transition();
+            &:hover {
+                @include box-shadow(0 .1rem 1.5rem 0 rgba(0, 0, 0, .2));
+            }
+            h3 {
+                padding-bottom: 1rem;
+                font-family: $text-semibold;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                color: $dark-grey;
+                text-overflow: ellipsis;
+            }
+            h4 {
+                font-family: $text-light;
+                font-size: 1.5rem;
+                font-style: italic;
+                color: $medium-grey;
+            }
+            .img-film,
+            .text-container{
+                @include flex(1 1 auto);
+            }
+            i {
+                position: absolute;
+                top: -2.4rem;
+                right: 0;
+                font-size: 2rem;
+                color: $medium-grey;
+                &:hover {
+                    cursor: pointer;
+                }
+                &.wishlisted {
+                    color: $red;
+                    display: none;
+                }
+            }
+            .img-film {
+                width: 7.2rem;
+                min-width: 7.2rem;
+                max-width: 7.2rem;
+                height: 7.2rem;
+                margin-right: 2rem;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include background-size(cover);
             }
         }
     }

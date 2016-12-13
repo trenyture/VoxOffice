@@ -1,8 +1,7 @@
 <?php
-	ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
 	include('newPDO.php');
-	if(!isset($_SESSION['fb_token'])){
+	if(!isset($_SESSION['fb_token']) && !isset($_GET['id'])){
 		header('location:../../index');
 	}else{
 	    $error;
@@ -14,6 +13,9 @@
 		if($ok == 1){
 			$error = false;
 			$msg = '';
+			$requClick = 'UPDATE VO_users SET click = click + 1 WHERE fb_id ='.$_SESSION['fbId'];
+			$requ = $maBD->prepare($requClick);
+			$ok = $requ->execute();
 		}else{
 			$error = true;
 			$msg = 'Vous avez fait planté la base de donnée';

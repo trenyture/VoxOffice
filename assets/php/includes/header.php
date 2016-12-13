@@ -146,7 +146,7 @@
                                 <span class="logoff"><i class="fa fa-power-off"></i></span>
                             </a>
                         </div>
-                        <p>Connecté en tant que :<br/><span id="username"><?php echo($_SESSION['fbName']); ?></span></p>
+                        <p>Connecté en tant que :<br/><a href="profile.php" id="username"><?php echo($_SESSION['fbName']); ?></a></p>
                     <?php
                     } else {
                     ?>

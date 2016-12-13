@@ -3,7 +3,12 @@ function lookingTitle(datas) {
     $data = $(datas);
     $data.each(function () {
         liRes += '<li>';
-        liRes += this.title + ' - ' + this.annee;
+        liRes += '<i class="fa fa-heart wishlist wishlisted"></i>';
+        liRes += '<div class="img-film" style="background-image:url(storage/vign_films/'+this.image+');"></div>';
+        liRes += '<div class="text-container">';
+        liRes += '<h3>'+this.title +' - '+this.annee+'</h3>';
+        liRes += '<h4>'+ this.author +'</h4>';
+        liRes += '</div>';
         liRes += '</li>';
     });
     $('ul#results').html(liRes);

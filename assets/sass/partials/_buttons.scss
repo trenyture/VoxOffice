@@ -140,10 +140,12 @@
 .btn-wishlist {
     @extend .btn-secondary-transparent;
     padding: 0 1.4rem;
-    display:none;
-    &:hover {
+    &:hover{
         background-color: $red;
-        
+    }
+    &.yet {
+        background-color: $red;
+        border:none;
     }
     i {
         padding: 0;

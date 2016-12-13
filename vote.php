@@ -20,7 +20,7 @@
                 <div class="vote-block">
                     <a href="#" class="btn-secondary btn-vote"><i class="fa fa-check"></i> <span>Voter</span></a>
                     <a href="#" class="btn-secondary-transparent btn-share" id="sh-f1" data-image="" data-title=""><i class="fa fa-facebook tablet-hidden"></i><i class="fa fa-share-alt tablet-only"></i> <span>Voter et partager</span></a>
-                    <a href="#" class="btn-wishlist"><i class="fa fa-heart-o"></i></a>
+                    <a href="#" class="btn-wishlist" data-id="" title="Ajouter ce film à vos favoris"><i class="fa fa-heart-o"></i></a>
                 </div>
             </div>
             <div class="overlay"></div>
@@ -34,7 +34,7 @@
                 <div class="vote-block">
                     <a href="#" class="btn-secondary btn-vote"><i class="fa fa-check"></i> <span>Voter</span></a>
                     <a href="#" class="btn-secondary-transparent btn-share" id="sh-f2" data-image="" data-title=""><i class="fa fa-facebook tablet-hidden"></i><i class="fa fa-share-alt tablet-only"></i> <span>Voter et partager</span></a>
-                    <a href="#" class="btn-wishlist"><i class="fa fa-heart-o"></i></a>
+                    <a href="#" class="btn-wishlist" data-id="" title="Ajouter ce film à vos favoris"><i class="fa fa-heart-o"></i></a>
                 </div>
             </div>
             <div class="overlay"></div>

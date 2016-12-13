@@ -125,12 +125,16 @@ header {
             font-size: 1.2rem;
             line-height: 1.4rem;
             @include transition();
-            span {
+            #username {
                 font-family: $text-semibold;
                 font-size: 1.4rem;
+                text-decoration:none;
                 color: $orange;
                 text-transform: uppercase;
                 @include transition();
+                &:hover{
+                    text-decoration:underline;
+                }
             }
             i {
                 font-size: 1.6rem;
@@ -202,7 +206,7 @@ header {
             
             p {
                 padding: 1.2rem 0;
-                span {
+                #username {
                     color: $purple;
                 }
             }
