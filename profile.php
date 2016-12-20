@@ -23,26 +23,23 @@
             <h2>Récompenses durement gagnées</h2>
             <ul>
                 <?php
-					if ($click >= 1) {
-						echo "<li><img src='assets/img/medals/carton.png' alt='Médaille en Carton! 1 click' title='Médaille en Carton! 1 click' /></li>";
-					}
 					if ($click >= 10) {
-						echo "<li><img src='assets/img/medals/chocolate.png' alt='Médaille en Chocolat! 10 clicks' title='Médaille en Chocolat! 10 clicks' /></li>";	
+						echo "<li><img src='assets/img/medals/iron-medal.png' alt='Médaille de Fer - 10 clics' /></li>";
 					}
 					if ($click >= 100) {
-						echo "<li><img src='assets/img/medals/fer.png' alt='Médaille de Fer! 100 clicks' title='Médaille de Fer! 100 clicks' /></li>";
+						echo "<li><img src='assets/img/medals/bronze-medal.png' alt='Médaille de Bronze - 100 clics' /></li>";
 					}
 					if ($click >= 1000) {
-						echo "<li><img src='assets/img/medals/bronze.png' alt='Médaille de Bronze! 1 000 clicks' title='Médaille de Bronze! 1 000 clicks' /></li>";
+						echo "<li><img src='assets/img/medals/silver-medal.png' alt='Médaille d'Argent - 1 000 clics' /></li>";
 					}
 					if ($click >= 10000) {
-						echo "<li><img src='assets/img/medals/argent.png' alt='Médaille d'Argent! 10 000 clicks' title='Médaille d'Argent! 10 000 clicks' /></li>";
+						echo "<li><img src='assets/img/medals/gold-medal.png' alt='Médaille d'Or - 10 000 clics' /></li>";
 					}
 					if ($click >= 100000) {
-						echo "<li><img src='assets/img/medals/or.png' alt='Médaille d'Or! 100 000 clicks' title='Médaille d'Or! 100 000 clicks' /></li>";
+						echo "<li><img src='assets/img/medals/platine-medal.png' alt='Médaille de Platine - 100 000 clics' /></li>";
 					}
 					if ($click >= 1000000) {
-						echo "<li><img src='assets/img/medals/trone.png' alt='Trone de Fer! 1 000 000 clicks' title='Trône de fer! 1 000 000 clicks' /></li>";
+						echo "<li><img src='assets/img/medals/unobtainium-medal.png' alt='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
 					}
 				?>
             </ul>

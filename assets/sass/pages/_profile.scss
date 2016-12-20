@@ -11,13 +11,17 @@
     article {
         &#medals {
             ul {
+                @include display-flex;
+                @include flex-wrap(wrap);
+                @include justify-content(space-between);
+                @include align-items(center);
                 text-align: center;
-                margin-bottom: 5rem;
+                margin-bottom: 3rem;
                 li {
-                    display: inline-block;
-                    margin-right: 1rem;
+                    @include flex(1 1 auto);
+                    margin: 0 2rem 2rem;
                     img {
-                        max-width: 12rem;
+                        max-width: 10rem;
                     }
                 }
             }

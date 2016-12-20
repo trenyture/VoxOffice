@@ -8,7 +8,7 @@ form {
             margin-top: 4rem;
         }
         
-        /*input:valid,
+        input:valid,
         input:invalid,
         input:valid:not([type="file"]) + label,
         input:invalid:not([type="file"]) + label,
@@ -39,9 +39,9 @@ form {
         select:invalid,
         textarea:invalid {
             background-color: $red;
-        }*/
+        }
         
-        &.valid-input input,
+        /*&.valid-input input,
         &.valid-input input:valid,
         &.valid-input input:not([type="file"]) + label,
         &.valid-input input:valid:not([type="file"]) + label,
@@ -92,7 +92,8 @@ form {
         &.invalid-input textarea,
         &.invalid-input textarea:invalid {
             background-color: $red;
-        }
+        }*/
+        
         &.filled label {
             font-size: 1.5rem;
             color: $grey !important;
