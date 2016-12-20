@@ -3180,16 +3180,88 @@ footer ul li a:hover {
 .profile-container article#favoris {
   padding-bottom: 5rem;
 }
-/* line 33, ../sass/pages/_profile.scss */
+/* line 31, ../sass/pages/_profile.scss */
+.profile-container article#favoris li {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 7.4rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  transition: all .3s;
+  -moz-border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  -moz-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
+}
+/* line 43, ../sass/pages/_profile.scss */
+.profile-container article#favoris li:hover .buttons {
+  display: block;
+}
+/* line 47, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .img_film {
+  width: 7.2rem;
+  min-width: 7.2rem;
+  max-width: 7.2rem;
+  height: 7.2rem;
+  margin-right: 2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 58, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .text-container {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+/* line 60, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .text-container h3 {
+  padding-bottom: 1rem;
+  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #2a2a2a;
+  text-overflow: ellipsis;
+}
+/* line 68, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .text-container h4 {
+  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #aaa;
+}
+/* line 75, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .buttons {
+  display: none;
+}
+/* line 77, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .buttons .delete-trash {
+  font-size: 3rem;
+  color: #7b6696;
+}
+/* line 80, ../sass/pages/_profile.scss */
+.profile-container article#favoris li .buttons .delete-trash:hover {
+  color: #F72359;
+}
+/* line 88, ../sass/pages/_profile.scss */
 .profile-container #sorting {
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
-/* line 36, ../sass/pages/_profile.scss */
+/* line 91, ../sass/pages/_profile.scss */
 .profile-container #sorting .search {
   float: left;
-  padding: 0 1rem;
   height: 4rem;
+  padding: 0 1rem;
   font-size: 1.8rem;
   font-weight: 600;
   color: #2a2a2a;
@@ -3204,20 +3276,20 @@ footer ul li a:hover {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 50, ../sass/pages/_profile.scss */
+/* line 105, ../sass/pages/_profile.scss */
 .profile-container #sorting .filters {
   float: right;
   line-height: 4rem;
 }
-/* line 53, ../sass/pages/_profile.scss */
+/* line 108, ../sass/pages/_profile.scss */
 .profile-container #sorting .filters .sort {
-  border: none;
-  background-color: #7b6696;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  padding: 0 1rem;
   margin-left: .5rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #7b6696;
+  border: none;
   cursor: pointer;
   -moz-border-radius: 0.2rem;
   -webkit-border-radius: 0.2rem;
@@ -3226,81 +3298,9 @@ footer ul li a:hover {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 64, ../sass/pages/_profile.scss */
+/* line 119, ../sass/pages/_profile.scss */
 .profile-container #sorting .filters .sort:hover {
   background-color: #fdbd4e;
-}
-/* line 69, ../sass/pages/_profile.scss */
-.profile-container #sorting li {
-  position: relative;
-  display: -webkit-flex;
-  display: flex;
-  height: 7.4rem;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  background-color: #fff;
-  transition: all .3s;
-  -webkit-align-items: center;
-  align-items: center;
-  -moz-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25);
-  -moz-border-radius: 0.2rem;
-  -webkit-border-radius: 0.2rem;
-  border-radius: 0.2rem;
-}
-/* line 81, ../sass/pages/_profile.scss */
-.profile-container #sorting li:hover .buttons {
-  display: block;
-}
-/* line 85, ../sass/pages/_profile.scss */
-.profile-container #sorting li .img_film {
-  width: 7.2rem;
-  min-width: 7.2rem;
-  max-width: 7.2rem;
-  height: 7.2rem;
-  margin-right: 2rem;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-position: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-/* line 96, ../sass/pages/_profile.scss */
-.profile-container #sorting li .text-container {
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-/* line 98, ../sass/pages/_profile.scss */
-.profile-container #sorting li .text-container h3 {
-  padding-bottom: 1rem;
-  font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
-  font-size: 1.8rem;
-  line-height: 2rem;
-  color: #2a2a2a;
-  text-overflow: ellipsis;
-}
-/* line 106, ../sass/pages/_profile.scss */
-.profile-container #sorting li .text-container h4 {
-  font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #aaa;
-}
-/* line 113, ../sass/pages/_profile.scss */
-.profile-container #sorting li .buttons {
-  display: none;
-}
-/* line 115, ../sass/pages/_profile.scss */
-.profile-container #sorting li .buttons .delete-trash {
-  font-size: 3rem;
-  color: #7b6696;
-}
-/* line 118, ../sass/pages/_profile.scss */
-.profile-container #sorting li .buttons .delete-trash:hover {
-  color: #F72359;
 }
 
 @media (max-width: 767px) {
