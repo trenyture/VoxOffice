@@ -15,18 +15,19 @@ window.fbAsyncInit = function(){
     js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
     ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false)
 );
-function postToFeed(title, url, image){
-    var obj = {method: 'feed',link: 'http://www.simon-tr.com/VoxOffice/', picture: 'http://www.simon-tr.com/VoxOffice/storage/img_films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
+function postToFeed(title, url, image, idG, idB){
+    var obj = {method: 'feed',link: 'http://www.simon-tr.com/projects/VoxOffice/', picture: 'http://www.simon-tr.com/projects/VoxOffice/storage/vign_films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
     function callback(response){
         if(response.post_id){
-            randFilms();
+            voteFor(idG,idB);
         }
     }
     FB.ui(obj, callback);
 }
 
 // Fin SDK Fb
-function voteFor(link){
+function voteFor(idG, idB){
+    var link = 'assets/php/addvote.php?idG='+idG+'&idB='+idB;
     $.ajax({
         url: link,
         success: function (result){
@@ -64,12 +65,15 @@ function constructPage(films) {
         $('article#film' + i + ' h3').html(value.title);
         $('article#film' + i + ' p.date').html(value.annee);
         $('article#film' + i + ' p.author em').html(value.author);
-        $('article#film' + i + ' a.btn-vote').attr('href', 'assets/php/addvote.php?id=' + value.id);
+        $('article#film' + i + ' a.btn-vote').data({
+            'theid':value.id
+        });
         $('article#film' + i + ' a.btn-share').attr('href', 'assets/php/addvote.php?id=' + value.id).data({
+            'theid':value.id,
             'image':value.image,
             'title':"J'ai voté pour "+value.title
         });
-        $('article#film' + i + ' a.btn-wishlist').attr('data-id',value.id);
+        $('article#film' + i + ' a.btn-wishlist').data('theid',value.id);
         if(value.favori == false || value.favori == 'false'){
             $('article#film' + i + ' a.btn-wishlist').removeClass('yet').html();
         }else{
@@ -89,54 +93,29 @@ $(document).ready(function () {
     randFilms();
 
     $('a#others').click(function (event) {
-        event.preventDefault();
         randFilms();
+        return false;
     });
 
     $('a.btn-vote').click(function(event){
-        event.preventDefault();
-        var href=$(this).attr('href');
-        voteFor(href);
+        var idG = $(this).data('theid'),
+            idB = $(this).closest('article').siblings('article').find('.btn-vote').data('theid');
+        voteFor(idG,idB);
+        return false;
     })
 
     $('.btn-share').click(function(event){
-        event.preventDefault();
+        var idG = $(this).data('theid'),
+            idB = $(this).closest('article').siblings('article').find('.btn-share').data('theid');
         elem = $(this);
-        postToFeed(elem.data('title'), elem.attr('href'), elem.data('image'));
+        postToFeed(elem.data('title'), elem.attr('href'), elem.data('image'), idG, idB);
+        return false;
     });
 
     $('a.btn-wishlist').click(function(){
-        addFav($(this).attr('data-id'));
+        addFav($(this).data('theid'));
         $(this).toggleClass('yet');
         return false;
     });
-    
-    // Blur switch
-    /*$(function() {
-        var input = $('#blurSwitch input');
-        
-        $(input).prop('checked', true);
-        $(input).click(blurSwitch);
-    });
-    function blurSwitch() {
-        var blurredImage = $('.vote-container .article-image');
-        
-        if (this.checked) {
-            $(blurredImage).attr('checked', true).css({
-                'webkit-filter': 'blur(.8rem)',
-                'filter': 'blur(.8rem)'
-            });
-            $(blurredImage).hover(function() {
-                $(this).css({
-                    'webkit-filter': 'blur(0)',
-                    'filter': 'blur(0)'
-                });
-            });
-        } else {
-            $(blurredImage).removeAttr('checked').css({
-                'webkit-filter': 'blur(0)',
-                'filter': 'blur(0)'
-            });
-        }
-    }*/
+
 });
