@@ -57,7 +57,7 @@
                     <li class="feature feature-compare">
                         <div class="feature-content">
                             <h3>Comparez.</h3>
-                            <p>Des paramètres comme la date de sortie ou la position dans le classement VoxOffice, bientôt disponibles.</p>
+                            <p>Le classement des films vous permet de voir instantanément les plus - ou les moins - populaires !</p>
                             <?php if(isset($_SESSION['fb_token'])){ ?>
                                 <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
                             <?php }?>
@@ -78,7 +78,7 @@
                 </div>
                 <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
                 <?php if(isset($_SESSION['fb_token'])) { ?>
-                    <a href="./vote" title="Connexion à Facebook" class="btn-fb">C'est parti!</a>
+                    <a href="./vote" title="Connexion à Facebook" class="btn-fb">Connecté !</a>
                 <?php } else { ?>
                     <a href="<?= $fbUrlConnect ?>" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
                 <?php } ?>

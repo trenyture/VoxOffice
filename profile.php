@@ -17,12 +17,12 @@
     $allFavs = $request->fetchAll(PDO::FETCH_OBJ);
 
 ?>
-	<section class="profile-container grey-section">
-		<h1>Votre profil</h1>
-		<article id='medals'>
-			<h2>Récompenses durement gagnées</h2>
-			<ul>
-				<?php
+    <section class="profile-container grey-section">
+        <h1>Votre profil</h1>
+        <article id='medals'>
+            <h2>Récompenses durement gagnées</h2>
+            <ul>
+                <?php
 					if ($click >= 1) {
 						echo "<li><img src='assets/img/medals/carton.png' alt='Médaille en Carton! 1 click' title='Médaille en Carton! 1 click' /></li>";
 					}
@@ -45,38 +45,38 @@
 						echo "<li><img src='assets/img/medals/trone.png' alt='Trone de Fer! 1 000 000 clicks' title='Trône de fer! 1 000 000 clicks' /></li>";
 					}
 				?>
-			</ul>
-		</article>
-		<article id='favoris'>
-			<h2>Vos films favoris:</h2>
-			<div class="content-lg">
-				<nav id="sorting">
-					<input class="search" placeholder="Search" />
-					<div><label>Organiser par: </label>
-						<button class="sort" data-sort="title">Titre</button>
-						<button class="sort" data-sort="year">Année</button>
-						<button class="sort" data-sort="real">Réalisateur</button>
-					</div>
-				</nav>
-				<ul class="list">
-					<?php foreach ($allFavs as $one) {
-					?>
-						<li>
-							<div class="img_film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
-							<div class="text-container">
-								<h3 class="title-fav"><span class="title"><?= $one->title; ?></span> - <span class="year"><?= $one->annee; ?></span></h3>
-								<h4 class="real">Réalisé par <?= $one->author; ?></h4>
-							</div>
-							<nav class="buttons">
-								<a href="#" data-num="<?= $one->id; ?>" class="btn delete-trash"><i class="fa fa-trash-o"></i></a>
-							</nav>
-						</li>
-					<?php } ?>
-				</ul>
-			</div>
-		</article>
-	</section>
+            </ul>
+        </article>
+        <article id="favoris">
+            <h2>Vos films favoris :</h2>
+            <div class="content-lg">
+                <nav id="sorting">
+                    <input class="search" placeholder="Search" />
+                    <div class="filters">
+                        <label>Organiser par: </label>
+                        <button class="sort" data-sort="title">Titre</button>
+                        <button class="sort" data-sort="year">Année</button>
+                        <button class="sort" data-sort="real">Réalisateur</button>
+                    </div>
+                </nav>
+                <ul class="list">
+                    <?php foreach ($allFavs as $one) { ?>
+                        <li>
+                            <div class="img_film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
+                            <div class="text-container">
+                                <h3 class="title-fav"><span class="title"><?= $one->title; ?></span> - <span class="year"><?= $one->annee; ?></span></h3>
+                                <h4 class="real">Réalisé par <?= $one->author; ?></h4>
+                            </div>
+                            <nav class="buttons">
+                                <a href="#" data-num="<?= $one->id; ?>" class="btn delete-trash"><i class="fa fa-trash-o"></i></a>
+                            </nav>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </article>
+    </section>
 
     <script type="text/javascript" src="assets/js/profile.js"></script>
 
-<?php require_once('assets/php/includes/footer.php'); ?>
+    <?php require_once('assets/php/includes/footer.php'); ?>

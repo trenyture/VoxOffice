@@ -184,11 +184,8 @@
             margin: 0 auto 0 -16rem;
             background-color: $border-grey;
         }
-        &:last-of-type {
-            padding-bottom: 0;
-            &:after {
-                display: none;
-            }
+        &:last-of-type:after {
+            display: none;
         }
         
         .feature-content {
@@ -201,11 +198,10 @@
             p {
                 color: $purple;
             }
-            .btn-round{
-                margin-top:1rem;
+            a {
+                margin-top: 3.2rem;
             }
         }
-        
         .feature-img {
             position: relative;
             width: 50%;

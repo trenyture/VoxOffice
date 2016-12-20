@@ -8,36 +8,89 @@ form {
             margin-top: 4rem;
         }
         
-        &.valid-input input,
-        &.valid-input input:not([type="file"]) + label,
-        &.valid-input select,
-        &.valid-input select + label,
-        &.valid-input textarea,
-        &.valid-input textarea + label,
-        &.invalid-input input,
-        &.invalid-input input:not([type="file"]) + label,
-        &.invalid-input select,
-        &.invalid-input select + label,
-        &.invalid-input textarea,
-        &.invalid-input textarea + label {
+        /*input:valid,
+        input:invalid,
+        input:valid:not([type="file"]) + label,
+        input:invalid:not([type="file"]) + label,
+        select:valid,
+        select:invalid,
+        select:valid + label,
+        select:invalid + label,
+        textarea:valid,
+        textarea:invalid,
+        textarea:valid + label,
+        textarea:invalid + label {
             color: #fff;
         }
-        &.valid-input input[type="file"] {
+        input[type="file"]:valid {
             color: $green;
             background-color: transparent;
         }
-        &.invalid-input input[type="file"] {
+        input[type="file"]:invalid {
+            color: $red;
+            background-color: transparent;
+        }
+        input:valid,
+        select:valid,
+        textarea:valid {
+            background-color: $green;
+        }
+        input:invalid,
+        select:invalid,
+        textarea:invalid {
+            background-color: $red;
+        }*/
+        
+        &.valid-input input,
+        &.valid-input input:valid,
+        &.valid-input input:not([type="file"]) + label,
+        &.valid-input input:valid:not([type="file"]) + label,
+        &.valid-input select,
+        &.valid-input select:valid,
+        &.valid-input select + label,
+        &.valid-input select:valid + label,
+        &.valid-input textarea,
+        &.valid-input textarea:valid,
+        &.valid-input textarea + label,
+        &.valid-input textarea:valid + label,
+        &.invalid-input input,
+        &.invalid-input input:invalid,
+        &.invalid-input input:not([type="file"]) + label,
+        &.invalid-input input:invalid:not([type="file"]) + label,
+        &.invalid-input select,
+        &.invalid-input select:invalid,
+        &.invalid-input select + label,
+        &.invalid-input select:invalid + label,
+        &.invalid-input textarea,
+        &.invalid-input textarea:invalid,
+        &.invalid-input textarea + label,
+        &.invalid-input textarea:invalid + label {
+            color: #fff;
+        }
+        &.valid-input input[type="file"],
+        &.valid-input input[type="file"]:valid {
+            color: $green;
+            background-color: transparent;
+        }
+        &.invalid-input input[type="file"],
+        &.invalid-input input[type="file"]:invalid {
             color: $red;
             background-color: transparent;
         }
         &.valid-input input,
+        &.valid-input input:valid,
         &.valid-input select,
-        &.valid-input textarea {
+        &.valid-input select:valid,
+        &.valid-input textarea,
+        &.valid-input textarea:valid {
             background-color: $green;
         }
         &.invalid-input input,
+        &.invalid-input input:invalid,
         &.invalid-input select,
-        &.invalid-input textarea {
+        &.invalid-input select:invalid,
+        &.invalid-input textarea,
+        &.invalid-input textarea:invalid {
             background-color: $red;
         }
         &.filled label {

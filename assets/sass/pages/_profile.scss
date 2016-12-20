@@ -1,129 +1,136 @@
 .profile-container {
-    padding-top:15rem;
-    h1{
-        margin-bottom: 5rem;
-    }
-    h2{
+    h2 {
         margin-bottom: 5rem;
         font-family: "montserrat", Helvetica, Arial, sans-serif;
         font-size: 3.4rem;
         text-align: center;
         text-transform: none;
         text-shadow: none;
-        color:$orange;
+        color: $orange;
     }
-    article{
-        &#medals{
-            ul{
+    article {
+        &#medals {
+            ul {
                 text-align: center;
                 margin-bottom: 5rem;
-                li{
+                li {
                     display: inline-block;
                     margin-right: 1rem;
-                    img{
+                    img {
                         max-width: 12rem;
                     }
                 }
             }
         }
-        &#favoris{
-            padding-bottom:5rem; 
-            nav#sorting{
-                overflow: hidden;
-                margin-bottom: 1.5rem;
-                input.search{
-                    float: left;
-                    padding: 0 1rem;
-                    height: 4rem;
+        &#favoris {
+            padding-bottom: 5rem;
+        }
+    }
+    #sorting {
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        .search {
+            float: left;
+            padding: 0 1rem;
+            height: 4rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: $dark-grey;
+            background-color: #fff;
+            border: 0;
+            overflow: hidden;
+            transition: all .3s;
+            @include border-radius(.2rem);
+            @include box-sizing(border-box);
+        }
+        .filters {
+            float: right;
+            line-height: 4rem;
+            .sort {
+                border: none;
+                background-color: $purple;
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                padding: 0 1rem;
+                margin-left: .5rem;
+                cursor: pointer;
+                @include border-radius(.2rem);
+                @include box-sizing(border-box);
+                &:hover {
+                    background-color: $orange;
+                }
+            }
+        }
+        li {
+            position: relative;
+            @include display-flex;
+            height: 7.4rem;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #fff;
+            transition: all .3s;
+            @include align-items(center);
+            @include box-shadow(0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25));
+            @include border-radius(0.2rem);
+            &:hover {
+                .buttons {
+                    display: block;
+                }
+            }
+            .img_film {
+                width: 7.2rem;
+                min-width: 7.2rem;
+                max-width: 7.2rem;
+                height: 7.2rem;
+                margin-right: 2rem;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
+                @include background-size(cover);
+            }
+            .text-container {
+                @include flex(1 1 auto);
+                h3 {
+                    padding-bottom: 1rem;
+                    font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
                     font-size: 1.8rem;
-                    font-weight: 600;
-                    color: $dark-grey;
-                    background-color: #fff;
-                    border: 0;
-                    overflow: hidden;
-                    transition: all .3s;
-                    @include border-radius(.2rem);
-                    @include box-sizing(border-box);
+                    line-height: 2rem;
+                    color: #2a2a2a;
+                    text-overflow: ellipsis;
                 }
-                &>div{
-                    float: right;
-                    line-height: 4rem;
-                    button.sort{
-                        border: none;
-                        background-color: $purple;
-                        color: white;
-                        text-transform: uppercase;
-                        font-size: 1.5rem;
-                        padding: 0 1rem;
-                        margin-left: .5rem;
-                        cursor: pointer;
-                        @include border-radius(.2rem);
-                        @include box-sizing(border-box);
-                        &:hover{
-                            background-color:$orange;
-                        }
+                h4 {
+                    font-family: "montserrat_light", Helvetica, Arial, sans-serif;
+                    font-size: 1.5rem;
+                    font-style: italic;
+                    color: #aaa;
+                }
+            }
+            .buttons {
+                display: none;
+                .delete-trash {
+                    font-size: 3rem;
+                    color: $purple;
+                    &:hover {
+                        color: $red;
                     }
                 }
             }
-            ul.list{
-                li{
-                    position: relative;
-                    display: -webkit-flex;
-                    display: flex;
-                    height: 7.4rem;
-                    margin-top: 1.5rem;
-                    padding: 1.5rem;
-                    background-color: #fff;
-                    transition: all .3s;
-                    @include align-items(center);
-                    @include box-shadow(0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25));
-                    @include border-radius(0.2rem);
-
-                    div.img_film{
-                        width: 7.2rem;
-                        min-width: 7.2rem;
-                        max-width: 7.2rem;
-                        height: 7.2rem;
-                        margin-right: 2rem;
-                        display: inline-block;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        @include background-size(cover);
-                    }
-                    div.text-container{
-                        @include flex(1 1 auto);
-                        h3{
-                            padding-bottom: 1rem;
-                            font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
-                            font-size: 1.8rem;
-                            line-height: 2rem;
-                            color: #2a2a2a;
-                            text-overflow: ellipsis;
-                        }
-                        h4{
-                            font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-                            font-size: 1.5rem;
-                            font-style: italic;
-                            color: #aaa;
-                        }
-                    }
-                    nav.buttons{
-                        display: none;
-                        a.delete-trash{
-                            font-size: 3rem;
-                            color: $purple;
-                            &:hover{
-                                color:$orange;
-                            }
-                        }
-                    }
-                    &:hover{
-                        nav.buttons{
-                            display: block;
-                        }
-                    }
-                }
-            }
+        }
+    }
+}
+@media (max-width: $smartphoneMax) {
+    .profile-container #sorting {
+        .search {
+            width: 100%;
+            margin-bottom: 1.6rem;
+        }
+        .filters {
+            float: none;
+            clear: both;
+        }
+        label {
+            display: block;
         }
     }
 }

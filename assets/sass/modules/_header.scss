@@ -8,7 +8,6 @@ header {
     @include transition();
     @include clearfix;
     z-index: 100;
-    
     .logo {
         float: left;
         width: 5.7rem;
@@ -24,11 +23,9 @@ header {
             @include transition();
         }
     }
-    
     .hamburger {
         display: none;
     }
-    
     nav,
     ul li {
         display: inline-block;
@@ -48,12 +45,10 @@ header {
             }
         }
     }
-
     .user {
         float: right;
         color: $light-grey;
         vertical-align: middle;
-        
         .switch-container {
             float: left;
             line-height: 8rem;
@@ -62,7 +57,6 @@ header {
                 margin: 0 2.4rem 0 .6rem;
             }
         }
-        
         .user-portrait {
             position: relative;
             float: left;
@@ -71,9 +65,9 @@ header {
             @include transition();
             a {
                 overflow: hidden;
-                display:block;
-                width:4.8rem;
-                height:4.8rem;
+                display: block;
+                width: 4.8rem;
+                height: 4.8rem;
                 background-position: center;
                 @include background-size(cover);
                 @include border-radius(50%);
@@ -106,7 +100,7 @@ header {
                     color: #fff;
                     line-height: 8rem;
                     display: inline;
-                    width:auto;
+                    width: auto;
                     height: auto;
                     @include transition();
                     &:hover {
@@ -119,7 +113,7 @@ header {
             }
         }
         p {
-            padding: 2.1rem 0;
+            padding: 2.4rem 0;
             display: inline-block;
             font-family: $text-font;
             font-size: 1.2rem;
@@ -128,20 +122,26 @@ header {
             #username {
                 font-family: $text-semibold;
                 font-size: 1.4rem;
-                text-decoration:none;
+                text-decoration: none;
                 color: $orange;
                 text-transform: uppercase;
                 @include transition();
-                &:hover{
-                    text-decoration:underline;
+                &:hover {
+                    text-decoration: underline;
                 }
+            }
+            a {
+                max-width: 23rem;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             i {
                 font-size: 1.6rem;
             }
         }
     }
-    
     // Darkened
     &.darkened {
         background-color: rgba(0, 0, 0, .6);
@@ -151,7 +151,6 @@ header {
         height: 6rem;
         background: #fff;
         @include box-shadow(rgba(black, .35) 0 .1rem .2rem);
-        
         .logo {
             margin-top: .6rem;
             &:hover svg path {
@@ -161,7 +160,6 @@ header {
                 fill: $purple;
             }
         }
-        
         ul li a {
             line-height: 6rem;
             color: $purple;
@@ -169,10 +167,8 @@ header {
                 color: $orange;
             }
         }
-        
         .user {
             color: $grey;
-            
             .switch-container {
                 line-height: 6rem;
                 .switch {
@@ -181,15 +177,14 @@ header {
                     }
                     input {
                         &:checked + .slider {
-                           background-color: $purple;
+                            background-color: $purple;
                         }
                         &:focus + .slider {
-                           background-color: rgba(0, 0, 0, .6);
+                            background-color: rgba(0, 0, 0, .6);
                         }
                     }
                 }
             }
-            
             .user-portrait {
                 margin: .6rem 1.1rem 0 0;
                 &.disconnected {
@@ -203,9 +198,8 @@ header {
                     }
                 }
             }
-            
             p {
-                padding: 1.2rem 0;
+                padding: 1.4rem 0;
                 #username {
                     color: $purple;
                 }
@@ -223,14 +217,13 @@ header {
         }
     }
 }
+
 @media (max-width: $tablet) {
     header {
         height: 4.4rem;
-        
         .logo {
             display: none;
         }
-        
         .hamburger {
             width: 2rem;
             height: 1.5rem;
@@ -254,7 +247,6 @@ header {
                     @include transform(rotate(-45deg));
                 }
             }
-            
             span {
                 width: 2rem;
                 height: .2rem;
@@ -266,7 +258,6 @@ header {
                 }
             }
         }
-        
         nav {
             position: fixed;
             top: 4.4rem;
@@ -302,14 +293,15 @@ header {
                 }
             }
         }
-        
         .user {
             .switch-container {
                 line-height: 4.4rem;
             }
             .user-portrait {
-                margin: .7rem .8rem 0;
+                margin: .7rem .8rem;
                 a {
+                    width: 3rem;
+                    height: 3rem;
                     span {
                         width: 3rem;
                         height: 3rem;
@@ -334,21 +326,17 @@ header {
                 }
             }
         }
-        
         &.scrolled {
             height: 4.4rem;
-            
             .hamburger span {
                 background: $purple;
             }
-            
             nav ul li a {
                 color: #fff;
                 &:hover {
                     color: $orange;
                 }
             }
-            
             .user {
                 .switch-container {
                     line-height: 4.4rem;
@@ -366,21 +354,28 @@ header {
         }
     }
 }
+
 @media (max-width: $smartphone) and (orientation: landscape) {
     header nav ul li a,
     header.scrolled nav ul li a {
         font-size: 4.2rem;
     }
 }
+
 @media (max-width: $smartphoneMin) {
     header nav ul li a,
     header.scrolled nav ul li a {
         font-size: 4.2rem;
     }
+    
 }
+
 @media (max-width: $smartphoneMin) and (orientation: landscape) {
     header nav ul li a,
     header.scrolled nav ul li a {
         line-height: 4.6rem;
+    }
+    header .user p a {
+        max-width: 16rem;
     }
 }

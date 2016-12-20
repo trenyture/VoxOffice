@@ -15,9 +15,9 @@
         $arrayRequest = array($user,$title,$date,$author,$imgTitle, 0);
         $ok = $requete->execute($arrayRequest);
         if($ok == true){
-            $alert = "<p class='confirmation center'>Votre film a bien été ajouté!</p>";
+            $alert = "<p class='confirmation center'>Votre film a bien été ajouté !</p>";
         }else{
-            $alert = "<p class='error center'>Un problème est survenu lors de l'ajout, veuillez réessayer</p>";
+            $alert = "<p class='error center'>Un problème est survenu lors de l'ajout, veuillez réessayer.</p>";
         }
         return $alert;
     }
@@ -32,13 +32,13 @@
         if(isset($_POST)){
             if(!isset($_POST['title']) || $_POST['title'] == '' || preg_replace('/\s+/', '', $_POST['title']) == ''){
                 $uploadOk = 0;
-                $message .= "<li>Vous devez rentrer un titre au film!</li>";
+                $message .= "<li>Vous devez ajouter un titre au film !</li>";
             }else{
                 $title = htmlspecialchars($_POST['title']);  
             }
             if(!isset($_POST['year']) || $_POST['year'] == '' || preg_replace('/\s+/', '', $_POST['year']) == ''){
                 $uploadOk = 0;
-                $message .= "<li>Vous devez rentrer une date de sortie au film!</li>";
+                $message .= "<li>Vous devez ajouter une date de sortie au film !</li>";
             }else{
                 $date = htmlspecialchars($_POST['year']);
                 $date = preg_replace('/\s+/', '', $date);
@@ -246,11 +246,11 @@
                 <ul id="error-messages" class="errors">
                     <?php echo $message; ?>
                 </ul>
-                <div class="input-container valid-input">
+                <div class="input-container">
                     <input type="text" id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
                     <label for="title">Titre du film</label>
                 </div>
-                <div class="input-container invalid-input">
+                <div class="input-container">
                     <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
                     <label for="year">Année de production (AAAA)</label>
                 </div>
