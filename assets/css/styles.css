@@ -1992,17 +1992,17 @@ header.scrolled .user p #username {
   header.scrolled nav ul li a {
     font-size: 4.2rem;
   }
+
+  /* line 370, ../sass/modules/_header.scss */
+  header .user p a {
+    max-width: 16rem;
+  }
 }
 @media (max-width: 480px) and (orientation: landscape) {
-  /* line 374, ../sass/modules/_header.scss */
+  /* line 376, ../sass/modules/_header.scss */
   header nav ul li a,
   header.scrolled nav ul li a {
     line-height: 4.6rem;
-  }
-
-  /* line 378, ../sass/modules/_header.scss */
-  header .user p a {
-    max-width: 16rem;
   }
 }
 /* line 1, ../sass/modules/_footer.scss */

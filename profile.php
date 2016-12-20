@@ -24,22 +24,22 @@
             <ul>
                 <?php
 					if ($click >= 10) {
-						echo "<li><img src='assets/img/medals/iron-medal.png' alt='Médaille de Fer - 10 clics' /></li>";
+						echo "<li><img src='assets/img/medals/iron-medal.svg' alt='Médaille de Fer - 10 clics' /></li>";
 					}
 					if ($click >= 100) {
-						echo "<li><img src='assets/img/medals/bronze-medal.png' alt='Médaille de Bronze - 100 clics' /></li>";
+						echo "<li><img src='assets/img/medals/bronze-medal.svg' alt='Médaille de Bronze - 100 clics' /></li>";
 					}
 					if ($click >= 1000) {
-						echo "<li><img src='assets/img/medals/silver-medal.png' alt='Médaille d'Argent - 1 000 clics' /></li>";
+						echo "<li><img src='assets/img/medals/silver-medal.svg' alt='Médaille d'Argent - 1 000 clics' /></li>";
 					}
 					if ($click >= 10000) {
-						echo "<li><img src='assets/img/medals/gold-medal.png' alt='Médaille d'Or - 10 000 clics' /></li>";
+						echo "<li><img src='assets/img/medals/gold-medal.svg' alt='Médaille d'Or - 10 000 clics' /></li>";
 					}
 					if ($click >= 100000) {
-						echo "<li><img src='assets/img/medals/platine-medal.png' alt='Médaille de Platine - 100 000 clics' /></li>";
+						echo "<li><img src='assets/img/medals/platine-medal.svg' alt='Médaille de Platine - 100 000 clics' /></li>";
 					}
 					if ($click >= 1000000) {
-						echo "<li><img src='assets/img/medals/unobtainium-medal.png' alt='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
+						echo "<li><img src='assets/img/medals/unobtainium-medal.svg' alt='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
 					}
 				?>
             </ul>

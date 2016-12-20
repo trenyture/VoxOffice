@@ -367,15 +367,14 @@ header {
     header.scrolled nav ul li a {
         font-size: 4.2rem;
     }
-    
+    header .user p a {
+        max-width: 16rem;
+    }
 }
 
 @media (max-width: $smartphoneMin) and (orientation: landscape) {
     header nav ul li a,
     header.scrolled nav ul li a {
         line-height: 4.6rem;
-    }
-    header .user p a {
-        max-width: 16rem;
     }
 }
