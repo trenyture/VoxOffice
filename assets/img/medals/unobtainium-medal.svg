@@ -8,8 +8,7 @@
 	.st2{fill:#7B6696;}
 	.st3{fill:#5C4E72;}
 	.st4{fill:none;}
-	.st5{font-family:'Montserrat-Bold';}
-	.st6{font-size:72px;}
+	.st5{enable-background:new    ;}
 </style>
 <g>
 	<path class="st0" d="M277,0h-84.5L70.4,178.4h84.5L277,0z"/>
@@ -20,5 +19,8 @@
 		 M154.9,253.5c-31,0-56.3-25.4-56.3-56.3s25.3-56.3,56.3-56.3s56.3,25.4,56.3,56.3S185.9,253.5,154.9,253.5z"/>
 </g>
 <rect x="66.8" y="169.6" class="st4" width="176.2" height="54.9"/>
-<text transform="matrix(1 0 0 1 107.3092 223.0106)" class="st3 st5 st6">1M</text>
+<g class="st5">
+	<path class="st3" d="M117.1,223v-40.2h-9.3v-10.3h22.1V223H117.1z"/>
+	<path class="st3" d="M186.1,223l-0.1-32.8L173.9,218h-8.4l-12.1-27.7V223H142v-50.5h14l13.7,30l13.7-30h14V223H186.1z"/>
+</g>
 </svg>
