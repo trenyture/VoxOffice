@@ -138,3 +138,8 @@
         }
     }
 }
+@media (max-width: $smartphone) {
+    .profile-container h2 {
+        font-size: 3rem;
+    }
+}

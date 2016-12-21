@@ -1224,64 +1224,28 @@ form .input-container {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  /*&.valid-input input,
-  &.valid-input input:valid,
-  &.valid-input input:not([type="file"]) + label,
-  &.valid-input input:valid:not([type="file"]) + label,
-  &.valid-input select,
-  &.valid-input select:valid,
-  &.valid-input select + label,
-  &.valid-input select:valid + label,
-  &.valid-input textarea,
-  &.valid-input textarea:valid,
-  &.valid-input textarea + label,
-  &.valid-input textarea:valid + label,
-  &.invalid-input input,
-  &.invalid-input input:invalid,
-  &.invalid-input input:not([type="file"]) + label,
-  &.invalid-input input:invalid:not([type="file"]) + label,
-  &.invalid-input select,
-  &.invalid-input select:invalid,
-  &.invalid-input select + label,
-  &.invalid-input select:invalid + label,
-  &.invalid-input textarea,
-  &.invalid-input textarea:invalid,
-  &.invalid-input textarea + label,
-  &.invalid-input textarea:invalid + label {
-      color: #fff;
-  }
-  &.valid-input input[type="file"],
-  &.valid-input input[type="file"]:valid {
-      color: $green;
-      background-color: transparent;
-  }
-  &.invalid-input input[type="file"],
-  &.invalid-input input[type="file"]:invalid {
-      color: $red;
-      background-color: transparent;
-  }
-  &.valid-input input,
-  &.valid-input input:valid,
-  &.valid-input select,
-  &.valid-input select:valid,
-  &.valid-input textarea,
-  &.valid-input textarea:valid {
-      background-color: $green;
-  }
-  &.invalid-input input,
-  &.invalid-input input:invalid,
-  &.invalid-input select,
-  &.invalid-input select:invalid,
-  &.invalid-input textarea,
-  &.invalid-input textarea:invalid {
-      background-color: $red;
-  }*/
 }
 /* line 7, ../sass/partials/_forms.scss */
+form .input-container.filled label {
+  font-size: 1.5rem;
+  color: #6e6e6e !important;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 12, ../sass/partials/_forms.scss */
 form .input-container + .input-container {
   margin-top: 4rem;
 }
-/* line 11, ../sass/partials/_forms.scss */
+/* line 16, ../sass/partials/_forms.scss */
+form .input-container label,
+form .input-container input,
+form .input-container select,
+form .input-container textarea {
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+/* line 23, ../sass/partials/_forms.scss */
 form .input-container input:valid,
 form .input-container input:invalid,
 form .input-container input:valid:not([type="file"]) + label,
@@ -1296,45 +1260,29 @@ form .input-container textarea:valid + label,
 form .input-container textarea:invalid + label {
   color: #fff;
 }
-/* line 25, ../sass/partials/_forms.scss */
+/* line 37, ../sass/partials/_forms.scss */
 form .input-container input[type="file"]:valid {
   color: #2DCC70;
   background-color: transparent;
 }
-/* line 29, ../sass/partials/_forms.scss */
+/* line 41, ../sass/partials/_forms.scss */
 form .input-container input[type="file"]:invalid {
   color: #F72359;
   background-color: transparent;
 }
-/* line 33, ../sass/partials/_forms.scss */
+/* line 45, ../sass/partials/_forms.scss */
 form .input-container input:valid,
 form .input-container select:valid,
 form .input-container textarea:valid {
   background-color: #2DCC70;
 }
-/* line 38, ../sass/partials/_forms.scss */
+/* line 50, ../sass/partials/_forms.scss */
 form .input-container input:invalid,
 form .input-container select:invalid,
 form .input-container textarea:invalid {
   background-color: #F72359;
 }
-/* line 97, ../sass/partials/_forms.scss */
-form .input-container.filled label {
-  font-size: 1.5rem;
-  color: #6e6e6e !important;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* line 103, ../sass/partials/_forms.scss */
-form .input-container label,
-form .input-container input,
-form .input-container select,
-form .input-container textarea {
-  -webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-/* line 111, ../sass/partials/_forms.scss */
+/* line 57, ../sass/partials/_forms.scss */
 form label {
   position: absolute;
   top: 0;
@@ -1347,7 +1295,7 @@ form label {
   transform: translate3d(1rem, 3.3rem, 0);
   transition: all .3s;
 }
-/* line 122, ../sass/partials/_forms.scss */
+/* line 68, ../sass/partials/_forms.scss */
 form input[type="text"],
 form input[type="email"],
 form input[type="number"],
@@ -1369,7 +1317,7 @@ form select {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 140, ../sass/partials/_forms.scss */
+/* line 86, ../sass/partials/_forms.scss */
 form input[type="text"]:hover,
 form input[type="email"]:hover,
 form input[type="number"]:hover,
@@ -1378,7 +1326,7 @@ form textarea:hover,
 form select:hover {
   cursor: pointer;
 }
-/* line 143, ../sass/partials/_forms.scss */
+/* line 89, ../sass/partials/_forms.scss */
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="number"]:focus,
@@ -1389,7 +1337,7 @@ form select:focus {
   background-color: #7b6696 !important;
   outline: 0;
 }
-/* line 147, ../sass/partials/_forms.scss */
+/* line 93, ../sass/partials/_forms.scss */
 form input[type="text"]:focus + label,
 form input[type="email"]:focus + label,
 form input[type="number"]:focus + label,
@@ -1402,21 +1350,21 @@ form select:focus + label {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 154, ../sass/partials/_forms.scss */
+/* line 100, ../sass/partials/_forms.scss */
 form input:not([type="file"]),
 form select {
   height: 4.8rem;
 }
-/* line 158, ../sass/partials/_forms.scss */
+/* line 104, ../sass/partials/_forms.scss */
 form input[type="number"] {
   width: 32rem;
 }
-/* line 161, ../sass/partials/_forms.scss */
+/* line 107, ../sass/partials/_forms.scss */
 form input[type="file"] {
   padding: 0 0 1rem;
   background: transparent;
 }
-/* line 164, ../sass/partials/_forms.scss */
+/* line 110, ../sass/partials/_forms.scss */
 form input[type="file"]:focus {
   color: #7b6696;
   background: transparent !important;
@@ -1424,30 +1372,30 @@ form input[type="file"]:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 168, ../sass/partials/_forms.scss */
+/* line 114, ../sass/partials/_forms.scss */
 form input[type="file"]:focus + label {
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 172, ../sass/partials/_forms.scss */
+/* line 118, ../sass/partials/_forms.scss */
 form input[type="file"] + label {
   font-size: 1.5rem;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 177, ../sass/partials/_forms.scss */
+/* line 123, ../sass/partials/_forms.scss */
 form textarea {
   height: 15rem;
   resize: none;
   overflow-y: auto;
 }
-/* line 182, ../sass/partials/_forms.scss */
+/* line 128, ../sass/partials/_forms.scss */
 form button[type="submit"] {
   margin-top: 2rem;
 }
-/* line 186, ../sass/partials/_forms.scss */
+/* line 132, ../sass/partials/_forms.scss */
 form h2 {
   margin: 3rem 0 1.5rem;
   font-family: "montserrat", Helvetica, Arial, sans-serif;
@@ -1456,31 +1404,31 @@ form h2 {
   text-transform: none;
   text-shadow: none;
 }
-/* line 193, ../sass/partials/_forms.scss */
+/* line 139, ../sass/partials/_forms.scss */
 form h2 big {
   color: #7b6696;
   font-size: 2.4rem;
   font-weight: 700;
 }
-/* line 199, ../sass/partials/_forms.scss */
+/* line 145, ../sass/partials/_forms.scss */
 form span {
   font-size: 1.2rem;
   font-style: italic;
 }
-/* line 204, ../sass/partials/_forms.scss */
+/* line 150, ../sass/partials/_forms.scss */
 form .errors {
   margin-bottom: 4rem;
 }
-/* line 207, ../sass/partials/_forms.scss */
+/* line 153, ../sass/partials/_forms.scss */
 form .error {
   color: #F72359;
 }
-/* line 209, ../sass/partials/_forms.scss */
+/* line 155, ../sass/partials/_forms.scss */
 form .error + .error {
   padding-top: .3rem;
 }
 
-/* line 214, ../sass/partials/_forms.scss */
+/* line 160, ../sass/partials/_forms.scss */
 .confirmation {
   margin-top: 2rem;
   font-size: 2rem;
@@ -1489,21 +1437,21 @@ form .error + .error {
 }
 
 @media (max-width: 767px) {
-  /* line 222, ../sass/partials/_forms.scss */
+  /* line 168, ../sass/partials/_forms.scss */
   form {
     padding-bottom: 3rem;
   }
-  /* line 224, ../sass/partials/_forms.scss */
+  /* line 170, ../sass/partials/_forms.scss */
   form .input-container + .input-container {
     margin-top: 2rem;
   }
-  /* line 227, ../sass/partials/_forms.scss */
+  /* line 173, ../sass/partials/_forms.scss */
   form .error {
     text-align: center;
   }
 }
 @media (max-width: 767px) {
-  /* line 233, ../sass/partials/_forms.scss */
+  /* line 179, ../sass/partials/_forms.scss */
   form input[type="number"] {
     width: 100%;
   }
@@ -3126,19 +3074,19 @@ footer ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 69, ../sass/pages/_add.scss */
+  /* line 68, ../sass/pages/_add.scss */
   .add-container .results-container {
     text-align: center;
   }
-  /* line 72, ../sass/pages/_add.scss */
+  /* line 71, ../sass/pages/_add.scss */
   .add-container .search-title-results li {
     padding-left: 0;
   }
-  /* line 74, ../sass/pages/_add.scss */
+  /* line 73, ../sass/pages/_add.scss */
   .add-container .search-title-results li:before {
     display: none;
   }
-  /* line 77, ../sass/pages/_add.scss */
+  /* line 76, ../sass/pages/_add.scss */
   .add-container .search-title-results li + li {
     margin-top: 1rem;
   }
@@ -3317,5 +3265,11 @@ footer ul li a:hover {
   /* line 136, ../sass/pages/_profile.scss */
   .profile-container #sorting label {
     display: block;
+  }
+}
+@media (max-width: 640px) {
+  /* line 142, ../sass/pages/_profile.scss */
+  .profile-container h2 {
+    font-size: 3rem;
   }
 }

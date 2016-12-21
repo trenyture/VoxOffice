@@ -4,8 +4,20 @@ form {
         position: relative;
         @include display-flex;
         @include flex-direction(column);
+        &.filled label {
+            font-size: 1.5rem;
+            color: $grey !important;
+            @include translate3d(0, 0, 0);
+        }
         + .input-container {
             margin-top: 4rem;
+        }
+        
+        label,
+        input,
+        select,
+        textarea {
+            @include flex(1 1 auto);
         }
         
         input:valid,
@@ -39,72 +51,6 @@ form {
         select:invalid,
         textarea:invalid {
             background-color: $red;
-        }
-        
-        /*&.valid-input input,
-        &.valid-input input:valid,
-        &.valid-input input:not([type="file"]) + label,
-        &.valid-input input:valid:not([type="file"]) + label,
-        &.valid-input select,
-        &.valid-input select:valid,
-        &.valid-input select + label,
-        &.valid-input select:valid + label,
-        &.valid-input textarea,
-        &.valid-input textarea:valid,
-        &.valid-input textarea + label,
-        &.valid-input textarea:valid + label,
-        &.invalid-input input,
-        &.invalid-input input:invalid,
-        &.invalid-input input:not([type="file"]) + label,
-        &.invalid-input input:invalid:not([type="file"]) + label,
-        &.invalid-input select,
-        &.invalid-input select:invalid,
-        &.invalid-input select + label,
-        &.invalid-input select:invalid + label,
-        &.invalid-input textarea,
-        &.invalid-input textarea:invalid,
-        &.invalid-input textarea + label,
-        &.invalid-input textarea:invalid + label {
-            color: #fff;
-        }
-        &.valid-input input[type="file"],
-        &.valid-input input[type="file"]:valid {
-            color: $green;
-            background-color: transparent;
-        }
-        &.invalid-input input[type="file"],
-        &.invalid-input input[type="file"]:invalid {
-            color: $red;
-            background-color: transparent;
-        }
-        &.valid-input input,
-        &.valid-input input:valid,
-        &.valid-input select,
-        &.valid-input select:valid,
-        &.valid-input textarea,
-        &.valid-input textarea:valid {
-            background-color: $green;
-        }
-        &.invalid-input input,
-        &.invalid-input input:invalid,
-        &.invalid-input select,
-        &.invalid-input select:invalid,
-        &.invalid-input textarea,
-        &.invalid-input textarea:invalid {
-            background-color: $red;
-        }*/
-        
-        &.filled label {
-            font-size: 1.5rem;
-            color: $grey !important;
-            @include translate3d(0, 0, 0);
-        }
-        
-        label,
-        input,
-        select,
-        textarea {
-            @include flex(1 1 auto);
         }
     }
     

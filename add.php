@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['fb_token'])){
         // Si l'utilisateur accède a cette page sans etre connecté via facebook, on le renvoie sur la page d'accueil
-        // header('location:./index');
+        header('location:./index');
     }
 	require_once('assets/php/includes/header.php');
     date_default_timezone_set('UTC');
@@ -70,7 +70,7 @@
                             if($Mim['mime'] == $allExts[$ExtPr]  || $Mim['mime'] == $allExtsIE[$ExtPr]){
                                 $img_dir = "storage/img_films/";
                                 $vign_dir = "storage/vign_films/";
-                                //On recupere le titre de l'image en lowercase et on le split pour supprimer les espaces et les appostrophes*/
+                                // On recupere le titre de l'image en lowercase et on le split pour supprimer les espaces et les appostrophes*/
                                 $imgTitle = strtr($title, $unwanted_array);
                                 $imgTitle = strtolower($imgTitle);
                                 $imgTitle = preg_replace('/\s+/', '', $imgTitle);
@@ -86,7 +86,7 @@
                                         case 'image/jpeg':
                                         case 'image/pjpg':
                                         case 'image/pjpeg':
-                                            /*On ajoute au titre l'année ecemple : topgun_1994*/
+                                            // On ajoute au titre l'année exemple : topgun_1994
                                             $imgTitle.='.jpg';
                                             $imageFileType = pathinfo($img_dir,PATHINFO_EXTENSION);
                                             $Dims = getimagesize($_FILES['fileToUpload']['tmp_name']);
@@ -102,7 +102,7 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagejpeg($NImage , $img_dir.$imgTitle, 80);
-                                            //VIGNETTE
+                                            // VIGNETTE
                                             $nVign = imagecreatefromjpeg($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
@@ -140,7 +140,7 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagepng($NImage , $img_dir.$imgTitle, 9);
-                                            //VIGNETTE
+                                            // VIGNETTE
                                             $nVign = imagecreatefrompng($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
@@ -178,7 +178,7 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagegif($NImage , $img_dir.$imgTitle);
-                                            //VIGNETTE
+                                            // VIGNETTE
                                             $nVign = imagecreatefromgif($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
@@ -225,51 +225,52 @@
         }
     }
 ?>
-	<div class="add-container grey-section">
-        <h1>Ajoutez un film !</h1>
-        <div class="content-lg">
-            <form id="search" class="form-search-film <?php if(!$uploadOk){echo'hidden';}?>" action="" method="POST">
-                <?php echo $alert; ?>
-                <div class="input-container">
-                    <input type="text" id="searchtitle" name="searchtitle" maxlength="50" />
-                    <label for="searchtitle">Quel film recherchez-vous ?</label>
-                </div>
-                <div class="results-container">
-                    <h2 class="results-number"><big>0</big> résultats :</h2>
-                    <ul id="results" class="search-title-results">
-                    </ul>
-                </div>
-                <div class="input-submit center">
-                </div>
-            </form>
-            <form id="formadd" class="form-add-film <?php if($uploadOk){echo'hidden';}?>" method="post" enctype="multipart/form-data">
-                <ul id="error-messages" class="errors">
-                    <?php echo $message; ?>
+
+<div class="add-container grey-section">
+    <h1>Ajoutez un film !</h1>
+    <div class="content-lg">
+        <form id="search" class="form-search-film <?php if(!$uploadOk){echo'hidden';}?>" action="" method="POST">
+            <?php echo $alert; ?>
+            <div class="input-container">
+                <input type="text" id="searchtitle" name="searchtitle" maxlength="50" />
+                <label for="searchtitle">Quel film recherchez-vous ?</label>
+            </div>
+            <div class="results-container">
+                <h2 class="results-number"><big>0</big> résultats :</h2>
+                <ul id="results" class="search-title-results">
                 </ul>
-                <div class="input-container">
-                    <input type="text" id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
-                    <label for="title">Titre du film</label>
-                </div>
-                <div class="input-container">
-                    <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
-                    <label for="year">Année de production (AAAA)</label>
-                </div>
-                <div class="input-container">
-                    <input type="text" id="author" name="author" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['author'].'"';}?> required />
-                    <label for="author">Nom et prénom du réalisateur</label>
-                </div>
-                <div class="input-container ">
-                    <input type="file" id="fileToUpload" name="fileToUpload" required />
-                    <label for="fileToUpload">Affiche du film :</label>
-                    <span>Images en jpg, png ou gif (taille inférieure à 1.5Mb)</span>
-                </div>
-                <div class="input-submit center">
-                    <button type="submit" class="btn-secondary"><i class="fa fa-plus"></i> Ajouter</button>
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="input-submit center">
+            </div>
+        </form>
+        <form id="formadd" class="form-add-film <?php if($uploadOk){echo'hidden';}?>" method="post" enctype="multipart/form-data">
+            <ul id="error-messages" class="errors">
+                <?php echo $message; ?>
+            </ul>
+            <div class="input-container">
+                <input type="text" id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
+                <label for="title">Titre du film</label>
+            </div>
+            <div class="input-container">
+                <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
+                <label for="year">Année de production (AAAA)</label>
+            </div>
+            <div class="input-container">
+                <input type="text" id="author" name="author" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['author'].'"';}?> required />
+                <label for="author">Nom et prénom du réalisateur</label>
+            </div>
+            <div class="input-container ">
+                <input type="file" id="fileToUpload" name="fileToUpload" required />
+                <label for="fileToUpload">Affiche du film :</label>
+                <span>Images en jpg, png ou gif (taille inférieure à 1.5Mb)</span>
+            </div>
+            <div class="input-submit center">
+                <button type="submit" class="btn-secondary"><i class="fa fa-plus"></i> Ajouter</button>
+            </div>
+        </form>
     </div>
-       
-    <script type="text/javascript" src="assets/js/add.js"></script>
+</div>
+
+<script type="text/javascript" src="assets/js/add.js"></script>
     
 <?php require_once('assets/php/includes/footer.php'); ?>
