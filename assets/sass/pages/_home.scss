@@ -6,7 +6,6 @@
     }
     &.bigger {
         font-size: 2rem;
-        line-height: 2.4rem;
         padding-bottom: 4.2rem;
         span {
             text-transform: uppercase;
@@ -68,7 +67,7 @@
             position: absolute;
             content: '';
             left: 50%;
-            top: 3.4rem;
+            top: 3rem;
             width: 3.6rem;
             height: .1rem;
             margin-left: -1.8rem;
@@ -297,11 +296,10 @@
         }
         p {
             padding-bottom: 3.4rem;
-            line-height: 1.4rem;
             color: $light-grey;
+            line-height: 1.8rem;
             small {
                 font-size: 1.4rem;
-                line-height: 1.6rem;
                 text-align: center;
             }
         }
@@ -309,7 +307,6 @@
             padding-bottom: 4.2rem;
             font-family: $text-semibold;
             font-size: 2rem;
-            line-height: 2rem;
             color: $orange;
         }
     }

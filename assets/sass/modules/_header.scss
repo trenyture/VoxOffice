@@ -266,9 +266,11 @@ header {
             height: calc(100% - 4.4rem);
             text-align: center;
             background: rgba($dark-purple, .9);
+            @include opacity(0);
             @include translate3d(-200%, 0, 0);
             @include transition-duration(.5s);
             &.open-menu {
+                @include opacity(1);
                 @include translate3d(0, 0, 0);
             }
             & + li {
@@ -279,16 +281,25 @@ header {
                 @include flex-direction(column);
                 @include justify-content(center);
                 @include align-items(center);
-                text-align: center;
                 height: 100%;
                 li {
+                    @include flex(1 1 25%);
+                    @include display-flex;
+                    @include justify-content(center);
+                    @include align-items(center);
+                    @include transition();
+                    width: 100%;
                     & + li {
                         margin: 0;
                     }
+                    &:hover {
+                        background: rgba($dark-purple, 1);
+                    }
                     a {
+                        width: 100%;
+                        display: block;
                         font-size: 4.8rem;
                         color: #fff;
-                        line-height: 5.6rem;
                     }
                 }
             }

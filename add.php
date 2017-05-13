@@ -6,7 +6,7 @@
     }
 	require_once('assets/php/includes/header.php');
     date_default_timezone_set('UTC');
-    ////////////////////////////////////////////////////////
+
     function saveToBdd($title,$date,$author,$imgTitle){
         $maBD = connexionBD();
         $maBD->exec('SET NAMES utf8');
@@ -21,7 +21,7 @@
         }
         return $alert;
     }
-    ////////////////////////////////////////////////////////
+
     $first = true;
     $uploadOk = 1;
     $message="Tous les champs sont obligatoires.";
@@ -50,7 +50,6 @@
                 $author = htmlspecialchars($_POST['author']);
             }
             if ($uploadOk == 1) {
-                /////////////////////////////////////////////////////////////////////////////////
                 if (isset($_FILES) && !empty($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] <= 0){
                     if ($_FILES['fileToUpload']['size'] <= 16777216){
                         $unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',

@@ -6,8 +6,8 @@ function lookingTitle(datas) {
         liRes += '<i class="fa fa-heart wishlist wishlisted"></i>';
         liRes += '<div class="img-film" style="background-image:url(storage/vign_films/'+this.image+');"></div>';
         liRes += '<div class="text-container">';
-        liRes += '<h3>'+this.title +' - '+this.annee+'</h3>';
-        liRes += '<h4>'+ this.author +'</h4>';
+        liRes += '<h3>' + this.title + '</h3>';
+        liRes += '<h4>' + this.annee + ' - ' + this.author + '</h4>';
         liRes += '</div>';
         liRes += '</li>';
     });

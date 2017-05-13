@@ -50,7 +50,7 @@
 }
 @media (max-width: $smartphone) {
     .btn-primary {
-        padding: .9pxrem 6.4rem;
+        padding: .9rem 6.4rem;
         font-size: 3rem;
     }
 }
@@ -107,7 +107,7 @@
     color: #fff;
     background: $fb-blue;
     @include box-shadow(0 0 0 $dark-fb-blue, 0 .5rem 1rem rgba(0, 0, 0, .35));
-    @include border-radius(3px);
+    @include border-radius(.3rem);
     &:hover {
         background: darken($fb-blue, 5%);
         @include box-shadow(0 0 0 $dark-fb-blue, 0 .3rem .5rem rgba(0, 0, 0, .35));
@@ -151,7 +151,7 @@
     }
 }
 
-// Switches
+// Switches ()
 .switch {
     position: relative;
     display: inline-block;

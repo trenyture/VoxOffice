@@ -25,22 +25,22 @@
         <ul>
             <?php
                 if ($click >= 10) {
-                    echo "<li><img src='assets/img/medals/iron-medal.svg' alt='Médaille de Fer - 10 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/iron-medal.svg' alt='Médaille de Fer - 10 clics' title='Médaille de Fer - 10 clics' /></li>";
                 }
                 if ($click >= 100) {
-                    echo "<li><img src='assets/img/medals/bronze-medal.svg' alt='Médaille de Bronze - 100 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/bronze-medal.svg' alt='Médaille de Bronze - 100 clics' title='Médaille de Bronze - 100 clics' /></li>";
                 }
                 if ($click >= 1000) {
-                    echo "<li><img src='assets/img/medals/silver-medal.svg' alt='Médaille d'Argent - 1 000 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/silver-medal.svg' alt='Médaille d'Argent - 1 000 clics' title='Médaille d'Argent - 1 000 clics' /></li>";
                 }
                 if ($click >= 10000) {
-                    echo "<li><img src='assets/img/medals/gold-medal.svg' alt='Médaille d'Or - 10 000 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/gold-medal.svg' alt='Médaille d'Or - 10 000 clics' title='Médaille d'Or - 10 000 clics' /></li>";
                 }
                 if ($click >= 100000) {
-                    echo "<li><img src='assets/img/medals/platine-medal.svg' alt='Médaille de Platine - 100 000 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/platine-medal.svg' alt='Médaille de Platine - 100 000 clics' title='Médaille de Platine - 100 000 clics' /></li>";
                 }
                 if ($click >= 1000000) {
-                    echo "<li><img src='assets/img/medals/unobtainium-medal.svg' alt='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
+                    echo "<li><img src='assets/img/medals/unobtainium-medal.svg' alt='Médaille d'Unobtainium - 1 000 000 clics' title='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
                 }
             ?>
         </ul>
@@ -49,21 +49,21 @@
         <h2>Vos films favoris :</h2>
         <div class="content-lg">
             <nav id="sorting">
-                <input class="search" placeholder="Search" />
-                <div class="filters">
+                <input type="text" id="search-input" class="search left" name="search" placeholder="Rechercher..." />
+                <div class="filters right">
                     <label>Organiser par: </label>
-                    <button class="sort" data-sort="title">Titre</button>
-                    <button class="sort" data-sort="year">Année</button>
-                    <button class="sort" data-sort="real">Réalisateur</button>
+                    <button type="button" class="btn btn-secondary sort" data-sort="title">Titre</button>
+                    <button type="button" class="btn btn-secondary sort" data-sort="year">Année</button>
+                    <button type="button" class="btn btn-secondary sort" data-sort="real">Réalisateur</button>
                 </div>
             </nav>
             <ul class="list">
                 <?php foreach ($allFavs as $one) { ?>
                     <li>
-                        <div class="img_film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
+                        <div class="img-film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
                         <div class="text-container">
-                            <h3 class="title-fav"><span class="title"><?= $one->title; ?></span> - <span class="year"><?= $one->annee; ?></span></h3>
-                            <h4 class="real">Réalisé par <?= $one->author; ?></h4>
+                            <h3 class="title-fav"><span class="title"><?= $one->title; ?></span></h3>
+                            <h4 class="real"><span class="year"><?= $one->annee; ?></span> - <?= $one->author; ?></h4>
                         </div>
                         <nav class="buttons">
                             <a href="#" data-num="<?= $one->id; ?>" class="btn delete-trash"><i class="fa fa-trash-o"></i></a>

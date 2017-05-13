@@ -12,13 +12,13 @@
     <h1>Classement</h1>
     <div class="content-lg">
         <section id="best" class="best">
-            <h2>Les "meilleurs" films :</h2>
+            <h2>Les plus hauts :</h2>
             <ul class="list-compare">
 
             </ul>
         </section>
         <section id="worst" class="worst">
-            <h2>Les "pires" films :</h2>
+            <h2>Les plus bas :</h2>
             <ul>
 
             </ul>

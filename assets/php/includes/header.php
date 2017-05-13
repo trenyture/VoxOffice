@@ -36,9 +36,6 @@
         <meta name="description" content="Un site web pour choisir et voter pour le meilleur film!">
         <meta name="keywords" content="Meilleur,Film,Best,Movie,Simon,Trichereau,Pierre,Prezelin,VoxOffice,Voter,Vote,HTML,CSS,JavaScript,jQuery,Facebook,Share,Partage,Php,MySQL,SASS,Compass"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="google-site-verification" content="">-->
 
         <title>VoxOffice - Tous vos films favoris. Classés.</title>
 
@@ -67,9 +64,9 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
         <!-- Scripts -->
-        <script src="assets/js/vendors/jquery-3.1.0.min.js"></script>
+        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
         <script src="assets/js/main.js"></script>
     </head>
     <body class="<?=$bodyId;?>">
@@ -100,7 +97,7 @@
                     c-3.9,3.9-3.9,10.3,0,14.2l19.9,20H250.8c0,0-67.3-4.6-118.6,48.5S86.2,208.1,86.2,208.1z" />
                 </svg>
             </a>
-            <!--<?php if(isset($_SESSION['fb_token'])) { ?>
+            <?php if(isset($_SESSION['fb_token'])) { ?>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -114,20 +111,7 @@
                     <li><a href="./add">Ajouter</a></li>
                 </ul>
             </nav>
-            <?php } ?>-->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="./index.php">Accueil</a></li>
-                    <li><a href="./vote.php">Voter</a></li>
-                    <li><a href="./compare.php">Classement</a></li>
-                    <li><a href="./add.php">Ajouter</a></li>
-                </ul>
-            </nav>
+            <?php } ?>
             <div class="user">
                 <!--<?php //if (strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
                 <div class="switch-container" id="blurSwitch">

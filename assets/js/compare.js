@@ -27,8 +27,8 @@ function constructDatas(films, how) {
         }
         ulLi += '</a><div class="img-film" style="background-image:url(storage/vign_films/' + this.image + ');"></div>';
         ulLi += '<div class="text-container">';
-        ulLi += '<h3>'+this.title+'</h3>';
-        ulLi += '<h4>'+this.annee+'</h4>';
+        ulLi += '<h3>' + this.title + '</h3>';
+        ulLi += '<h4>' + this.annee + ' - ' + this.author + '</h4>';
         ulLi += '<div class="score"><p>'+this.vote+'</p></div>'
         ulLi += '</li>';
         i = i + 1;
@@ -46,8 +46,8 @@ function constructDatas(films, how) {
         }
         ulLi += '</a><div class="img-film" style="background-image:url(storage/vign_films/' + this.image + ');"></div>';
         ulLi += '<div class="text-container">';
-        ulLi += '<h3>'+this.title+'</h3>';
-        ulLi += '<h4>'+this.annee+'</h4>';
+        ulLi += '<h3>' + this.title + '</h3>';
+        ulLi += '<h4>' + this.annee + ' - ' + this.author + '</h4>';
         ulLi += '<div class="score"><p>'+this.vote+'</p></div>'
         ulLi += '</li>';
         i2 = i2 + 1;

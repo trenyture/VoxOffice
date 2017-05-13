@@ -16,7 +16,7 @@
         <div class="article-image" style="background-image: url('storage/img_films/2001.jpg');"></div>
         <div class="content">
             <h3>"[Nom de mon film 1]"</h3>
-            <p class="author">de <em>[Prénom] [Nom]</em></p>
+            <p class="author"><em>[Prénom] [Nom]</em></p>
             <p class="date">[Année]</p>
             <div class="vote-block">
                 <a href="#" class="btn-secondary btn-vote" data-theid=""><i class="fa fa-check"></i> <span>Voter</span></a>

@@ -58,7 +58,7 @@
                 <?php echo $msg; ?>
             </ul>
             <div class="input-container">
-                <input type="email" name="mail" id="mail" value="<?php echo $_POST["mail"]; ?>" required />
+                <input type="email" name="mail" id="mail" value="<?php echo $_POST["mail"]; ?>" maxlength="200" required />
                 <label for="mail">Votre mail</label>
             </div>
             <div class="input-container">
@@ -72,7 +72,7 @@
                 <label for="sujet">Sujet de votre message</label>
             </div>
             <div class="input-container">
-                <textarea name="message" id="message" required><?php echo $_POST["message"]; ?></textarea>
+                <textarea name="message" id="message" maxlength="1000" required><?php echo $_POST["message"]; ?></textarea>
                 <label for="message">Détails de votre message</label>
             </div>
             <div class="input-submit center">

@@ -3,10 +3,10 @@
         margin-bottom: 5rem;
         font-family: "montserrat", Helvetica, Arial, sans-serif;
         font-size: 3.4rem;
+        color: $orange;
         text-align: center;
         text-transform: none;
         text-shadow: none;
-        color: $orange;
     }
     article {
         &#medals {
@@ -15,8 +15,8 @@
                 @include flex-wrap(wrap);
                 @include justify-content(space-between);
                 @include align-items(center);
-                text-align: center;
                 margin-bottom: 3rem;
+                text-align: center;
                 li {
                     @include flex(1 1 auto);
                     margin: 0 2rem 2rem;
@@ -36,51 +36,63 @@
                 margin-top: 2rem;
                 padding: 1.5rem;
                 background-color: #fff;
-                transition: all .3s;
+                @include transition();
                 @include border-radius(0.2rem);
-                @include box-shadow(0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.25));
+                @include box-shadow(0 .1rem .2rem 0 rgba(0, 0, 0, .25));
                 &:hover {
+                    @include box-shadow(0 .1rem 1.5rem 0 rgba(0, 0, 0, .2));
                     .buttons {
                         display: block;
                     }
                 }
-                .img_film {
-                    width: 7.2rem;
-                    min-width: 7.2rem;
-                    max-width: 7.2rem;
-                    height: 7.2rem;
-                    margin-right: 2rem;
-                    display: inline-block;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    @include background-size(cover);
-                }
-                .text-container {
-                    @include flex(1 1 auto);
-                    h3 {
-                        padding-bottom: 1rem;
-                        font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
-                        font-size: 1.8rem;
-                        line-height: 2rem;
-                        color: #2a2a2a;
-                        text-overflow: ellipsis;
-                    }
-                    h4 {
-                        font-family: "montserrat_light", Helvetica, Arial, sans-serif;
-                        font-size: 1.5rem;
-                        font-style: italic;
-                        color: #aaa;
-                    }
-                }
-                .buttons {
-                    display: none;
-                    .delete-trash {
-                        font-size: 3rem;
-                        color: $purple;
-                        &:hover {
-                            color: $red;
-                        }
-                    }
+            }
+            .text-container {
+                @include flex(1 1 auto);
+            }
+        }
+        h3,
+        h4 {
+            max-width: 70rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            &:first-letter {
+                text-transform: capitalize;
+            }
+        }
+        h3 {
+            padding-bottom: 1rem;
+            font-family: $text-semibold;
+            font-size: 1.8rem;
+            color: $dark-grey;
+        }
+        h4 {
+            padding-bottom: .5rem;
+            font-family: $text-light;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: $medium-grey;
+        }
+        
+        .img-film {
+            width: 7.2rem;
+            min-width: 7.2rem;
+            max-width: 7.2rem;
+            height: 7.2rem;
+            margin-right: 2rem;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            @include background-size(cover);
+        }
+        
+        .buttons {
+            display: none;
+            .delete-trash {
+                font-size: 3rem;
+                color: $purple;
+                &:hover {
+                    color: $red;
                 }
             }
         }
@@ -89,40 +101,19 @@
         overflow: hidden;
         margin-bottom: 1.5rem;
         .search {
-            float: left;
             height: 4rem;
-            padding: 0 1rem;
-            font-size: 1.8rem;
-            font-weight: 600;
             color: $dark-grey;
             background-color: #fff;
             border: 0;
             overflow: hidden;
-            transition: all .3s;
+            cursor: pointer;
+            @include transition();
             @include border-radius(.2rem);
             @include box-sizing(border-box);
         }
-        .filters {
-            float: right;
-            line-height: 4rem;
-            .sort {
-                margin-left: .5rem;
-                padding: 0 1rem;
-                font-size: 1.5rem;
-                color: #fff;
-                text-transform: uppercase;
-                background-color: $purple;
-                border: none;
-                cursor: pointer;
-                @include border-radius(.2rem);
-                @include box-sizing(border-box);
-                &:hover {
-                    background-color: $orange;
-                }
-            }
-        }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .profile-container #sorting {
         .search {
@@ -139,7 +130,24 @@
     }
 }
 @media (max-width: $smartphone) {
-    .profile-container h2 {
-        font-size: 3rem;
+    .profile-container {
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+@media (max-width: $smartphoneMin) {
+    .profile-container article {
+        h3,
+        h4 {
+            max-width: 25rem;
+        }
+        .img-film {
+            width: 6rem;
+            min-width: 6rem;
+            max-width: 6rem;
+            height: 6rem;
+            margin-right: 1.5rem;
+        }
     }
 }

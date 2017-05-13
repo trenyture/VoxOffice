@@ -70,6 +70,9 @@
             font-family: $text-semibold;
             font-size: 4.6rem;
             padding-bottom: 3rem;
+            &:first-letter {
+                text-transform: capitalize;
+            }
         }
         p + p {
             padding-top: 1.2rem;
@@ -78,6 +81,9 @@
             font-family: $text-light;
             font-size: 1.8rem;
             font-style: italic;
+            &:first-letter {
+                text-transform: capitalize;
+            }
         }
         .date {
             font-family: $text-font;

@@ -1,9 +1,8 @@
 .grey-section {
     min-height: 100vh;
-    padding-top: 20rem;
     background-color: $light-grey;
     h1 {
-        margin-bottom: 10rem;
+        padding: 20rem 0 10rem;
         font-family: $text-font;
         font-size: 6.4rem;
         font-weight: 600;
@@ -14,29 +13,19 @@
 }
 
 @media (max-width: $tablet) {
-    .grey-section {
-        padding-top: 15rem;
-        h1 {
-            font-size: 5.8rem;
-            margin-bottom: 7rem;
-        }
+    .grey-section h1 {
+        padding: 12rem 0 7rem;
+        font-size: 5.8rem;
     }
 }
-@media (max-width: $tablet) {
-    .grey-section {
-        padding-top: 15rem;
-        h1 {
-            font-size: 5.8rem;
-            margin-bottom: 7rem;
-        }
+@media (max-width: $smartphoneMax) {
+    .grey-section h1 {
+        font-size: 5.2rem;
     }
 }
 @media (max-width: $smartphoneMin) {
-    .grey-section {
-        padding-top: 10rem;
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 3rem;
-        }
+    .grey-section h1 {
+        padding: 10rem 0 5rem;
+        font-size: 4rem;
     }
 }

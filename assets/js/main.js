@@ -45,6 +45,17 @@ $(document).ready(function () {
         return false;
     });
 
+    // Inputs default state
+    /*if ($('input').length <= 0 || $('textarea').length <= 0 || $('select').length <= 0) {
+        var input = $('input');
+        var textarea = $('textarea');
+        var select = $('select');
+        
+        input.removeClass('invalid');
+        textarea.removeClass('invalid');
+        select.removeClass('invalid');
+    }*/
+    
     // Mobile menu opening {
     $('.hamburger').on('click', function (e) {
         e.preventDefault();
