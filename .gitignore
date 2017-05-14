@@ -222,7 +222,7 @@ pip-log.txt
 
 
 #############
-## SASS
+## SCSS
 #############
 
 .sass-cache
@@ -232,8 +232,6 @@ pip-log.txt
 #############
 
 /storage
-/public/css
-/public/js
 
 #############
 ## DASHBOARD
