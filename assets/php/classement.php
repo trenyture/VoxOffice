@@ -1,9 +1,9 @@
 <?php
 	ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
-	if(!isset($_SESSION['fb_token'])){
+	if (!isset($_SESSION['fb_token'])){
 		header('location:../../index');
-	}else{
+	} else {
 		include('newPDO.php');
 		$maBD = connexionBD();
 		$how = 0;
@@ -23,7 +23,7 @@
 			$test = sizeof($res);
 			if ($test == 0) {
 				$good->favori = false;
-			}else{
+			} else {
 				$good->favori = true;
 			}
 		}
@@ -39,7 +39,7 @@
 			$test = sizeof($res);
 			if ($test == 0) {
 				$bad->favori = false;
-			}else{
+			} else {
 				$bad->favori = true;
 			}
 		}

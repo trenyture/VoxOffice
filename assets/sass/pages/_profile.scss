@@ -73,7 +73,6 @@
             font-style: italic;
             color: $medium-grey;
         }
-        
         .img-film {
             width: 7.2rem;
             min-width: 7.2rem;
@@ -85,7 +84,6 @@
             background-position: center;
             @include background-size(cover);
         }
-        
         .buttons {
             display: none;
             .delete-trash {
@@ -129,6 +127,7 @@
         }
     }
 }
+
 @media (max-width: $smartphone) {
     .profile-container {
         h2 {
@@ -136,6 +135,7 @@
         }
     }
 }
+
 @media (max-width: $smartphoneMin) {
     .profile-container article {
         h3,

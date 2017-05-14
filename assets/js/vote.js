@@ -1,51 +1,65 @@
 // Share Facebook
-window.fbAsyncInit = function(){
+window.fbAsyncInit = function () {
     FB.init({
         appId: '898558203596431',
         status: true,
         cookie: true,
         xfbml: true,
-        version : 'v2.7'
-    }); 
+        version: 'v2.7'
+    });
 };
 
-(function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-    if(d.getElementById(id)) {return;}
-    js = d.createElement('script'); js.id = id; 
-    js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
-    ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false)
-);
-function postToFeed(title, url, image, idG, idB){
-    var obj = {method: 'feed',link: 'http://www.simon-tr.com/projects/VoxOffice/', picture: 'http://www.simon-tr.com/projects/VoxOffice/storage/vign_films/'+image,name: title,description: "Et toi, pour quoi aurais-tu voté?"};
-    function callback(response){
-        if(response.post_id){
-            voteFor(idG,idB);
+(function (d, debug) {
+    var js, id = 'facebook-jssdk',
+        ref = d.getElementsByTagName('script')[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement('script');
+    js.id = id;
+    js.async = true;
+    js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+    ref.parentNode.insertBefore(js, ref);
+}(document, /*debug*/ false));
+
+function postToFeed(title, url, image, idG, idB) {
+    var obj = {
+        method: 'feed',
+        link: 'http://www.simon-tr.com/projects/VoxOffice/',
+        picture: 'http://www.simon-tr.com/projects/VoxOffice/storage/vign_films/' + image,
+        name: title,
+        description: "Et toi, pour quoi aurais-tu voté?"
+    };
+
+    function callback(response) {
+        if (response.post_id) {
+            voteFor(idG, idB);
         }
     }
     FB.ui(obj, callback);
 }
 
-// Fin SDK Fb
-function voteFor(idG, idB){
-    var link = 'assets/php/addvote.php?idG='+idG+'&idB='+idB;
+// End SDK Fb
+function voteFor(idG, idB) {
+    var link = 'assets/php/addvote.php?idG=' + idG + '&idB=' + idB;
     $.ajax({
         url: link,
-        success: function (result){
-            if(result){
+        success: function (result) {
+            if (result) {
                 result = eval(result);
-                if(!result[0]){
+                if (!result[0]) {
                     randFilms();
-                }else{
+                } else {
                     alert(result[1]);
                 }
-            }else{
+            } else {
                 alert("Vous n'êtes pas connecté!");
             }
         }
     });
 }
 
-function randFilms(){
+function randFilms() {
     $.ajax({
         url: './assets/php/rand.php',
         dataType: 'json',
@@ -57,7 +71,7 @@ function randFilms(){
 
 function constructPage(films) {
     $films = $(films);
-    $.each($films, function(key, value){
+    $.each($films, function (key, value) {
         var i = key + 1;
         $('article#film' + i + ' div.article-image').css({
             'background-image': 'url(storage/img_films/' + value.image + ')'
@@ -66,25 +80,25 @@ function constructPage(films) {
         $('article#film' + i + ' p.date').html(value.annee);
         $('article#film' + i + ' p.author em').html(value.author);
         $('article#film' + i + ' a.btn-vote').data({
-            'theid':value.id
+            'theid': value.id
         });
         $('article#film' + i + ' a.btn-share').attr('href', 'assets/php/addvote.php?id=' + value.id).data({
-            'theid':value.id,
-            'image':value.image,
-            'title':"J'ai voté pour "+value.title
+            'theid': value.id,
+            'image': value.image,
+            'title': "J'ai voté pour " + value.title
         });
-        $('article#film' + i + ' a.btn-wishlist').data('theid',value.id);
-        if(value.favori == false || value.favori == 'false'){
+        $('article#film' + i + ' a.btn-wishlist').data('theid', value.id);
+        if (value.favori == false || value.favori == 'false') {
             $('article#film' + i + ' a.btn-wishlist').removeClass('yet').html();
-        }else{
+        } else {
             $('article#film' + i + ' a.btn-wishlist').addClass('yet').html();
         }
     });
 }
 
-function addFav(id){
+function addFav(id) {
     $.ajax({
-        url: 'assets/php/addfav.php?film_id='+id,
+        url: 'assets/php/addfav.php?film_id=' + id,
         dataType: 'json'
     });
 }
@@ -97,14 +111,14 @@ $(document).ready(function () {
         return false;
     });
 
-    $('a.btn-vote').click(function(event){
+    $('a.btn-vote').click(function (event) {
         var idG = $(this).data('theid'),
             idB = $(this).closest('article').siblings('article').find('.btn-vote').data('theid');
-        voteFor(idG,idB);
+        voteFor(idG, idB);
         return false;
     })
 
-    $('.btn-share').click(function(event){
+    $('.btn-share').click(function (event) {
         var idG = $(this).data('theid'),
             idB = $(this).closest('article').siblings('article').find('.btn-share').data('theid');
         elem = $(this);
@@ -112,7 +126,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('a.btn-wishlist').click(function(){
+    $('a.btn-wishlist').click(function () {
         addFav($(this).data('theid'));
         $(this).toggleClass('yet');
         return false;

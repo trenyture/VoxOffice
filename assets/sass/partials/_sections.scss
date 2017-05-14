@@ -18,11 +18,13 @@
         font-size: 5.8rem;
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .grey-section h1 {
         font-size: 5.2rem;
     }
 }
+
 @media (max-width: $smartphoneMin) {
     .grey-section h1 {
         padding: 10rem 0 5rem;

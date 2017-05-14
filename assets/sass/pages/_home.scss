@@ -1,7 +1,7 @@
 .home section p {
     font-family: $text-font;
     font-size: 1.6rem;
-    & + p {
+    +p {
         padding-top: 2rem;
     }
     &.bigger {
@@ -18,15 +18,17 @@
         }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .home section p.bigger {
         padding-bottom: 0;
     }
 }
+
 @media (max-width: $smartphone) {
     .home section p {
         font-size: 1.4rem;
-        & + p {
+        +p {
             padding-top: 1.6rem;
         }
         &.bigger {
@@ -36,9 +38,11 @@
     }
 }
 
+
 /* ======================================
     INTRODUCTION
 ====================================== */
+
 .home-intro {
     position: relative;
     width: 100%;
@@ -47,13 +51,11 @@
     background: url("../img/home_background.jpg") no-repeat center center;
     background-position: center center;
     @include background-size(cover);
-    
     .intro-content {
         position: relative;
         top: 50%;
         @include transformY50;
     }
-    
     .subtitle {
         position: relative;
         padding: 5.4rem 0 .8rem;
@@ -75,6 +77,7 @@
         }
     }
 }
+
 @media (max-width: $smartphone) {
     .home-intro .subtitle {
         margin-bottom: 7.6rem;
@@ -85,20 +88,22 @@
         }
     }
 }
+
 @media (max-width: $smartphone) and (orientation: landscape) {
     .home-intro .subtitle {
         margin-bottom: 3.6rem;
     }
 }
 
+
 /* ======================================
     CONCEPT
 ====================================== */
+
 .home-description {
     background: url("../img/movie_clap.svg") no-repeat top -12rem right -2.4rem $purple;
     background-size: 38% auto;
     border-bottom: 1px solid $dark-purple;
-    
     .description {
         padding: 20rem 0;
         h2 {
@@ -115,33 +120,34 @@
             }
         }
     }
-    
 }
+
 @media (min-width: $desktop) {
     .home-description {
         background-size: auto;
     }
 }
+
 @media (max-width: $tabletMax) {
     .home-description {
         background-size: 40rem auto;
     }
 }
+
 @media (max-width: $tablet) {
     .home-description {
         background-size: 32rem auto;
-        background-position: right -2.4rem top -6rem ;
-        
+        background-position: right -2.4rem top -6rem;
         .description.half {
             width: 75%;
         }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .home-description {
         background-size: 25rem auto;
         background-position: center top -4rem;
-        
         .description.half {
             width: 100%;
             padding: 25rem 0 6rem;
@@ -151,25 +157,26 @@
         }
     }
 }
+
 @media (max-width: $smartphone) {
     .home-description .description.half h2 {
         padding-bottom: 1.6rem;
     }
 }
 
+
 /* ======================================
     HOW TO
 ====================================== */
+
 .home-features {
     padding: 8rem 0;
     background: $yellow;
-    
     h2 {
         color: $purple;
         text-align: center;
         padding-bottom: 2.4rem;
     }
-    
     .feature {
         position: relative;
         padding: 7.2rem 0;
@@ -186,7 +193,6 @@
         &:last-of-type:after {
             display: none;
         }
-        
         .feature-content {
             width: 50%;
             display: inline-block;
@@ -215,19 +221,19 @@
         }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .home-features .feature .feature-img img {
         height: 13rem;
     }
 }
+
 @media (max-width: $smartphone) {
     .home-features {
         padding: 6rem 0;
-        
         h2 {
             padding-bottom: 1.4rem;
         }
-        
         .feature {
             padding: 3.4rem 0;
             &:after {
@@ -235,7 +241,6 @@
                 margin: 0;
                 @include transformX50();
             }
-            
             .feature-content {
                 width: 100%;
                 text-align: center;
@@ -265,16 +270,17 @@
     }
 }
 
+
 /* ======================================
     GET STARTED
 ====================================== */
+
 .home-connect {
     position: relative;
     padding: 8rem 0;
     text-align: center;
     background: url("../img/movie_mosaic.jpg") no-repeat center center;
     @include background-size(cover);
-    
     .filter {
         position: absolute;
         content: '';
@@ -285,11 +291,9 @@
         background: rgba(0, 0, 0, 0.6);
         z-index: 0;
     }
-    
-    > div {
+    >div {
         position: relative;
         z-index: 1;
-        
         h2 {
             color: $orange;
             padding-bottom: 1.2rem;
@@ -311,14 +315,13 @@
         }
     }
 }
+
 @media (max-width: $smartphone) {
     .home-connect {
-       padding: 6rem 0;
-        
+        padding: 6rem 0;
         p {
             padding-bottom: 1.2rem;
         }
-        
         .alert {
             padding-bottom: 4rem;
             font-size: 1.6rem;

@@ -35,7 +35,7 @@ form {
             color: #fff;
             background-color: $purple;
             outline: 0;
-            + label {
+            +label {
                 font-size: 1.5rem;
                 color: $purple;
                 @include translate3d(0, 0, 0);
@@ -56,11 +56,11 @@ form {
             color: $purple;
             background: transparent;
             @include box-shadow(none);
-            + label {
+            +label {
                 @include translate3d(0, 0, 0);
             }
         }
-        + label {
+        +label {
             font-size: 1.5rem;
             @include translate3d(0, 0, 0);
         }
@@ -74,7 +74,6 @@ form {
     button[type="submit"] {
         margin-top: 2rem;
     }
-    
     .input-container {
         position: relative;
         @include display-flex;
@@ -84,28 +83,25 @@ form {
             color: $grey;
             @include translate3d(0, 0, 0);
         }
-        + .input-container {
+        +.input-container {
             margin-top: 4rem;
         }
-        
         label,
         input,
         select,
         textarea {
             @include flex(1 1 auto);
         }
-        
-        input:required:focus:valid + label,
-        select:required:focus:valid + label,
-        textarea:required:focus:valid + label {
+        input:required:focus:valid+label,
+        select:required:focus:valid+label,
+        textarea:required:focus:valid+label {
             color: $green;
         }
-        input:required:focus:invalid + label,
-        select:required:focus:invalid + label,
-        textarea:required:focus:invalid + label {
+        input:required:focus:invalid+label,
+        select:required:focus:invalid+label,
+        textarea:required:focus:invalid+label {
             color: $red;
         }
-        
         input:not([type="file"]):required:focus:valid,
         select:required:focus:valid,
         textarea:required:focus:valid {
@@ -116,24 +112,21 @@ form {
         textarea:required:focus:invalid {
             background-color: $red;
         }
-        
         input[type="file"]:valid,
         input[type="file"]:focus:valid {
             background-color: transparent;
-            + label {
+            +label {
                 color: $green;
             }
         }
         input[type="file"]:invalid,
         input[type="file"]:focus:invalid {
             background-color: transparent;
-            + label {
+            +label {
                 color: $red;
             }
         }
-        
     }
-    
     h2 {
         margin: 3rem 0 1.5rem;
         font-family: $text-font;
@@ -151,17 +144,17 @@ form {
         font-size: 1.2rem;
         font-style: italic;
     }
-    
     .errors {
         margin-bottom: 4rem;
     }
     .error {
         color: $red;
-        + .error {
+        +.error {
             padding-top: .3rem;
         }
     }
 }
+
 .confirmation {
     margin-top: 2rem;
     font-size: 2rem;
@@ -172,7 +165,7 @@ form {
 @media (max-width: $smartphoneMax) {
     form {
         padding-bottom: 3rem;
-        .input-container + .input-container {
+        .input-container+.input-container {
             margin-top: 2rem;
         }
         .error {
@@ -180,6 +173,7 @@ form {
         }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     form input[type="number"] {
         width: 100%;

@@ -1,7 +1,7 @@
 <?php
 	ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
-	if(!isset($_SESSION['fb_token'])){
+	if (!isset($_SESSION['fb_token'])){
 		header('location:../../index');
 	}
 	include('newPDO.php');
@@ -19,7 +19,7 @@
 		$test = sizeof($res);
 		if ($test == 0) {
 			$mark->favori = false;
-		}else{
+		} else {
 			$mark->favori = true;
 		}
 	}

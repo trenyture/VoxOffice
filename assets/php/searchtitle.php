@@ -1,6 +1,6 @@
 <?php
     session_start();
-	if(!isset($_SESSION['fb_token'])){
+	if (!isset($_SESSION['fb_token'])){
 		header('location:../../index');
 	}
 	include('newPDO.php');
@@ -9,5 +9,6 @@
 	$requete = $maBD->prepare($requExec);
 	$ok = $requete->execute();
 	$markers = $requete->fetchAll(PDO::FETCH_OBJ);
+
 	echo json_encode($markers);
 ?>

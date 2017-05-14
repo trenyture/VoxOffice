@@ -1,5 +1,4 @@
 <?php
-    
 	use Facebook\FacebookRedirectLoginHelper;
     use Facebook\FacebookSession;
     use Facebook\FacebookRequest;
@@ -11,24 +10,24 @@
         session_destroy();
         header('location:./index');
     }
-    //l'utilisateur se connecte avec FB
+    // User connects to Facebook
     if (isset($_GET) && isset($_GET['code'])) {
         header('location:./vote');
     }
     function test_user ($nom, $id){
-        $maBD = connexionBD() ;  // Cette fonction est définie dans le dossier helpers
+        $maBD = connexionBD() ;  // Defined in 'helpers' folder
         $texteRequete = ("SELECT * from VO_users WHERE VO_users.fb_id=".$id) ;
         $requete = $maBD->prepare($texteRequete) ;
         $ok = $requete->execute() ; 
-        // Dans $resultats, on récupère le résultat de la requête,
-        // sous la forme d'un tableau d'objets  
+        // In $resultats, we get the request result as a objects table...
         $resultats = $requete->fetchAll(PDO::FETCH_OBJ)  ;
-        if(sizeof($resultats)==0){
+        if (sizeof($resultats)==0){
             $requete = $maBD->prepare('INSERT INTO VO_users (fb_id, name) VALUES (?, ?)');
             $ok = $requete->execute(array($id, $nom));
         }
-        // Et on envoie ce résultat au programme qui l'a demandé : le controller
+        // ...and we send that resultat to the controller
     }
+
     /*FACEBOOK CONNECT*/
     $appId = '898558203596431';
     $appSecret = '16f33b4c7bca662b5b6d286fe9a2642d';
@@ -37,11 +36,11 @@
     $helper=new FacebookRedirectLoginHelper('http://simon-tr.com/projects/VoxOffice/index');
     if (isset($_SESSION) && isset($_SESSION['fb_token'])) {
         $session = new FacebookSession($_SESSION['fb_token']);
-    }else{
+    } else {
         $session = $helper->getSessionFromRedirect();
     }
-    if($session){
-        try{
+    if ($session) {
+        try {
             $_SESSION['fb_token'] = $session->getToken();
             $request = new FacebookRequest($session, 'GET', '/me');
             $profile = $request -> execute() -> getGraphObject();
@@ -52,7 +51,7 @@
             $picture = $request2 -> execute();
             $img = $picture->getGraphObject()->asArray();
             $_SESSION['fbImg'] = $img;
-        }catch(Exception $e){
+        } catch(Exception $e) {
             $_SESSION = null;
             session_destroy();
         }

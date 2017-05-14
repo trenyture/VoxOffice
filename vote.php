@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
+    if (!isset($_SESSION['fb_token'])){
+        // If user is not connected via facebook, back to home
         header('location:./index');
     }
     require_once('assets/php/includes/header.php');

@@ -39,7 +39,6 @@ footer {
         }
         a {
             color: #fff;
-            
             &:hover {
                 color: $orange;
             }
@@ -48,7 +47,7 @@ footer {
     ul li {
         margin-top: 2.2rem;
         display: inline-block;
-        & + li {
+        +li {
             margin-left: 1.4rem;
         }
         a {
@@ -63,6 +62,7 @@ footer {
         }
     }
 }
+
 @media (max-width: $smartphoneMax) {
     footer {
         padding: 3rem 0;

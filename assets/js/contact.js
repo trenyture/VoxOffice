@@ -1,18 +1,19 @@
+// Legacy mail verification
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
-// Sur les vieux navigateur il n'y a pas de verifications d'email du coup voici la fonction!!!
+
 
 $(document).ready(function () {
-    // Vérification formulaire
+    // Form verification
     $('form').submit(function (event) {
         var errorMsg = '',
             okSend = true;
         if ($('#mail').val() == '') {
             errorMsg += '<li class="error">Votre email est requis.</li>';
             okSend = false;
-        }else{
+        } else {
             if (validateEmail($('#mail').val()) == false) {
                 errorMsg += '<li class="error">Veuillez vérifier que votre email soit valide.</li>'
                 okSend = false;

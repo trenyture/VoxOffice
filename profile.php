@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accede a cette page sans etre connecté par facebook, on le renvoie sur la page d'accueil
+    if (!isset($_SESSION['fb_token'])){
+        // If user is not connected via facebook, back to home
         header('location:./index');
     }
     require_once('assets/php/includes/header.php');
@@ -24,25 +24,25 @@
         <h2>Récompenses durement gagnées :</h2>
         <ul>
             <?php
-                if ($click >= 10) {
-                    echo "<li><img src='assets/img/medals/iron-medal.svg' alt='Médaille de Fer - 10 clics' title='Médaille de Fer - 10 clics' /></li>";
-                }
-                if ($click >= 100) {
-                    echo "<li><img src='assets/img/medals/bronze-medal.svg' alt='Médaille de Bronze - 100 clics' title='Médaille de Bronze - 100 clics' /></li>";
-                }
-                if ($click >= 1000) {
-                    echo "<li><img src='assets/img/medals/silver-medal.svg' alt='Médaille d'Argent - 1 000 clics' title='Médaille d'Argent - 1 000 clics' /></li>";
-                }
-                if ($click >= 10000) {
-                    echo "<li><img src='assets/img/medals/gold-medal.svg' alt='Médaille d'Or - 10 000 clics' title='Médaille d'Or - 10 000 clics' /></li>";
-                }
-                if ($click >= 100000) {
-                    echo "<li><img src='assets/img/medals/platine-medal.svg' alt='Médaille de Platine - 100 000 clics' title='Médaille de Platine - 100 000 clics' /></li>";
-                }
-                if ($click >= 1000000) {
-                    echo "<li><img src='assets/img/medals/unobtainium-medal.svg' alt='Médaille d'Unobtainium - 1 000 000 clics' title='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
-                }
-            ?>
+            if ($click >= 10) {
+                echo "<li><img src='assets/img/medals/iron-medal.svg' alt='Médaille de Fer - 10 clics' title='Médaille de Fer - 10 clics' /></li>";
+            }
+            if ($click >= 100) {
+                echo "<li><img src='assets/img/medals/bronze-medal.svg' alt='Médaille de Bronze - 100 clics' title='Médaille de Bronze - 100 clics' /></li>";
+            }
+            if ($click >= 1000) {
+                echo "<li><img src='assets/img/medals/silver-medal.svg' alt='Médaille d'Argent - 1 000 clics' title='Médaille d'Argent - 1 000 clics' /></li>";
+            }
+            if ($click >= 10000) {
+                echo "<li><img src='assets/img/medals/gold-medal.svg' alt='Médaille d'Or - 10 000 clics' title='Médaille d'Or - 10 000 clics' /></li>";
+            }
+            if ($click >= 100000) {
+                echo "<li><img src='assets/img/medals/platine-medal.svg' alt='Médaille de Platine - 100 000 clics' title='Médaille de Platine - 100 000 clics' /></li>";
+            }
+            if ($click >= 1000000) {
+                echo "<li><img src='assets/img/medals/unobtainium-medal.svg' alt='Médaille d'Unobtainium - 1 000 000 clics' title='Médaille d'Unobtainium - 1 000 000 clics' /></li>";
+            }
+        ?>
         </ul>
     </article>
     <article id="favoris">
@@ -51,7 +51,7 @@
             <nav id="sorting">
                 <input type="text" id="search-input" class="search left" name="search" placeholder="Rechercher..." />
                 <div class="filters right">
-                    <label>Organiser par: </label>
+                    <label>Organiser par : </label>
                     <button type="button" class="btn btn-secondary sort" data-sort="title">Titre</button>
                     <button type="button" class="btn btn-secondary sort" data-sort="year">Année</button>
                     <button type="button" class="btn btn-secondary sort" data-sort="real">Réalisateur</button>
@@ -59,16 +59,18 @@
             </nav>
             <ul class="list">
                 <?php foreach ($allFavs as $one) { ?>
-                    <li>
-                        <div class="img-film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
-                        <div class="text-container">
-                            <h3 class="title-fav"><span class="title"><?= $one->title; ?></span></h3>
-                            <h4 class="real"><span class="year"><?= $one->annee; ?></span> - <?= $one->author; ?></h4>
-                        </div>
-                        <nav class="buttons">
-                            <a href="#" data-num="<?= $one->id; ?>" class="btn delete-trash"><i class="fa fa-trash-o"></i></a>
-                        </nav>
-                    </li>
+                <li>
+                    <div class="img-film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
+                    <div class="text-container">
+                        <h3 class="title-fav"><span class="title"><?= $one->title; ?></span></h3>
+                        <h4 class="real"><span class="year"><?= $one->annee; ?></span> -
+                            <?= $one->author; ?>
+                        </h4>
+                    </div>
+                    <nav class="buttons">
+                        <a href="#" data-num="<?= $one->id; ?>" class="btn delete-trash"><i class="fa fa-trash-o"></i></a>
+                    </nav>
+                </li>
                 <?php } ?>
             </ul>
         </div>

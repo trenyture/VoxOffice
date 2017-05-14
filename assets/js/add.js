@@ -26,7 +26,7 @@ function changeFormAdd() {
 
 $(document).ready(function () {
     $('form#search input#searchtitle').keyup(function () {
-        // On ne fait la recherche qu'à partir de 3 caractères minimum
+        // Seach after 3ch min
         if ($(this).val().length > 2) {
             var searchKey = $(this).val();
             $.ajax({
@@ -42,7 +42,7 @@ $(document).ready(function () {
         changeFormAdd();
         return false;
     });
-    // Vérification Formulaire avant l'envoi
+    // Form verification before sending
     $('form#formadd').submit(function () {
         var okForm = true;
         var messageError = '';

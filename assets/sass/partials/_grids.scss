@@ -4,9 +4,11 @@
 .content-sm {
     margin: 0 auto;
 }
+
 .content-fluid {
     width: 100%;
 }
+
 .content-lg {
     width: 960px;
     @media (max-width: $tabletMax) {
@@ -16,6 +18,7 @@
         @include box-sizing(border-box);
     }
 }
+
 .content-md {
     width: 860px;
     @media (max-width: $tabletMax) {
@@ -25,6 +28,7 @@
         @include box-sizing(border-box);
     }
 }
+
 .content-sm {
     width: 420px;
     @media (max-width: $smartphone) {
@@ -37,6 +41,7 @@
 .full {
     width: 100%;
 }
+
 .half {
     width: 50%;
     @media (max-width: $smartphoneMax) {
@@ -47,9 +52,11 @@
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
+
 .center {
     margin: 0 auto;
     text-align: center;
@@ -66,26 +73,31 @@
         display: none !important;
     }
 }
+
 @media (max-width: $desktopSmall) {
     .desktop-hidden {
         display: none !important;
     }
 }
+
 @media (min-width: $tabletMax) {
     .tablet-only {
         display: none !important;
     }
 }
+
 @media (max-width: $tabletMax) {
     .tablet-hidden {
         display: none !important;
     }
 }
+
 @media (min-width: $smartphoneMax) {
     .mobile-only {
         display: none !important;
     }
 }
+
 @media (max-width: $smartphoneMax) {
     .mobile-hidden {
         display: none !important;

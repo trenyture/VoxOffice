@@ -41,7 +41,7 @@
             color: $medium-grey;
         }
         .img-film,
-        .text-container{
+        .text-container {
             @include flex(1 1 auto);
         }
         i {
@@ -73,10 +73,11 @@
 }
 
 @media (max-width: $smartphoneMax) {
-    .add-container .search-title-results li + li {
+    .add-container .search-title-results li+li {
         margin-top: 1.5rem;
     }
 }
+
 @media (max-width: $smartphoneMin) {
     .add-container .search-title-results {
         h3,

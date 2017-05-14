@@ -18,6 +18,7 @@
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
 @mixin transformX50 {
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);

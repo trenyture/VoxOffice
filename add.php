@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if(!isset($_SESSION['fb_token'])){
-        // Si l'utilisateur accède a cette page sans etre connecté via facebook, on le renvoie sur la page d'accueil
+    if (!isset($_SESSION['fb_token'])){
+        // If user is not connected via facebook, back to home
         header('location:./index');
     }
 	require_once('assets/php/includes/header.php');
@@ -14,9 +14,9 @@
         $user = $_SESSION['fbId'];
         $arrayRequest = array($user,$title,$date,$author,$imgTitle, 0);
         $ok = $requete->execute($arrayRequest);
-        if($ok == true){
-            $alert = "<p class='confirmation center'>Votre film a bien été ajouté !</p>";
-        }else{
+        if ($ok == true){
+            $alert = "<p class='confirmation center'>Votre film a été ajouté avec succès !</p>";
+        } else {
             $alert = "<p class='error center'>Un problème est survenu lors de l'ajout, veuillez réessayer.</p>";
         }
         return $alert;
@@ -24,29 +24,29 @@
 
     $first = true;
     $uploadOk = 1;
-    $message="Tous les champs sont obligatoires.";
+    $message = "Tous les champs sont obligatoires.";
     if ($_POST) {
         $first = false;
-        $message="";
+        $message = "";
         $alert = '';
-        if(isset($_POST)){
-            if(!isset($_POST['title']) || $_POST['title'] == '' || preg_replace('/\s+/', '', $_POST['title']) == ''){
+        if (isset($_POST)){
+            if (!isset($_POST['title']) || $_POST['title'] == '' || preg_replace('/\s+/', '', $_POST['title']) == ''){
                 $uploadOk = 0;
                 $message .= "<li>Vous devez ajouter un titre au film !</li>";
-            }else{
+            } else {
                 $title = htmlspecialchars($_POST['title']);  
             }
-            if(!isset($_POST['year']) || $_POST['year'] == '' || preg_replace('/\s+/', '', $_POST['year']) == ''){
+            if (!isset($_POST['year']) || $_POST['year'] == '' || preg_replace('/\s+/', '', $_POST['year']) == ''){
                 $uploadOk = 0;
                 $message .= "<li>Vous devez ajouter une date de sortie au film !</li>";
-            }else{
+            } else {
                 $date = htmlspecialchars($_POST['year']);
                 $date = preg_replace('/\s+/', '', $date);
             }
-            if(!isset($_POST['author']) || $_POST['author'] == '' || preg_replace('/\s+/', '', $_POST['author']) == ''){
+            if (!isset($_POST['author']) || $_POST['author'] == '' || preg_replace('/\s+/', '', $_POST['author']) == ''){
                 $uploadOk = 0;
                 $message .= "<li>Vous devez préciser le réalisateur du film!</li>";
-            }else{
+            } else {
                 $author = htmlspecialchars($_POST['author']);
             }
             if ($uploadOk == 1) {
@@ -59,17 +59,17 @@
                                 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'þ'=>'b', 'ÿ'=>'y',  '€'=>'e',  '$'=>'s', '@'=>'a',
                                 '/'=>'', '&'=>'', '#'=>'', '%'=>'', '('=>'', ')'=>'', '='=>'', '+'=>'',  '*'=>'',  '^'=>'',   '¨'=>'', '{'=>'', '}'=>'', '´'=>'', '|'=>'', '['=>'', ']'=>'',
                                 '!'=>'', '¡'=>'', '.'=>'', ','=>'', '?'=>'', '¿'=>'', '-'=>'', '_'=>'', ';'=>'', '~'=>'', ':'=>'', '"'=>'', "'"=>'', '¬'=>'' );
-                        // Je vérifie l'extension présumée du fichier :
+                        // Check file extension :
                         $ExtPr = explode('.', $_FILES['fileToUpload']['name']);
                         $ExtPr = strtolower(end($ExtPr));
                         if ($ExtPr == 'jpg' || $ExtPr == 'jpeg' || $ExtPr == 'pjpg' || $ExtPr == 'pjpeg' || $ExtPr == 'gif' || $ExtPr == 'png'){
                             $allExts = array('jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'gif' => 'image/gif');
                             $allExtsIE = array('jpg' => 'image/pjpg', 'jpeg'=>'image/pjpeg'); // Il fallait une nouvelle fois qu'IE se différencie.
                             $Mim = getimagesize($_FILES['fileToUpload']['tmp_name']);
-                            if($Mim['mime'] == $allExts[$ExtPr]  || $Mim['mime'] == $allExtsIE[$ExtPr]){
+                            if ($Mim['mime'] == $allExts[$ExtPr]  || $Mim['mime'] == $allExtsIE[$ExtPr]){
                                 $img_dir = "storage/img_films/";
                                 $vign_dir = "storage/vign_films/";
-                                // On recupere le titre de l'image en lowercase et on le split pour supprimer les espaces et les appostrophes*/
+                                // Get image title in lowercase, then split it to delete useless formatting
                                 $imgTitle = strtr($title, $unwanted_array);
                                 $imgTitle = strtolower($imgTitle);
                                 $imgTitle = preg_replace('/\s+/', '', $imgTitle);
@@ -79,21 +79,21 @@
                                 if (file_exists($img_dir.$imgTitle.'.jpg') || file_exists($img_dir.$imgTitle.'.png') || file_exists($img_dir.$imgTitle.'.gif')){
                                     $alert = "<p class='error'>Désolé, un film portant ce nom et à cette date existe déjà.</p>";
                                     $uploadOk = 1;
-                                }else{
+                                } else {
                                     switch ($Mim['mime']) {
                                         // ### JPG
                                         case 'image/jpeg':
                                         case 'image/pjpg':
                                         case 'image/pjpeg':
-                                            // On ajoute au titre l'année exemple : topgun_1994
+                                            // Add year : topgun_1994
                                             $imgTitle.='.jpg';
                                             $imageFileType = pathinfo($img_dir,PATHINFO_EXTENSION);
                                             $Dims = getimagesize($_FILES['fileToUpload']['tmp_name']);
-                                            //IMG
+                                            // IMG
                                             $nImg = imagecreatefromjpeg($_FILES['fileToUpload']['tmp_name']);
-                                            if($Dims[0] > 1200){
+                                            if ($Dims[0] > 1200){
                                                 $nLar = 1000;
-                                            }else{
+                                            } else {
                                                 $nLar = $Dims[0];
                                             }
                                             $Red = (($nLar * 100)/$Dims[0]);
@@ -101,11 +101,11 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagejpeg($NImage , $img_dir.$imgTitle, 80);
-                                            // VIGNETTE
+                                            // Image
                                             $nVign = imagecreatefromjpeg($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
-                                            }else{
+                                            } else {
                                                 $vLar = $Dims[0];
                                             }
                                             $vRed = (($vLar * 100)/$Dims[0]);
@@ -117,7 +117,7 @@
                                                 imagedestroy($nImg);
                                                 $alert = saveToBdd($title,$date,$author,$imgTitle);
                                                 $uploadOk = 1;
-                                            }else{
+                                            } else {
                                                 $uploadOk = 0;
                                                 $message .= "<li>Il y a eu un problème lors de l'enregistrement de l'image.</li>";
                                             }
@@ -127,11 +127,11 @@
                                             $imgTitle.='.png';
                                             $imageFileType = pathinfo($img_dir,PATHINFO_EXTENSION);
                                             $Dims = getimagesize($_FILES['fileToUpload']['tmp_name']);
-                                            //IMG
+                                            // Image
                                             $nImg = imagecreatefrompng($_FILES['fileToUpload']['tmp_name']);
-                                            if($Dims[0] > 1200){
+                                            if ($Dims[0] > 1200){
                                                 $nLar = 1000;
-                                            }else{
+                                            } else {
                                                 $nLar = $Dims[0];
                                             }
                                             $Red = (($nLar * 100)/$Dims[0]);
@@ -139,11 +139,11 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagepng($NImage , $img_dir.$imgTitle, 9);
-                                            // VIGNETTE
+                                            // Image
                                             $nVign = imagecreatefrompng($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
-                                            }else{
+                                            } else {
                                                 $vLar = $Dims[0];
                                             }
                                             $vRed = (($vLar * 100)/$Dims[0]);
@@ -155,7 +155,7 @@
                                                 imagedestroy($nImg);
                                                 $alert = saveToBdd($title,$date,$author,$imgTitle);
                                                 $uploadOk = 1;
-                                            }else{
+                                            } else {
                                                 $uploadOk = 0;
                                                 $message .= "<li>Il y a eu un problème lors de l'enregistrement de l'image.</li>";
                                             }
@@ -165,11 +165,11 @@
                                             $imgTitle.='.gif';
                                             $imageFileType = pathinfo($img_dir,PATHINFO_EXTENSION);
                                             $Dims = getimagesize($_FILES['fileToUpload']['tmp_name']);
-                                            //IMG
+                                            // Image
                                             $nImg = imagecreatefromgif($_FILES['fileToUpload']['tmp_name']);
-                                            if($Dims[0] > 1200){
+                                            if ($Dims[0] > 1200){
                                                 $nLar = 1000;
-                                            }else{
+                                            } else {
                                                 $nLar = $Dims[0];
                                             }
                                             $Red = (($nLar * 100)/$Dims[0]);
@@ -177,11 +177,11 @@
                                             $NImage = imagecreatetruecolor($nLar , $nHaut) or die ("Erreur");
                                             imagecopyresampled($NImage , $nImg, 0, 0, 0, 0, $nLar, $nHaut, $Dims[0],$Dims[1]);
                                             $tImg = imagegif($NImage , $img_dir.$imgTitle);
-                                            // VIGNETTE
+                                            // Image
                                             $nVign = imagecreatefromgif($_FILES['fileToUpload']['tmp_name']);
                                             if ($Dims[0] > 200) {
                                                 $vLar = 150;
-                                            }else{
+                                            } else {
                                                 $vLar = $Dims[0];
                                             }
                                             $vRed = (($vLar * 100)/$Dims[0]);
@@ -193,30 +193,30 @@
                                                 imagedestroy($nImg);
                                                 $alert = saveToBdd($title,$date,$author,$imgTitle);
                                                 $uploadOk = 1;
-                                            }else{
+                                            } else {
                                                 $uploadOk = 0;
                                                 $message .= "<li>Il y a eu un problème lors de l'enregistrement de l'image.</li>";
                                             }
                                             break;
                                         default:
                                             $uploadOk = 0;
-                                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
+                                            $message .= "<li>Votre fichier est invalide... Veuillez importer uniquement des images en JPG, PNG ou GIF.</li>";
                                             break;
                                     }
                                 }
-                            }else{
+                            } else {
                                 $uploadOk = 0;
-                                $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
+                                $message .= "<li>Votre fichier est invalide... Veuillez importer uniquement des images en JPG, PNG ou GIF.</li>";
                             }
-                        }else{
+                        } else {
                             $uploadOk = 0;
-                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
+                            $message .= "<li>Votre fichier est invalide... Veuillez importer uniquement des images en JPG, PNG ou GIF.</li>";
                         }
-                    }else{
+                    } else {
                         $uploadOk = 0;
-                        $message .= "<li>Désolé, mais votre fichier est trop grand.</li>";
+                        $message .= "<li>Votre fichier est invalide... Veuillez réduire son poids.</li>";
                     }
-                }else{
+                } else {
                     $uploadOk = 0;
                     $message .= "<li>Vous devez importer une image !</li>";
                 }
@@ -226,9 +226,9 @@
 ?>
 
 <div class="add-container grey-section">
-    <h1>Ajoutez un film !</h1>
+    <h1>Ajoutez un film</h1>
     <div class="content-lg">
-        <form id="search" class="form-search-film <?php if(!$uploadOk){echo'hidden';}?>" action="" method="POST">
+        <form id="search" class="form-search-film <?php if (!$uploadOk){echo'hidden';}?>" action="" method="POST">
             <?php echo $alert; ?>
             <div class="input-container">
                 <input type="text" id="searchtitle" name="searchtitle" maxlength="50" />
@@ -242,26 +242,26 @@
             <div class="input-submit center">
             </div>
         </form>
-        <form id="formadd" class="form-add-film <?php if($uploadOk){echo'hidden';}?>" method="post" enctype="multipart/form-data">
+        <form id="formadd" class="form-add-film <?php if ($uploadOk){echo'hidden';}?>" method="post" enctype="multipart/form-data">
             <ul id="error-messages" class="errors">
                 <?php echo $message; ?>
             </ul>
             <div class="input-container">
-                <input type="text" required id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
+                <input type="text" required id="title" name="title" maxlength="50" <?php if (!$uploadOk && !$first){echo 'value="'.$_POST[ 'title']. '"';}?> autofocus required />
                 <label for="title">Titre du film</label>
             </div>
             <div class="input-container">
-                <input type="number" required id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
+                <input type="number" required id="year" name="year" min="1800" max="<?php echo date(" Y "); ?>" <?php if (!$uploadOk && !$first){echo 'value="'.$_POST[ 'year']. '"';}?> required />
                 <label for="year">Année de production (AAAA)</label>
             </div>
             <div class="input-container">
-                <input type="text" required id="author" name="author" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['author'].'"';}?> required />
+                <input type="text" required id="author" name="author" maxlength="50" <?php if (!$uploadOk && !$first){echo 'value="'.$_POST[ 'author']. '"';}?> required />
                 <label for="author">Nom et prénom du réalisateur</label>
             </div>
             <div class="input-container">
                 <input type="file" id="fileToUpload" name="fileToUpload" required />
                 <label for="fileToUpload">Affiche du film :</label>
-                <span>Images en jpg, png ou gif (taille inférieure à 1.5Mb)</span>
+                <span>Images en JPG, PNG ou GIF (taille inférieure à 1.5Mo)</span>
             </div>
             <div class="input-submit center">
                 <button type="submit" class="btn-secondary"><i class="fa fa-plus"></i> Ajouter</button>
@@ -271,5 +271,5 @@
 </div>
 
 <script type="text/javascript" src="assets/js/add.js"></script>
-    
+
 <?php require_once('assets/php/includes/footer.php'); ?>

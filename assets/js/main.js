@@ -44,7 +44,7 @@ $(document).ready(function () {
         }
         return false;
     });
-    
+
     // Mobile menu opening {
     $('.hamburger').on('click', function (e) {
         e.preventDefault();
@@ -53,7 +53,7 @@ $(document).ready(function () {
     });
 
     // Label animations
-    $('form input, form select, form textarea').blur(function() {
+    $('form input, form select, form textarea').blur(function () {
         if ($(this).val()) {
             $(this).parents('div').addClass('filled');
         } else {
