@@ -4,7 +4,7 @@ function lookingTitle(datas) {
     $data.each(function () {
         liRes += '<li>';
         liRes += '<i class="fa fa-heart wishlist wishlisted"></i>';
-        liRes += '<div class="img-film" style="background-image:url(storage/vign_films/'+this.image+');"></div>';
+        liRes += '<div class="img-film" style="background-image:url(storage/vign_films/' + this.image + ');"></div>';
         liRes += '<div class="text-container">';
         liRes += '<h3>' + this.title + '</h3>';
         liRes += '<h4>' + this.annee + ' - ' + this.author + '</h4>';
@@ -38,7 +38,7 @@ $(document).ready(function () {
             });
         }
     });
-    $('form#search').submit(function(event){
+    $('form#search').submit(function (event) {
         changeFormAdd();
         return false;
     });

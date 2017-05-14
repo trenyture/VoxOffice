@@ -200,25 +200,25 @@
                                             break;
                                         default:
                                             $uploadOk = 0;
-                                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF!</li>";
+                                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
                                             break;
                                     }
                                 }
                             }else{
                                 $uploadOk = 0;
-                                $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF!</li>";
+                                $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
                             }
                         }else{
                             $uploadOk = 0;
-                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF!</li>";
+                            $message .= "<li>Votre fichier est invalide... Seulement des images en JPG, PNG ou GIF !</li>";
                         }
                     }else{
                         $uploadOk = 0;
-                        $message .= "<li>Désolé mais votre fichier est trop grand.</li>";
+                        $message .= "<li>Désolé, mais votre fichier est trop grand.</li>";
                     }
                 }else{
                     $uploadOk = 0;
-                    $message .= "<li>Vous devez importer une image!</li>";
+                    $message .= "<li>Vous devez importer une image !</li>";
                 }
             }
         }
@@ -247,18 +247,18 @@
                 <?php echo $message; ?>
             </ul>
             <div class="input-container">
-                <input type="text" id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
+                <input type="text" required id="title" name="title" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['title'].'"';}?> autofocus required />
                 <label for="title">Titre du film</label>
             </div>
             <div class="input-container">
-                <input type="number" id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
+                <input type="number" required id="year" name="year" min="1800" max="<?php echo date("Y"); ?>" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['year'].'"';}?> required />
                 <label for="year">Année de production (AAAA)</label>
             </div>
             <div class="input-container">
-                <input type="text" id="author" name="author" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['author'].'"';}?> required />
+                <input type="text" required id="author" name="author" maxlength="50" <?php if(!$uploadOk && !$first){echo'value="'.$_POST['author'].'"';}?> required />
                 <label for="author">Nom et prénom du réalisateur</label>
             </div>
-            <div class="input-container ">
+            <div class="input-container">
                 <input type="file" id="fileToUpload" name="fileToUpload" required />
                 <label for="fileToUpload">Affiche du film :</label>
                 <span>Images en jpg, png ou gif (taille inférieure à 1.5Mb)</span>

@@ -1,59 +1,5 @@
 form {
     padding-bottom: 6rem;
-    .input-container {
-        position: relative;
-        @include display-flex;
-        @include flex-direction(column);
-        &.filled label {
-            font-size: 1.5rem;
-            color: $grey !important;
-            @include translate3d(0, 0, 0);
-        }
-        + .input-container {
-            margin-top: 4rem;
-        }
-        
-        label,
-        input,
-        select,
-        textarea {
-            @include flex(1 1 auto);
-        }
-        
-        input:valid,
-        input:invalid,
-        input:valid:not([type="file"]) + label,
-        input:invalid:not([type="file"]) + label,
-        select:valid,
-        select:invalid,
-        select:valid + label,
-        select:invalid + label,
-        textarea:valid,
-        textarea:invalid,
-        textarea:valid + label,
-        textarea:invalid + label {
-            color: #fff;
-        }
-        input[type="file"]:valid {
-            color: $green;
-            background-color: transparent;
-        }
-        input[type="file"]:invalid {
-            color: $red;
-            background-color: transparent;
-        }
-        input:valid,
-        select:valid,
-        textarea:valid {
-            background-color: $green;
-        }
-        input:invalid,
-        select:invalid,
-        textarea:invalid {
-            background-color: $red;
-        }
-    }
-    
     label {
         position: absolute;
         top: 0;
@@ -64,7 +10,6 @@ form {
         @include translate3d(1rem, 3.3rem, 0);
         @include transition();
     }
-
     input[type="text"],
     input[type="email"],
     input[type="number"],
@@ -88,11 +33,11 @@ form {
         }
         &:focus {
             color: #fff;
-            background-color: $purple !important;
+            background-color: $purple;
             outline: 0;
             + label {
                 font-size: 1.5rem;
-                color: $purple !important;
+                color: $purple;
                 @include translate3d(0, 0, 0);
             }
         }
@@ -109,7 +54,7 @@ form {
         background: transparent;
         &:focus {
             color: $purple;
-            background: transparent !important;
+            background: transparent;
             @include box-shadow(none);
             + label {
                 @include translate3d(0, 0, 0);
@@ -128,6 +73,65 @@ form {
     }
     button[type="submit"] {
         margin-top: 2rem;
+    }
+    
+    .input-container {
+        position: relative;
+        @include display-flex;
+        @include flex-direction(column);
+        &.filled label {
+            font-size: 1.5rem;
+            color: $grey;
+            @include translate3d(0, 0, 0);
+        }
+        + .input-container {
+            margin-top: 4rem;
+        }
+        
+        label,
+        input,
+        select,
+        textarea {
+            @include flex(1 1 auto);
+        }
+        
+        input:required:focus:valid + label,
+        select:required:focus:valid + label,
+        textarea:required:focus:valid + label {
+            color: $green;
+        }
+        input:required:focus:invalid + label,
+        select:required:focus:invalid + label,
+        textarea:required:focus:invalid + label {
+            color: $red;
+        }
+        
+        input:not([type="file"]):required:focus:valid,
+        select:required:focus:valid,
+        textarea:required:focus:valid {
+            background-color: $green;
+        }
+        input:not([type="file"]):required:focus:invalid,
+        select:required:focus:invalid,
+        textarea:required:focus:invalid {
+            background-color: $red;
+        }
+        
+        input[type="file"]:valid,
+        input[type="file"]:focus:valid {
+            background-color: transparent;
+            + label {
+                color: $green;
+            }
+        }
+        input[type="file"]:invalid,
+        input[type="file"]:focus:invalid {
+            background-color: transparent;
+            + label {
+                color: $red;
+            }
+        }
+        
     }
     
     h2 {
