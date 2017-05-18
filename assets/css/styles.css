@@ -3274,6 +3274,7 @@ footer ul li a:hover {
 /* line 101, ../sass/pages/_profile.scss */
 .profile-container #sorting .search {
   height: 4rem;
+  padding: 0 1rem;
   color: #2a2a2a;
   background-color: #fff;
   border: 0;
@@ -3289,34 +3290,34 @@ footer ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  /* line 117, ../sass/pages/_profile.scss */
+  /* line 118, ../sass/pages/_profile.scss */
   .profile-container #sorting .search {
     width: 100%;
     margin-bottom: 1.6rem;
   }
-  /* line 121, ../sass/pages/_profile.scss */
+  /* line 122, ../sass/pages/_profile.scss */
   .profile-container #sorting .filters {
     float: none;
     clear: both;
   }
-  /* line 125, ../sass/pages/_profile.scss */
+  /* line 126, ../sass/pages/_profile.scss */
   .profile-container #sorting label {
     display: block;
   }
 }
 @media (max-width: 640px) {
-  /* line 133, ../sass/pages/_profile.scss */
+  /* line 134, ../sass/pages/_profile.scss */
   .profile-container h2 {
     font-size: 3rem;
   }
 }
 @media (max-width: 480px) {
-  /* line 141, ../sass/pages/_profile.scss */
+  /* line 142, ../sass/pages/_profile.scss */
   .profile-container article h3,
   .profile-container article h4 {
     max-width: 25rem;
   }
-  /* line 145, ../sass/pages/_profile.scss */
+  /* line 146, ../sass/pages/_profile.scss */
   .profile-container article .img-film {
     width: 6rem;
     min-width: 6rem;
