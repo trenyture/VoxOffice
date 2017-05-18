@@ -2845,7 +2845,7 @@ footer ul li a:hover {
 }
 /* line 43, ../sass/pages/_compare.scss */
 .compare-container section h3 {
-  padding-bottom: 1rem;
+  padding-bottom: .5rem;
   font-family: "montserrat_semibold", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   color: #2a2a2a;
@@ -2944,72 +2944,73 @@ footer ul li a:hover {
   display: block;
   font-family: "montserrat_bold", Helvetica, Arial, sans-serif;
   font-size: 3.4rem;
+  line-height: 3rem;
   text-align: right;
 }
-/* line 122, ../sass/pages/_compare.scss */
+/* line 123, ../sass/pages/_compare.scss */
 .compare-container li:hover a.wishlist {
   display: block;
 }
 
 @media (max-width: 960px) {
-  /* line 131, ../sass/pages/_compare.scss */
+  /* line 132, ../sass/pages/_compare.scss */
   .compare-container .content-lg {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  /* line 134, ../sass/pages/_compare.scss */
+  /* line 135, ../sass/pages/_compare.scss */
   .compare-container section {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
   }
-  /* line 136, ../sass/pages/_compare.scss */
+  /* line 137, ../sass/pages/_compare.scss */
   .compare-container section + section {
     margin-top: 6rem;
   }
-  /* line 139, ../sass/pages/_compare.scss */
+  /* line 140, ../sass/pages/_compare.scss */
   .compare-container section h2 {
     font-size: 3rem;
     margin-bottom: 0;
   }
-  /* line 144, ../sass/pages/_compare.scss */
+  /* line 145, ../sass/pages/_compare.scss */
   .compare-container ul {
     margin-top: 5.8rem;
   }
-  /* line 147, ../sass/pages/_compare.scss */
+  /* line 148, ../sass/pages/_compare.scss */
   .compare-container li {
     width: 75%;
     height: auto;
     margin: 3rem auto 0;
   }
-  /* line 151, ../sass/pages/_compare.scss */
+  /* line 152, ../sass/pages/_compare.scss */
   .compare-container li + li {
     margin-top: 4rem;
   }
 }
 @media (max-width: 640px) {
-  /* line 160, ../sass/pages/_compare.scss */
+  /* line 161, ../sass/pages/_compare.scss */
   .compare-container li {
     width: auto;
     max-width: 100%;
   }
 }
 @media (max-width: 480px) {
-  /* line 170, ../sass/pages/_compare.scss */
+  /* line 171, ../sass/pages/_compare.scss */
   .compare-container section h2 {
     font-size: 2rem;
   }
-  /* line 173, ../sass/pages/_compare.scss */
+  /* line 174, ../sass/pages/_compare.scss */
   .compare-container section h3 {
     max-width: 25rem;
     padding-bottom: 0;
     font-size: 1.6rem;
   }
-  /* line 178, ../sass/pages/_compare.scss */
+  /* line 179, ../sass/pages/_compare.scss */
   .compare-container section h4 {
     max-width: 25rem;
     font-size: 1.4rem;
   }
-  /* line 184, ../sass/pages/_compare.scss */
+  /* line 185, ../sass/pages/_compare.scss */
   .compare-container li .img-film {
     width: 6rem;
     min-width: 6rem;
@@ -3017,7 +3018,7 @@ footer ul li a:hover {
     height: 6rem;
     margin-right: 1.5rem;
   }
-  /* line 191, ../sass/pages/_compare.scss */
+  /* line 192, ../sass/pages/_compare.scss */
   .compare-container li p {
     font-size: 2.4rem;
   }
