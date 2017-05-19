@@ -1,5 +1,5 @@
 # VoxOffice
-All your favorites movies, classified.
+All your favorites movies, sorted.
 
 # Technologies :
 HTML - Sass (with Compass) - jQuery - PHP - MySQL - Facebook app
