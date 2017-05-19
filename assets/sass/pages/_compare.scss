@@ -41,7 +41,7 @@
             }
         }
         h3 {
-            padding-bottom: 1rem;
+            padding-bottom: .5rem;
             font-family: $text-semibold;
             font-size: 1.8rem;
             color: $dark-grey;
@@ -116,6 +116,7 @@
             display: block;
             font-family: $text-bold;
             font-size: 3.4rem;
+            line-height: 3rem;
             text-align: right;
         }
         &:hover {
