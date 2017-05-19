@@ -1,9 +1,9 @@
 <?php
 	ini_set('display_errors', 1);  error_reporting(E_ALL);
     session_start();
-	if (!isset($_SESSION['fb_token'])){
+	if(!isset($_SESSION['fb_token'])){
 		header('location:../../index');
-	} else {
+	}else{
 		include('newPDO.php');
 		$maBD = connexionBD();
 		$how = 0;
@@ -11,7 +11,7 @@
 		if (isset($_GET['how'])) {
 			$how = intval($_GET['how'])*5;
 		}
-		$requGood = 'SELECT id,image,title,annee,vote,author FROM VO_films ORDER BY vote DESC, title ASC LIMIT '.$how.',5';
+		$requGood = 'SELECT id,image,author,title,annee,vote FROM VO_films ORDER BY vote DESC, title ASC LIMIT '.$how.',5';
 		$requete = $maBD->prepare($requGood);
 		$ok = $requete->execute() ;
 		$goods = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -23,11 +23,11 @@
 			$test = sizeof($res);
 			if ($test == 0) {
 				$good->favori = false;
-			} else {
+			}else{
 				$good->favori = true;
 			}
 		}
-		$requBad = 'SELECT id,image,title,annee,vote FROM VO_films ORDER BY vote ASC, title ASC LIMIT '.$how.',5';
+		$requBad = 'SELECT id,image,author,title,annee,vote FROM VO_films ORDER BY vote ASC, title ASC LIMIT '.$how.',5';
 		$request = $maBD->prepare($requBad);
 		$ok = $request->execute() ;
 		$bads = $request->fetchAll(PDO::FETCH_OBJ);
@@ -39,7 +39,7 @@
 			$test = sizeof($res);
 			if ($test == 0) {
 				$bad->favori = false;
-			} else {
+			}else{
 				$bad->favori = true;
 			}
 		}
