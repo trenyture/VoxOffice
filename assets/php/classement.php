@@ -11,7 +11,7 @@
 		if (isset($_GET['how'])) {
 			$how = intval($_GET['how'])*5;
 		}
-		$requGood = 'SELECT id,image,title,annee,vote FROM VO_films ORDER BY vote DESC, title ASC LIMIT '.$how.',5';
+		$requGood = 'SELECT id,image,title,annee,vote,author FROM VO_films ORDER BY vote DESC, title ASC LIMIT '.$how.',5';
 		$requete = $maBD->prepare($requGood);
 		$ok = $requete->execute() ;
 		$goods = $requete->fetchAll(PDO::FETCH_OBJ);
