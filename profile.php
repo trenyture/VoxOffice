@@ -63,8 +63,8 @@
                     <div class="img-film" style="background-image:url(storage/vign_films/<?= $one->image; ?>);"></div>
                     <div class="text-container">
                         <h3 class="title-fav"><span class="title"><?= $one->title; ?></span></h3>
-                        <h4 class="real"><span class="year"><?= $one->annee; ?></span> -
-                            <?= $one->author; ?>
+                        <h4><span class="year"><?= $one->annee; ?></span> -
+                            <span class="real"><?= $one->author; ?></span>
                         </h4>
                     </div>
                     <nav class="buttons">
