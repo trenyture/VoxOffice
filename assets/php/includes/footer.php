@@ -22,7 +22,7 @@
                 </svg>
                 <h2><span>Vox</span>Office<small>1.0.1</small></h2>
                 <p><span class="icon icon-lab"></span>par Simon Trichereau & Pierre Prézelin.</p>
-                <p>© 2016 <a href="/">VoxOffice</a></p>
+                <p>© 2017 <a href="/">VoxOffice</a></p>
                 <ul>
                     <li><a href="https://github.com/trenyture/VoxOffice" target="_blank"><i class="fa fa-github"></i></a></li>
                     <li><a href="/contact"><i class="fa fa-question"></i></a></li>
