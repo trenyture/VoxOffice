@@ -2,20 +2,23 @@
     include('assets/php/newPDO.php');
     include('assets/php/fbConnect.php');
     $fbUrlConnect = $helper->getLoginUrl();
-    switch ($_SERVER['REQUEST_URI']) {
-        case '/VoxOffice/vote':
+    switch (str_replace(".php", "", $_SERVER['REQUEST_URI'])) {
+        case '/vote':
             $bodyId = 'vote';
             break;
-        case '/VoxOffice/add':
+        case '/add':
             $bodyId = 'add';
             break;
-        case '/VoxOffice/compare':
+        case '/compare':
             $bodyId = 'compare';
             break;
-        case '/VoxOffice/contact':
+        case '/contact':
             $bodyId = 'contact';
             break;
-
+        case '/profile':
+            $bodyId = 'profile';
+            break;
+            
         default:
             $bodyId = 'home';
             break;
@@ -36,6 +39,9 @@
         <meta name="description" content="Un site web pour choisir et voter pour le meilleur film!">
         <meta name="keywords" content="Meilleur,Film,Best,Movie,Simon,Trichereau,Pierre,Prezelin,VoxOffice,Voter,Vote,HTML,CSS,JavaScript,jQuery,Facebook,Share,Partage,Php,MySQL,SASS,Compass"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="google-site-verification" content="">-->
 
         <title>VoxOffice - Tous vos films favoris. Classés.</title>
 
@@ -64,18 +70,18 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/font-awesome-4.6.3/css/font-awesome.min.css">
         <!-- Scripts -->
-        <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/vendors/jquery-3.1.0.min.js"></script>
         <script src="assets/js/main.js"></script>
     </head>
     <body class="<?=$bodyId;?>">
-        <?php if (strpos($_SERVER['REQUEST_URI'], 'index') == true || strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
+        <?php if ($bodyId == 'home' || $bodyId == 'vote') { ?>
         <header>
         <?php } else { ?>
         <header class="darkened">
         <?php } ?>
-            <a href="./index.php" class="logo">
+            <a href="./index" class="logo">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 495.6 405" style="enable-background:new 0 0 495.6 405;" xml:space="preserve">
                     <path d="M317.1,125.4c-17.2,0-31.2,14-31.2,31.2c0,6.3,1.9,12.5,5.5,17.7c3.7,6.3,2.7,11.1,1.7,13.6l-32.7,61.5l0,0v0.1
                     l-0.9,1.6c-1.4,2.2-4.8,5.6-11.8,6.3h-0.2c-7-0.6-10.4-4.1-11.8-6.3l-0.9-1.6v-0.1l0,0l-32.7-61.5c-1-2.4-1.9-7.3,1.7-13.6
@@ -98,19 +104,19 @@
                 </svg>
             </a>
             <?php if(isset($_SESSION['fb_token'])) { ?>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="./index">Accueil</a></li>
-                    <li><a href="./vote">Voter</a></li>
-                    <li><a href="./compare">Classement</a></li>
-                    <li><a href="./add">Ajouter</a></li>
-                </ul>
-            </nav>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="./index">Accueil</a></li>
+						<li><a href="./vote">Voter</a></li>
+						<li><a href="./compare">Classement</a></li>
+						<li><a href="./add">Ajouter</a></li>
+					</ul>
+				</nav>
             <?php } ?>
             <div class="user">
                 <!--<?php //if (strpos($_SERVER['REQUEST_URI'], 'vote') == true) { ?>
@@ -126,11 +132,11 @@
                     if(isset($_SESSION['fb_token'])) {
                     ?>
                         <div class="user-portrait">
-                            <a class="connected" href="index.php?logout=true" style="background-image:url('<?php echo $_SESSION['fbImg']['url']; ?>');">
+                            <a class="connected" href="index?logout=true" style="background-image:url('<?php echo $_SESSION['fbImg']['url']; ?>');">
                                 <span class="logoff"><i class="fa fa-power-off"></i></span>
                             </a>
                         </div>
-                        <p>Connecté en tant que :<br/><a href="profile.php" id="username"><?php echo($_SESSION['fbName']); ?></a></p>
+                        <p>Connecté en tant que :<br/><a href="profile" id="username"><?php echo($_SESSION['fbName']); ?></a></p>
                     <?php
                     } else {
                     ?>
