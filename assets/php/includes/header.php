@@ -97,7 +97,7 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="/">Accueil</a></li>
+						<li><a href="/index">Accueil</a></li>
 						<li><a href="/vote">Voter</a></li>
 						<li><a href="/compare">Classement</a></li>
 						<li><a href="/add">Ajouter</a></li>
