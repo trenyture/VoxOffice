@@ -33,7 +33,7 @@
     $appSecret = '16f33b4c7bca662b5b6d286fe9a2642d';
 
     FacebookSession::setDefaultApplication($appId,$appSecret);
-    $helper=new FacebookRedirectLoginHelper('http://simon-tr.com/projects/VoxOffice/index');
+    $helper=new FacebookRedirectLoginHelper('http://www.voxoffice.fr/index');
     if (isset($_SESSION) && isset($_SESSION['fb_token'])) {
         $session = new FacebookSession($_SESSION['fb_token']);
     } else {

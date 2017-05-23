@@ -25,8 +25,8 @@ window.fbAsyncInit = function () {
 function postToFeed(title, url, image, idG, idB) {
     var obj = {
         method: 'feed',
-        link: 'http://www.simon-tr.com/projects/VoxOffice/',
-        picture: 'http://www.simon-tr.com/projects/VoxOffice/storage/vign_films/' + image,
+        link: 'http://www.voxoffice.fr/',
+        picture: 'http://www.voxoffice.fr/storage/vign_films/' + image,
         name: title,
         description: "Et toi, pour quoi aurais-tu voté?"
     };
