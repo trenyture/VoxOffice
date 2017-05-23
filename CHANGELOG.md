@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.1] - 23-05-2017
+## [1.0.1] - 24-05-2017
 - Changed the background color of favicons
 - Fixed style bugs
 

@@ -28,7 +28,7 @@ function postToFeed(title, url, image, idG, idB) {
         link: 'http://www.voxoffice.fr/',
         picture: 'http://www.voxoffice.fr/storage/vign_films/' + image,
         name: title,
-        description: "Et toi, pour quoi aurais-tu voté?"
+        description: "Et toi, pour quoi aurais-tu voté ?"
     };
 
     function callback(response) {
@@ -53,7 +53,7 @@ function voteFor(idG, idB) {
                     alert(result[1]);
                 }
             } else {
-                alert("Vous n'êtes pas connecté!");
+                alert("Vous n'êtes pas connecté !");
             }
         }
     });
