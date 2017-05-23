@@ -294,25 +294,24 @@
     >div {
         position: relative;
         z-index: 1;
-        h2 {
-            color: $orange;
-            padding-bottom: 1.2rem;
-        }
-        p {
-            padding-bottom: 3.4rem;
-            color: $light-grey;
-            line-height: 1.8rem;
-            small {
-                font-size: 1.4rem;
-                text-align: center;
-            }
-        }
-        .alert {
-            padding-bottom: 4.2rem;
-            font-family: $text-semibold;
-            font-size: 2rem;
-            color: $orange;
-        }
+    }
+    h2 {
+        color: $orange;
+        padding-bottom: 1.2rem;
+    }
+    p {
+        padding-bottom: 3.4rem;
+        color: $light-grey;
+    }
+    small {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .alert {
+        padding-bottom: 4.2rem;
+        font-family: $text-semibold;
+        font-size: 2rem;
+        color: $orange;
     }
 }
 

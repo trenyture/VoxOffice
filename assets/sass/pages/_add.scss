@@ -34,7 +34,6 @@
             color: $dark-grey;
         }
         h4 {
-            padding-bottom: .5rem;
             font-family: $text-light;
             font-size: 1.5rem;
             font-style: italic;
@@ -82,7 +81,14 @@
     .add-container .search-title-results {
         h3,
         h4 {
-            max-width: 25rem;
+            max-width: 19.5rem;
+        }
+        h3 {
+            padding-bottom: .5rem;
+            font-size: 1.6rem;
+        }
+        h4 {
+            font-size: 1.4rem;
         }
         .img-film {
             width: 6rem;

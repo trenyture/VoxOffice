@@ -8,7 +8,7 @@
         <h1><a href="#" title="VoxOffice - Accueil">Vox<span>Office</span></a></h1>
         <p class="subtitle">Tous vos films favoris. Classés.</p>
         <?php if (isset($_SESSION['fb_token'])){ ?>
-        <a href="./vote" class="btn-primary">Go!</a>
+        <a href="/vote" class="btn-primary">Go!</a>
         <?php } else { ?>
         <a href="<?= $fbUrlConnect ?>" class="btn btn-primary btn-square">Go!</a>
         <?php } ?>
@@ -36,7 +36,7 @@
                     <p>Le principe de VoxOffice est de voter.</p>
                     <p>Faites votre choix entre deux films pour les faire monter - ou descendre - dans le classement général. D'autres films vous seront proposés aussitôt après.</p>
                     <?php if (isset($_SESSION['fb_token'])) { ?>
-                    <a href="./vote" class="btn btn-round" title="Essayer">Essayer</a>
+                    <a href="/vote" class="btn btn-round" title="Essayer">Essayer</a>
                     <?php } ?>
                 </div>
                 <div class="feature-img right">
@@ -48,7 +48,7 @@
                     <h3>Ajoutez.</h3>
                     <p>Vous pouvez également ajouter vos propres films et enrichir la liste VoxOffice des films référencés. C'est simple, rapide et immédiat !</p>
                     <?php if (isset($_SESSION['fb_token'])) { ?>
-                    <a href="./add" class="btn btn-round" title="Essayer">Essayer</a>
+                    <a href="/add" class="btn btn-round" title="Essayer">Essayer</a>
                     <?php } ?>
                 </div>
                 <div class="feature-img left">
@@ -60,7 +60,7 @@
                     <h3>Comparez.</h3>
                     <p>Le classement des films vous permet de voir instantanément les plus - ou les moins - populaires !</p>
                     <?php if (isset($_SESSION['fb_token'])){ ?>
-                    <a href="./compare" class="btn btn-round" title="Essayer">Essayer</a>
+                    <a href="/compare" class="btn btn-round" title="Essayer">Essayer</a>
                     <?php } ?>
                 </div>
                 <div class="feature-img right">
@@ -79,7 +79,7 @@
         </div>
         <p class="alert">Ce, sans aucune publicité, tracking, ou notifications intrusives.</p>
         <?php if (isset($_SESSION['fb_token'])) { ?>
-        <a href="./vote" title="Connexion à Facebook" class="btn-fb">Connecté !</a>
+        <a href="/vote" title="Connexion à Facebook" class="btn-fb">Connecté !</a>
         <?php } else { ?>
         <a href="<?= $fbUrlConnect ?>" title="Connexion à Facebook" class="btn btn-fb"><i class="fa fa-facebook"></i>Se connecter à Facebook</a>
         <?php } ?>
